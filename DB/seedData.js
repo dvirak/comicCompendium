@@ -1,7 +1,9 @@
 const client = require("./client");
 const { createUser } = require("./usersDB");
+const { createBook } = require("./booksDB");
+const { books } = require("../Data/bookData");
 
-// Remove all tables
+// Remove all tables if the exist
 async function dropTables() {
   console.log("DROPPING TABLES...");
 
@@ -43,14 +45,21 @@ async function createTables() {
       id SERIAL PRIMARY KEY,
       title VARCHAR(255) UNIQUE NOT NULL,
       author VARCHAR(255) NOT NULL,
-      artist VARCHAR(255) NOT NULL,
-      publisher VARCHAR(255) NOT NULL,
-      publish_date DATE NOT NULL,
-      description VARCHAR NOT NULL,
-      genre VARCHAR(255) NOT NULL,
+      illustrator VARCHAR(255) NULL,
+      penciler VARCHAR(255) NULL,
+      inker VARCHAR(255) NULL,
+      colorist VARCHAR(255) NULL,
+      letterer VARCHAR(255) NULL,
+      publisher VARCHAR(255) NULL,
+      publish_date DATE NULL,
+      description VARCHAR NULL,
+      print_length INTEGER NULL,
+      genre1 VARCHAR(255) NULL,
+      genre2 VARCHAR(255) NULL,
+      genre3 VARCHAR(255) NULL,
       series_name VARCHAR(255) NULL,
-      series_volume SMALLINT NULL,
-      cover_image VARCHAR(255) NOT NULL
+      series_volume VARCHAR(255) NULL,
+      cover_image VARCHAR(255) NULL
     );
     `);
 
@@ -90,6 +99,16 @@ async function createInitialBooks() {
   console.log("CREATING INITIAL BOOKS...");
 
   try {
+    // This method will guarantee proper order when seeding
+    // for (const book of books) {
+    //   console.log(book.title);
+    //   const newBook = await createBook(book);
+    // }
+
+    // A slightly faster way to seed which will not guarantee order unless id is specified.
+    const createdBooks = await Promise.all(
+      books.map((book) => createBook(book))
+    );
   } catch (error) {
     throw error;
   }
