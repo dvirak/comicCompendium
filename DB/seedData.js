@@ -1,9 +1,18 @@
 const client = require("./client");
+const { createUser } = require("./usersDB");
 
 // Remove all tables
 async function dropTables() {
+  console.log("DROPPING TABLES...");
+
+  //Drop all tables in correct order
   try {
-    console.log("DROPPING TABLES...");
+    await client.query(`
+    DROP TABLE IF EXISTS products;
+    DROP TABLE IF EXISTS users;
+    DROP TABLE IF EXISTS books;
+    `);
+
     console.log("TABLES DROPPED!");
   } catch (error) {
     throw error;
@@ -30,7 +39,7 @@ async function createTables() {
       `);
 
     await client.query(`
-    CREATE TABLE products(
+    CREATE TABLE books(
       id SERIAL PRIMARY KEY,
       title VARCHAR(255) UNIQUE NOT NULL,
       author VARCHAR(255) NOT NULL,
@@ -41,9 +50,11 @@ async function createTables() {
       genre VARCHAR(255) NOT NULL,
       series_name VARCHAR(255) NULL,
       series_volume SMALLINT NULL,
-      cover_image VARCHAR(255) NOT NULL,
+      cover_image VARCHAR(255) NOT NULL
     );
     `);
+
+    console.log("FINISHED BUILDING TABLES!");
   } catch (error) {
     throw error;
   }
@@ -51,16 +62,34 @@ async function createTables() {
 
 // Create initial users
 async function createInitialUsers() {
+  console.log("CREATING INITIAL USERS...");
+
   try {
-    console.log("CREATING INITIAL USERS...");
+    const usersToCreate = [
+      {
+        username: "dv43",
+        password: "daniel43",
+        first_name: "Daniel",
+        last_name: "Virak",
+        preferred_name: "Daniel",
+        phone: 8048782866,
+        email: "dvirak43@vt.edu",
+        admin: true,
+      },
+    ];
+
+    for (const user of usersToCreate) {
+      const newUser = await createUser(user);
+    }
   } catch (error) {
     throw error;
   }
 }
 
 async function createInitialBooks() {
+  console.log("CREATING INITIAL BOOKS...");
+
   try {
-    console.log("CREATING INITIAL BOOKS...");
   } catch (error) {
     throw error;
   }
