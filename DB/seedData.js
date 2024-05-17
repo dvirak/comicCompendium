@@ -1,4 +1,5 @@
 const client = require("./client");
+const { seedAllTables } = require("./seedTables/seedAllTables");
 const { createUser } = require("./usersDB");
 const { createBook } = require("./booksDB");
 const { books } = require("../Data/bookData");
@@ -10,10 +11,21 @@ async function dropTables() {
   //Drop all tables in correct order
   try {
     await client.query(`
-    DROP TABLE IF EXISTS products;
-    DROP TABLE IF EXISTS users;
-    DROP TABLE IF EXISTS books;
-    `);
+  DROP TABLE IF EXISTS users_books;
+  DROP TABLE IF EXISTS wishlist_items;
+  DROP TABLE IF EXISTS wishlists;
+  DROP TABLE IF EXISTS user_ratings;
+  DROP TABLE IF EXISTS global_ratings;
+  DROP TABLE IF EXISTS books;
+  DROP TABLE IF EXISTS authors;
+  DROP TABLE IF EXISTS illustrators;
+  DROP TABLE IF EXISTS pencillers;
+  DROP TABLE IF EXISTS inkers;
+  DROP TABLE IF EXISTS colorists;
+  DROP TABLE IF EXISTS letterers;
+  DROP TABLE IF EXISTS publishers;
+  DROP TABLE IF EXISTS series;
+`);
 
     console.log("TABLES DROPPED!");
   } catch (error) {
@@ -24,47 +36,13 @@ async function dropTables() {
 // Build all tables
 async function createTables() {
   try {
-    console.log("BUILDING TABLES...");
+    console.log("CREATING TABLES...");
 
-    await client.query(`
-    CREATE TABLE users(
-      id SERIAL PRIMARY KEY,
-      username VARCHAR(255) UNIQUE NOT NULL,
-      password VARCHAR(255) NOT NULL,
-      first_name VARCHAR(255) NOT NULL,
-      last_name VARCHAR(255) NOT NULL,
-      preferred_name VARCHAR(255) NULL,
-      phone BIGINT NOT NULL,
-      email VARCHAR(255) NOT NULL,
-      admin BOOLEAN NOT NULL DEFAULT false
-    );
-      `);
-
-    await client.query(`
-    CREATE TABLE books(
-      id SERIAL PRIMARY KEY,
-      title VARCHAR(255) UNIQUE NOT NULL,
-      author VARCHAR(255) NOT NULL,
-      illustrator VARCHAR(255) NULL,
-      penciler VARCHAR(255) NULL,
-      inker VARCHAR(255) NULL,
-      colorist VARCHAR(255) NULL,
-      letterer VARCHAR(255) NULL,
-      publisher VARCHAR(255) NULL,
-      publish_date DATE NULL,
-      description VARCHAR NULL,
-      print_length INTEGER NULL,
-      genre1 VARCHAR(255) NULL,
-      genre2 VARCHAR(255) NULL,
-      genre3 VARCHAR(255) NULL,
-      series_name VARCHAR(255) NULL,
-      series_volume VARCHAR(255) NULL,
-      cover_image VARCHAR(255) NULL
-    );
-    `);
+    await seedAllTables();
 
     console.log("FINISHED BUILDING TABLES!");
   } catch (error) {
+    console.error("Error creating tables: " + error.message);
     throw error;
   }
 }
