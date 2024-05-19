@@ -1,5 +1,5 @@
 const client = require("../../client");
-const { seedAllTables } = require("../seedTables/seedAllTables");
+const { seedAllTables } = require("../buildTables/buildAllTables");
 const { dropTables } = require("./dropTables");
 const {
   createInitialData,
