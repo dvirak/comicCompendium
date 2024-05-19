@@ -20,7 +20,8 @@ async function buildBooksTable() {
         colorist_id INTEGER REFERENCES colorists(id),
         letterer_id INTEGER REFERENCES letterers(id),
         publisher_id INTEGER REFERENCES publishers(id),
-        series_name_id INTEGER REFERENCES series(id)
+        series_name_id INTEGER REFERENCES series(id),
+        CONSTRAINT unique_id_title UNIQUE (id, title)
       );
     `);
 
