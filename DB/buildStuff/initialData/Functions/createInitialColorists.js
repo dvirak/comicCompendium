@@ -1,10 +1,20 @@
+//! Imported Files --------------------------
 const { colorists } = require("../Data/coloristData");
 const { createColorist } = require("../../../DBFunctions/coloristDB");
+//! ---------------------------------------------
 
+//* --------------CREATE INITIAL COLORISTS-------------
 async function createInitialColorists() {
   console.log("CREATING INITIAL Colorists...");
 
   try {
+    // This method will guarantee proper order when seeding
+    // for (const colorist of colorists) {
+    //   console.log(colorist.colorist_name);
+    //   const newColorist = await createColorist(colorist);
+    // }
+
+    // A slightly faster way to seed which will not guarantee order unless id is specified.
     const createdColorists = await Promise.all(
       colorists.map((colorist) => createColorist(colorist))
     );
@@ -15,6 +25,7 @@ async function createInitialColorists() {
     throw error;
   }
 }
+//* --------------CREATE INITIAL COLORISTS-------------
 
 module.exports = {
   createInitialColorists,
