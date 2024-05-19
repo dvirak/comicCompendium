@@ -1,6 +1,9 @@
+//! Imported Files --------------------------
 const { authors } = require("../Data/authorData");
 const { createAuthor } = require("../../../DBFunctions/authorDB");
+//! ---------------------------------------------
 
+//* --------------CREATE INITIAL AUTHORS-------------
 async function createInitialAuthors() {
   console.log("CREATING INITIAL Authors...");
 
@@ -22,6 +25,7 @@ async function createInitialAuthors() {
     throw error;
   }
 }
+//* --------------CREATE INITIAL AUTHORS-------------
 
 module.exports = {
   createInitialAuthors,
