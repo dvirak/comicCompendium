@@ -1,5 +1,5 @@
 const client = require("./client");
-const { rebuildDB, testDB } = require("./seedData");
+const { rebuildDB, testDB } = require("./buildStuff/buildDatabase/rebuildDB");
 
 rebuildDB()
   .catch(console.error)
