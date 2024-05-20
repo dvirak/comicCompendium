@@ -3,7 +3,7 @@ const client = require("../client");
 //! ---------------------------------------------
 
 //* --------------CREATE SERIES DB-------------
-async function createSeries({ id, series_name }) {
+async function createSeries({ series_name }) {
   console.log("CREATING SERIES: " + series_name);
 
   try {
@@ -11,12 +11,12 @@ async function createSeries({ id, series_name }) {
       rows: [series],
     } = await client.query(
       `
-      INSERT INTO series(id, series_name)
-      VALUES ($1, $2)
-      ON CONFLICT (id) DO NOTHING
+      INSERT INTO series(series_name)
+      VALUES ($1)
+      ON CONFLICT (series_name) DO NOTHING
       RETURNING *
       `,
-      [id, series_name]
+      [series_name]
     );
 
     console.log("CREATED SERIES: " + series_name);

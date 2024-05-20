@@ -9,15 +9,14 @@ async function createInitialPublishers() {
 
   try {
     // This method will guarantee proper order when seeding
-    // for (const publisher of publishers) {
-    //   console.log(publisher); // You can customize this according to your data structure
-    //   const newPublisher = await createPublisher(publisher);
-    // }
+    for (const publisher of publishers) {
+      const newPublisher = await createPublisher(publisher);
+    }
 
     // A slightly faster way to seed which will not guarantee order unless id is specified.
-    const createdPublishers = await Promise.all(
-      publishers.map((publisher) => createPublisher(publisher))
-    );
+    // const createdPublishers = await Promise.all(
+    //   publishers.map((publisher) => createPublisher(publisher))
+    // );
 
     console.log("FINISHED CREATING INITIAL PUBLISHERS!");
   } catch (error) {

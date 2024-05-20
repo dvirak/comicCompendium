@@ -3,7 +3,7 @@ const client = require("../client");
 //! ---------------------------------------------
 
 //* --------------CREATE PENCILLER DB-------------
-async function createPenciller({ id, penciller_name }) {
+async function createPenciller({ penciller_name }) {
   console.log("CREATING PENCILLER: " + penciller_name);
 
   try {
@@ -11,12 +11,12 @@ async function createPenciller({ id, penciller_name }) {
       rows: [penciller],
     } = await client.query(
       `
-      INSERT INTO pencillers(id, penciller_name)
-      VALUES ($1, $2)
-      ON CONFLICT (id) DO NOTHING
+      INSERT INTO pencillers(penciller_name)
+      VALUES ($1)
+      ON CONFLICT (penciller_name) DO NOTHING
       RETURNING *
       `,
-      [id, penciller_name]
+      [penciller_name]
     );
 
     console.log("CREATED PENCILLER: " + penciller_name);

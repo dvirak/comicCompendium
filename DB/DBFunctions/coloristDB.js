@@ -3,7 +3,7 @@ const client = require("../client");
 //! ---------------------------------------------
 
 //* --------------CREATE COLORIST DB-------------
-async function createColorist({ id, colorist_name }) {
+async function createColorist({ colorist_name }) {
   console.log("CREATING COLORIST: " + colorist_name);
 
   try {
@@ -11,12 +11,12 @@ async function createColorist({ id, colorist_name }) {
       rows: [colorist],
     } = await client.query(
       `
-      INSERT INTO colorists(id, colorist_name)
-      VALUES ($1, $2)
-      ON CONFLICT (id) DO NOTHING
+      INSERT INTO colorists(colorist_name)
+      VALUES ($1)
+      ON CONFLICT (colorist_name) DO NOTHING
       RETURNING *
       `,
-      [id, colorist_name]
+      [colorist_name]
     );
 
     console.log("CREATED COLORIST: " + colorist_name);

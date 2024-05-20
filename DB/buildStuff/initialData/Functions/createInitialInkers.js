@@ -9,15 +9,14 @@ async function createInitialInkers() {
 
   try {
     // This method will guarantee proper order when seeding
-    // for (const inker of inkers) {
-    //   console.log(inker); // You can customize this according to your data structure
-    //   const newInker = await createInker(inker);
-    // }
+    for (const inker of inkers) {
+      const newInker = await createInker(inker);
+    }
 
     // A slightly faster way to seed which will not guarantee order unless id is specified.
-    const createdInkers = await Promise.all(
-      inkers.map((inker) => createInker(inker))
-    );
+    // const createdInkers = await Promise.all(
+    //   inkers.map((inker) => createInker(inker))
+    // );
 
     console.log("FINISHED CREATING INITIAL INKERS!");
   } catch (error) {
