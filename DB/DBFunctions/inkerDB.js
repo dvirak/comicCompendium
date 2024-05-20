@@ -3,7 +3,7 @@ const client = require("../client");
 //! ---------------------------------------------
 
 //* --------------CREATE INKER DB-------------
-async function createInker({ id, inker_name }) {
+async function createInker({ inker_name }) {
   console.log("CREATING INKER: " + inker_name);
 
   try {
@@ -11,12 +11,12 @@ async function createInker({ id, inker_name }) {
       rows: [inker],
     } = await client.query(
       `
-      INSERT INTO inkers(id, inker_name)
-      VALUES ($1, $2)
-      ON CONFLICT (id) DO NOTHING
+      INSERT INTO inkers(inker_name)
+      VALUES ($1)
+      ON CONFLICT (inker_name) DO NOTHING
       RETURNING *
       `,
-      [id, inker_name]
+      [inker_name]
     );
 
     console.log("CREATED INKER: " + inker_name);

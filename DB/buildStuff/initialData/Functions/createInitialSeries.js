@@ -9,15 +9,14 @@ async function createInitialSeries() {
 
   try {
     // This method will guarantee proper order when seeding
-    // for (const serie of series) {
-    //   console.log(serie); // You can customize this according to your data structure
-    //   const newSeries = await createSeries(serie);
-    // }
+    for (const serie of series) {
+      const newSeries = await createSeries(serie);
+    }
 
     // A slightly faster way to seed which will not guarantee order unless id is specified.
-    const createdSeries = await Promise.all(
-      series.map((serie) => createSeries(serie))
-    );
+    // const createdSeries = await Promise.all(
+    //   series.map((serie) => createSeries(serie))
+    // );
 
     console.log("FINISHED CREATING INITIAL SERIES!");
   } catch (error) {

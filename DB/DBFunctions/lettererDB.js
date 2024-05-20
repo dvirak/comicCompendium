@@ -3,7 +3,7 @@ const client = require("../client");
 //! ---------------------------------------------
 
 //* --------------CREATE LETTERER DB-------------
-async function createLetterer({ id, letterer_name }) {
+async function createLetterer({ letterer_name }) {
   console.log("CREATING LETTERER: " + letterer_name);
 
   try {
@@ -11,12 +11,12 @@ async function createLetterer({ id, letterer_name }) {
       rows: [letterer],
     } = await client.query(
       `
-      INSERT INTO letterers(id, letterer_name)
-      VALUES ($1, $2)
-      ON CONFLICT (id) DO NOTHING
+      INSERT INTO letterers(letterer_name)
+      VALUES ($1)
+      ON CONFLICT (letterer_name) DO NOTHING
       RETURNING *
       `,
-      [id, letterer_name]
+      [letterer_name]
     );
 
     console.log("CREATED LETTERER: " + letterer_name);

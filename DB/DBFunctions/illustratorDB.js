@@ -3,7 +3,7 @@ const client = require("../client");
 //! ---------------------------------------------
 
 //* --------------CREATE ILLUSTRATOR DB-------------
-async function createIllustrator({ id, illustrator_name }) {
+async function createIllustrator({ illustrator_name }) {
   console.log("CREATING ILLUSTRATOR: " + illustrator_name);
 
   try {
@@ -11,12 +11,12 @@ async function createIllustrator({ id, illustrator_name }) {
       rows: [illustrator],
     } = await client.query(
       `
-      INSERT INTO illustrators(id, illustrator_name)
-      VALUES ($1, $2)
-      ON CONFLICT (id) DO NOTHING
+      INSERT INTO illustrators(illustrator_name)
+      VALUES ($1)
+      ON CONFLICT (illustrator_name) DO NOTHING
       RETURNING *
       `,
-      [id, illustrator_name]
+      [illustrator_name]
     );
 
     console.log("CREATED ILLUSTRATOR: " + illustrator_name);

@@ -3,7 +3,7 @@ const client = require("../client");
 //! ---------------------------------------------
 
 //* --------------CREATE PUBLISHER DB-------------
-async function createPublisher({ id, publisher_name }) {
+async function createPublisher({ publisher_name }) {
   console.log("CREATING PUBLISHER: " + publisher_name);
 
   try {
@@ -11,12 +11,12 @@ async function createPublisher({ id, publisher_name }) {
       rows: [publisher],
     } = await client.query(
       `
-      INSERT INTO publishers(id, publisher_name)
-      VALUES ($1, $2)
-      ON CONFLICT (id) DO NOTHING
+      INSERT INTO publishers(publisher_name)
+      VALUES ($1)
+      ON CONFLICT (publisher_name) DO NOTHING
       RETURNING *
       `,
-      [id, publisher_name]
+      [publisher_name]
     );
 
     console.log("CREATED PUBLISHER: " + publisher_name);

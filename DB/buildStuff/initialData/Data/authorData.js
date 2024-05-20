@@ -1,7 +1,4 @@
-const authors = [
-  { id: 1, author_name: "Alan Moore" },
-  // Add more authors as needed
-];
+const authors = [{ id: 1, author_name: "Alan Moore" }];
 
 module.exports = {
   authors,

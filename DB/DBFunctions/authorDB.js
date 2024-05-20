@@ -3,7 +3,7 @@ const client = require("../client");
 //! ---------------------------------------------
 
 //* --------------CREATE AUTHOR DB-------------
-async function createAuthor({ id, author_name }) {
+async function createAuthor({ author_name }) {
   console.log("CREATING AUTHOR: " + author_name);
 
   try {
@@ -11,12 +11,12 @@ async function createAuthor({ id, author_name }) {
       rows: [author],
     } = await client.query(
       `
-      INSERT INTO authors(id, author_name)
-      VALUES ($1, $2)
-      ON CONFLICT (id) DO NOTHING
+      INSERT INTO authors(author_name)
+      VALUES ($1)
+      ON CONFLICT (author_name) DO NOTHING
       RETURNING *
       `,
-      [id, author_name]
+      [author_name]
     );
 
     console.log("CREATED AUTHOR: " + author_name);

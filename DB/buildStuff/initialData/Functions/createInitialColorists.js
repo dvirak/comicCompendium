@@ -9,15 +9,14 @@ async function createInitialColorists() {
 
   try {
     // This method will guarantee proper order when seeding
-    // for (const colorist of colorists) {
-    //   console.log(colorist.colorist_name);
-    //   const newColorist = await createColorist(colorist);
-    // }
+    for (const colorist of colorists) {
+      const newColorist = await createColorist(colorist);
+    }
 
     // A slightly faster way to seed which will not guarantee order unless id is specified.
-    const createdColorists = await Promise.all(
-      colorists.map((colorist) => createColorist(colorist))
-    );
+    // const createdColorists = await Promise.all(
+    //   colorists.map((colorist) => createColorist(colorist))
+    // );
 
     console.log("FINISHED CREATING INITIAL COLORISTS!");
   } catch (error) {

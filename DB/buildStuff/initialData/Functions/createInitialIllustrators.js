@@ -9,15 +9,14 @@ async function createInitialIllustrators() {
 
   try {
     // This method will guarantee proper order when seeding
-    // for (const illustrator of illustrators) {
-    //   console.log(illustrator); // You can customize this according to your data structure
-    //   const newIllustrator = await createIllustrator(illustrator);
-    // }
+    for (const illustrator of illustrators) {
+      const newIllustrator = await createIllustrator(illustrator);
+    }
 
     // A slightly faster way to seed which will not guarantee order unless id is specified.
-    const createdIllustrators = await Promise.all(
-      illustrators.map((illustrator) => createIllustrator(illustrator))
-    );
+    // const createdIllustrators = await Promise.all(
+    //   illustrators.map((illustrator) => createIllustrator(illustrator))
+    // );
 
     console.log("FINISHED CREATING INITIAL ILLUSTRATORS!");
   } catch (error) {
