@@ -1,6 +1,8 @@
 //! Imported Files --------------------------
 const { series } = require("../Data/seriesData");
-const { createSeries } = require("../../../DBFunctions/seriesDB");
+const {
+  createSeries,
+} = require("../../../DBFunctions/SeriesDB/createSeriesDB");
 //! ---------------------------------------------
 
 //* --------------CREATE INITIAL SERIES-------------

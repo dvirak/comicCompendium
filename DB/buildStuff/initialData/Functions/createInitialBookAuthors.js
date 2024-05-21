@@ -1,8 +1,8 @@
 //! Imported Files --------------------------
-const { colorists } = require("../Data/coloristData");
+const { colorists } = require("../Data/bookAuthorsData");
 const {
   createColorist,
-} = require("../../../DBFunctions/ColoristDB/createColoristDB");
+} = require("../../../DBFunctions/BookAuthorDB/createBookAuthorDB");
 //! ---------------------------------------------
 
 //* --------------CREATE INITIAL COLORISTS-------------

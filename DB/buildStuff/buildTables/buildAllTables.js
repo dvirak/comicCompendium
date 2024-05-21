@@ -13,6 +13,7 @@ const { buildUsersRatingsTable } = require("./buildUsersRatingsTable");
 const { buildUsersTable } = require("./buildUsersTable");
 const { buildWishListItemsTable } = require("./buildWishlistItemsTable");
 const { buildWishListsTable } = require("./buildWishlistsTable");
+const { buildBookAuthorsTable } = require("./buildBookAuthorsTable");
 
 // Import other table creation modules here...
 
@@ -30,6 +31,7 @@ async function seedAllTables() {
     await buildSeriesTable();
     await buildUsersTable();
     await buildBooksTable();
+    await buildBookAuthorsTable();
     await buildGlobalRatingsTable();
     await buildUsersBooksTable();
     await buildUsersRatingsTable();

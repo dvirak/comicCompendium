@@ -1,6 +1,8 @@
 //! Imported Files --------------------------
 const { authors } = require("../Data/authorData");
-const { createAuthor } = require("../../../DBFunctions/authorDB");
+const {
+  createAuthor,
+} = require("../../../DBFunctions/AuthorDB/createAuthorDB");
 //! ---------------------------------------------
 
 //* --------------CREATE INITIAL AUTHORS-------------

@@ -1,6 +1,6 @@
 //! Imported Files --------------------------
 const { wishlistItems } = require("../Data/wishlistItemData");
-const { createWishlistItem } = require("../../../DBFunctions/wishlistItemDB");
+const { createWishlistItem } = require("../../../DBFunctions/WishlistItemDB");
 //! ---------------------------------------------
 
 //* --------------CREATE INITIAL WISHLIST ITEMS-------------
