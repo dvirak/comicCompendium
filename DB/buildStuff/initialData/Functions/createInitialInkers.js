@@ -1,6 +1,6 @@
 //! Imported Files --------------------------
 const { inkers } = require("../Data/inkerData");
-const { createInker } = require("../../../DBFunctions/inkerDB");
+const { createInker } = require("../../../DBFunctions/InkerDB/createInkerDB");
 //! ---------------------------------------------
 
 //* --------------CREATE INITIAL INKERS-------------

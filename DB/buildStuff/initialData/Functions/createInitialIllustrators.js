@@ -1,6 +1,8 @@
 //! Imported Files --------------------------
 const { illustrators } = require("../Data/illustratorData");
-const { createIllustrator } = require("../../../DBFunctions/illustratorDB");
+const {
+  createIllustrator,
+} = require("../../../DBFunctions/IllustratorDB/createIllustratorDB");
 //! ---------------------------------------------
 
 //* --------------CREATE INITIAL ILLUSTRATORS-------------

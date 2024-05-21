@@ -1,6 +1,8 @@
 //! Imported Files --------------------------
 const { globalRatings } = require("../Data/globalRatingsData");
-const { createGlobalRating } = require("../../../DBFunctions/globalRatingDB");
+const {
+  createGlobalRating,
+} = require("../../../DBFunctions/GlobalRatingDB/createGobalRatingDB");
 //! ---------------------------------------------
 
 //* --------------CREATE INITIAL GLOBAL RATINGS-------------

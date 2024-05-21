@@ -1,6 +1,8 @@
 //! Imported Files --------------------------
 const { publishers } = require("../Data/publisherData");
-const { createPublisher } = require("../../../DBFunctions/publisherDB");
+const {
+  createPublisher,
+} = require("../../../DBFunctions/PublisherDB/createPublisherDB");
 //! ---------------------------------------------
 
 //* --------------CREATE INITIAL PUBLISHERS-------------

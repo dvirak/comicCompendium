@@ -1,6 +1,8 @@
 //! Imported Files --------------------------
 const { letterers } = require("../Data/lettererData");
-const { createLetterer } = require("../../../DBFunctions/lettererDB");
+const {
+  createLetterer,
+} = require("../../../DBFunctions/LettererDB/createLettererDB");
 //! ---------------------------------------------
 
 //* --------------CREATE INITIAL LETTERERS-------------
