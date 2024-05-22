@@ -1,6 +1,6 @@
 //! Imported Files --------------------------
 const { userRatings } = require("../Data/userRatingsData");
-const { createUserRating } = require("../../../DBFunctions/userRatingsDB");
+const { createUserRating } = require("../../../DBFunctions/UserRatingsDB");
 //! ---------------------------------------------
 
 //* --------------CREATE INITIAL USER RATINGS-------------

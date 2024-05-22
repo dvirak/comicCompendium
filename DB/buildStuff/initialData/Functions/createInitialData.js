@@ -6,6 +6,10 @@ const { createInitialIllustrators } = require("./createInitialIllustrators");
 const { createInitialPublishers } = require("./createInitialPublishers");
 const { createInitialSeries } = require("./createInitialSeries");
 const { createInitialLetterers } = require("./createInitialLetterers");
+const { createInitialBookAuthors } = require("./createInitialBookAuthors");
+const { createInitialBookColorists } = require("./createInitialBookColorists");
+const { createInitialInkers } = require("./createInitialInkers");
+const { createInitialPencillers } = require("./createInitialPencillers");
 
 async function createInitialData() {
   try {
@@ -13,10 +17,14 @@ async function createInitialData() {
     await createInitialAuthors();
     await createInitialColorists();
     await createInitialIllustrators();
+    // await createInitialInkers();
+    // await createInitialPencillers();
     await createInitialPublishers();
     await createInitialSeries();
     await createInitialLetterers();
     await createInitialBooks();
+    await createInitialBookAuthors();
+    await createInitialBookColorists();
   } catch (error) {
     console.log("ERROR IN CREATE INITIAL DATA: " + error);
     throw error;
