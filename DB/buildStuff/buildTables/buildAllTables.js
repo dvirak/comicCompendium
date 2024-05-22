@@ -18,6 +18,7 @@ const { buildBookColoristsTable } = require("./buildBookColoristsTable");
 const { buildBookIllustratorsTable } = require("./buildBookIllustratorsTable");
 const { buildBookPencillersTable } = require("./buildBookPencillersTable");
 const { buildBookInkersTable } = require("./buildBookInkersTable");
+const { buildBookSeriesTable } = require("./buildBookSeriesTable");
 
 // Import other table creation modules here...
 
@@ -40,6 +41,7 @@ async function seedAllTables() {
     await buildBookIllustratorsTable();
     await buildBookPencillersTable();
     await buildBookInkersTable();
+    await buildBookSeriesTable();
     await buildGlobalRatingsTable();
     await buildUsersBooksTable();
     await buildUsersRatingsTable();
