@@ -1,6 +1,8 @@
 //! Imported Files --------------------------
 const { pencillers } = require("../Data/pencillerData");
-const { createPenciller } = require("../../../DBFunctions");
+const {
+  createPenciller,
+} = require("../../../DBFunctions/PencillerDB/createPencillerDB");
 //! ---------------------------------------------
 
 //* --------------CREATE INITIAL PENCILLERS-------------

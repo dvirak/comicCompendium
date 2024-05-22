@@ -1,33 +1,33 @@
 //! Imported Files --------------------------
-const { colorists } = require("../Data/bookAuthorsData");
+const { bookAuthors } = require("../Data/bookAuthorData");
 const {
-  createColorist,
+  createBookAuthor,
 } = require("../../../DBFunctions/BookAuthorDB/createBookAuthorDB");
 //! ---------------------------------------------
 
-//* --------------CREATE INITIAL COLORISTS-------------
-async function createInitialColorists() {
-  console.log("CREATING INITIAL Colorists...");
+//* --------------CREATE INITIAL BOOK AUTHORS-------------
+async function createInitialBookAuthors() {
+  console.log("CREATING INITIAL BookAuthors...");
 
   try {
     // This method will guarantee proper order when seeding
-    for (const colorist of colorists) {
-      const newColorist = await createColorist(colorist);
+    for (const bookAuthor of bookAuthors) {
+      const newBookAuthor = await createBookAuthor(bookAuthor);
     }
 
     // A slightly faster way to seed which will not guarantee order unless id is specified.
-    // const createdColorists = await Promise.all(
-    //   colorists.map((colorist) => createColorist(colorist))
+    // const createdBookAuthor = await Promise.all(
+    //   bookAuthors.map((bookAuthor) => createBookAuthor(bookAuthor))
     // );
 
-    console.log("FINISHED CREATING INITIAL COLORISTS!");
+    console.log("FINISHED CREATING INITIAL BookAuthors!");
   } catch (error) {
-    console.log(`ERROR CREATING INITIAL COLORISTS: ` + error);
+    console.log(`ERROR CREATING INITIAL BookAuthors: ` + error);
     throw error;
   }
 }
-//* --------------CREATE INITIAL COLORISTS-------------
+//* --------------CREATE INITIAL BOOK AUTHORS-------------
 
 module.exports = {
-  createInitialColorists,
+  createInitialBookAuthors,
 };
