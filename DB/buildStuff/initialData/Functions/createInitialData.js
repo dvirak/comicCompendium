@@ -17,6 +17,7 @@ const {
   createInitialBookPencillers,
 } = require("./createInitialBookPencillers");
 const { createInitialBookInkers } = require("./createInitialBookInkers");
+const { createInitialBookSeries } = require("./createInitialBookSeries");
 
 async function createInitialData() {
   try {
@@ -33,6 +34,7 @@ async function createInitialData() {
     await createInitialBookAuthors();
     await createInitialBookColorists();
     await createInitialBookIllustrators();
+    await createInitialBookSeries();
     // await createInitialBookPencillers();
     // await createInitialBookInkers();
   } catch (error) {
