@@ -3,8 +3,8 @@ const client = require("../../client");
 //! ---------------------------------------------
 
 //* --------------CREATE INKER DB-------------
-async function createInker({ inker_name }) {
-  console.log("CREATING INKER: " + inker_name);
+async function createInkerDB({ inker_name }) {
+  console.log("CREATING INKER IN DB: " + inker_name);
 
   try {
     const {
@@ -19,16 +19,18 @@ async function createInker({ inker_name }) {
       [inker_name]
     );
 
-    console.log("CREATED INKER: " + inker_name);
+    console.log("CREATED INKER IN DB: " + inker_name);
 
     return inker;
   } catch (error) {
-    console.error(`Error creating ${inker_name}: ${error}`);
+    console.error(
+      `Error creating inker in DB with name ${inker_name}: ${error}`
+    );
     throw error;
   }
 }
 //* --------------CREATE INKER DB-------------
 
 module.exports = {
-  createInker,
+  createInkerDB,
 };

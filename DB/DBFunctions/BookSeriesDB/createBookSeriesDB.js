@@ -3,9 +3,12 @@ const client = require("../../client");
 //! ---------------------------------------------
 
 //* --------------CREATE BOOK SERIES DB-------------
-async function createBookSeries({ series_id, book_id }) {
+async function createBookSeriesDB({ series_id, book_id }) {
   console.log(
-    "CREATING BOOK SERIES: series_id: " + series_id + ", book_id:" + book_id
+    "CREATING BOOK SERIES IN DB: series_id: " +
+      series_id +
+      ", book_id:" +
+      book_id
   );
 
   try {
@@ -22,13 +25,16 @@ async function createBookSeries({ series_id, book_id }) {
     );
 
     console.log(
-      "CREATED BOOK SERIES: series_id: " + series_id + ", book_id: " + book_id
+      "CREATED BOOK SERIES IN DB: series_id: " +
+        series_id +
+        ", book_id: " +
+        book_id
     );
 
     return book_series;
   } catch (error) {
     console.error(
-      `Error creating book series with series_id: ${series_id} and book_id: ${book_id}: ${error}`
+      `Error creating book series in DB with series_id: ${series_id} and book_id: ${book_id}: ${error}`
     );
     throw error;
   }
@@ -36,5 +42,5 @@ async function createBookSeries({ series_id, book_id }) {
 //* --------------CREATE BOOK SERIES DB-------------
 
 module.exports = {
-  createBookSeries,
+  createBookSeriesDB,
 };

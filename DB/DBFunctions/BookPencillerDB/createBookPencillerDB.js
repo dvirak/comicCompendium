@@ -3,9 +3,9 @@ const client = require("../../client");
 //! ---------------------------------------------
 
 //* --------------CREATE BOOK PENCILLER DB-------------
-async function createBookPenciller({ penciller_id, book_id }) {
+async function createBookPencillerDB({ penciller_id, book_id }) {
   console.log(
-    "CREATING BOOK PENCILLER: penciller_id: " +
+    "CREATING BOOK PENCILLER IN DB: penciller_id: " +
       penciller_id +
       ", book_id:" +
       book_id
@@ -25,7 +25,7 @@ async function createBookPenciller({ penciller_id, book_id }) {
     );
 
     console.log(
-      "CREATED BOOK PENCILLER: penciller_id: " +
+      "CREATED BOOK PENCILLER IN DB: penciller_id: " +
         penciller_id +
         ", book_id: " +
         book_id
@@ -34,7 +34,7 @@ async function createBookPenciller({ penciller_id, book_id }) {
     return book_penciller;
   } catch (error) {
     console.error(
-      `Error creating book penciller with penciller_id: ${penciller_id} and book_id: ${book_id}: ${error}`
+      `Error creating book penciller in DB with penciller_id: ${penciller_id} and book_id: ${book_id}: ${error}`
     );
     throw error;
   }
@@ -42,5 +42,5 @@ async function createBookPenciller({ penciller_id, book_id }) {
 //* --------------CREATE BOOK PENCILLER DB-------------
 
 module.exports = {
-  createBookPenciller,
+  createBookPencillerDB,
 };

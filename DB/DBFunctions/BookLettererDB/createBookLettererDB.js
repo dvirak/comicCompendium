@@ -3,9 +3,9 @@ const client = require("../../client");
 //! ---------------------------------------------
 
 //* --------------CREATE BOOK LETTERER DB-------------
-async function createBookLetterer({ letterer_id, book_id }) {
+async function createBookLettererDB({ letterer_id, book_id }) {
   console.log(
-    "CREATING BOOK LETTERER: letterer_id: " +
+    "CREATING BOOK LETTERER IN DB: letterer_id: " +
       letterer_id +
       ", book_id:" +
       book_id
@@ -25,7 +25,7 @@ async function createBookLetterer({ letterer_id, book_id }) {
     );
 
     console.log(
-      "CREATED BOOK LETTERER: letterer_id: " +
+      "CREATED BOOK LETTERER IN DB: letterer_id: " +
         letterer_id +
         ", book_id: " +
         book_id
@@ -34,7 +34,7 @@ async function createBookLetterer({ letterer_id, book_id }) {
     return book_letterer;
   } catch (error) {
     console.error(
-      `Error creating book letterer with letterer_id: ${letterer_id} and book_id: ${book_id}: ${error}`
+      `Error creating book letterer in DB with letterer_id: ${letterer_id} and book_id: ${book_id}: ${error}`
     );
     throw error;
   }
@@ -42,5 +42,5 @@ async function createBookLetterer({ letterer_id, book_id }) {
 //* --------------CREATE BOOK LETTERER DB-------------
 
 module.exports = {
-  createBookLetterer,
+  createBookLettererDB,
 };

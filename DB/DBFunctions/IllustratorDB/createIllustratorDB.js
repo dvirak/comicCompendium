@@ -3,8 +3,8 @@ const client = require("../../client");
 //! ---------------------------------------------
 
 //* --------------CREATE ILLUSTRATOR DB-------------
-async function createIllustrator({ illustrator_name }) {
-  console.log("CREATING ILLUSTRATOR: " + illustrator_name);
+async function createIllustratorDB({ illustrator_name }) {
+  console.log("CREATING ILLUSTRATOR IN DB: " + illustrator_name);
 
   try {
     const {
@@ -19,16 +19,18 @@ async function createIllustrator({ illustrator_name }) {
       [illustrator_name]
     );
 
-    console.log("CREATED ILLUSTRATOR: " + illustrator_name);
+    console.log("CREATED ILLUSTRATOR IN DB: " + illustrator_name);
 
     return illustrator;
   } catch (error) {
-    console.error(`Error creating ${illustrator_name}: ${error}`);
+    console.error(
+      `Error creating illustrator in DB with name ${illustrator_name}: ${error}`
+    );
     throw error;
   }
 }
 //* --------------CREATE ILLUSTRATOR DB-------------
 
 module.exports = {
-  createIllustrator,
+  createIllustratorDB,
 };

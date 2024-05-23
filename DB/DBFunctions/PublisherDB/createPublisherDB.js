@@ -3,8 +3,8 @@ const client = require("../../client");
 //! ---------------------------------------------
 
 //* --------------CREATE PUBLISHER DB-------------
-async function createPublisher({ publisher_name }) {
-  console.log("CREATING PUBLISHER: " + publisher_name);
+async function createPublisherDB({ publisher_name }) {
+  console.log("CREATING PUBLISHER IN DB: " + publisher_name);
 
   try {
     const {
@@ -19,16 +19,18 @@ async function createPublisher({ publisher_name }) {
       [publisher_name]
     );
 
-    console.log("CREATED PUBLISHER: " + publisher_name);
+    console.log("CREATED PUBLISHER IN DB: " + publisher_name);
 
     return publisher;
   } catch (error) {
-    console.error(`Error creating ${publisher_name}: ${error}`);
+    console.error(
+      `Error creating publisher in DB with name ${publisher_name}: ${error}`
+    );
     throw error;
   }
 }
 //* --------------CREATE PUBLISHER DB-------------
 
 module.exports = {
-  createPublisher,
+  createPublisherDB,
 };

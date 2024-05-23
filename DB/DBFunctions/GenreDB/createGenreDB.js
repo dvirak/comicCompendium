@@ -4,7 +4,7 @@ const client = require("../../client");
 
 //* --------------CREATE GENRE DB-------------
 async function createGenreDB({ genre_name }) {
-  console.log("CREATING GENRE: " + genre_name);
+  console.log("CREATING GENRE IN DB: " + genre_name);
 
   try {
     const {
@@ -19,11 +19,13 @@ async function createGenreDB({ genre_name }) {
       [genre_name]
     );
 
-    console.log("CREATED GENRE: " + genre_name);
+    console.log("CREATED GENRE IN DB: " + genre_name);
 
     return genre;
   } catch (error) {
-    console.error(`Error creating ${genre_name}: ${error}`);
+    console.error(
+      `Error creating genre in DB with name ${genre_name}: ${error}`
+    );
     throw error;
   }
 }
