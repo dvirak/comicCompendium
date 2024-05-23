@@ -11,14 +11,7 @@ async function createBookDB({
   print_length,
   series_volume,
   cover_image,
-  author_id,
-  illustrator_id,
-  penciller_id,
-  inker_id,
-  colorist_id,
-  letterer_id,
   publisher_id,
-  series_name_id,
 }) {
   console.log("CREATING BOOK IN DB: " + title);
 
@@ -27,8 +20,8 @@ async function createBookDB({
       rows: [book],
     } = await client.query(
       `
-      INSERT INTO books(title, publish_date, description, print_length, series_volume, cover_image, author_id, illustrator_id, penciller_id, inker_id, colorist_id, letterer_id, publisher_id, series_name_id)
-      VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14)
+      INSERT INTO books(title, publish_date, description, print_length, series_volume, cover_image, publisher_id)
+      VALUES ($1, $2, $3, $4, $5, $6, $7)
       ON CONFLICT (title) DO NOTHING
       RETURNING *
       `,
@@ -39,14 +32,7 @@ async function createBookDB({
         print_length,
         series_volume,
         cover_image,
-        author_id,
-        illustrator_id,
-        penciller_id,
-        inker_id,
-        colorist_id,
-        letterer_id,
         publisher_id,
-        series_name_id,
       ]
     );
 
