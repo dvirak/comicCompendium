@@ -1,7 +1,7 @@
 //! Imported Files --------------------------
 const { pencillers } = require("../Data/pencillerData");
 const {
-  createPenciller,
+  createPencillerDB,
 } = require("../../../DBFunctions/PencillerDB/createPencillerDB");
 //! ---------------------------------------------
 
@@ -12,7 +12,7 @@ async function createInitialPencillers() {
   try {
     // This method will guarantee proper order when seeding
     for (const penciller of pencillers) {
-      const newPenciller = await createPenciller(penciller);
+      const newPenciller = await createPencillerDB(penciller);
     }
 
     // A slightly faster way to seed which will not guarantee order unless id is specified.

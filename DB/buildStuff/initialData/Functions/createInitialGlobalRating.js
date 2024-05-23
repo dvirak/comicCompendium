@@ -1,5 +1,5 @@
 //! Imported Files --------------------------
-const { globalRatings } = require("../Data/globalRatingsData");
+const { globalRatingsDB } = require("../Data/globalRatingsData");
 const {
   createGlobalRating,
 } = require("../../../DBFunctions/GlobalRatingDB/createGobalRatingDB");
@@ -18,7 +18,7 @@ async function createInitialGlobalRatings() {
 
     // A slightly faster way to seed which will not guarantee order unless id is specified.
     const createdGlobalRatings = await Promise.all(
-      globalRatings.map((globalRating) => createGlobalRating(globalRating))
+      globalRatings.map((globalRating) => createGlobalRatingDB(globalRating))
     );
 
     console.log("FINISHED CREATING INITIAL GLOBAL RATINGS!");

@@ -1,7 +1,7 @@
 //! Imported Files --------------------------
 const { bookSeries } = require("../Data/bookSeriesData");
 const {
-  createBookSeries,
+  createBookSeriesDB,
 } = require("../../../DBFunctions/BookSeriesDB/createBookSeriesDB");
 //! ---------------------------------------------
 
@@ -12,7 +12,7 @@ async function createInitialBookSeries() {
   try {
     // This method will guarantee proper order when seeding
     for (const bookSeriesItem of bookSeries) {
-      const newBookSeries = await createBookSeries(bookSeriesItem);
+      const newBookSeries = await createBookSeriesDB(bookSeriesItem);
     }
 
     // A slightly faster way to seed which will not guarantee order unless id is specified.

@@ -1,7 +1,7 @@
 //! Imported Files --------------------------
 const { bookPencillers } = require("../Data/bookPencillerData");
 const {
-  createBookPenciller,
+  createBookPencillerDB,
 } = require("../../../DBFunctions/BookPencillerDB/createBookPencillerDB");
 //! ---------------------------------------------
 
@@ -12,7 +12,7 @@ async function createInitialBookPencillers() {
   try {
     // This method will guarantee proper order when seeding
     for (const bookPenciller of bookPencillers) {
-      const newBookPenciller = await createBookPenciller(bookPenciller);
+      const newBookPenciller = await createBookPencillerDB(bookPenciller);
     }
 
     // A slightly faster way to seed which will not guarantee order unless id is specified.

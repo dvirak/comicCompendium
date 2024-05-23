@@ -1,7 +1,7 @@
 //! Imported Files --------------------------
 const { illustrators } = require("../Data/illustratorData");
 const {
-  createIllustrator,
+  createIllustratorDB,
 } = require("../../../DBFunctions/IllustratorDB/createIllustratorDB");
 //! ---------------------------------------------
 
@@ -12,7 +12,7 @@ async function createInitialIllustrators() {
   try {
     // This method will guarantee proper order when seeding
     for (const illustrator of illustrators) {
-      const newIllustrator = await createIllustrator(illustrator);
+      const newIllustrator = await createIllustratorDB(illustrator);
     }
 
     // A slightly faster way to seed which will not guarantee order unless id is specified.

@@ -1,6 +1,6 @@
 //! Imported Files --------------------------
 const { genres } = require("../Data/genreData");
-const { createGenre } = require("../../../DBFunctions/GenreDB/createGenreDB");
+const { createGenreDB } = require("../../../DBFunctions/GenreDB/createGenreDB");
 //! ---------------------------------------------
 
 //* --------------CREATE INITIAL GENRES-------------
@@ -11,7 +11,7 @@ async function createInitialGenres() {
     // This method will guarantee proper order when seeding
     // Use for seeding purpose to ensure order of data without creating seed specific functions
     for (const genre of genres) {
-      const newGenre = await createGenre(genre);
+      const newGenre = await createGenreDB(genre);
     }
 
     // A slightly faster way to seed which will not guarantee order unless id is specified.

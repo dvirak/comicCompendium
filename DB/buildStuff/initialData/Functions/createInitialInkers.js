@@ -1,6 +1,6 @@
 //! Imported Files --------------------------
 const { inkers } = require("../Data/inkerData");
-const { createInker } = require("../../../DBFunctions/InkerDB/createInkerDB");
+const { createInkerDB } = require("../../../DBFunctions/InkerDB/createInkerDB");
 //! ---------------------------------------------
 
 //* --------------CREATE INITIAL INKERS-------------
@@ -10,7 +10,7 @@ async function createInitialInkers() {
   try {
     // This method will guarantee proper order when seeding
     for (const inker of inkers) {
-      const newInker = await createInker(inker);
+      const newInker = await createInkerDB(inker);
     }
 
     // A slightly faster way to seed which will not guarantee order unless id is specified.

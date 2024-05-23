@@ -1,6 +1,6 @@
 //! Imported Files --------------------------
 const { userRatings } = require("../Data/userRatingsData");
-const { createUserRating } = require("../../../DBFunctions/UserRatingsDB");
+const { createUserRatingDB } = require("../../../DBFunctions/UserRatingsDB");
 //! ---------------------------------------------
 
 //* --------------CREATE INITIAL USER RATINGS-------------
@@ -16,7 +16,7 @@ async function createInitialUserRatings() {
 
     // A slightly faster way to seed which will not guarantee order unless id is specified.
     const createdUserRatings = await Promise.all(
-      userRatings.map((userRating) => createUserRating(userRating))
+      userRatings.map((userRating) => createUserRatingDB(userRating))
     );
 
     console.log("FINISHED CREATING INITIAL USER RATINGS!");

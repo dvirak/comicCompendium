@@ -1,7 +1,7 @@
 //! Imported Files --------------------------
 const { bookGenres } = require("../Data/bookGenreData");
 const {
-  createBookGenre,
+  createBookGenreDB,
 } = require("../../../DBFunctions/BookGenreDB/createBookGenreDB");
 //! ---------------------------------------------
 
@@ -12,7 +12,7 @@ async function createInitialBookGenres() {
   try {
     // This method will guarantee proper order when seeding
     for (const bookGenre of bookGenres) {
-      const newBookGenre = await createBookGenre(bookGenre);
+      const newBookGenre = await createBookGenreDB(bookGenre);
     }
 
     // A slightly faster way to seed which will not guarantee order unless id is specified.
