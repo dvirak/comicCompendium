@@ -1,5 +1,5 @@
 const { books } = require("../Data/bookData");
-const { createBook } = require("../../../DBFunctions/BookDB/createBookDB");
+const { createBookDB } = require("../../../DBFunctions/BookDB/createBookDB");
 
 async function createInitialBooks() {
   console.log("CREATING INITIAL BOOKS...");
@@ -7,7 +7,7 @@ async function createInitialBooks() {
   try {
     // This method will guarantee proper order when seeding
     for (const book of books) {
-      const newBook = await createBook(book);
+      const newBook = await createBookDB(book);
     }
 
     // A slightly faster way to seed which will not guarantee order unless id is specified.

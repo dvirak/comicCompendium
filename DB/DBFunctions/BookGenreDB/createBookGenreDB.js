@@ -3,9 +3,9 @@ const client = require("../../client");
 //! ---------------------------------------------
 
 //* --------------CREATE BOOK GENRE DB-------------
-async function createBookGenre({ genre_id, book_id }) {
+async function createBookGenreDB({ genre_id, book_id }) {
   console.log(
-    "CREATING BOOK GENRE: genre_id: " + genre_id + ", book_id:" + book_id
+    "CREATING BOOK GENRE IN DB: genre_id: " + genre_id + ", book_id:" + book_id
   );
 
   try {
@@ -22,13 +22,16 @@ async function createBookGenre({ genre_id, book_id }) {
     );
 
     console.log(
-      "CREATED BOOK GENRE: genre_id: " + genre_id + ", book_id: " + book_id
+      "CREATED BOOK GENRE IN DB: genre_id: " +
+        genre_id +
+        ", book_id: " +
+        book_id
     );
 
     return book_genre;
   } catch (error) {
     console.error(
-      `Error creating book genre with genre_id: ${genre_id} and book_id: ${book_id}: ${error}`
+      `Error creating book genre in DB with genre_id: ${genre_id} and book_id: ${book_id}: ${error}`
     );
     throw error;
   }
@@ -36,5 +39,5 @@ async function createBookGenre({ genre_id, book_id }) {
 //* --------------CREATE BOOK GENRE DB-------------
 
 module.exports = {
-  createBookGenre,
+  createBookGenreDB,
 };

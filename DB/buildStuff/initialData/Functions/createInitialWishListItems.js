@@ -1,6 +1,6 @@
 //! Imported Files --------------------------
 const { wishlistItems } = require("../Data/wishlistItemData");
-const { createWishlistItem } = require("../../../DBFunctions/WishlistItemDB");
+const { createWishlistItemDB } = require("../../../DBFunctions/WishlistItemDB");
 //! ---------------------------------------------
 
 //* --------------CREATE INITIAL WISHLIST ITEMS-------------
@@ -16,7 +16,7 @@ async function createInitialWishlistItems() {
 
     // A slightly faster way to seed which will not guarantee order unless id is specified.
     const createdItems = await Promise.all(
-      wishlistItems.map((item) => createWishlistItem(item))
+      wishlistItems.map((item) => createWishlistItemDB(item))
     );
 
     console.log("FINISHED CREATING INITIAL WISHLIST ITEMS!");

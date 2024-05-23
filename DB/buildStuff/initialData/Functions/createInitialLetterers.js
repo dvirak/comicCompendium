@@ -1,7 +1,7 @@
 //! Imported Files --------------------------
 const { letterers } = require("../Data/lettererData");
 const {
-  createLetterer,
+  createLettererDB,
 } = require("../../../DBFunctions/LettererDB/createLettererDB");
 //! ---------------------------------------------
 
@@ -12,7 +12,7 @@ async function createInitialLetterers() {
   try {
     // This method will guarantee proper order when seeding
     for (const letterer of letterers) {
-      const newLetterer = await createLetterer(letterer);
+      const newLetterer = await createLettererDB(letterer);
     }
 
     // A slightly faster way to seed which will not guarantee order unless id is specified.

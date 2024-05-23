@@ -1,7 +1,7 @@
 //! Imported Files --------------------------
 const { colorists } = require("../Data/coloristData");
 const {
-  createColorist,
+  createColoristDB,
 } = require("../../../DBFunctions/ColoristDB/createColoristDB");
 //! ---------------------------------------------
 
@@ -12,7 +12,7 @@ async function createInitialColorists() {
   try {
     // This method will guarantee proper order when seeding
     for (const colorist of colorists) {
-      const newColorist = await createColorist(colorist);
+      const newColorist = await createColoristDB(colorist);
     }
 
     // A slightly faster way to seed which will not guarantee order unless id is specified.

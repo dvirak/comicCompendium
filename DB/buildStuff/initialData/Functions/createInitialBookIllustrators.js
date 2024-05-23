@@ -1,7 +1,7 @@
 //! Imported Files --------------------------
 const { bookIllustrators } = require("../Data/bookIllustratorData");
 const {
-  createBookIllustrator,
+  createBookIllustratorDB,
 } = require("../../../DBFunctions/BookIllustratorDB/createBookIllustratorDB");
 //! ---------------------------------------------
 
@@ -12,7 +12,7 @@ async function createInitialBookIllustrators() {
   try {
     // This method will guarantee proper order when seeding
     for (const bookIllustrator of bookIllustrators) {
-      const newBookIllustrator = await createBookIllustrator(bookIllustrator);
+      const newBookIllustrator = await createBookIllustratorDB(bookIllustrator);
     }
 
     // A slightly faster way to seed which will not guarantee order unless id is specified.

@@ -1,6 +1,6 @@
 //! Imported Files --------------------------
 const { userBooks } = require("../Data/userBooksData");
-const { createUserBook } = require("../../../DBFunctions/UserBooksDB");
+const { createUserBookDB } = require("../../../DBFunctions/UserBooksDB");
 //! ---------------------------------------------
 
 //* --------------CREATE INITIAL USER BOOKS-------------
@@ -16,7 +16,7 @@ async function createInitialUserBooks() {
 
     // A slightly faster way to seed which will not guarantee order unless id is specified.
     const createdUserBooks = await Promise.all(
-      userBooks.map((userBook) => createUserBook(userBook))
+      userBooks.map((userBook) => createUserBookDB(userBook))
     );
 
     console.log("FINISHED CREATING INITIAL USER BOOKS!");

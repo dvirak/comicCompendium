@@ -1,7 +1,7 @@
 //! Imported Files --------------------------
 const { publishers } = require("../Data/publisherData");
 const {
-  createPublisher,
+  createPublisherDB,
 } = require("../../../DBFunctions/PublisherDB/createPublisherDB");
 //! ---------------------------------------------
 
@@ -12,7 +12,7 @@ async function createInitialPublishers() {
   try {
     // This method will guarantee proper order when seeding
     for (const publisher of publishers) {
-      const newPublisher = await createPublisher(publisher);
+      const newPublisher = await createPublisherDB(publisher);
     }
 
     // A slightly faster way to seed which will not guarantee order unless id is specified.

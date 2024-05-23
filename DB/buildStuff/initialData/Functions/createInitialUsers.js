@@ -1,5 +1,5 @@
 const { users } = require("../Data/userData");
-const { createUser } = require("../../../DBFunctions/UserDB/createUserDB");
+const { createUserDB } = require("../../../DBFunctions/UserDB/createUserDB");
 
 // Create initial users
 async function createInitialUsers() {
@@ -7,7 +7,7 @@ async function createInitialUsers() {
 
   try {
     for (const user of users) {
-      const newUser = await createUser(user);
+      const newUser = await createUserDB(user);
     }
   } catch (error) {
     throw error;

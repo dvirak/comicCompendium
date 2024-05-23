@@ -1,7 +1,7 @@
 //! Imported Files --------------------------
 const { series } = require("../Data/seriesData");
 const {
-  createSeries,
+  createSeriesDB,
 } = require("../../../DBFunctions/SeriesDB/createSeriesDB");
 //! ---------------------------------------------
 
@@ -12,7 +12,7 @@ async function createInitialSeries() {
   try {
     // This method will guarantee proper order when seeding
     for (const serie of series) {
-      const newSeries = await createSeries(serie);
+      const newSeries = await createSeriesDB(serie);
     }
 
     // A slightly faster way to seed which will not guarantee order unless id is specified.
