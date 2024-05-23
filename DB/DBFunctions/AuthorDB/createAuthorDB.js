@@ -3,7 +3,7 @@ const client = require("../../client");
 //! ---------------------------------------------
 
 //* --------------CREATE AUTHOR DB-------------
-async function createAuthor({ author_name }) {
+async function createAuthorDB({ author_name }) {
   console.log("CREATING AUTHOR: " + author_name);
 
   try {
@@ -30,5 +30,5 @@ async function createAuthor({ author_name }) {
 //* --------------CREATE AUTHOR DB-------------
 
 module.exports = {
-  createAuthor,
+  createAuthorDB,
 };

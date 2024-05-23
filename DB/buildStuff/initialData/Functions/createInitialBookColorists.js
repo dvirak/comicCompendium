@@ -1,7 +1,7 @@
 //! Imported Files --------------------------
 const { bookColorists } = require("../Data/bookColoristData");
 const {
-  createBookColorist,
+  createBookColoristDB,
 } = require("../../../DBFunctions/BookColoristDB/createBookColoristDB");
 //! ---------------------------------------------
 
@@ -12,7 +12,7 @@ async function createInitialBookColorists() {
   try {
     // This method will guarantee proper order when seeding
     for (const bookColorist of bookColorists) {
-      const newBookColorist = await createBookColorist(bookColorist);
+      const newBookColorist = await createBookColoristDB(bookColorist);
     }
 
     // A slightly faster way to seed which will not guarantee order unless id is specified.

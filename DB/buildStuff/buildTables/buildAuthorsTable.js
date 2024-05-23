@@ -1,5 +1,8 @@
+//! Imported Files --------------------------
 const client = require("../../client");
+//! ---------------------------------------------
 
+//* --------------BUILD AUTHORS TABLE-------------
 async function buildAuthorsTable() {
   console.log("STARTING TO BUILD Authors TABLE...");
 
@@ -17,14 +20,8 @@ async function buildAuthorsTable() {
     throw error;
   }
 }
+//* --------------BUILD AUTHORS TABLE-------------
 
 module.exports = {
   buildAuthorsTable,
 };
-
-//     await client.query(`
-//   CREATE TABLE authors (
-//     id SERIAL PRIMARY KEY,
-//     author_name VARCHAR(255) UNIQUE
-//   );
-// `);
