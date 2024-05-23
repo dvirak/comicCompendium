@@ -28,8 +28,8 @@ async function createInitialData() {
     await createInitialAuthors();
     await createInitialColorists();
     await createInitialIllustrators();
-    // await createInitialInkers();
-    // await createInitialPencillers();
+    await createInitialInkers();
+    await createInitialPencillers();
     await createInitialPublishers();
     await createInitialSeries();
     await createInitialLetterers();
@@ -39,8 +39,8 @@ async function createInitialData() {
     await createInitialBookIllustrators();
     await createInitialBookSeries();
     await createInitialBookLetterers();
-    // await createInitialBookPencillers();
-    // await createInitialBookInkers();
+    await createInitialBookPencillers();
+    await createInitialBookInkers();
     await createInitialGenres();
     await createInitialBookGenres();
   } catch (error) {

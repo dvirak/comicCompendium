@@ -1,6 +1,9 @@
 const colorists = [
   { id: 1, colorist_name: "John Higgins" },
-  // Add more colorists as needed
+  { id: 2, colorist_name: "Laura Martin" },
+  { id: 3, colorist_name: "Neeraj Menon" },
+  { id: 4, colorist_name: "GURU-eFX" },
+  { id: 5, colorist_name: "Rachelle Rosenberg" },
 ];
 
 module.exports = { colorists };

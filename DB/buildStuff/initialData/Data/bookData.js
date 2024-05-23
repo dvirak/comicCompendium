@@ -11,25 +11,18 @@ const books = [
       "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1442239711i/472331.jpg",
     publisher_id: 1,
   },
-  // {
-  //   id: 2,
-  //   title: "Star Wars: War of the Bounty Hunters",
-  //   publish_date: "2021-05-04",
-  //   description:
-  //     "Set in the Star Wars universe, this story follows the events surrounding Boba Fett's mission to deliver Han Solo to Jabba the Hutt, revealing a galaxy-wide conflict over the frozen carbonite slab.",
-  //   print_length: 112,
-  //   series_volume: "1",
-  //   cover_image:
-  //     "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1608680715i/56655472._SY475_.jpg",
-  //   author_id: 2,
-  //   illustrator_id: 2,
-  //   penciller_id: null,
-  //   inker_id: null,
-  //   colorist_id: 2,
-  //   letterer_id: 2,
-  //   publisher_id: 2,
-  //   series_name_id: 2,
-  // },
+  {
+    id: 2,
+    title: "Star Wars: War of the Bounty Hunters",
+    publish_date: "2021-11-23",
+    description:
+      "Set in the Star Wars universe, this story follows the events surrounding Boba Fett's mission to deliver Han Solo to Jabba the Hutt, revealing a galaxy-wide conflict over the frozen carbonite slab.",
+    print_length: 160,
+    series_volume: "Alpha 1, 1-5",
+    cover_image:
+      "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1641552044i/57796295.jpg",
+    publisher_id: 2,
+  },
   // {
   //   id: 3,
   //   title: "Batman: The Black Mirror",
