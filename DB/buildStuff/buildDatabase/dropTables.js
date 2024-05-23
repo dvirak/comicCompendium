@@ -30,6 +30,7 @@ async function dropTables() {
       DROP TABLE IF EXISTS letterers;
       DROP TABLE IF EXISTS publishers;
       DROP TABLE IF EXISTS series;
+      DROP TABLE IF EXISTS genres;
     `);
 
     console.log("TABLES DROPPED!");
