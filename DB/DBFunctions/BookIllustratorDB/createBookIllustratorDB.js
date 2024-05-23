@@ -3,9 +3,9 @@ const client = require("../../client");
 //! ---------------------------------------------
 
 //* --------------CREATE BOOK ILLUSTRATOR DB-------------
-async function createBookIllustrator({ illustrator_id, book_id }) {
+async function createBookIllustratorDB({ illustrator_id, book_id }) {
   console.log(
-    "CREATING BOOK ILLUSTRATOR: illustrator_id: " +
+    "CREATING BOOK ILLUSTRATOR IN DB: illustrator_id: " +
       illustrator_id +
       ", book_id:" +
       book_id
@@ -25,7 +25,7 @@ async function createBookIllustrator({ illustrator_id, book_id }) {
     );
 
     console.log(
-      "CREATED BOOK ILLUSTRATOR: illustrator_id: " +
+      "CREATED BOOK ILLUSTRATOR IN DB: illustrator_id: " +
         illustrator_id +
         ", book_id: " +
         book_id
@@ -34,7 +34,7 @@ async function createBookIllustrator({ illustrator_id, book_id }) {
     return book_illustrator;
   } catch (error) {
     console.error(
-      `Error creating book illustrator with illustrator_id: ${illustrator_id} and book_id: ${book_id}: ${error}`
+      `Error creating book illustrator in DB with illustrator_id: ${illustrator_id} and book_id: ${book_id}: ${error}`
     );
     throw error;
   }
@@ -42,5 +42,5 @@ async function createBookIllustrator({ illustrator_id, book_id }) {
 //* --------------CREATE BOOK ILLUSTRATOR DB-------------
 
 module.exports = {
-  createBookIllustrator,
+  createBookIllustratorDB,
 };

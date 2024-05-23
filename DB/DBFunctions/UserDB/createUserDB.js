@@ -1,6 +1,10 @@
+//! Imported Files --------------------------
 const client = require("../../client");
 const bcrypt = require("bcrypt");
 const SALT_COUNT = 10;
+//! ---------------------------------------------
+
+//* --------------CREATE USER DB-------------
 
 /* 
 createUser receives values from a new patron to the website and pushes them into the Database so they can access their data later
@@ -8,7 +12,8 @@ Pre-Condition: A new user with no profile saved, and the following information f
   UNIQUE username, password, first_name, last_name, preferred_name, phone, email, admin status
 Post-Condition: Returns the userinfomration that was added to the database
 */
-async function createUser({
+
+async function createUserDB({
   username,
   password,
   first_name,
@@ -18,7 +23,7 @@ async function createUser({
   email,
   admin,
 }) {
-  console.log("CREATING USER: " + username);
+  console.log("CREATING USER IN DB: " + username);
 
   // use bcrypt to "hash" a function by SALT_COUNT to create unique hashedPassword that is more secure
   const hashedPassword = await bcrypt.hash(password, SALT_COUNT);
@@ -44,7 +49,7 @@ async function createUser({
       ]
     );
 
-    console.log("USER CREATED: " + user.username);
+    console.log("USER CREATED IN DB: " + user.username);
 
     return user;
   } catch (error) {
@@ -53,6 +58,8 @@ async function createUser({
   }
 }
 
+//* --------------CREATE USER DB-------------
+
 module.exports = {
-  createUser,
+  createUserDB,
 };

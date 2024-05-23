@@ -3,8 +3,8 @@ const client = require("../../client");
 //! ---------------------------------------------
 
 //* --------------CREATE LETTERER DB-------------
-async function createLetterer({ letterer_name }) {
-  console.log("CREATING LETTERER: " + letterer_name);
+async function createLettererDB({ letterer_name }) {
+  console.log("CREATING LETTERER IN DB: " + letterer_name);
 
   try {
     const {
@@ -19,16 +19,18 @@ async function createLetterer({ letterer_name }) {
       [letterer_name]
     );
 
-    console.log("CREATED LETTERER: " + letterer_name);
+    console.log("CREATED LETTERER IN DB: " + letterer_name);
 
     return letterer;
   } catch (error) {
-    console.error(`Error creating ${letterer_name}: ${error}`);
+    console.error(
+      `Error creating letterer in DB with name ${letterer_name}: ${error}`
+    );
     throw error;
   }
 }
 //* --------------CREATE LETTERER DB-------------
 
 module.exports = {
-  createLetterer,
+  createLettererDB,
 };

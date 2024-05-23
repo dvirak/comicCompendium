@@ -4,7 +4,7 @@ const client = require("../../client");
 //! ---------------------------------------------
 
 //* --------------CREATE BOOK DB-------------
-async function createBook({
+async function createBookDB({
   title,
   publish_date,
   description,
@@ -20,7 +20,7 @@ async function createBook({
   publisher_id,
   series_name_id,
 }) {
-  console.log("CREATING BOOK: " + title);
+  console.log("CREATING BOOK IN DB: " + title);
 
   try {
     const {
@@ -61,5 +61,5 @@ async function createBook({
 //* --------------CREATE BOOK DB-------------
 
 module.exports = {
-  createBook,
+  createBookDB,
 };

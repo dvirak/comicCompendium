@@ -3,9 +3,9 @@ const client = require("../../client");
 //! ---------------------------------------------
 
 //* --------------CREATE BOOK COLORIST DB-------------
-async function createBookColorist({ colorist_id, book_id }) {
+async function createBookColoristDB({ colorist_id, book_id }) {
   console.log(
-    "CREATING BOOK COLORIST: colorist_id: " +
+    "CREATING BOOK COLORIST IN DB: colorist_id: " +
       colorist_id +
       ", book_id:" +
       book_id
@@ -42,5 +42,5 @@ async function createBookColorist({ colorist_id, book_id }) {
 //* --------------CREATE BOOK COLORIST DB-------------
 
 module.exports = {
-  createBookColorist,
+  createBookColoristDB,
 };

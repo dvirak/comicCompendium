@@ -3,8 +3,8 @@ const client = require("../../client");
 //! ---------------------------------------------
 
 //* --------------CREATE SERIES DB-------------
-async function createSeries({ series_name }) {
-  console.log("CREATING SERIES: " + series_name);
+async function createSeriesDB({ series_name }) {
+  console.log("CREATING SERIES IN DB: " + series_name);
 
   try {
     const {
@@ -19,16 +19,18 @@ async function createSeries({ series_name }) {
       [series_name]
     );
 
-    console.log("CREATED SERIES: " + series_name);
+    console.log("CREATED SERIES IN DB: " + series_name);
 
     return series;
   } catch (error) {
-    console.error(`Error creating ${series_name}: ${error}`);
+    console.error(
+      `Error creating series in DB with name ${series_name}: ${error}`
+    );
     throw error;
   }
 }
 //* --------------CREATE SERIES DB-------------
 
 module.exports = {
-  createSeries,
+  createSeriesDB,
 };

@@ -3,9 +3,9 @@ const client = require("../../client");
 //! ---------------------------------------------
 
 //* --------------CREATE BOOK INKER DB-------------
-async function createBookInker({ inker_id, book_id }) {
+async function createBookInkerDB({ inker_id, book_id }) {
   console.log(
-    "CREATING BOOK INKER: inker_id: " + inker_id + ", book_id:" + book_id
+    "CREATING BOOK INKER IN DB: inker_id: " + inker_id + ", book_id:" + book_id
   );
 
   try {
@@ -22,13 +22,16 @@ async function createBookInker({ inker_id, book_id }) {
     );
 
     console.log(
-      "CREATED BOOK INKER: inker_id: " + inker_id + ", book_id: " + book_id
+      "CREATED BOOK INKER IN DB: inker_id: " +
+        inker_id +
+        ", book_id: " +
+        book_id
     );
 
     return book_inker;
   } catch (error) {
     console.error(
-      `Error creating book inker with inker_id: ${inker_id} and book_id: ${book_id}: ${error}`
+      `Error creating book inker in DB with inker_id: ${inker_id} and book_id: ${book_id}: ${error}`
     );
     throw error;
   }
@@ -36,5 +39,5 @@ async function createBookInker({ inker_id, book_id }) {
 //* --------------CREATE BOOK INKER DB-------------
 
 module.exports = {
-  createBookInker,
+  createBookInkerDB,
 };

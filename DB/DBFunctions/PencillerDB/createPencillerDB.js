@@ -3,8 +3,8 @@ const client = require("../../client");
 //! ---------------------------------------------
 
 //* --------------CREATE PENCILLER DB-------------
-async function createPenciller({ penciller_name }) {
-  console.log("CREATING PENCILLER: " + penciller_name);
+async function createPencillerDB({ penciller_name }) {
+  console.log("CREATING PENCILLER IN DB: " + penciller_name);
 
   try {
     const {
@@ -19,16 +19,18 @@ async function createPenciller({ penciller_name }) {
       [penciller_name]
     );
 
-    console.log("CREATED PENCILLER: " + penciller_name);
+    console.log("CREATED PENCILLER IN DB: " + penciller_name);
 
     return penciller;
   } catch (error) {
-    console.error(`Error creating ${penciller_name}: ${error}`);
+    console.error(
+      `Error creating penciller in DB with name ${penciller_name}: ${error}`
+    );
     throw error;
   }
 }
 //* --------------CREATE PENCILLER DB-------------
 
 module.exports = {
-  createPenciller,
+  createPencillerDB,
 };

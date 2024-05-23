@@ -3,8 +3,8 @@ const client = require("../../client");
 //! ---------------------------------------------
 
 //* --------------CREATE COLORIST DB-------------
-async function createColorist({ colorist_name }) {
-  console.log("CREATING COLORIST: " + colorist_name);
+async function createColoristDB({ colorist_name }) {
+  console.log("CREATING COLORIST IN DB: " + colorist_name);
 
   try {
     const {
@@ -19,16 +19,18 @@ async function createColorist({ colorist_name }) {
       [colorist_name]
     );
 
-    console.log("CREATED COLORIST: " + colorist_name);
+    console.log("CREATED COLORIST IN DB: " + colorist_name);
 
     return colorist;
   } catch (error) {
-    console.error(`Error creating ${colorist_name}: ${error}`);
+    console.error(
+      `Error creating colorist in DB with name ${colorist_name}: ${error}`
+    );
     throw error;
   }
 }
 //* --------------CREATE COLORIST DB-------------
 
 module.exports = {
-  createColorist,
+  createColoristDB,
 };
