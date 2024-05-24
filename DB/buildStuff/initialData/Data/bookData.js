@@ -68,6 +68,17 @@ const books = [
     cover_image:
       "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1551800909i/40996652.jpg",
   },
+  {
+    id: 7,
+    title: "Batman: The Killing Joke, The Deluxe Edition",
+    publish_date: "2008-03-19",
+    description:
+      "A chilling exploration of the Joker's origins, this graphic novel delves into his twisted relationship with Batman, culminating in a brutal attack on Barbara Gordon. The story examines themes of madness, identity, and the thin line between hero and villain in Gotham City.",
+    print_length: 64,
+    series_volume: "Batman Post-Crisis #45",
+    cover_image:
+      "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1443698368i/2233549.jpg",
+  },
 ];
 
 module.exports = {
