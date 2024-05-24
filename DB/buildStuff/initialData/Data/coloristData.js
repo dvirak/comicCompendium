@@ -10,6 +10,8 @@ const colorists = [
   { id: 9, colorist_name: "Jeremy Lawson" },
   { id: 10, colorist_name: "Tony Avina" },
   { id: 11, colorist_name: "Pete Woods" },
+  { id: 12, colorist_name: "Gene D'Angelo" },
+  { id: 13, colorist_name: "Glenn Whitmore" },
 ];
 
 module.exports = { colorists };
