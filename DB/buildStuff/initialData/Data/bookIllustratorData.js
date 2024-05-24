@@ -5,6 +5,9 @@ const bookIllustrators = [
   { id: 4, book_id: 2, illustrator_id: 4 },
   { id: 5, book_id: 3, illustrator_id: 5 },
   { id: 6, book_id: 3, illustrator_id: 6 },
+  { id: 7, book_id: 4, illustrator_id: 7 },
+  { id: 8, book_id: 4, illustrator_id: 8 },
+  { id: 9, book_id: 4, illustrator_id: 9 },
 ];
 
 module.exports = {
