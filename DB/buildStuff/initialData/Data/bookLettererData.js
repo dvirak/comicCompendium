@@ -16,6 +16,7 @@ const bookLetterers = [
   { id: 15, book_id: 9, letterer_id: 11 },
   { id: 16, book_id: 10, letterer_id: 10 },
   { id: 17, book_id: 10, letterer_id: 11 },
+  { id: 18, book_id: 11, letterer_id: 2 },
 ];
 
 module.exports = {

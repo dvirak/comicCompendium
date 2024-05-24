@@ -53,7 +53,7 @@ const books = [
       "Superman faces his ultimate challenge as he battles the monstrous Doomsday in a fight to the death. This storyline, one of the most iconic in comic book history, explores themes of heroism, sacrifice, and the impact of Superman's death on the world.",
     print_length: 160,
     series_volume:
-      "Death and Return of Superman 2016 Edition (#1), Superman Post-Crisis (#20), Superman (1987) (#73-75), Superman: The Man of Steel (1991-2003) (#17–19), Esenciales DC, Post-Crisis Superman (Collected Editions)",
+      "Death and Return of Superman 2016 Edition (#1), Superman Post-Crisis (#20), Superman (1987) (#73-75), Superman: The Man of Steel (1991-2003) (#17-19), Esenciales DC, Post-Crisis Superman (Collected Editions)",
     cover_image:
       "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1459558444i/16156334.jpg",
   },
@@ -104,13 +104,24 @@ const books = [
   {
     id: 10,
     title: "Katara and the Pirate's Silver (Avatar The Last Airbender)",
-    publish_date: "220-10-13",
+    publish_date: "2020-10-13",
     description:
       "In this graphic novel set in the Avatar universe, Katara embarks on an adventure where she joins a group of pirates. She must navigate the treacherous waters and outwit her newfound allies and enemies to secure a valuable treasure while staying true to her principles.",
     print_length: 80,
     series_volume: "Avatar: The Last Airbender Comics (#0.5",
     cover_image:
       "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1589918348i/52815360.jpg",
+  },
+  {
+    id: 11,
+    title: "The Unbeatable Squirrel Girl Beats Up the Marvel Universe",
+    publish_date: "2016-10-11",
+    description:
+      "In this comedic and action-packed tale, Squirrel Girl, known for her unbeatable optimism and squirrel-based powers, finds herself facing off against the entire Marvel Universe. With her unique blend of wit and strength, she takes on some of the most formidable foes in the Marvel universe, proving that sometimes the most unexpected heroes can save the day.",
+    print_length: 120,
+    series_volume: "Marvel OGN(#8)",
+    cover_image:
+      "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1470642451i/29567266.jpg",
   },
 ];
 
