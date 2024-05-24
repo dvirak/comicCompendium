@@ -20,6 +20,7 @@ async function dropTables() {
       DROP TABLE IF EXISTS book_series;
       DROP TABLE IF EXISTS book_letterers;
       DROP TABLE IF EXISTS book_genres;
+      DROP TABLE IF EXISTS book_publishers;
       DROP TABLE IF EXISTS users;
       DROP TABLE IF EXISTS books;
       DROP TABLE IF EXISTS authors;

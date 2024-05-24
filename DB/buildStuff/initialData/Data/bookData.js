@@ -34,6 +34,17 @@ const books = [
     cover_image:
       "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1503130842i/13533742.jpg",
   },
+  {
+    id: 4,
+    title: "Batman Beyond, Volume 1: Escaping the Grave",
+    publish_date: "2017-06-28",
+    description:
+      "Terry McGinnis returns as Batman in Neo-Gotham after his presumed death. Battling new and old enemies, he faces the challenge of protecting the city while uncovering secrets about his past.",
+    print_length: 144,
+    series_volume: "Batman Beyond (2016) #1-5, Batman Beyond: Rebirth #1",
+    cover_image:
+      "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1495899826i/33232943.jpg",
+  },
 ];
 
 module.exports = {
