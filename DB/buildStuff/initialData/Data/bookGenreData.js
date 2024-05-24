@@ -14,6 +14,14 @@ const bookGenres = [
   { id: 13, book_id: 2, genre_id: 4 },
   { id: 14, book_id: 2, genre_id: 6 },
   { id: 15, book_id: 2, genre_id: 10 },
+  { id: 16, book_id: 3, genre_id: 1 },
+  { id: 17, book_id: 3, genre_id: 2 },
+  { id: 18, book_id: 3, genre_id: 3 },
+  { id: 19, book_id: 3, genre_id: 4 },
+  { id: 20, book_id: 3, genre_id: 7 },
+  { id: 21, book_id: 3, genre_id: 9 },
+  { id: 22, book_id: 3, genre_id: 11 },
+  { id: 23, book_id: 3, genre_id: 12 },
 ];
 
 module.exports = {
