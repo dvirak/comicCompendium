@@ -51,6 +51,21 @@ const bookGenres = [
   { id: 50, book_id: 7, genre_id: 9 },
   { id: 51, book_id: 7, genre_id: 11 },
   { id: 52, book_id: 7, genre_id: 12 },
+  { id: 53, book_id: 8, genre_id: 1 },
+  { id: 54, book_id: 8, genre_id: 2 },
+  { id: 55, book_id: 8, genre_id: 4 },
+  { id: 55, book_id: 8, genre_id: 6 },
+  { id: 56, book_id: 8, genre_id: 15 },
+  { id: 57, book_id: 9, genre_id: 1 },
+  { id: 58, book_id: 9, genre_id: 2 },
+  { id: 59, book_id: 9, genre_id: 4 },
+  { id: 60, book_id: 9, genre_id: 6 },
+  { id: 61, book_id: 9, genre_id: 15 },
+  { id: 62, book_id: 10, genre_id: 1 },
+  { id: 63, book_id: 10, genre_id: 2 },
+  { id: 64, book_id: 10, genre_id: 4 },
+  { id: 65, book_id: 10, genre_id: 6 },
+  { id: 66, book_id: 10, genre_id: 15 },
 ];
 
 module.exports = {

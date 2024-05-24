@@ -11,5 +11,6 @@ const illustrators = [
   { id: 10, illustrator_name: "John Bogdanove" },
   { id: 11, illustrator_name: "J.H. Williams III" },
   { id: 12, illustrator_name: "Brian Bolland" },
+  { id: 13, illustrator_name: "Peter Wartman" },
 ];
 module.exports = { illustrators };

@@ -18,7 +18,8 @@ const colorists = [
   { id: 17, colorist_name: "Cox" },
   { id: 18, colorist_name: "Alex Sinclair" },
   { id: 19, colorist_name: "Nick Bell" },
-  { id: 19, colorist_name: "Brian Bolland" },
+  { id: 20, colorist_name: "Brian Bolland" },
+  { id: 21, colorist_name: "Adele Matera" },
 ];
 
 module.exports = { colorists };

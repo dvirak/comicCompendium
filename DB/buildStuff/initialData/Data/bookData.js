@@ -79,6 +79,39 @@ const books = [
     cover_image:
       "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1443698368i/2233549.jpg",
   },
+  {
+    id: 8,
+    title: "Suki, Alone (Avatar The Last Airbender)",
+    publish_date: "2021-06-22",
+    description:
+      "In this graphic novel set in the Avatar universe, Suki, leader of the Kyoshi Warriors, finds herself imprisoned in the Fire Nation's highest security prison. The story follows her struggle for survival and self-discovery as she navigates the harsh conditions and uncovers a plot that could change the course of the war",
+    print_length: 80,
+    series_volume: "Avatar: The Last Airbender Comics (#0.6)",
+    cover_image:
+      "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1607483841i/56227240.jpg",
+  },
+  {
+    id: 9,
+    title: "Toph Beifong's Metalbending Academy (Avatar The Last Airbender)",
+    publish_date: "2021-02-16",
+    description:
+      "In this graphic novel set in the Avatar universe, Toph Beifong establishes and runs an academy to teach metalbending. The story explores her efforts to train a new generation of benders while dealing with her own personal challenges and the expectations placed upon her.",
+    print_length: 80,
+    series_volume: "Avatar: The Last Airbender Comics (#7)",
+    cover_image:
+      "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1595627500i/54663469.jpg",
+  },
+  {
+    id: 10,
+    title: "Katara and the Pirate's Silver (Avatar The Last Airbender)",
+    publish_date: "220-10-13",
+    description:
+      "In this graphic novel set in the Avatar universe, Katara embarks on an adventure where she joins a group of pirates. She must navigate the treacherous waters and outwit her newfound allies and enemies to secure a valuable treasure while staying true to her principles.",
+    print_length: 80,
+    series_volume: "Avatar: The Last Airbender Comics (#0.5",
+    cover_image:
+      "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1589918348i/52815360.jpg",
+  },
 ];
 
 module.exports = {

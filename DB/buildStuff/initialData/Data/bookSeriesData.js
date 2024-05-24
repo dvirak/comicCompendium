@@ -15,6 +15,12 @@ const bookSeries = [
   { id: 13, book_id: 7, series_id: 4 },
   { id: 14, book_id: 7, series_id: 5 },
   { id: 15, book_id: 7, series_id: 13 },
+  { id: 16, book_id: 8, series_id: 14 },
+  { id: 17, book_id: 8, series_id: 15 },
+  { id: 18, book_id: 9, series_id: 14 },
+  { id: 19, book_id: 9, series_id: 15 },
+  { id: 20, book_id: 10, series_id: 14 },
+  { id: 21, book_id: 10, series_id: 15 },
 ];
 
 module.exports = {

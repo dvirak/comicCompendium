@@ -12,6 +12,8 @@ const series = [
   { id: 11, series_name: "Superman: The Man of Steel" },
   { id: 12, series_name: "Promethea" },
   { id: 13, series_name: "Batman One Shots" },
+  { id: 14, series_name: "Avatar The Last Airbender Comics" },
+  { id: 15, series_name: "Avatar The Last Airbender Books" },
 ];
 
 module.exports = { series };
