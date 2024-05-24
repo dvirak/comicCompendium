@@ -21,6 +21,9 @@ const { createInitialBookSeries } = require("./createInitialBookSeries");
 const { createInitialBookLetterers } = require("./createInitialBookLetterers");
 const { createInitialBookGenres } = require("./createInitialBookGenres");
 const { createInitialGenres } = require("./createInitialGenres");
+const {
+  createInitialBookPublishers,
+} = require("./createInitialBookPublishers");
 
 async function createInitialData() {
   try {
@@ -43,6 +46,7 @@ async function createInitialData() {
     await createInitialBookInkers();
     await createInitialGenres();
     await createInitialBookGenres();
+    await createInitialBookPublishers();
   } catch (error) {
     console.log("ERROR IN CREATE INITIAL DATA: " + error);
     throw error;
