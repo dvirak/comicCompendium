@@ -11,6 +11,7 @@ const genres = [
   { id: 10, genre_name: "Star Wars" },
   { id: 11, genre_name: "Horror" },
   { id: 12, genre_name: "Batman" },
+  { id: 13, genre_name: "Superman" },
 ];
 
 module.exports = {
