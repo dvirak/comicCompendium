@@ -18,6 +18,7 @@ const bookColorists = [
   { id: 17, book_id: 6, colorist_id: 17 },
   { id: 18, book_id: 6, colorist_id: 18 },
   { id: 19, book_id: 6, colorist_id: 19 },
+  { id: 20, book_id: 7, colorist_id: 20 },
 ];
 
 module.exports = {

@@ -8,6 +8,7 @@ const letterers = [
   { id: 7, letterer_name: "Bill Oakley" },
   { id: 8, letterer_name: "Wille Schubert" },
   { id: 9, letterer_name: "Todd Klein" },
+  { id: 10, letterer_name: "Richard Starkings" },
 ];
 
 module.exports = {
