@@ -7,6 +7,7 @@ const inkers = [
   { id: 6, inker_name: "Doug Hazlewood" },
   { id: 7, inker_name: "Dennis Janke" },
   { id: 8, inker_name: "Denis Rodier" },
+  { id: 9, inker_name: "Mick Gray" },
 ];
 
 module.exports = {

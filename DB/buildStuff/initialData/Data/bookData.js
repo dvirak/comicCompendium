@@ -57,6 +57,17 @@ const books = [
     cover_image:
       "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1459558444i/16156334.jpg",
   },
+  {
+    id: 6,
+    title: "Promethea: 20th Anniversary Deluxe Edition, Book One",
+    publish_date: "2019-03-12",
+    description:
+      "Promethea tells the story of Sophie Bangs, a young college student in a futuristic New York City who is researching the recurring figure of Promethea, a mythical heroine who has appeared in various forms throughout history. As Sophie becomes the new Promethea, she embarks on a journey through the realms of imagination, learning about magic, mythology, and the power of stories.",
+    print_length: 384,
+    series_volume: "Promethea #1-12",
+    cover_image:
+      "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1551800909i/40996652.jpg",
+  },
 ];
 
 module.exports = {

@@ -8,6 +8,7 @@ const bookInkers = [
   { id: 7, book_id: 5, inker_id: 6 },
   { id: 8, book_id: 5, inker_id: 7 },
   { id: 9, book_id: 5, inker_id: 8 },
+  { id: 10, book_id: 6, inker_id: 9 },
 ];
 
 module.exports = {

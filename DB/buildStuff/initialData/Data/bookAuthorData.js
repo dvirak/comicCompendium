@@ -7,6 +7,7 @@ const bookAuthors = [
   { id: 6, book_id: 5, author_id: 5 },
   { id: 7, book_id: 5, author_id: 6 },
   { id: 8, book_id: 5, author_id: 7 },
+  { id: 9, book_id: 6, author_id: 1 },
 ];
 
 module.exports = {
