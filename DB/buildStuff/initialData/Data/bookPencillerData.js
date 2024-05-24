@@ -6,6 +6,7 @@ const bookPencillers = [
   { id: 5, book_id: 5, penciller_id: 5 },
   { id: 6, book_id: 5, penciller_id: 6 },
   { id: 7, book_id: 5, penciller_id: 7 },
+  { id: 8, book_id: 6, penciller_id: 8 },
 ];
 
 module.exports = {

@@ -12,6 +12,12 @@ const bookColorists = [
   { id: 11, book_id: 4, colorist_id: 11 },
   { id: 12, book_id: 5, colorist_id: 12 },
   { id: 13, book_id: 5, colorist_id: 13 },
+  { id: 14, book_id: 6, colorist_id: 14 },
+  { id: 15, book_id: 6, colorist_id: 15 },
+  { id: 16, book_id: 6, colorist_id: 16 },
+  { id: 17, book_id: 6, colorist_id: 17 },
+  { id: 18, book_id: 6, colorist_id: 18 },
+  { id: 19, book_id: 6, colorist_id: 19 },
 ];
 
 module.exports = {

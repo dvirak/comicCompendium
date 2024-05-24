@@ -12,6 +12,12 @@ const colorists = [
   { id: 11, colorist_name: "Pete Woods" },
   { id: 12, colorist_name: "Gene D'Angelo" },
   { id: 13, colorist_name: "Glenn Whitmore" },
+  { id: 14, colorist_name: "Jeremy Cox" },
+  { id: 15, colorist_name: "Digital Chameleon" },
+  { id: 16, colorist_name: "WildStorm FX" },
+  { id: 17, colorist_name: "Cox" },
+  { id: 18, colorist_name: "Alex Sinclair" },
+  { id: 19, colorist_name: "Nick Bell" },
 ];
 
 module.exports = { colorists };

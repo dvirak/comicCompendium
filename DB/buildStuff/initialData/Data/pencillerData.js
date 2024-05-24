@@ -6,6 +6,7 @@ const pencillers = [
   { id: 5, penciller_name: "Tom Grummett" },
   { id: 6, penciller_name: "Jackson Guice" },
   { id: 7, penciller_name: "Dan Jurgens" },
+  { id: 8, penciller_name: "J.H. Williams III" },
 ];
 
 module.exports = {

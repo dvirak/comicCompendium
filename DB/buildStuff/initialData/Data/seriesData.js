@@ -10,6 +10,7 @@ const series = [
   { id: 9, series_name: "Superman Post-Crisis" },
   { id: 10, series_name: "Superman (1987)" },
   { id: 11, series_name: "Superman: The Man of Steel" },
+  { id: 12, series_name: "Promethea" },
 ];
 
 module.exports = { series };
