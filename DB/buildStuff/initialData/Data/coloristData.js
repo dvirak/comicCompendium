@@ -20,6 +20,7 @@ const colorists = [
   { id: 19, colorist_name: "Nick Bell" },
   { id: 20, colorist_name: "Brian Bolland" },
   { id: 21, colorist_name: "Adele Matera" },
+  { id: 22, colorist_name: "Rico Renzi" },
 ];
 
 module.exports = { colorists };

@@ -14,6 +14,9 @@ const series = [
   { id: 13, series_name: "Batman One Shots" },
   { id: 14, series_name: "Avatar The Last Airbender Comics" },
   { id: 15, series_name: "Avatar The Last Airbender Books" },
+  { id: 16, series_name: "Marvel OGN" },
+  { id: 17, series_name: "The Unbeatable Squirrel Girl" },
+  { id: 18, series_name: "The Unbeatable Squirrel Girl (Collected Editions)" },
 ];
 
 module.exports = { series };
