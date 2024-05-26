@@ -11,7 +11,6 @@ async function createBookDB({
   print_length,
   series_volume,
   cover_image,
-  publisher_id,
 }) {
   console.log("CREATING BOOK IN DB: " + title);
 
@@ -20,8 +19,8 @@ async function createBookDB({
       rows: [book],
     } = await client.query(
       `
-      INSERT INTO books(title, publish_date, description, print_length, series_volume, cover_image, publisher_id)
-      VALUES ($1, $2, $3, $4, $5, $6, $7)
+      INSERT INTO books(title, publish_date, description, print_length, series_volume, cover_image)
+      VALUES ($1, $2, $3, $4, $5, $6)
       ON CONFLICT (title) DO NOTHING
       RETURNING *
       `,
@@ -32,7 +31,6 @@ async function createBookDB({
         print_length,
         series_volume,
         cover_image,
-        publisher_id,
       ]
     );
 

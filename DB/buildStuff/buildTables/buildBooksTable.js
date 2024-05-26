@@ -13,7 +13,6 @@ async function buildBooksTable() {
         print_length INTEGER,
         series_volume VARCHAR(255),
         cover_image VARCHAR(255),
-        publisher_id INTEGER REFERENCES publishers(id),
         CONSTRAINT unique_id_title UNIQUE (id, title)
       );
     `);

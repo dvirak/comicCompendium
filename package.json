@@ -7,7 +7,7 @@
     "test": "tests"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "mocha 'Test/*.mjs' --require esm",
     "start": "nodemon index.js",
     "seed": "node ./DB/seed.js"
   },
@@ -23,5 +23,10 @@
     "morgan": "^1.10.0",
     "nodemon": "^3.1.0",
     "pg": "^8.9.0"
+  },
+  "devDependencies": {
+    "chai": "^5.1.1",
+    "esm": "^3.2.25",
+    "mocha": "^10.4.0"
   }
 }

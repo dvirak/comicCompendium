@@ -1,6 +1,8 @@
 const express = require("express");
 const apiRouter = express.Router();
 
+const bookController = require("./bookController");
+
 const jwt = require("jsonwebtoken");
 // const { getUserById, getUserByUsername } = require("../db/usersDB");
 const client = require("../DB/client");
@@ -51,11 +53,11 @@ const { JWT_SECRET = "asugertiughfhsvduhsv" } = process.env;
 // });
 
 // Will add these once I have the APIs written
-const usersRouter = require("./usersAPI");
-apiRouter.use("/users", usersRouter);
+// const usersRouter = require("./usersAPI");
+// apiRouter.use("/users", usersRouter);
 
-const booksRouter = require("./booksAPI");
-apiRouter.use("/books", booksRouter);
+// const booksRouter = require("./bookController");
+// apiRouter.use("/books", booksRouter);
 
 // const cartsRouter = require("./cartsAPI");
 // apiRouter.use("/cart", cartsRouter);
@@ -65,6 +67,8 @@ apiRouter.use("/books", booksRouter);
 
 // const wishlistsRouter = require("./wishlistAPI");
 // apiRouter.use("/wishlist", wishlistsRouter);
+
+apiRouter.use("/books", bookController);
 
 apiRouter.use((error, req, res, next) => {
   console.log(req.header);
