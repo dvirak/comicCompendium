@@ -1,12 +1,11 @@
 // ! ----------------- IMPORTED FILES --------------------------
 const express = require("express");
 const router = express.Router();
-// ! -----------------------------------------------------------
 
-// ! ---------- IMPORTED COMPONENTS/VARIABLES -------------------
+// ! ---------------- IMPORTED MODULES -------------------------
 const {
   getAllBooksBasicDB,
-} = require("../../DB/DBFunctions/BookDB/getAllBooksBasicDB");
+} = require("../../DB/DBFunctions/BookDB/getBooksDB/getAllBooksBasicDB");
 // ! -----------------------------------------------------------
 
 /**
@@ -23,19 +22,16 @@ const {
 
 router.get("/", async (req, res, next) => {
   console.log("IN GET ALL BOOKS BASIC API");
+
   try {
-    const rawData = await getAllBooksBasicDB();
-    const basicBooks = JSON.stringify(rawData);
-    res.send(basicBooks);
-  } catch ({ title, message }) {
-    console.log(
-      "Error in GET ALL BOOKS BASIC API: " + title + "Message: " + message
-    );
-    next({
-      error: err,
-      message: "Failed GET ALL BOOKS BASIC API.",
-    });
-    throw error;
+    // Calls the database function to get all books
+    const basicBooks = await getAllBooksBasicDB();
+
+    // Send list of books as the response
+    res.status(200).json(basicBooks);
+  } catch (err) {
+    // Pass the error to the next middleware
+    next(err);
   }
 });
 

@@ -22,7 +22,14 @@ apiRouter.use("/users", userController);
 apiRouter.use((error, req, res, next) => {
   console.log(req.header);
   console.log(error);
-  res.send(error);
+
+  console.error(error);
+
+  // Send a standardize error response
+  res.status.json({
+    error: "Internal Service Failure",
+    message: error.message || "An Unexpected Error Occurred.",
+  });
 });
 
 module.exports = apiRouter;
