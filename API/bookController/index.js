@@ -10,6 +10,6 @@ const booksRouter = express.Router();
  * Route: /books/all-books-basic-info
  */
 const getAllBooksBasicAPI = require("./getAllBooksBasicAPI");
-booksRouter.use("/all-books-basic-info", getAllBooksBasicAPI);
+booksRouter.use("/", getAllBooksBasicAPI);
 
 module.exports = booksRouter;

@@ -1,5 +1,5 @@
 // ! ----------------- IMPORTED FILES --------------------------
-const client = require("../../client");
+const client = require("../../../client");
 
 // Import the requireUser function from the utils module.
 // const { requireUser } = require('/utils');
