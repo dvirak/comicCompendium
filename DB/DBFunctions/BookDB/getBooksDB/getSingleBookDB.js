@@ -1,4 +1,4 @@
-const { fetchBookById, fetchBookByName } = require("./helpers");
+const { getBookByIdDB, getBookByNameDB } = require("./helpers");
 
 /**
  * Retrieves a single book from the database based on the provided book_id or book_name.
@@ -18,9 +18,9 @@ async function getSingleBookDB(book_id, book_name) {
   let book;
 
   if (book_id) {
-    book = await fetchBookById(book_id);
+    book = await getBookByIdDB(book_id);
   } else if (book_name) {
-    book = await fetchBookByName(book_name);
+    book = await getBookByNameDB(book_name);
   }
 
   if (!book) {
