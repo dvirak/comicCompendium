@@ -30,8 +30,8 @@ router.get("/", async (req, res, next) => {
     // Send list of books as the response
     res.status(200).json(basicBooks);
   } catch (err) {
-    // Pass the error to the next middleware
-    next(err);
+    // Handle errors and send an appropriate response
+    res.status(500).json({ error: err.message });
   }
 });
 
