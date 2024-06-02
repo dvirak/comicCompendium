@@ -1,4 +1,4 @@
-const { getBookByIdDB, getBookByNameDB } = require("./helpers");
+const { getBookByIdDB, getBookByNameDB } = require("./Helpers");
 
 /**
  * Retrieves a single book from the database based on the provided book_id or book_name.
@@ -10,6 +10,7 @@ const { getBookByIdDB, getBookByNameDB } = require("./helpers");
  */
 async function getSingleBookDB(book_id, book_name) {
   console.log("IN GET SINGLE BOOK DB");
+  console.log("book_id");
 
   if (!book_id && !book_name) {
     throw new Error("Either book_id or book_name must be provided.");

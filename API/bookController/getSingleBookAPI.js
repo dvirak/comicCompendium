@@ -1,7 +1,12 @@
 // ! ----------------- IMPORTED FILES --------------------------
+const express = require("express");
+// ! -----------------------------------------------------------
+
+// ! ---------------- IMPORTED MODULES -------------------------
 const {
   getSingleBookDB,
 } = require("../../DB/DBFunctions/BookDB/getBooksDB/getSingleBookDB");
+// ! -----------------------------------------------------------
 
 /**
  * Handles GET requests to retrieve a single book based on either book_id or book_name.
@@ -10,7 +15,11 @@ const {
  * @param {Object} res - The response object, used to send back the desired book data or an error message.
  */
 async function getSingleBookAPI(req, res) {
-  const { book_id, book_name } = req.query;
+  const { book_id, book_name } = req.body;
+
+  console.log(req.body);
+
+  console.log("IN GET SINGLE BOOK API");
 
   try {
     // Validate input
@@ -31,4 +40,4 @@ async function getSingleBookAPI(req, res) {
   }
 }
 
-module.exports = { getSingleBookAPI };
+module.exports = getSingleBookAPI;

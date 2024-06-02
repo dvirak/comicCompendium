@@ -20,12 +20,12 @@ const {
  * @postcondition A response containing basic book information is sent to the client.
  */
 
-router.get("/", async (req, res, next) => {
+async function getAllBooksBasicAPI(req, res) {
   console.log("IN GET ALL BOOKS BASIC API");
 
   try {
     // Calls the database function to get all books
-    const basicBooks = await getAllBooksBasicDB();
+    const basicBooks = await getAllBooksBasicDB(req, res);
 
     // Send list of books as the response
     res.status(200).json(basicBooks);
@@ -33,6 +33,6 @@ router.get("/", async (req, res, next) => {
     // Handle errors and send an appropriate response
     res.status(500).json({ error: err.message });
   }
-});
+}
 
-module.exports = router;
+module.exports = getAllBooksBasicAPI;
