@@ -12,4 +12,7 @@ const usersRouter = express.Router();
 const getAllUsersAPI = require("./getAllUsersAPI");
 usersRouter.get("/", getAllUsersAPI);
 
+const getSingleUserAPI = require("./getSingleUserAPI");
+usersRouter.get("/user", getSingleUserAPI);
+
 module.exports = usersRouter;

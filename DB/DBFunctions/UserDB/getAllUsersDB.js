@@ -23,7 +23,7 @@ async function getAllUsersDB() {
   try {
     // Query to select all users from the 'users' table.
     const { rows } = await client.query(`
-      SELECT *
+      SELECT id, username, first_name, last_name, preferred_name, phone, email
       FROM users;
     `);
 
