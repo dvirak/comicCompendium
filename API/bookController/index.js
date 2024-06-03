@@ -7,28 +7,20 @@ const booksRouter = express.Router();
 /**
  * Description: Retrieves basic information for all books.
  * Method: GET
- * Route: /books/all-books-basic-info
+ * Route: /books
  */
 const getAllBooksBasicAPI = require("./getAllBooksBasicAPI");
 booksRouter.get("/", getAllBooksBasicAPI);
 
+/**
+ * Description: Retrieves a single book based on either book_id or book_title.
+ * Method: GET
+ * Route: /books/book
+ *
+ * Note: You must send either book_id or book_title in the req.body.
+ * Example req.body: { book_id: 1 } or { book_title: "Book Title" }
+ */
 const getSingleBookAPI = require("./getSingleBookAPI");
-booksRouter.get("/:type?", async (req, res) => {
-  // Log the received request
-  console.log(
-    `Received GET request at /books${
-      req.params.type ? `/${req.params.type}` : ""
-    }`
-  );
-
-  // Check if the request is for /books or /books/book
-  if (!req.params.type || req.params.type === "book") {
-    // Call the function to handle the single book API
-    await getSingleBookAPI(req, res);
-  } else {
-    // Handle other routes if needed
-    res.status(404).json({ error: "Route not found" });
-  }
-});
+booksRouter.get("/book", getSingleBookAPI);
 
 module.exports = booksRouter;
