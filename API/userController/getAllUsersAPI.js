@@ -4,7 +4,9 @@ const router = express.Router();
 // ! -----------------------------------------------------------
 
 // ! ---------- IMPORTED COMPONENTS/VARIABLES -------------------
-const { getAllUsersDB } = require("../../DB/DBFunctions/UserDB/getAllUsersDB");
+const {
+  getAllUsersDB,
+} = require("../../DB/DBFunctions/UserDB/GetUsersDB/getAllUsersDB");
 // ! -----------------------------------------------------------
 
 /**

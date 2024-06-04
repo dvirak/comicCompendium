@@ -5,7 +5,7 @@ const router = express.Router();
 // ! ---------------- IMPORTED MODULES -------------------------
 const {
   getAllBooksBasicDB,
-} = require("../../DB/DBFunctions/BookDB/getBooksDB/getAllBooksBasicDB");
+} = require("../../DB/DBFunctions/BookDB/GetBooksDB/getAllBooksBasicDB");
 // ! -----------------------------------------------------------
 
 /**
