@@ -9,27 +9,27 @@ const client = require("../../../../client");
 /**
  * Retrieves a single user from the database based on the provided user name.
  *
- * @param {string} user_name - The name of the user to retrieve.
+ * @param {string} username - The name of the user to retrieve.
  * @returns {Promise<Object>} A promise that resolves to the user object.
  * @throws {Error} If an error occurs while querying the database or if the user is not found.
  *
- * @precondition user_name is provided and is a valid string.
+ * @precondition username is provided and is a valid string.
  * @postcondition The function returns a Promise that resolves to an object containing the user data from the database.
  *                If an error occurs while querying the database, the function throws an error.
  */
 
-async function getUserByUsernameDB(user_name) {
-  console.log("IN GET USER BY NAME DB");
+async function getUserByUsernameDB(username) {
+  console.log("IN GET USER BY USERNAME DB");
 
   const query = `
-    SELECT id, username, first_name, last_name, preferred_name, phone, email, admin
+    SELECT *
     FROM users
-    WHERE title = $1
+    WHERE username = $1
   `;
 
   try {
-    // Execute the query to select the user from the 'users' table where the title matches the provided user_name.
-    const { rows } = await client.query(query, [user_name]);
+    // Execute the query to select the user from the 'users' table where the title matches the provided username.
+    const { rows } = await client.query(query, [username]);
 
     // If no rows are returned, throw an error indicating the user was not found.
     if (rows.length === 0) {
