@@ -5,7 +5,7 @@ const express = require("express");
 // ! ---------------- IMPORTED MODULES -------------------------
 const {
   getSingleBookDB,
-} = require("../../DB/DBFunctions/BookDB/getBooksDB/getSingleBookDB");
+} = require("../../DB/DBFunctions/BookDB/GetBooksDB/getSingleBookDB");
 // ! -----------------------------------------------------------
 
 /**
