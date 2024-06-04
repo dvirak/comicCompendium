@@ -1,18 +1,19 @@
-// ! ----------------- IMPORTED FILES --------------------------
+// ! ----------------- IMPORTED LIBRARIES --------------------------
 const express = require("express");
+// ! -----------------------------------------------------------
+
+// ! ---------------- IMPORTED MODULES -------------------------
+const setUser = require("./Authentication/setUser");
 // ! -----------------------------------------------------------
 
 const apiRouter = express.Router();
 
+// Use the setUser middleware
+apiRouter.use(setUser);
+
 // Import controllers for books and users
 const bookController = require("./bookController");
 const userController = require("./userController");
-
-// JWT authentication middleware
-const jwt = require("jsonwebtoken");
-// const { getUserById, getUserByUsername } = require("../db/usersDB");
-const client = require("../DB/client");
-const { JWT_SECRET = "asugertiughfhsvduhsv" } = process.env;
 
 // Define routes
 apiRouter.use("/books", bookController);
@@ -33,6 +34,10 @@ apiRouter.use((error, req, res, next) => {
 });
 
 module.exports = apiRouter;
+
+// const { getUserById, getUserByUsername } = require("../db/usersDB");
+// const { JWT_SECRET = "asugertiughfhsvduhsv" } = process.env;
+// const client = require("../DB/client");
 
 // Set req.user if possible
 // apiRouter.use(async (req, res, next) => {

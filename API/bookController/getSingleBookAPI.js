@@ -1,8 +1,7 @@
-// ! ----------------- IMPORTED FILES --------------------------
+// ! ----------------- IMPORTED LIBRARIES --------------------------
 const express = require("express");
-// ! -----------------------------------------------------------
 
-// ! ---------------- IMPORTED MODULES -------------------------
+// ! ---------------- IMPORTED LOCAL MODULES -------------------------
 const {
   getSingleBookDB,
 } = require("../../DB/DBFunctions/BookDB/GetBooksDB/getSingleBookDB");
