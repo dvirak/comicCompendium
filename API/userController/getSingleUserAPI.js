@@ -1,8 +1,8 @@
-// ! ----------------- IMPORTED FILES --------------------------
+// ! ----------------- IMPORTED LIBRARIES --------------------------
 const express = require("express");
 // ! -----------------------------------------------------------
 
-// ! ---------------- IMPORTED MODULES -------------------------
+// ! ---------------- IMPORTED LOCAL FILES --------------------
 const {
   getSingleUserDB,
 } = require("../../DB/DBFunctions/UserDB/GetUsersDB/getSingleUserDB");

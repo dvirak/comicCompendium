@@ -15,4 +15,7 @@ usersRouter.get("/", getAllUsersAPI);
 const getSingleUserAPI = require("./getSingleUserAPI");
 usersRouter.get("/user", getSingleUserAPI);
 
+const loginUserAPI = require("./loginUserAPI");
+usersRouter.post("/login", loginUserAPI);
+
 module.exports = usersRouter;

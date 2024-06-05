@@ -21,7 +21,7 @@ const {
  * @postcondition A response containing all user information is sent to the client.
  */
 
-router.get("/", async (req, res, next) => {
+async function getAllUsersAPI(req, res, next) {
   console.log("IN GET ALL USERS API");
   try {
     const rawData = await getAllUsersDB();
@@ -35,6 +35,6 @@ router.get("/", async (req, res, next) => {
     });
     throw error;
   }
-});
+}
 
-module.exports = router;
+module.exports = getAllUsersAPI;
