@@ -1,3 +1,8 @@
+// ! ----------------- IMPORTED LIBRARIES --------------------------
+const jwt = require("jsonwebtoken");
+const { JWT_SECRET = "jafhjafkw935809gyaGEh0aljkgn" } = process.env;
+// ! -----------------------------------------------------------
+
 // ! ---------------- IMPORTED LOCAL FILES --------------------
 const {
   confirmUser,
@@ -15,8 +20,13 @@ const {
  * @param {Function} next - The next middleware function in the request-response cycle.
  */
 async function loginUserAPI(req, res, next) {
+  console.log("IN LOGIN USER");
+  console.log(req.body);
   // Extract username and password from the request body
   const { username, password } = req.body;
+  console.log(username);
+  console.log(password);
+
   try {
     // Check if username or password is missing
     if (!username || !password) {
@@ -44,7 +54,7 @@ async function loginUserAPI(req, res, next) {
         { expiresIn: "1w" }
       );
       // Send the user information along with the token in the response
-      res.send({ user, message: `You're logged in ${user.usernam}!`, token });
+      res.send({ user, message: `You're logged in ${user.username}!`, token });
     }
   } catch (error) {
     // Handle errors and send an appropriate response
