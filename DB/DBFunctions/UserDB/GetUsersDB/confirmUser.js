@@ -1,3 +1,7 @@
+// ! ----------------- IMPORTED LIBRARIES --------------------------
+const bcrypt = require("bcrypt");
+// ! -----------------------------------------------------------
+
 // ! ---------------- IMPORTED LOCAL FILES --------------------
 const { getUserByUsernameDB } = require("./Helpers");
 // ! -----------------------------------------------------------
@@ -15,7 +19,9 @@ const { getUserByUsernameDB } = require("./Helpers");
  * @returns {Object|null} The user object without the password field if credentials are valid, otherwise null.
  * @throws {Error} If an error occurs while retrieving user information or comparing passwords.
  */
-async function confirmUser({ username, password }) {
+async function confirmUser(username, password) {
+  console.log("IN CONFIRM USER");
+  console.log(username);
   // Check if either username or password is missing
   if (!username || !password) {
     // Log an error message if either username or password is missing
