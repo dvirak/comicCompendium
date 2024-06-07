@@ -21,12 +21,13 @@ const {
  * @postcondition A response containing all user information is sent to the client.
  */
 
-async function getAllUsersAPI(req, res, next) {
+async function getAllUsersAPI(req, res) {
   console.log("IN GET ALL USERS API");
   try {
-    const rawData = await getAllUsersDB();
-    const allUsers = JSON.stringify(rawData);
-    res.send(allUsers);
+    const basicUsers = await getAllUsersDB(req, res);
+
+    // Send list of books as the response
+    res.status(200).json(basicUsers);
   } catch ({ title, message }) {
     console.log("Error in GET ALL USERS API: " + title + "Message: " + message);
     next({
