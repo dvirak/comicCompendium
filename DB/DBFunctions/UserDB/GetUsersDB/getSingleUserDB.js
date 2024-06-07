@@ -8,9 +8,11 @@ const { getUserByIdDB, getUserByUsernameDB } = require("./Helpers");
  * @returns {Promise<Object>} A promise that resolves to the user data.
  * @throws {Error} If neither user_id nor username is provided, or if the user is not found.
  */
-async function getSingleUserDB(user_id, username) {
+async function getSingleUserDB(userData) {
+  const { user_id, username } = userData;
   console.log("IN GET SINGLE USER DB");
-  console.log("user_id");
+  console.log(user_id);
+  console.log(username);
 
   if (!user_id && !username) {
     throw new Error("Either user_id or username must be provided.");
@@ -22,10 +24,6 @@ async function getSingleUserDB(user_id, username) {
     user = await getUserByIdDB(user_id);
   } else if (username) {
     user = await getUserByUsernameDB(username);
-  }
-
-  if (!user) {
-    throw new Error("User not found.");
   }
 
   return user;

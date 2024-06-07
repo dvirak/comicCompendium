@@ -33,7 +33,7 @@ async function getUserByUsernameDB(username) {
 
     // If no rows are returned, throw an error indicating the user was not found.
     if (rows.length === 0) {
-      throw new Error("User not found.");
+      return null;
     }
 
     // Return the first row from the fetched rows (user).
