@@ -34,6 +34,13 @@ usersRouter.get("/user", getSingleUserAPI);
 const loginUserAPI = require("./loginUserAPI");
 usersRouter.post("/login", loginUserAPI);
 
+/**
+ * Description: Registers a new user and returns a token.
+ * Method: POST
+ * Route: /users/register
+ * Request Body: Requires username (string), password (string), first_name (string), last_name (string), preferred_name (string), phone (int), email (string). Optionally contains admin (boolean).
+ * Response: Returns an array containing user info, a message, and a token.
+ */
 const createUserAPI = require("./createUserAPI");
 usersRouter.post("/register", createUserAPI);
 

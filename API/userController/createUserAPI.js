@@ -16,28 +16,20 @@ const { JWT_SECRET = "jafhjafkw935809gyaGEh0aljkgn" } = process.env;
  * creates a new user in the database if valid,
  * and generates a JWT token for the new user.
  *
- * @param {Object} req - The request object, containing user details in the body.
+ * @param {Object} req - The request object, containing user details in the body. Contains username (string), password (string), first_name (string), last_name (string), preferred_name (string), phone (int), email (string). Optionally contains admin (boolean).
  * @param {Object} res - The response object, used to send back the user data or an error message.
  * @param {Function} next - The next middleware function in the request-response cycle.
  */
 async function createUserAPI(req, res, next) {
   // Extract user details from the request body
-  const {
-    username,
-    password,
-    first_name,
-    last_name,
-    preferred_name,
-    phone,
-    email,
-    admin,
-  } = req.body;
-
   console.log("IN CREATE USER API");
+
+  if (req.body.admin !== true) {
+    req.body.admin = false;
+  }
 
   try {
     // Check if the user already exists
-    let userData = { username };
     const queriedUser = await getSingleUserDB(req.body);
     if (queriedUser) {
       // If user exists, send an error response
@@ -46,7 +38,7 @@ async function createUserAPI(req, res, next) {
         name: "UserExistsError",
         message: "A user by the username already exists",
       });
-    } else if (password.length < 8) {
+    } else if (req.body.password.length < 8) {
       // If password is too short, send an error response
       next({
         status: 401,
