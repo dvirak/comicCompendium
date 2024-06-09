@@ -23,6 +23,7 @@ async function createUserDB({
   email,
   admin,
 }) {
+  admin !== true ? (admin = false) : (admin = admin);
   console.log("CREATING USER IN DB: " + username);
 
   // use bcrypt to "hash" a function by SALT_COUNT to create unique hashedPassword that is more secure
@@ -33,7 +34,8 @@ async function createUserDB({
       rows: [user],
     } = await client.query(
       `
-      INSERT INTO users(username, password, first_name, last_name, preferred_name, phone, email, admin) VALUES ($1, $2, $3, $4, $5, $6, $7, $8)
+      INSERT INTO users(username, password, first_name, last_name, preferred_name, phone, email, admin) 
+      VALUES ($1, $2, $3, $4, $5, $6, $7, COALESCE($8, false))
       ON CONFLICT (username) DO NOTHING 
       RETURNING *
       `,
