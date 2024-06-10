@@ -21,10 +21,11 @@ const client = require("../../../../client");
 async function getUserByUsernameDB(username) {
   console.log("IN GET USER BY USERNAME DB");
 
+  // Use ILIKE to perform a case-insensitive search in the database
   const query = `
     SELECT *
     FROM users
-    WHERE username = $1
+    WHERE username ILIKE $1
   `;
 
   try {
