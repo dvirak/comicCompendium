@@ -21,11 +21,8 @@ const {
  */
 async function loginUserAPI(req, res, next) {
   console.log("IN LOGIN USER");
-  console.log(req.body);
   // Extract username and password from the request body
   const { username, password } = req.body;
-  console.log(username);
-  console.log(password);
 
   try {
     // Check if username or password is missing
@@ -38,10 +35,10 @@ async function loginUserAPI(req, res, next) {
     }
 
     // Attempt to confirm user credentials
-    const user = await confirmUser(username, password);
+    const response = await confirmUser(username, password);
 
     // If user credentials are not valid, send an error response
-    if (!user) {
+    if (!response) {
       next({
         name: "IncorrectCredentialsError",
         message: "Username or password is incorrect",
@@ -49,12 +46,16 @@ async function loginUserAPI(req, res, next) {
     } else {
       // If user credentials are valid, generate a JWT token
       const token = jwt.sign(
-        { id: user.id, username: user.username },
+        { id: response.user.id, username: response.user.username },
         JWT_SECRET,
         { expiresIn: "1w" }
       );
       // Send the user information along with the token in the response
-      res.send({ user, message: `You're logged in ${user.username}!`, token });
+      res.send({
+        response,
+        message: `You're logged in ${response.user.username}!`,
+        token,
+      });
     }
   } catch (error) {
     // Handle errors and send an appropriate response
