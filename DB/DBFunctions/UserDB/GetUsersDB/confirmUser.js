@@ -21,12 +21,10 @@ const { getUserByUsernameDB } = require("./Helpers");
  */
 async function confirmUser(username, password) {
   console.log("IN CONFIRM USER");
-  console.log(username);
   // Check if either username or password is missing
-  if (!username || !password) {
-    // Log an error message if either username or password is missing
-    console.log("No username or password provided");
-    return;
+  const inpuCheckResults = inputCheck(username, password);
+  if (inpuCheckResults.status === false) {
+    return inpuCheckResults;
   }
 
   try {
@@ -34,7 +32,10 @@ async function confirmUser(username, password) {
     const user = await getUserByUsernameDB(username);
 
     // If no user is found with the provided username, return null
-    if (!user) return;
+    if (!user) {
+      console.log("No user found");
+      return { status: false, message: "No user found" };
+    }
 
     // Retrieve the hashed password from the user object
     const hashedPassword = user.password;
@@ -43,16 +44,37 @@ async function confirmUser(username, password) {
     const passwordsMatch = await bcrypt.compare(password, hashedPassword);
 
     // If the passwords do not match, return null
-    if (!passwordsMatch) return;
+    if (!passwordsMatch) {
+      console.log("Passwords did not match");
+      return { status: false, message: "Incorrect Password" };
+    }
 
     // If the passwords match, delete the password field from the user object
     delete user.password;
 
     // Return the user object without the password field
-    return user;
+    return { status: true, message: "Password confirmed", user };
   } catch (error) {
     // Throw any caught errors for handling by the caller
     throw error;
+  }
+}
+
+function inputCheck(username, password) {
+  if (!username && !password) {
+    // Log an error message if either username or password is missing
+    console.log("No username or password provided");
+    return { status: false, message: "No username or password provided" };
+  }
+  if (!username) {
+    // Log an error message if either username or password is missing
+    console.log("No username provided");
+    return { status: false, message: "No username provided" };
+  }
+  if (!password) {
+    // Log an error message if either username or password is missing
+    console.log("No password provided");
+    return { status: false, message: "No password provided" };
   }
 }
 

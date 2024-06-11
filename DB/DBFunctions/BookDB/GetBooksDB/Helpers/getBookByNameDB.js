@@ -24,7 +24,7 @@ async function getBookByNameDB(book_name) {
   const query = `
     SELECT *
     FROM books
-    WHERE title = $1
+    WHERE title ILIKE $1
   `;
 
   try {
