@@ -28,7 +28,7 @@ async function loginUserAPI(req, res, next) {
     // Check if username or password is missing
     if (!username || !password) {
       // Send an error response if either username or password is missing
-      next({
+      return res.status(400).json({
         name: "MissingCredentialsError",
         message: "Please supply both a username and password",
       });
@@ -37,11 +37,15 @@ async function loginUserAPI(req, res, next) {
     // Attempt to confirm user credentials
     const response = await confirmUser(username, password);
 
-    // If user credentials are not valid, send an error response
     if (!response) {
-      next({
-        name: "IncorrectCredentialsError",
-        message: "Username or password is incorrect",
+      return res.status(500).json({
+        name: "DatabaseConnectionError",
+        message: "There was an issue trying to reach the database",
+      });
+    } else if (response.status === false) {
+      return res.status(400).json({
+        name: response.name || "AuthenticationError",
+        message: response.message,
       });
     } else {
       // If user credentials are valid, generate a JWT token
@@ -51,8 +55,8 @@ async function loginUserAPI(req, res, next) {
         { expiresIn: "1w" }
       );
       // Send the user information along with the token in the response
-      res.send({
-        response,
+      res.status(200).json({
+        user: response.user,
         message: `You're logged in ${response.user.username}!`,
         token,
       });
