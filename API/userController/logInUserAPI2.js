@@ -37,6 +37,12 @@ async function loginUserAPI(req, res, next) {
     // Attempt to confirm user credentials
     const response = await confirmUser(username, password);
 
+    // If user credentials are not valid, send an error response
+    // if (!response) {
+    //   next({
+    //     name: "IncorrectCredentialsError",
+    //     message: "Username or password is incorrect",
+    //   });
     if (!response) {
       return res.status(500).json({
         name: "DatabaseConnectionError",
