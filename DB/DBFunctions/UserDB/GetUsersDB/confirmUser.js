@@ -1,9 +1,11 @@
-// ! ----------------- IMPORTED LIBRARIES --------------------------
-const bcrypt = require("bcrypt");
-// ! -----------------------------------------------------------
-
 // ! ---------------- IMPORTED LOCAL FILES --------------------
-const { getUserByUsernameDB, inputCheck } = require("./Helpers");
+const {
+  getUserByUsernameDB,
+  inputCheck,
+  UserNotFoundError,
+  comparePasswords,
+  IncorrectPasswordError,
+} = require("./Helpers");
 // ! -----------------------------------------------------------
 
 /**
@@ -31,30 +33,17 @@ async function confirmUser(username, password) {
     // Retrieve user information from the database based on the provided username
     const user = await getUserByUsernameDB(username);
 
-    // If no user is found with the provided username, return null
+    // If no user is found with the provided username, return UserNotFoundError
     if (!user) {
-      console.log("No user found");
-      return {
-        status: false,
-        name: "UserNotFoundError",
-        message: "No user found",
-      };
+      throw new UserNotFoundError();
     }
 
-    // Retrieve the hashed password from the user object
-    const hashedPassword = user.password;
+    // Compare the provided password with the user password retrieved from the database
+    const passwordsMatch = await comparePasswords(password, user.password);
 
-    // Compare the provided password with the hashed password retrieved from the database
-    const passwordsMatch = await bcrypt.compare(password, hashedPassword);
-
-    // If the passwords do not match, return null
+    // If the passwords do not match, throw password error
     if (!passwordsMatch) {
-      console.log("Passwords did not match");
-      return {
-        status: false,
-        name: "IncorrectPasswordError",
-        message: "Incorrect Password",
-      };
+      throw new IncorrectPasswordError();
     }
 
     // If the passwords match, delete the password field from the user object
@@ -69,7 +58,18 @@ async function confirmUser(username, password) {
     };
   } catch (error) {
     // Throw any caught errors for handling by the caller
-    throw error;
+    if (
+      error instanceof UserNotFoundError ||
+      error instanceof IncorrectPasswordError
+    ) {
+      return {
+        status: false,
+        name: error.name,
+        message: error.message,
+      };
+    } else {
+      throw error;
+    }
   }
 }
 
