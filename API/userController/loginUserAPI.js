@@ -4,9 +4,7 @@ const { JWT_SECRET = "jafhjafkw935809gyaGEh0aljkgn" } = process.env;
 // ! -----------------------------------------------------------
 
 // ! ---------------- IMPORTED LOCAL FILES --------------------
-const {
-  confirmUser,
-} = require("../../DB/DBFunctions/UserDB/GetUsersDB/confirmUser");
+const confirmUser = require("../../DB/DBFunctions/UserDB/GetUsersDB/confirmUser");
 // ! -----------------------------------------------------------
 
 /**
