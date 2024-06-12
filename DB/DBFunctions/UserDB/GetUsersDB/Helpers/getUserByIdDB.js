@@ -48,4 +48,4 @@ async function getUserByIdDB(user_id) {
 // ------------GET SINGLE USER BY ID FROM DATABASE------------
 
 // Export the function for use by other modules.
-module.exports = { getUserByIdDB };
+module.exports = getUserByIdDB;

@@ -49,4 +49,4 @@ async function getUserByUsernameDB(username) {
 // ------------GET SINGLE USER BY NAME FROM DATABASE------------
 
 // Export the function for use by other modules.
-module.exports = { getUserByUsernameDB };
+module.exports = getUserByUsernameDB;
