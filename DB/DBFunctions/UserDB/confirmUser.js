@@ -5,7 +5,7 @@ const {
   UserNotFoundError,
   comparePasswords,
   IncorrectPasswordError,
-} = require("./Helpers");
+} = require("./GetUsersDB/Helpers");
 // ! -----------------------------------------------------------
 
 /**
