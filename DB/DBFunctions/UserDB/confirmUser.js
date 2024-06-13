@@ -1,10 +1,12 @@
 // ! ---------------- IMPORTED LOCAL FILES --------------------
 const {
+  UserNotFoundErrorDB,
+  IncorrectPasswordErrorDB,
+} = require("../../ErrorsDB");
+const {
   getUserByUsernameDB,
   inputCheck,
-  UserNotFoundError,
   comparePasswords,
-  IncorrectPasswordError,
 } = require("./GetUsersDB/Helpers");
 // ! -----------------------------------------------------------
 
@@ -35,7 +37,7 @@ async function confirmUser(username, password) {
 
     // If no user is found with the provided username, return UserNotFoundError
     if (!user) {
-      throw new UserNotFoundError();
+      throw new UserNotFoundErrorDB();
     }
 
     // Compare the provided password with the user password retrieved from the database
@@ -43,7 +45,7 @@ async function confirmUser(username, password) {
 
     // If the passwords do not match, throw password error
     if (!passwordsMatch) {
-      throw new IncorrectPasswordError();
+      throw new IncorrectPasswordErrorDB();
     }
 
     // If the passwords match, delete the password field from the user object

@@ -4,6 +4,7 @@ const express = require("express");
 
 // ! ---------------- IMPORTED MODULES -------------------------
 const setUser = require("./Authentication/setUser");
+const erroHandlerAPI = require("./ErrorsAPI/errorHandlerAPI");
 // ! -----------------------------------------------------------
 
 const apiRouter = express.Router();
@@ -20,18 +21,7 @@ apiRouter.use("/books", bookController);
 apiRouter.use("/users", userController);
 
 // Error handling middleware
-apiRouter.use((error, req, res, next) => {
-  console.log(req.header);
-  console.log(error);
-
-  console.error(error);
-
-  // Send a standardize error response
-  res.status(error.status || 500).json({
-    error: error.name || "Internal Service Failure",
-    message: error.message || "An Unexpected Error Occurred.",
-  });
-});
+apiRouter.use(erroHandlerAPI);
 
 module.exports = apiRouter;
 
