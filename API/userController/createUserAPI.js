@@ -7,6 +7,11 @@ const { createUserDB } = require("../../DB/DBFunctions/UserDB/createUserDB");
 const {
   getSingleUserDB,
 } = require("../../DB/DBFunctions/UserDB/GetUsersDB/getSingleUserDB");
+const {
+  PasswordLengthErrorAPI,
+  UserCreationErrorAPI,
+  UserExistsErrorAPI,
+} = require("../ErrorsAPI/APIErrorsFolder");
 const { JWT_SECRET = "jafhjafkw935809gyaGEh0aljkgn" } = process.env;
 // ! -----------------------------------------------------------
 
@@ -16,7 +21,10 @@ const { JWT_SECRET = "jafhjafkw935809gyaGEh0aljkgn" } = process.env;
  * creates a new user in the database if valid,
  * and generates a JWT token for the new user.
  *
- * @param {Object} req - The request object, containing user details in the body. Contains username (string), password (string), first_name (string), last_name (string), preferred_name (string), phone (int), email (string). Optionally contains admin (boolean).
+ * @param {Object} req - The request object, containing user details in the body.
+ *                       Contains username (string), password (string), first_name (string),
+ *                       last_name (string), preferred_name (string), phone (int), email (string).
+ *                       Optionally contains admin (boolean).
  * @param {Object} res - The response object, used to send back the user data or an error message.
  * @param {Function} next - The next middleware function in the request-response cycle.
  */
@@ -33,28 +41,16 @@ async function createUserAPI(req, res, next) {
     const queriedUser = await getSingleUserDB(req.body);
     if (queriedUser) {
       // If user exists, send an error response
-      next({
-        status: 401,
-        name: "UserExistsError",
-        message: "A user by the username already exists",
-      });
+      throw new UserExistsErrorAPI();
     } else if (req.body.password.length < 8) {
       // If password is too short, send an error response
-      next({
-        status: 401,
-        name: "PasswordLengthError",
-        message: "Password must be at least 8 characters",
-      });
+      throw new PasswordLengthErrorAPI();
     } else {
       // Create the new user in the database
       const user = await createUserDB(req.body);
       if (!user) {
         // If user creation failed, send an error response
-        next({
-          status: 401,
-          name: "UserCreationError",
-          message: "There was a problem registering you",
-        });
+        throw new UserCreationErrorAPI();
       } else {
         // Generate a JWT token for the new user
         const token = jwt.sign(
@@ -70,6 +66,7 @@ async function createUserAPI(req, res, next) {
     // Handle errors and send an appropriate response
     next({
       status: 500,
+      name: error.name,
       message: error.message,
     });
   }

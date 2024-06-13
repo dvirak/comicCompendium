@@ -29,10 +29,10 @@ async function getAllUsersDB() {
 
     // Return the fetched rows (users).
     return rows;
-  } catch (err) {
-    console.log(`Error occurred in GET ALL USERS DB: ${err}`);
+  } catch (error) {
+    console.log(`Error occurred in GET ALL USERS DB: ${error}`);
     // Throw the error for handling by the caller.
-    throw err;
+    throw error;
   }
 }
 

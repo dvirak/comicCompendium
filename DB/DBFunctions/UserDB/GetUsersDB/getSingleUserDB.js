@@ -1,5 +1,5 @@
 const { getUserByIdDB, getUserByUsernameDB } = require("./Helpers");
-const { NoUserProvidedError } = require("./Helpers/errors");
+const { NoUserProvidedError } = require("../../../ErrorsDB");
 
 /**
  * Retrieves a single user from the database based on the provided user_id or username.
