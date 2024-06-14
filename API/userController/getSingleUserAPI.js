@@ -1,42 +1,41 @@
 // ! ----------------- IMPORTED LIBRARIES --------------------------
 const express = require("express");
-// ! -----------------------------------------------------------
+// ! ---------------------------------------------------------------
 
-// ! ---------------- IMPORTED LOCAL FILES --------------------
+// ! ---------------- IMPORTED LOCAL FILES -------------------------
 const {
   getSingleUserDB,
 } = require("../../DB/DBFunctions/UserDB/GetUsersDB/getSingleUserDB");
-// ! -----------------------------------------------------------
+const { UserNotFoundErrorAPI } = require("../ErrorsAPI/APIErrorsFolder");
+const InputErrorAPI = require("../ErrorsAPI/APIErrorsFolder/ValidationErrorAPI");
+// ! ---------------------------------------------------------------
 
 /**
  * Handles GET requests to retrieve a single user based on either user_id or username.
  *
- * @param {Object} req - The request object, containing query parameters for user_id or username.
+ * @param {Object} req - The request object, containing parameters for user_id or query parameters for username.
  * @param {Object} res - The response object, used to send back the desired user data or an error message.
  * @param {Function} next - The next middleware function in the request-response cycle.
  */
 async function getSingleUserAPI(req, res, next) {
   console.log("IN GET SINGLE USER API");
+  const user_id = req.params.user_id;
+  const username = req.query.username;
 
   try {
-    // Validate input
-    if (!req.body.user_id && !req.body.username) {
-      return next({
-        status: 400,
-        name: "ValidationError",
-        message: "Either user_id or username must be provided.",
-      });
+    // Validate input: Ensure either user_id or username is provided
+    if (!user_id && !username) {
+      throw new InputErrorAPI();
     }
 
-    // Call the database function to get the user data
-    const user = await getSingleUserDB(req.body);
+    // Call the database function to get the user data based on user_id or username
+    const user = user_id
+      ? await getSingleUserDB({ user_id })
+      : await getSingleUserDB({ username });
 
+    // If user is not found, throw a UserNotFoundErrorAPI
     if (!user) {
-      return next({
-        status: 404,
-        name: "UserNotFoundError",
-        message: "User not found.",
-      });
+      throw new UserNotFoundErrorAPI();
     }
 
     // Send the user data as the response

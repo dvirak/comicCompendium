@@ -1,4 +1,5 @@
 // ! ----------------- IMPORTED FILES --------------------------
+const NoInfoProvidedErrorDB = require("../../ErrorsDB/NoInfoProvidedErrorDB");
 const client = require("../../client");
 // ! -----------------------------------------------------------
 
@@ -25,10 +26,7 @@ async function updateUserDB(id, fields = {}) {
 
   // If there are no fields to update, return early.
   if (setString.length === 0) {
-    return {
-      status: false,
-      message: "No information was provided to update",
-    };
+    throw new NoInfoProvidedErrorDB();
   }
 
   try {
