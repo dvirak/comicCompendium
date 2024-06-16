@@ -1,3 +1,5 @@
+const NotAdminErrorAPI = require("../../Errors/API/NotAdminErrorAPI");
+
 /**
  * Middleware to ensure the user is an admin.
  * If the user is not an admin, it responds with an error message.
@@ -7,11 +9,8 @@
  * @param {Function} next - The next middleware function
  */
 function requireAdmin(req, res, next) {
-  if (!req.user || !req.user.admin) {
-    next({
-      name: "NotAuthorizedError",
-      message: "You must be an admin to perform this action",
-    });
+  if (!req.user.admin) {
+    throw new NotAdminErrorAPI();
   } else {
     next(); // If user is an admin, proceed to the next middleware or route handler
   }
