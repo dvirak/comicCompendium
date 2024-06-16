@@ -2,7 +2,7 @@
 const {
   UserNotFoundErrorDB,
   IncorrectPasswordErrorDB,
-} = require("../../ErrorsDB");
+} = require("../../../Errors/DB");
 const {
   getUserByUsernameDB,
   inputCheck,
