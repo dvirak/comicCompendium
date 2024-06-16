@@ -6,8 +6,7 @@ const express = require("express");
 const {
   getSingleUserDB,
 } = require("../../DB/DBFunctions/UserDB/GetUsersDB/getSingleUserDB");
-const { UserNotFoundErrorAPI } = require("../ErrorsAPI/APIErrorsFolder");
-const InputErrorAPI = require("../ErrorsAPI/APIErrorsFolder/ValidationErrorAPI");
+const { UserNotFoundErrorAPI, InputErrorAPI } = require("../../Errors/API");
 // ! ---------------------------------------------------------------
 
 /**

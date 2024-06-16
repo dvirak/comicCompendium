@@ -4,7 +4,7 @@ const express = require("express");
 
 // ! ---------------- IMPORTED MODULES -------------------------
 const setUser = require("./Authentication/setUser");
-const erroHandlerAPI = require("./ErrorsAPI/errorHandlerAPI");
+const erroHandlerAPI = require("../Errors/API/errorHandlerAPI");
 // ! -----------------------------------------------------------
 
 const apiRouter = express.Router();

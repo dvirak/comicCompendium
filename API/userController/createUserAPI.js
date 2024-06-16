@@ -11,7 +11,7 @@ const {
   PasswordLengthErrorAPI,
   UserCreationErrorAPI,
   UserExistsErrorAPI,
-} = require("../ErrorsAPI/APIErrorsFolder");
+} = require("../../Errors/API");
 const { JWT_SECRET = "jafhjafkw935809gyaGEh0aljkgn" } = process.env;
 // ! -----------------------------------------------------------
 
@@ -64,8 +64,9 @@ async function createUserAPI(req, res, next) {
     }
   } catch (error) {
     // Handle errors and send an appropriate response
+    console.error("Error in createUserAPI: " + error);
     next({
-      status: 500,
+      status: error.status || 500,
       name: error.name,
       message: error.message,
     });

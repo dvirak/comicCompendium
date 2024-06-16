@@ -28,13 +28,13 @@ async function getAllUsersAPI(req, res) {
 
     // Send list of books as the response
     res.status(200).json(basicUsers);
-  } catch ({ title, message }) {
-    console.log("Error in GET ALL USERS API: " + title + "Message: " + message);
+  } catch (error) {
+    console.error("Error in getAllUsersAPI: " + error);
     next({
-      error: err,
-      message: "Failed GET ALL USERS API.",
+      status: error.status || 500,
+      name: error.name,
+      message: error.message,
     });
-    throw error;
   }
 }
 

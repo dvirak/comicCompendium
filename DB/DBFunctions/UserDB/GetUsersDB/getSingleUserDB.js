@@ -1,5 +1,5 @@
 const { getUserByIdDB, getUserByUsernameDB } = require("./Helpers");
-const { NoUserProvidedError } = require("../../../ErrorsDB");
+const { NoUserProvidedErrorDB } = require("../../../../Errors/DB");
 
 /**
  * Retrieves a single user from the database based on the provided user_id or username.
@@ -14,7 +14,7 @@ async function getSingleUserDB(userData) {
   console.log("IN GET SINGLE USER DB");
 
   if (!user_id && !username) {
-    throw new NoUserProvidedError();
+    throw new NoUserProvidedErrorDB();
   }
 
   let user;

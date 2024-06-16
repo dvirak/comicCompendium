@@ -8,9 +8,9 @@ const { getBookByIdDB, getBookByNameDB } = require("./Helpers");
  * @returns {Promise<Object>} A promise that resolves to the book data.
  * @throws {Error} If neither book_id nor book_title is provided, or if the book is not found.
  */
-async function getSingleBookDB(book_id, book_title) {
+async function getSingleBookDB(userData) {
   console.log("IN GET SINGLE BOOK DB");
-  console.log("book_id");
+  const { book_id, book_title } = userData;
 
   if (!book_id && !book_title) {
     throw new Error("Either book_id or book_title must be provided.");
