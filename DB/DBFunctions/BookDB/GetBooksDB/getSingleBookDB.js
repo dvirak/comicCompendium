@@ -13,6 +13,7 @@ async function getSingleBookDB(userData) {
   const { book_id, book_title } = userData;
 
   if (!book_id && !book_title) {
+    // ! CREAET NEW ERROR FUCK
     throw new Error("Either book_id or book_title must be provided.");
   }
 

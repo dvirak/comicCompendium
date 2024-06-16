@@ -4,7 +4,7 @@ const express = require("express");
 
 // ! ---------------- IMPORTED MODULES -------------------------
 const setUser = require("./Authentication/setUser");
-const erroHandlerAPI = require("../Errors/API/errorHandlerAPI");
+const { errorHandlerAPI } = require("../Errors/API/");
 // ! -----------------------------------------------------------
 
 const apiRouter = express.Router();
@@ -21,7 +21,7 @@ apiRouter.use("/books", bookController);
 apiRouter.use("/users", userController);
 
 // Error handling middleware
-apiRouter.use(erroHandlerAPI);
+apiRouter.use(errorHandlerAPI);
 
 module.exports = apiRouter;
 

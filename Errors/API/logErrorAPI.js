@@ -9,7 +9,7 @@ const fs = require("fs");
  * @param {Error} error - The error object containing details about the error.
  * @param {Function} next - The next middleware function to handle the error.
  */
-function logError(programName, error, next) {
+function logErrorAPI(programName, error, next) {
   console.error(`Error in ${programName}:`, error);
 
   // Append error to a log file (optional)
@@ -26,4 +26,4 @@ function logError(programName, error, next) {
   });
 }
 
-module.exports = logError;
+module.exports = logErrorAPI;

@@ -2,6 +2,7 @@
 const {
   UserNotFoundErrorDB,
   IncorrectPasswordErrorDB,
+  logErrorDB,
 } = require("../../../Errors/DB");
 const {
   getUserByUsernameDB,
@@ -23,7 +24,7 @@ const {
  * @returns {Object|null} The user object without the password field if credentials are valid, otherwise null.
  * @throws {Error} If an error occurs while retrieving user information or comparing passwords.
  */
-async function confirmUser(username, password) {
+async function confirmUser(username, password, next) {
   console.log("IN CONFIRM USER");
   // Check if either username or password is missing
   const inputCheckResults = inputCheck(username, password);
@@ -60,18 +61,7 @@ async function confirmUser(username, password) {
     };
   } catch (error) {
     // Throw any caught errors for handling by the caller
-    if (
-      error instanceof UserNotFoundError ||
-      error instanceof IncorrectPasswordError
-    ) {
-      return {
-        status: false,
-        name: error.name,
-        message: error.message,
-      };
-    } else {
-      throw error;
-    }
+    logErrorDB("confirmUser", error, next);
   }
 }
 

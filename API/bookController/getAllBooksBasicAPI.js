@@ -4,6 +4,7 @@ const router = express.Router();
 // ! -----------------------------------------------------------
 
 // ! ---------------- IMPORTED MODULES -------------------------
+const logErrorAPI = require("../../Errors/API/logErrorAPI");
 const {
   getAllBooksBasicDB,
 } = require("../../DB/DBFunctions/BookDB/GetBooksDB/getAllBooksBasicDB");
@@ -30,9 +31,9 @@ async function getAllBooksBasicAPI(req, res) {
 
     // Send list of books as the response
     res.status(200).json(basicBooks);
-  } catch (err) {
+  } catch (error) {
     // Handle errors and send an appropriate response
-    res.status(500).json({ error: err.message });
+    logErrorAPI("getAllBooksBasicAPI", error, next);
   }
 }
 

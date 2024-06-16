@@ -6,7 +6,11 @@ const express = require("express");
 const {
   getSingleUserDB,
 } = require("../../DB/DBFunctions/UserDB/GetUsersDB/getSingleUserDB");
-const { UserNotFoundErrorAPI, InputErrorAPI } = require("../../Errors/API");
+const {
+  UserNotFoundErrorAPI,
+  InputErrorUsersAPI,
+  logErrorAPI,
+} = require("../../Errors/API");
 // ! ---------------------------------------------------------------
 
 /**
@@ -24,7 +28,7 @@ async function getSingleUserAPI(req, res, next) {
   try {
     // Validate input: Ensure either user_id or username is provided
     if (!user_id && !username) {
-      throw new InputErrorAPI();
+      throw new InputErrorUsersAPI();
     }
 
     // Call the database function to get the user data based on user_id or username
@@ -39,12 +43,9 @@ async function getSingleUserAPI(req, res, next) {
 
     // Send the user data as the response
     res.status(200).json(user);
-  } catch (err) {
+  } catch (error) {
     // Handle errors and send an appropriate response
-    next({
-      status: 500,
-      message: err.message,
-    });
+    logErrorAPI("getSingleUserAPI", error, next);
   }
 }
 

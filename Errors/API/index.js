@@ -1,5 +1,5 @@
 const AuthorizationHeaderErrorAPI = require("./AuthorizationHeaderErrorAPI");
-const InputErrorAPI = require("./InputErrorAPI");
+const InputErrorUsersAPI = require("./InputErrorUsersAPI");
 const NotLoggedInErrorAPI = require("./NoLogInErrorAPI");
 const NotAdminErrorAPI = require("./NotAdminErrorAPI");
 const PasswordLengthErrorAPI = require("./PasswordLengthErrorAPI");
@@ -7,7 +7,12 @@ const TokenVerificationErrorAPI = require("./TokenVerificationErrorAPI");
 const UserCreationErrorAPI = require("./UserCreationErrorAPI");
 const UserExistsErrorAPI = require("./UserExistsErrorAPI");
 const UserNotFoundErrorAPI = require("./UserNotFoundErrorAPI");
-const logError = require("./logErrorAPI");
+const logErrorAPI = require("./logErrorAPI");
+const InputErrorBooksAPI = require("./InputErrorBooksAPI");
+const DatabaseConnectionErrorAPI = require("./DatabaseConnectionErrorAPI");
+const errorHandlerAPI = require("./errorHandlerAPI");
+const BookNotFoundErrorAPI = require("./BookNotFoundErrorAPI");
+const AuthenticationErrorLoginAPI = require("./AuthenticationErrorLoginAPI");
 
 module.exports = {
   UserExistsErrorAPI,
@@ -15,9 +20,14 @@ module.exports = {
   UserCreationErrorAPI,
   UserNotFoundErrorAPI,
   AuthorizationHeaderErrorAPI,
-  InputErrorAPI,
+  InputErrorUsersAPI,
   NotLoggedInErrorAPI,
   NotAdminErrorAPI,
   TokenVerificationErrorAPI,
-  logError,
+  logErrorAPI,
+  InputErrorBooksAPI,
+  DatabaseConnectionErrorAPI,
+  errorHandlerAPI,
+  BookNotFoundErrorAPI,
+  AuthenticationErrorLoginAPI,
 };

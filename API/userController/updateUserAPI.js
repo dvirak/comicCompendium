@@ -1,7 +1,7 @@
 const {
   getUserByIdDB,
 } = require("../../DB/DBFunctions/UserDB/GetUsersDB/Helpers");
-const { UserNotFoundErrorAPI } = require("../ErrorsAPI/APIErrorsFolder");
+const { logError, UserNotFoundErrorAPI } = require("../../Errors/API");
 
 async function updateUserAPI(req, res, next) {
   const userToEdit = await getUserByIdDB(req.body.user_id);
@@ -11,10 +11,8 @@ async function updateUserAPI(req, res, next) {
 
   try {
   } catch (error) {
-    next({
-      status: 500,
-      name: error.name,
-      message: error.message,
-    });
+    logError("updateUserAPI", error, next);
   }
 }
+
+module.exports = updateUserAPI;
