@@ -1,5 +1,5 @@
 // Error handling middleware
-function erroHandlerAPI(error, req, res, next) {
+function errorHandlerAPI(error, req, res, next) {
   console.log(req.header);
   console.log(error);
 
@@ -10,4 +10,4 @@ function erroHandlerAPI(error, req, res, next) {
   });
 }
 
-module.exports = erroHandlerAPI;
+module.exports = errorHandlerAPI;

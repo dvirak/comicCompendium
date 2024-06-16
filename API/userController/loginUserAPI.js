@@ -5,6 +5,11 @@ const { JWT_SECRET = "jafhjafkw935809gyaGEh0aljkgn" } = process.env;
 
 // ! ---------------- IMPORTED LOCAL FILES --------------------
 const confirmUser = require("../../DB/DBFunctions/UserDB/confirmUser");
+const {
+  DatabaseConnectionErrorAPI,
+  AuthenticationErrorLoginAPI,
+  logErrorAPI,
+} = require("../../Errors/API");
 // ! -----------------------------------------------------------
 
 /**
@@ -26,25 +31,16 @@ async function loginUserAPI(req, res, next) {
     // Check if username or password is missing
     if (!username || !password) {
       // Send an error response if either username or password is missing
-      return res.status(400).json({
-        name: "MissingCredentialsError",
-        message: "Please supply both a username and password",
-      });
+      throw new InputErrorLoginAPI();
     }
 
     // Attempt to confirm user credentials
-    const response = await confirmUser(username, password);
+    const response = await confirmUser(username, password, next);
 
     if (!response) {
-      return res.status(500).json({
-        name: "DatabaseConnectionError",
-        message: "There was an issue trying to reach the database",
-      });
+      throw new DatabaseConnectionErrorAPI();
     } else if (response.status === false) {
-      return res.status(400).json({
-        name: response.name || "AuthenticationError",
-        message: response.message,
-      });
+      throw new AuthenticationErrorLoginAPI();
     } else {
       // If user credentials are valid, generate a JWT token
       const token = jwt.sign(
@@ -61,7 +57,7 @@ async function loginUserAPI(req, res, next) {
     }
   } catch (error) {
     // Handle errors and send an appropriate response
-    res.status(500).json({ error: error.message });
+    logErrorAPI("loginUserAPI", error, next);
   }
 }
 

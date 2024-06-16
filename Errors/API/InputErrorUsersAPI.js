@@ -1,5 +1,5 @@
 /**
- * Custom error class for handling input validation errors in API requests.
+ * Custom error class for handling user table input validation errors in API requests.
  * Extends the base Error class.
  */
 class InputErrorAPI extends Error {

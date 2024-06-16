@@ -21,6 +21,6 @@ booksRouter.get("/", getAllBooksBasicAPI);
  * Example req.body: { book_id: 1 } or { book_title: "Book Title" }
  */
 const getSingleBookAPI = require("./getSingleBookAPI");
-booksRouter.get("/book", getSingleBookAPI);
+booksRouter.get("/book/:book_id?", getSingleBookAPI);
 
 module.exports = booksRouter;

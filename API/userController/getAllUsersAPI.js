@@ -7,6 +7,7 @@ const router = express.Router();
 const {
   getAllUsersDB,
 } = require("../../DB/DBFunctions/UserDB/GetUsersDB/getAllUsersDB");
+const { logErrorAPI } = require("../../Errors/API");
 // ! -----------------------------------------------------------
 
 /**
@@ -29,12 +30,7 @@ async function getAllUsersAPI(req, res) {
     // Send list of books as the response
     res.status(200).json(basicUsers);
   } catch (error) {
-    console.error("Error in getAllUsersAPI: " + error);
-    next({
-      status: error.status || 500,
-      name: error.name,
-      message: error.message,
-    });
+    logErrorAPI("getgAllUsersAPI", error, next);
   }
 }
 

@@ -11,6 +11,7 @@ const {
   PasswordLengthErrorAPI,
   UserCreationErrorAPI,
   UserExistsErrorAPI,
+  logErrorAPI,
 } = require("../../Errors/API");
 const { JWT_SECRET = "jafhjafkw935809gyaGEh0aljkgn" } = process.env;
 // ! -----------------------------------------------------------
@@ -39,6 +40,7 @@ async function createUserAPI(req, res, next) {
   try {
     // Check if the user already exists
     const queriedUser = await getSingleUserDB(req.body);
+
     if (queriedUser) {
       // If user exists, send an error response
       throw new UserExistsErrorAPI();
@@ -48,6 +50,7 @@ async function createUserAPI(req, res, next) {
     } else {
       // Create the new user in the database
       const user = await createUserDB(req.body);
+
       if (!user) {
         // If user creation failed, send an error response
         throw new UserCreationErrorAPI();
@@ -64,12 +67,7 @@ async function createUserAPI(req, res, next) {
     }
   } catch (error) {
     // Handle errors and send an appropriate response
-    console.error("Error in createUserAPI: " + error);
-    next({
-      status: error.status || 500,
-      name: error.name,
-      message: error.message,
-    });
+    logErrorAPI("createUserAPI", error, next);
   }
 }
 
