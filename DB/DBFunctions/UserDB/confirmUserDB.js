@@ -6,8 +6,8 @@ const {
 } = require("../../../Errors/DB");
 const {
   getUserByUsernameDB,
-  inputCheck,
-  comparePasswords,
+  inputCheckDB,
+  comparePasswordsDB,
 } = require("./GetUsersDB/Helpers");
 // ! -----------------------------------------------------------
 
@@ -24,15 +24,18 @@ const {
  * @returns {Object|null} The user object without the password field if credentials are valid, otherwise null.
  * @throws {Error} If an error occurs while retrieving user information or comparing passwords.
  */
-async function confirmUser(username, password, next) {
+async function confirmUserDB(username, password, next) {
   console.log("IN CONFIRM USER");
-  // Check if either username or password is missing
-  const inputCheckResults = inputCheck(username, password);
-  if (inputCheckResults.status === false) {
-    return inputCheckResults;
-  }
+
+  // const inputCheckResults =
+  // if (inputCheckResults.status === false) {
+  //   return inputCheckResults;
+  // }
 
   try {
+    // Check if either username or password is missing
+    inputCheckDB(username, password);
+
     // Retrieve user information from the database based on the provided username
     const user = await getUserByUsernameDB(username);
 
@@ -42,7 +45,7 @@ async function confirmUser(username, password, next) {
     }
 
     // Compare the provided password with the user password retrieved from the database
-    const passwordsMatch = await comparePasswords(password, user.password);
+    const passwordsMatch = await comparePasswordsDB(password, user.password);
 
     // If the passwords do not match, throw password error
     if (!passwordsMatch) {
@@ -61,8 +64,8 @@ async function confirmUser(username, password, next) {
     };
   } catch (error) {
     // Throw any caught errors for handling by the caller
-    logErrorDB("confirmUser", error, next);
+    logErrorDB("confirmUserDB", error, next);
   }
 }
 
-module.exports = confirmUser;
+module.exports = confirmUserDB;

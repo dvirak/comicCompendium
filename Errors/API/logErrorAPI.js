@@ -10,7 +10,7 @@ const fs = require("fs");
  * @param {Function} next - The next middleware function to handle the error.
  */
 function logErrorAPI(programName, error, next) {
-  console.error(`Error in ${programName}:`, error);
+  console.error(`API Error in ${programName}:`, error);
 
   // Append error to a log file (optional)
   const logMessage = `Error in ${programName}: ${error}\n`;

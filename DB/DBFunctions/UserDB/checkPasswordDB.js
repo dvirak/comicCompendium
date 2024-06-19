@@ -1,4 +1,5 @@
-const { confirmUser } = require("./confirmUser");
+const { logErrorDB } = require("../../../Errors/DB");
+const confirmUserDB = require("./confirmUserDB");
 
 /**
  * Checks the user's password by calling the confirmUser function.
@@ -9,22 +10,13 @@ const { confirmUser } = require("./confirmUser");
  * @returns {Object} A response object indicating the status and a message.
  * @throws {Error} If an error occurs while confirming the user.
  */
-async function checkPassword(username, password) {
+async function checkPasswordDB(username, password, next) {
   try {
-    const response = await confirmUser(username, password);
-
-    if (!response) {
-      return {
-        status: false,
-        message: "An error occurred during password confirmation",
-      };
-    }
-
+    const response = await confirmUserDB(username, password);
     return response;
   } catch (error) {
-    console.error("Error in checkPassword:", error);
-    throw error;
+    logErrorDB("checkPasswordDB", error, next);
   }
 }
 
-module.exports = { checkPassword };
+module.exports = { checkPasswordDB };
