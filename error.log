@@ -15,3 +15,11 @@ Error in createUserAPI: PasswordLengthErrorAPI: Password must be at least 8 char
 Error in loginUserAPI: TypeError: confirmUserDB is not a function
 Error in loginUserAPI: DatabaseConnectionErrorAPI: There was an issue trying to reach the database
 Error in loginUserAPI: DatabaseConnectionErrorAPI: There was an issue trying to reach the database
+Error in loginUserAPI: DatabaseConnectionErrorAPI: There was an issue trying to reach the database
+Error in loginUserAPI: DatabaseConnectionErrorAPI: There was an issue trying to reach the database
+Error in loginUserAPI: DatabaseConnectionErrorAPI: There was an issue trying to reach the database
+Error in loginUserAPI: DatabaseConnectionErrorAPI: There was an issue trying to reach the database
+Error in loginUserAPI: IncorrectPasswordErrorDB: Incorrect password
+Error in loginUserAPI: IncorrectPasswordErrorDB: Incorrect password
+Error in loginUserAPI: ReferenceError: next is not defined
+Error in loginUserAPI: UserNotFoundErrorDB: No user found

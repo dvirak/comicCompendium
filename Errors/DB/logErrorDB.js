@@ -17,11 +17,7 @@ function logErrorDB(programName, error, next) {
   });
 
   // Send an appropriate error response using next()
-  next({
-    status: error.status || 500,
-    name: error.name,
-    message: error.message,
-  });
+  // next(error);
 }
 
 module.exports = logErrorDB;

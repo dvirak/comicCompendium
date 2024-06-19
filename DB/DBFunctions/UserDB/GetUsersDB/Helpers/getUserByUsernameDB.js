@@ -43,7 +43,8 @@ async function getUserByUsernameDB(username) {
     return rows[0];
   } catch (error) {
     // Log the error for further handling
-    logErrorDB("getUserByUsernameDB", error, next);
+    logErrorDB("getUserByUsernameDB", error);
+    throw error;
   }
 }
 
