@@ -12,3 +12,6 @@ Error in loginUserAPI: DatabaseConnectionErrorAPI: There was an issue trying to 
 Error in createUserAPI: UserExistsErrorAPI: A user with that username already exists
 Error in createUserAPI: UserExistsErrorAPI: A user with that username already exists
 Error in createUserAPI: PasswordLengthErrorAPI: Password must be at least 8 characters
+Error in loginUserAPI: TypeError: confirmUserDB is not a function
+Error in loginUserAPI: DatabaseConnectionErrorAPI: There was an issue trying to reach the database
+Error in loginUserAPI: DatabaseConnectionErrorAPI: There was an issue trying to reach the database

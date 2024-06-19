@@ -1,5 +1,5 @@
 // ! ----------------- IMPORTED FILES --------------------------
-const NoInfoProvidedErrorDB = require("../../ErrorsDB/NoInfoProvidedErrorDB");
+const NoInfoProvidedErrorDB = require("../../../Errors/DB");
 const client = require("../../client");
 // ! -----------------------------------------------------------
 
@@ -48,8 +48,7 @@ async function updateUserDB(id, fields = {}) {
     return user;
   } catch (error) {
     // If an error occurs, throw it to be handled by the caller.
-    console.error("Error occured in updateUserDB", error);
-    throw error;
+    NoInfoProvidedErrorDB.logErrorDB("updateUserDB", error, next);
   }
 }
 // ----------------- UPDATE USER IN DATABASE -------------------

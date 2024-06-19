@@ -1,4 +1,7 @@
 const IncorrectPasswordErrorDB = require("./IncorrectPasswordErrorDB");
+const MissingLoginInfoErrorDB = require("./MissingLoginInfoErrorDB");
+const MissingPasswordErrorDB = require("./MissingPasswordErrorDB");
+const MissingUsernameErrorDB = require("./MissingUsernameErrorDB");
 const NoInfoProvidedErrorDB = require("./NoInfoProvidedErrorDB");
 const NoUserProvidedErrorDB = require("./NoUserProvidedErrorDB");
 const UserNotFoundErrorDB = require("./UserNotFoundErrorDB");
@@ -10,4 +13,7 @@ module.exports = {
   UserNotFoundErrorDB,
   NoInfoProvidedErrorDB,
   logErrorDB,
+  MissingLoginInfoErrorDB,
+  MissingUsernameErrorDB,
+  MissingPasswordErrorDB,
 };

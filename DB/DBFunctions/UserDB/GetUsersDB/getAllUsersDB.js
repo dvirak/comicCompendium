@@ -1,4 +1,5 @@
 // ! ----------------- IMPORTED FILES --------------------------
+const { logErrorDB } = require("../../../../Errors/DB");
 const client = require("../../../client");
 
 // Import the requireUser function from the utils module.
@@ -30,9 +31,8 @@ async function getAllUsersDB() {
     // Return the fetched rows (users).
     return rows;
   } catch (error) {
-    console.log(`Error occurred in GET ALL USERS DB: ${error}`);
     // Throw the error for handling by the caller.
-    throw error;
+    logErrorDB("getAllUsersDB", error, next);
   }
 }
 

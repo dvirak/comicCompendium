@@ -1,4 +1,5 @@
 //! Imported Files --------------------------
+const { logErrorDB } = require("../../../Errors/DB");
 const client = require("../../client");
 const bcrypt = require("bcrypt");
 const SALT_COUNT = 10;
@@ -55,8 +56,7 @@ async function createUserDB({
 
     return user;
   } catch (error) {
-    console.log(`Error occurred in the createUser Db Call, ${error}`);
-    throw error;
+    logErrorDB("createUserDB", error, next);
   }
 }
 

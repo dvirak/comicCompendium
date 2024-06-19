@@ -4,7 +4,7 @@ const { JWT_SECRET = "jafhjafkw935809gyaGEh0aljkgn" } = process.env;
 // ! -----------------------------------------------------------
 
 // ! ---------------- IMPORTED LOCAL FILES --------------------
-const confirmUser = require("../../DB/DBFunctions/UserDB/confirmUser");
+const { confirmUserDB } = require("../../DB/DBFunctions/UserDB");
 const {
   DatabaseConnectionErrorAPI,
   AuthenticationErrorLoginAPI,
@@ -35,7 +35,7 @@ async function loginUserAPI(req, res, next) {
     }
 
     // Attempt to confirm user credentials
-    const response = await confirmUser(username, password, next);
+    const response = await confirmUserDB(username, password, next);
 
     if (!response) {
       throw new DatabaseConnectionErrorAPI();

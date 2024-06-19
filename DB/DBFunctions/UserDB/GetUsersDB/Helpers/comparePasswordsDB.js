@@ -8,8 +8,8 @@ const bcrypt = require("bcrypt");
  * @param {string} hashedPassword - The hashed password to compare with.
  * @returns {boolean} True if the passwords match, otherwise false.
  */
-async function comparePasswords(plainPassword, hashedPassword) {
+async function comparePasswordsDB(plainPassword, hashedPassword) {
   return bcrypt.compare(plainPassword, hashedPassword);
 }
 
-module.exports = comparePasswords;
+module.exports = comparePasswordsDB;

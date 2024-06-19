@@ -1,4 +1,5 @@
 // ! ----------------- IMPORTED FILES --------------------------
+const { UserNotFoundErrorDB, logErrorDB } = require("../../../../../Errors/DB");
 const client = require("../../../../client");
 
 // Import the requireUser function from the utils module.
@@ -33,15 +34,14 @@ async function getUserByIdDB(user_id) {
 
     // If no rows are returned, throw an error indicating the user was not found.
     if (rows.length === 0) {
-      throw new Error("User not found.");
+      throw new UserNotFoundErrorDB();
     }
 
     // Return the first row from the fetched rows (user).
     return rows[0];
-  } catch (err) {
-    console.log(`Error occurred in GET USER BY ID DB: ${err}`);
-    // Throw the error for handling by the caller.
-    throw err;
+  } catch (error) {
+    // Log the error for further handling
+    logErrorDB("getUserByIdDB", error, next);
   }
 }
 
