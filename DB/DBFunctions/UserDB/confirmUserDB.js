@@ -64,7 +64,8 @@ async function confirmUserDB(username, password, next) {
     };
   } catch (error) {
     // Throw any caught errors for handling by the caller
-    logErrorDB("confirmUserDB", error, next);
+    logErrorDB("confirmUserDB", error);
+    throw error;
   }
 }
 

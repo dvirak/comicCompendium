@@ -4,3 +4,12 @@ Database Error in confirmUser: UserNotFoundErrorDB: No user found
 Database Error in confirmUser: IncorrectPasswordErrorDB: Incorrect password
 Database Error in confirmUserDB: IncorrectPasswordErrorDB: Incorrect password
 Database Error in confirmUserDB: IncorrectPasswordErrorDB: Incorrect password
+Database Error in confirmUserDB: IncorrectPasswordErrorDB: Incorrect password
+Database Error in confirmUserDB: IncorrectPasswordErrorDB: Incorrect password
+Database Error in confirmUserDB: IncorrectPasswordErrorDB: Incorrect password
+Database Error in confirmUserDB: IncorrectPasswordErrorDB: Incorrect password
+Database Error in confirmUserDB: IncorrectPasswordErrorDB: Incorrect password
+Database Error in confirmUserDB: IncorrectPasswordErrorDB: Incorrect password
+Database Error in confirmUserDB: ReferenceError: next is not defined
+Database Error in getUserByUsernameDB: UserNotFoundErrorDB: No user found
+Database Error in confirmUserDB: UserNotFoundErrorDB: No user found

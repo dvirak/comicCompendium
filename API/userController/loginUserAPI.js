@@ -37,7 +37,10 @@ async function loginUserAPI(req, res, next) {
     // Attempt to confirm user credentials
     const response = await confirmUserDB(username, password, next);
 
+    console.log("RESPONSE: " + response);
+
     if (!response) {
+      console.log("IF NOT RESPONSE....");
       throw new DatabaseConnectionErrorAPI();
     } else if (response.status === false) {
       throw new AuthenticationErrorLoginAPI();
