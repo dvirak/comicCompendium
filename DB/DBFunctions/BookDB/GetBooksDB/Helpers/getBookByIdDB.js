@@ -48,4 +48,4 @@ async function getBookByIdDB(book_id) {
 // ------------GET SINGLE BOOK BY ID FROM DATABASE------------
 
 // Export the function for use by other modules.
-module.exports = { getBookByIdDB };
+module.exports = getBookByIdDB;

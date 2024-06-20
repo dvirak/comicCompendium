@@ -41,7 +41,7 @@ async function getUserByIdDB(user_id) {
     return rows[0];
   } catch (error) {
     // Log the error for further handling
-    logErrorDB("getUserByIdDB", error, next);
+    logErrorDB("getUserByIdDB", error);
   }
 }
 

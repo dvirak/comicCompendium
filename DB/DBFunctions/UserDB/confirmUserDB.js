@@ -24,7 +24,7 @@ const {
  * @returns {Object|null} The user object without the password field if credentials are valid, otherwise null.
  * @throws {Error} If an error occurs while retrieving user information or comparing passwords.
  */
-async function confirmUserDB(username, password, next) {
+async function confirmUserDB(username, password) {
   console.log("IN CONFIRM USER");
 
   // const inputCheckResults =

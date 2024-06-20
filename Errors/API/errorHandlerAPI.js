@@ -1,6 +1,6 @@
 // Error handling middleware
 function errorHandlerAPI(error, req, res, next) {
-  console.log(req.header);
+  console.log(req.headers);
   console.log(error);
 
   // Send a standardize error response

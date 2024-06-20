@@ -3,9 +3,7 @@ const express = require("express");
 // ! ---------------------------------------------------------------
 
 // ! ---------------- IMPORTED LOCAL FILES -------------------------
-const {
-  getSingleUserDB,
-} = require("../../DB/DBFunctions/UserDB/GetUsersDB/getSingleUserDB");
+const getSingleUserDB = require("../../DB/DBFunctions/UserDB/GetUsersDB/getSingleUserDB");
 const {
   UserNotFoundErrorAPI,
   InputErrorUsersAPI,

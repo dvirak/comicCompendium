@@ -10,13 +10,14 @@ const confirmUserDB = require("./confirmUserDB");
  * @returns {Object} A response object indicating the status and a message.
  * @throws {Error} If an error occurs while confirming the user.
  */
-async function checkPasswordDB(username, password, next) {
+async function checkPasswordDB(username, password) {
   try {
     const response = await confirmUserDB(username, password);
     return response;
   } catch (error) {
-    logErrorDB("checkPasswordDB", error, next);
+    logErrorDB("checkPasswordDB", error);
+    throw error;
   }
 }
 
-module.exports = { checkPasswordDB };
+module.exports = checkPasswordDB;
