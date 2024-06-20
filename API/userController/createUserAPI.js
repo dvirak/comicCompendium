@@ -3,16 +3,14 @@ const jwt = require("jsonwebtoken");
 // ! -----------------------------------------------------------
 
 // ! ---------------- IMPORTED LOCAL FILES --------------------
-const { createUserDB } = require("../../DB/DBFunctions/UserDB/createUserDB");
-const {
-  getSingleUserDB,
-} = require("../../DB/DBFunctions/UserDB/GetUsersDB/getSingleUserDB");
+const { createUserDB } = require("../../DB/DBFunctions/UserDB");
 const {
   PasswordLengthErrorAPI,
   UserCreationErrorAPI,
   UserExistsErrorAPI,
   logErrorAPI,
 } = require("../../Errors/API");
+const userExistsCheckAPI = require("./Helpers/userExistsCheckAPI");
 const { JWT_SECRET = "jafhjafkw935809gyaGEh0aljkgn" } = process.env;
 // ! -----------------------------------------------------------
 
@@ -39,7 +37,9 @@ async function createUserAPI(req, res, next) {
 
   try {
     // Check if the user already exists
-    const queriedUser = await getSingleUserDB(req.body);
+    const queriedUser = await userExistsCheckAPI(req.body.username);
+
+    console.log("QUIERIED USER: " + queriedUser);
 
     if (queriedUser) {
       // If user exists, send an error response

@@ -23,3 +23,28 @@ Error in loginUserAPI: IncorrectPasswordErrorDB: Incorrect password
 Error in loginUserAPI: IncorrectPasswordErrorDB: Incorrect password
 Error in loginUserAPI: ReferenceError: next is not defined
 Error in loginUserAPI: UserNotFoundErrorDB: No user found
+Error in getSingleBookAPI: Error: Book not found.
+Error in getSingleBookAPI: error: invalid input syntax for type integer: "book_title=watchmen"
+Error in getSingleBookAPI: Error: Book not found.
+Error in getSingleBookAPI: Error: Book not found.
+Error in getSingleBookAPI: Error: Book not found.
+Error in getSingleBookAPI: Error: Book not found.
+Error in getSingleBookAPI: Error: Book not found.
+Error in getSingleUserAPI: ReferenceError: next is not defined
+Error in getSingleUserAPI: TypeError: getSingleUserDB is not a function
+Error in getSingleUserAPI: ReferenceError: next is not defined
+Error in getSingleUserAPI: UserNotFoundErrorAPI: No user found
+Error in getSingleUserAPI: TypeError: getSingleUserDB is not a function
+Error in getSingleUserAPI: UserNotFoundErrorAPI: No user found
+Error in getSingleUserAPI: InputErrorAPI: Either user_id or username must be provided.
+Error in getSingleUserAPI: InputErrorAPI: Either user_id or username must be provided.
+Error in loginUserAPI: UserNotFoundErrorDB: No user found
+Error in createUserAPI: TypeError: getSingleUserDB is not a function
+Error in createUserAPI: UserNotFoundErrorDB: No user found
+Error in createUserAPI: UserNotFoundErrorDB: No user found
+Error in createUserAPI: PasswordLengthErrorAPI: Password must be at least 8 characters
+Error in createUserAPI: PasswordLengthErrorAPI: Password must be at least 8 characters
+Error in createUserAPI: UserExistsErrorAPI: A user with that username already exists
+Error in getSingleUserAPI: UserNotFoundErrorDB: No user found
+Error in getSingleUserAPI: UserNotFoundErrorAPI: No user found
+Error in getSingleUserAPI: UserNotFoundErrorDB: No user found

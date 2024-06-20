@@ -48,7 +48,8 @@ async function updateUserDB(id, fields = {}) {
     return user;
   } catch (error) {
     // If an error occurs, throw it to be handled by the caller.
-    NoInfoProvidedErrorDB.logErrorDB("updateUserDB", error, next);
+    logErrorDB("updateUserDB", error);
+    throw error;
   }
 }
 // ----------------- UPDATE USER IN DATABASE -------------------

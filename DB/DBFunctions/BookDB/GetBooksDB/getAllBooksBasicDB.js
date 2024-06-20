@@ -29,14 +29,14 @@ async function getAllBooksBasicDB() {
 
     // Return the fetched rows (books).
     return rows;
-  } catch (err) {
-    console.log(`Error occurred in GET ALL BOOKS BASIC DB: ${err}`);
+  } catch (error) {
     // Throw the error for handling by the caller.
-    throw err;
+    logErrorDB("getAllBooksDB", error);
+    throw error;
   }
 }
 
 // -----------------GET ALL BOOKS FROM DATABASE-----------------
 
 // Export the function for use by other modules.
-module.exports = { getAllBooksBasicDB };
+module.exports = getAllBooksBasicDB;

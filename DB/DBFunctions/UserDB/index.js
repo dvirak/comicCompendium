@@ -1,6 +1,6 @@
-const { checkPasswordDB } = require("./checkPasswordDB");
+const checkPasswordDB = require("./checkPasswordDB");
 const confirmUserDB = require("./confirmUserDB");
-const { createUserDB } = require("./createUserDB");
+const createUserDB = require("./createUserDB");
 const updateUserDB = require("./updateUserDB");
 
 module.exports = { checkPasswordDB, confirmUserDB, createUserDB, updateUserDB };

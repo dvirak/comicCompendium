@@ -56,12 +56,11 @@ async function createUserDB({
 
     return user;
   } catch (error) {
-    logErrorDB("createUserDB", error, next);
+    logErrorDB("createUserDB", error);
+    throw error;
   }
 }
 
 //* --------------CREATE USER DB-------------
 
-module.exports = {
-  createUserDB,
-};
+module.exports = createUserDB;

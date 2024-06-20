@@ -3,7 +3,7 @@ const { getUserByIdDB, getUserByUsernameDB } = require("./Helpers");
 const { NoUserProvidedErrorDB, logErrorDB } = require("../../../../Errors/DB");
 // ! -----------------------------------------------------------
 
-// -----------------GET SINGLE USER FROM DATABASE---------------
+//* -----------------GET SINGLE USER FROM DATABASE---------------
 /**
  * Retrieves a single user from the database based on the provided user_id or username.
  *
@@ -17,13 +17,13 @@ const { NoUserProvidedErrorDB, logErrorDB } = require("../../../../Errors/DB");
  * @postcondition The function returns a Promise that resolves to an object containing the user data from the database.
  *                If an error occurs, the function throws an error.
  */
-async function getSingleUserDB(userData) {
-  const { user_id, username } = userData;
+async function getSingleUserDB({ user_id, username }) {
   console.log("IN GET SINGLE USER DB");
 
   try {
     if (!user_id && !username) {
-      throw new NoUserProvidedErrorDB(); // Throw an error if neither user_id nor username is provided
+      // Throw an error if neither user_id nor username is provided
+      throw new NoUserProvidedErrorDB();
     }
 
     let user;
@@ -36,13 +36,15 @@ async function getSingleUserDB(userData) {
       user = await getUserByUsernameDB(username);
     }
 
-    return user; // Return the user data
+    // Return the user data
+    return user;
   } catch (error) {
     // Log the error for further handling
-    logErrorDB("getSingleUserDB", error, next);
+    logErrorDB("getSingleUserDB", error);
+    throw error;
   }
 }
-// -----------------GET SINGLE USER FROM DATABASE---------------
+//* -----------------GET SINGLE USER FROM DATABASE---------------
 
 // Export the function for use by other modules.
-module.exports = { getSingleUserDB };
+module.exports = getSingleUserDB;

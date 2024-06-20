@@ -39,4 +39,4 @@ async function getAllUsersDB() {
 // -----------------GET ALL USERS FROM DATABASE-----------------
 
 // Export the function for use by other modules.
-module.exports = { getAllUsersDB };
+module.exports = getAllUsersDB;
