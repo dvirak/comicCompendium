@@ -1,5 +1,6 @@
 // ! ----------------- IMPORTED FILES --------------------------
 const express = require("express");
+const requireUser = require("../Authentication/requireUser");
 // ! -----------------------------------------------------------
 
 const booksRouter = express.Router();
@@ -22,5 +23,8 @@ booksRouter.get("/", getAllBooksBasicAPI);
  */
 const getSingleBookAPI = require("./getSingleBookAPI");
 booksRouter.get("/book/:book_id?", getSingleBookAPI);
+
+const createBookAPI = require("./createBookAPI");
+booksRouter.post("/add", requireUser, createBookAPI);
 
 module.exports = booksRouter;
