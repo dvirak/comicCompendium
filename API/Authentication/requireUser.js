@@ -17,4 +17,4 @@ function requireUser(req, res, next) {
 }
 
 // Export the middleware functions for use in other modules
-module.exports = { requireUser };
+module.exports = requireUser;

@@ -68,3 +68,4 @@ Error in createUserAPI: UserExistsErrorAPI: A user with that username already ex
 Error in createUserAPI: UserExistsErrorAPI: A user with that username already exists
 Error in createUserAPI: PasswordLengthErrorAPI: Password must be at least 8 characters
 Error in createUserAPI: ReferenceError: bcrypt is not defined
+Error in loginUserAPI: IncorrectPasswordErrorDB: Incorrect password

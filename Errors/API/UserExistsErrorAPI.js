@@ -12,7 +12,7 @@ class UserExistsErrorAPI extends Error {
   constructor(message = "A user with that username already exists") {
     super(message); // Call the constructor of Error class with the provided message
     this.name = "UserExistsErrorAPI"; // Set the name of the error
-    this.status = 401; // Set the HTTP status code associated with this error (401 Unauthorized)
+    this.status = 409; // Set the HTTP status code associated with this error (409 Conflict)
   }
 }
 

@@ -13,6 +13,8 @@ const DatabaseConnectionErrorAPI = require("./DatabaseConnectionErrorAPI");
 const errorHandlerAPI = require("./errorHandlerAPI");
 const BookNotFoundErrorAPI = require("./BookNotFoundErrorAPI");
 const AuthenticationErrorLoginAPI = require("./AuthenticationErrorLoginAPI");
+const UserFeatureErrorAPI = require("./UserFeatureErrorAPI");
+const ItemAlreadyExistsErrorAPI = require("./ItemAlreadyExistsError");
 
 module.exports = {
   UserExistsErrorAPI,
@@ -30,4 +32,6 @@ module.exports = {
   errorHandlerAPI,
   BookNotFoundErrorAPI,
   AuthenticationErrorLoginAPI,
+  UserFeatureErrorAPI,
+  ItemAlreadyExistsErrorAPI,
 };
