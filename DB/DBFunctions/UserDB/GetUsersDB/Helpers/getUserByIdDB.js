@@ -42,6 +42,7 @@ async function getUserByIdDB(user_id) {
   } catch (error) {
     // Log the error for further handling
     logErrorDB("getUserByIdDB", error);
+    throw error;
   }
 }
 

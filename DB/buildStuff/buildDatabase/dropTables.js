@@ -1,10 +1,21 @@
+// ! ----------------- IMPORTED FILES --------------------------
 const client = require("../../client");
+const { logErrorDB } = require("../../../Errors/DB");
+// ! -----------------------------------------------------------
 
+//* --------------DROP TABLES DB-------------
+/**
+ * Drop all tables in the database if they exist.
+ *
+ * @returns {Promise<void>} A promise that resolves when tables are dropped successfully.
+ * @throws {Error} If an error occurs while dropping tables.
+ *
+ * @precondition None.
+ * @postcondition All tables specified are dropped from the database if they exist.
+ */
 async function dropTables() {
-  // Remove all tables if the exist
   console.log("DROPPING TABLES...");
 
-  //Drop all tables in correct order
   try {
     await client.query(`
       DROP TABLE IF EXISTS users_books;
@@ -36,10 +47,14 @@ async function dropTables() {
 
     console.log("TABLES DROPPED!");
   } catch (error) {
+    // Log the error for further handling
+    logErrorDB("dropTables", error);
     throw error;
   }
 }
+//* --------------DROP TABLES DB-------------
 
+// Export the function for use by other modules.
 module.exports = {
   dropTables,
 };

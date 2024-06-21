@@ -1,19 +1,29 @@
 //! Imported Files --------------------------
-const { logErrorDB } = require("../../../Errors/DB");
 const client = require("../../client");
+const { logErrorDB } = require("../../../Errors/DB");
 const bcrypt = require("bcrypt");
 const SALT_COUNT = 10;
 //! ---------------------------------------------
 
 //* --------------CREATE USER DB-------------
-
-/* 
-createUser receives values from a new patron to the website and pushes them into the Database so they can access their data later
-Pre-Condition: A new user with no profile saved, and the following information from the user:
-  UNIQUE username, password, first_name, last_name, preferred_name, phone, email, admin status
-Post-Condition: Returns the userinfomration that was added to the database
-*/
-
+/**
+ * Creates a new user in the database.
+ *
+ * @param {Object} userData - Object containing user data.
+ * @param {string} userData.username - The username of the new user.
+ * @param {string} userData.password - The password of the new user.
+ * @param {string} userData.first_name - The first name of the new user.
+ * @param {string} userData.last_name - The last name of the new user.
+ * @param {string} userData.preferred_name - The preferred name of the new user.
+ * @param {string} userData.phone - The phone number of the new user.
+ * @param {string} userData.email - The email address of the new user.
+ * @param {boolean} [userData.admin=false] - Optional admin status of the new user.
+ * @returns {Promise<Object>} A promise that resolves to the user data inserted into the database.
+ * @throws {Error} If there's an error during the database operation.
+ *
+ * @precondition userData must contain username, password, first_name, last_name, preferred_name, phone, and email fields.
+ * @postcondition The function inserts a new user into the database and returns the user object.
+ */
 async function createUserDB({
   username,
   password,
@@ -22,15 +32,16 @@ async function createUserDB({
   preferred_name,
   phone,
   email,
-  admin,
+  admin = false,
 }) {
+  // Ensure admin is a boolean and defaults to false unless explicitly sent as true
   admin !== true ? (admin = false) : (admin = admin);
-  console.log("CREATING USER IN DB: " + username);
-
-  // use bcrypt to "hash" a function by SALT_COUNT to create unique hashedPassword that is more secure
-  const hashedPassword = await bcrypt.hash(password, SALT_COUNT);
 
   try {
+    // Hash the password using bcrypt
+    const hashedPassword = await bcrypt.hash(password, SALT_COUNT);
+
+    // Insert user data into the database
     const {
       rows: [user],
     } = await client.query(
@@ -52,15 +63,13 @@ async function createUserDB({
       ]
     );
 
-    console.log("USER CREATED IN DB: " + user.username);
-
     return user;
   } catch (error) {
+    // Log and rethrow the error
     logErrorDB("createUserDB", error);
     throw error;
   }
 }
-
 //* --------------CREATE USER DB-------------
 
 module.exports = createUserDB;

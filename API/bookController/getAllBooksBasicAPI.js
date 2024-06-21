@@ -7,7 +7,7 @@ const router = express.Router();
 const logErrorAPI = require("../../Errors/API/logErrorAPI");
 const {
   getAllBooksBasicDB,
-} = require("../../DB/DBFunctions/BookDB/GetBooksDB/getAllBooksBasicDB");
+} = require("../../DB/DBFunctions/BookDB/GetBooksDB");
 // ! -----------------------------------------------------------
 
 /**
@@ -22,7 +22,7 @@ const {
  * @postcondition A response containing basic book information is sent to the client.
  */
 
-async function getAllBooksBasicAPI(req, res) {
+async function getAllBooksBasicAPI(req, res, next) {
   console.log("IN GET ALL BOOKS BASIC API");
 
   try {

@@ -27,7 +27,7 @@ const { buildBookPublishersTable } = require("./buildBookPublishersTable");
 // Import other table creation modules here...
 
 // Function to seed all tables
-async function seedAllTables() {
+async function buildAllTables() {
   console.log("STARTING TO SEED ALL TABLES...");
   try {
     await buildAuthorsTable();
@@ -66,5 +66,5 @@ async function seedAllTables() {
 }
 
 module.exports = {
-  seedAllTables,
+  buildAllTables,
 };

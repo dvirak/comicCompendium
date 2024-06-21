@@ -1,26 +1,45 @@
+// ! ----------------- IMPORTED FILES --------------------------
 const client = require("../../client");
-const { seedAllTables } = require("../buildTables/buildAllTables");
+const { buildAllTables } = require("../buildTables/buildAllTables");
 const { dropTables } = require("./dropTables");
 const {
   createInitialData,
 } = require("../initialData/Functions/createInitialData");
+const { logErrorDB } = require("../../../Errors/DB");
+// ! -----------------------------------------------------------
 
-// Drop tables, create tables, create Initial Data
+//* -------------- REBUILD DATABASE FUNCTION --------------
+/**
+ * Drops existing tables, creates new tables, and seeds initial data into the database.
+ *
+ * @returns {Promise<void>} A promise that resolves when the database is successfully rebuilt.
+ * @throws {Error} If any error occurs during dropping tables, creating tables, or seeding data.
+ *
+ * @precondition Database connection must be established.
+ * @postcondition The database is rebuilt with fresh tables and initial data.
+ */
 async function rebuildDB() {
   console.log("STARTING TO REBUILD DB...");
 
   try {
-    client.connect();
+    // Connect to the database
+    await client.connect();
+
+    // Drop existing tables
     await dropTables();
-    await seedAllTables();
+
+    // Create new tables and seed initial data
+    await buildAllTables();
     await createInitialData();
 
     console.log("FINISHED REBUILDING DB!");
   } catch (error) {
-    console.log("ERROR IN REBUILD DB: " + error);
+    // Log the error for further handling
+    logErrorDB("rebuildDB", error);
     throw error;
   }
 }
+//* -------------- REBUILD DATABASE FUNCTION --------------
 
 // Export Function
 module.exports = {
