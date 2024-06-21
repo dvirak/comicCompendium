@@ -4,9 +4,7 @@ const router = express.Router();
 // ! -----------------------------------------------------------
 
 // ! ---------- IMPORTED COMPONENTS/VARIABLES -------------------
-const {
-  getAllUsersDB,
-} = require("../../DB/DBFunctions/UserDB/GetUsersDB/getAllUsersDB");
+const { getAllUsersDB } = require("../../DB/DBFunctions/UserDB/GetUsersDB");
 const { logErrorAPI } = require("../../Errors/API");
 // ! -----------------------------------------------------------
 
@@ -22,7 +20,7 @@ const { logErrorAPI } = require("../../Errors/API");
  * @postcondition A response containing all user information is sent to the client.
  */
 
-async function getAllUsersAPI(req, res) {
+async function getAllUsersAPI(req, res, next) {
   console.log("IN GET ALL USERS API");
   try {
     const basicUsers = await getAllUsersDB(req, res);
@@ -30,6 +28,7 @@ async function getAllUsersAPI(req, res) {
     // Send list of books as the response
     res.status(200).json(basicUsers);
   } catch (error) {
+    // Handle errors and send an appropriate response
     logErrorAPI("getgAllUsersAPI", error, next);
   }
 }

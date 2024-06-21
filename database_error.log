@@ -33,3 +33,32 @@ Database Error in getSingleUserDB: UserNotFoundErrorDB: No user found
 Database Error in getUserByIdDB: UserNotFoundErrorDB: No user found
 Database Error in getUserByUsernameDB: UserNotFoundErrorDB: No user found
 Database Error in getSingleUserDB: UserNotFoundErrorDB: No user found
+Database Error in getUserByUsernameDB: UserNotFoundErrorDB: No user found
+Database Error in getSingleUserDB: UserNotFoundErrorDB: No user found
+Database Error in getSingleBookDB: Error: Book not found.
+Database Error in getBookByIdDB: Error: Book not found.
+Database Error in getSingleBookDB: Error: Book not found.
+Database Error in getBookByIdDB: BookNotFoundErrorDB: No book found
+Database Error in getSingleBookDB: BookNotFoundErrorDB: No book found
+Database Error in getSingleBookDB: Error: Book not found.
+Database Error in getBookByNameDB: BookNotFoundErrorDB: No book found
+Database Error in getSingleBookDB: BookNotFoundErrorDB: No book found
+Database Error in getUserByIdDB: UserNotFoundErrorDB: No user found
+Database Error in getUserByIdDB: UserNotFoundErrorDB: No user found
+Database Error in getSingleUserDB: UserNotFoundErrorDB: No user found
+Database Error in getUserByIdDB: UserNotFoundErrorDB: No user found
+Database Error in getSingleUserDB: UserNotFoundErrorDB: No user found
+Database Error in getUserByIdDB: UserNotFoundErrorDB: No user found
+Database Error in getSingleUserDB: UserNotFoundErrorDB: No user found
+Database Error in getUserByUsernameDB: UserNotFoundErrorDB: No user found
+Database Error in getSingleUserDB: UserNotFoundErrorDB: No user found
+Database Error in getUserByUsernameDB: UserNotFoundErrorDB: No user found
+Database Error in confirmUserDB: UserNotFoundErrorDB: No user found
+Database Error in confirmUserDB: IncorrectPasswordErrorDB: Incorrect password
+Database Error in getUserByUsernameDB: UserNotFoundErrorDB: No user found
+Database Error in getSingleUserDB: UserNotFoundErrorDB: No user found
+Database Error in getUserByUsernameDB: UserNotFoundErrorDB: No user found
+Database Error in getSingleUserDB: UserNotFoundErrorDB: No user found
+Database Error in createUserDB: ReferenceError: bcrypt is not defined
+Database Error in getUserByUsernameDB: UserNotFoundErrorDB: No user found
+Database Error in getSingleUserDB: UserNotFoundErrorDB: No user found

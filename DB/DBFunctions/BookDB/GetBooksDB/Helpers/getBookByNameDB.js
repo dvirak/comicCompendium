@@ -1,4 +1,5 @@
 // ! ----------------- IMPORTED FILES --------------------------
+const { logErrorDB, BookNotFoundErrorDB } = require("../../../../../Errors/DB");
 const client = require("../../../../client");
 
 // Import the requireUser function from the utils module.
@@ -19,8 +20,6 @@ const client = require("../../../../client");
  */
 
 async function getBookByNameDB(book_name) {
-  console.log("IN GET BOOK BY NAME DB");
-
   const query = `
     SELECT *
     FROM books
@@ -33,15 +32,15 @@ async function getBookByNameDB(book_name) {
 
     // If no rows are returned, throw an error indicating the book was not found.
     if (rows.length === 0) {
-      throw new Error("Book not found.");
+      throw new BookNotFoundErrorDB();
     }
 
     // Return the first row from the fetched rows (book).
     return rows[0];
-  } catch (err) {
-    console.log(`Error occurred in GET BOOK BY NAME DB: ${err}`);
+  } catch (error) {
     // Throw the error for handling by the caller.
-    throw err;
+    logErrorDB("getBookByNameDB", error);
+    throw error;
   }
 }
 

@@ -48,3 +48,23 @@ Error in createUserAPI: UserExistsErrorAPI: A user with that username already ex
 Error in getSingleUserAPI: UserNotFoundErrorDB: No user found
 Error in getSingleUserAPI: UserNotFoundErrorAPI: No user found
 Error in getSingleUserAPI: UserNotFoundErrorDB: No user found
+Error in getSingleUserAPI: UserNotFoundErrorDB: No user found
+Error in getSingleBookAPI: TypeError: getSingleBookDB is not a function
+Error in getSingleBookAPI: InputErrorBooksAPI: Either book_id or book_title must be provided.
+Error in getSingleBookAPI: Error: Book not found.
+Error in getSingleBookAPI: Error: Book not found.
+Error in getSingleBookAPI: BookNotFoundErrorDB: No book found
+Error in getSingleBookAPI: Error: Book not found.
+Error in getSingleBookAPI: BookNotFoundErrorDB: No book found
+Error in getSingleUserAPI: UserNotFoundErrorAPI: No user found
+Error in getSingleUserAPI: UserNotFoundErrorDB: No user found
+Error in getSingleUserAPI: UserNotFoundErrorDB: No user found
+Error in getgAllUsersAPI: TypeError: getAllUsersDB is not a function
+Error in getSingleUserAPI: UserNotFoundErrorDB: No user found
+Error in getSingleUserAPI: UserNotFoundErrorDB: No user found
+Error in loginUserAPI: UserNotFoundErrorDB: No user found
+Error in loginUserAPI: IncorrectPasswordErrorDB: Incorrect password
+Error in createUserAPI: UserExistsErrorAPI: A user with that username already exists
+Error in createUserAPI: UserExistsErrorAPI: A user with that username already exists
+Error in createUserAPI: PasswordLengthErrorAPI: Password must be at least 8 characters
+Error in createUserAPI: ReferenceError: bcrypt is not defined

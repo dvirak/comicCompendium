@@ -32,7 +32,8 @@ async function getAllUsersDB() {
     return rows;
   } catch (error) {
     // Throw the error for handling by the caller.
-    logErrorDB("getAllUsersDB", error, next);
+    logErrorDB("getAllUsersDB", error);
+    throw error;
   }
 }
 

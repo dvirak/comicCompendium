@@ -7,9 +7,7 @@ const {
   logErrorAPI,
   BookNotFoundErrorAPI,
 } = require("../../Errors/API");
-const {
-  getSingleBookDB,
-} = require("../../DB/DBFunctions/BookDB/GetBooksDB/getSingleBookDB");
+const { getSingleBookDB } = require("../../DB/DBFunctions/BookDB/GetBooksDB/");
 // ! -----------------------------------------------------------
 
 /**
