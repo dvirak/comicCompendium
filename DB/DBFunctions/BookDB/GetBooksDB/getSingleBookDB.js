@@ -22,6 +22,7 @@ const {
  */
 async function getSingleBookDB({ book_id, book_title }) {
   console.log("IN GET SINGLE BOOK DB");
+  console.log(book_title);
 
   try {
     if (!book_id && !book_title) {

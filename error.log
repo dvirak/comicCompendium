@@ -69,3 +69,12 @@ Error in createUserAPI: UserExistsErrorAPI: A user with that username already ex
 Error in createUserAPI: PasswordLengthErrorAPI: Password must be at least 8 characters
 Error in createUserAPI: ReferenceError: bcrypt is not defined
 Error in loginUserAPI: IncorrectPasswordErrorDB: Incorrect password
+Error in createBookAPI: TypeError: Cannot destructure property 'book_id' of 'undefined' as it is undefined.
+Error in createBookAPI: TypeError: Cannot destructure property 'book_id' of 'undefined' as it is undefined.
+Error in createBookAPI: TypeError: Cannot destructure property 'book_id' of 'undefined' as it is undefined.
+Error in createBookAPI: MissingBookInfoErrorDB: No book_id or book_title provided
+Error in createBookAPI: BookNotFoundErrorDB: No book found
+Error in createBookAPI: BookNotFoundErrorDB: No book found
+Error in createBookAPI: BookNotFoundErrorDB: No book found
+Error in createBookAPI: BookNotFoundErrorDB: No book found
+Error in createBookAPI: BookNotFoundErrorDB: No book found

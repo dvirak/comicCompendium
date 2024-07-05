@@ -8,12 +8,16 @@ const {
 
 async function createBookAPI(req, res, next) {
   console.log("IN CREATE BOOK API");
+  console.log(req.user);
 
   if (!req.user) {
     throw new UserFeatureErrorAPI();
   }
   try {
-    const bookExists = await getSingleBookDB(req.body.title);
+    const book_title = req.body.title;
+    console.log(book_title);
+    const bookExists = await getSingleBookDB({ book_title });
+    console.log(bookExists);
     if (bookExists) {
       throw new ItemAlreadyExistsErrorAPI();
     } else {

@@ -9,6 +9,7 @@ const NoLogInErrorAPI = require("../../Errors/API/NoLogInErrorAPI");
  * @param {Function} next - The next middleware function
  */
 function requireUser(req, res, next) {
+  console.log("IN REQUIRE USER");
   if (!req.user) {
     throw new NoLogInErrorAPI();
   } else {
