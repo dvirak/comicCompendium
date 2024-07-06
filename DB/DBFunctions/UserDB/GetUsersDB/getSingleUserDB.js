@@ -19,6 +19,7 @@ const { NoUserProvidedErrorDB, logErrorDB } = require("../../../../Errors/DB");
  */
 async function getSingleUserDB({ user_id, username }) {
   console.log("IN GET SINGLE USER DB");
+  console.log(user_id);
 
   try {
     if (!user_id && !username) {
