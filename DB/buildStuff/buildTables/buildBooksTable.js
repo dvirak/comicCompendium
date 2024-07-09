@@ -7,12 +7,12 @@ async function buildBooksTable() {
     await client.query(`
       CREATE TABLE books (
         id SERIAL PRIMARY KEY,
-        title VARCHAR(255) UNIQUE,
-        publish_date DATE,
-        description TEXT,
-        print_length INTEGER,
-        series_volume VARCHAR(255),
-        cover_image VARCHAR(255),
+        title VARCHAR(255) UNIQUE NOT NULL,
+        publish_date DATE NOT NULL,
+        description TEXT NOT NULL,
+        print_length INTEGER NOT NULL,
+        series_volume VARCHAR(255) NOT NULL,
+        cover_image VARCHAR(255) NOT NULL,
         CONSTRAINT unique_id_title UNIQUE (id, title)
       );
     `);
