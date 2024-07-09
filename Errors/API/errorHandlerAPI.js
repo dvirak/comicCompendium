@@ -7,6 +7,7 @@ function errorHandlerAPI(error, req, res, next) {
   res.status(error.status || 500).json({
     error: error.name || "Internal Service Failure",
     message: error.message || "An Unexpected Error Occurred.",
+    code: error.code || "API_ERROR",
   });
 }
 

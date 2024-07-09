@@ -79,3 +79,16 @@ Database Error in getBookByNameDB: BookNotFoundErrorDB: No book found
 Database Error in getSingleBookDB: BookNotFoundErrorDB: No book found
 Database Error in getBookByNameDB: BookNotFoundErrorDB: No book found
 Database Error in getSingleBookDB: BookNotFoundErrorDB: No book found
+Database Error in getBookByNameDB: BookNotFoundErrorDB: No book found
+Database Error in getSingleBookDB: BookNotFoundErrorDB: No book found
+Database Error in getBookByNameDB: BookNotFoundErrorDB: No book found
+Database Error in getSingleBookDB: BookNotFoundErrorDB: No book found
+Database Error in getSingleBookDB: MissingBookInfoErrorDB: No book_id or book_title provided
+Database Error in getBookByNameDB: BookNotFoundErrorDB: No book found
+Database Error in getSingleBookDB: BookNotFoundErrorDB: No book found
+Database Error in createBookDB: error: invalid input syntax for type date: ""
+Database Error in getBookByNameDB: BookNotFoundErrorDB: No book found
+Database Error in getSingleBookDB: BookNotFoundErrorDB: No book found
+Database Error in createBookDB: error: invalid input syntax for type date: ""
+Database Error in getBookByNameDB: BookNotFoundErrorDB: No book found
+Database Error in getSingleBookDB: BookNotFoundErrorDB: No book found
