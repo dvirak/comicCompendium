@@ -9,29 +9,33 @@ const {
 const { BookNotFoundErrorDB } = require("../../Errors/DB");
 
 async function createBookAPI(req, res, next) {
-  console.log("IN CREATE BOOK API");
-  console.log(req.publish_date);
+  const {
+    title,
+    publish_date,
+    description,
+    print_length,
+    series_volume,
+    cover_image,
+  } = req.body;
 
-  if (!req.user) {
-    throw new UserFeatureErrorAPI();
-  } else if (
-    !req.body.title ||
-    !req.body.publish_date ||
-    !req.body.description ||
-    !req.body.print_length ||
-    !req.body.series_volume ||
-    !req.body.cover_image
-  ) {
-    console.log("IN ELSE IF");
-    throw new MissingInformationErrorAPI(
-      "You are missing information for the book in createBookAPI"
-    );
-  }
   try {
-    const book_title = req.body.title;
-
+    if (
+      !title ||
+      !publish_date ||
+      !description ||
+      !print_length ||
+      !series_volume ||
+      !cover_image
+    ) {
+      console.log("IN ELSE IF");
+      throw new MissingInformationErrorAPI(
+        "You are missing information for the book in createBookAPI"
+      );
+    }
     let bookExists;
+    console.log(title);
     try {
+      let book_title = title;
       bookExists = await getSingleBookDB({ book_title });
     } catch (error) {
       if (error instanceof BookNotFoundErrorDB) {
