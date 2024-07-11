@@ -1,6 +1,6 @@
 const AuthorizationHeaderErrorAPI = require("./AuthorizationHeaderErrorAPI");
 const InputErrorUsersAPI = require("./InputErrorUsersAPI");
-const NotLoggedInErrorAPI = require("./NoLogInErrorAPI");
+const NotLoggedInErrorAPI = require("./NotLoggedInErrorAPI");
 const NotAdminErrorAPI = require("./NotAdminErrorAPI");
 const PasswordLengthErrorAPI = require("./PasswordLengthErrorAPI");
 const TokenVerificationErrorAPI = require("./TokenVerificationErrorAPI");

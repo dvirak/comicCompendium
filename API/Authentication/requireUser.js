@@ -1,4 +1,4 @@
-const NoLogInErrorAPI = require("../../Errors/API/NoLogInErrorAPI");
+const { NotLoggedInErrorAPI } = require("../../Errors/API");
 
 /**
  * Middleware to ensure a user is logged in.
@@ -11,7 +11,7 @@ const NoLogInErrorAPI = require("../../Errors/API/NoLogInErrorAPI");
 function requireUser(req, res, next) {
   console.log("IN REQUIRE USER");
   if (!req.user) {
-    throw new NoLogInErrorAPI();
+    throw new NotLoggedInErrorAPI();
   } else {
     next(); // If user is found, proceed to the next middleware or route handler
   }

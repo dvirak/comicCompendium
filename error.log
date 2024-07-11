@@ -84,3 +84,16 @@ Error in createBookAPI: MissingBookInfoErrorDB: No book_id or book_title provide
 Error in createBookAPI: error: invalid input syntax for type date: ""
 Error in createBookAPI: error: invalid input syntax for type date: ""
 Error in createBookAPI: ItemAlreadyExistsErrorAPI: An instance of this item already exists in the database
+Error in createBookAPI: ItemAlreadyExistsErrorAPI: An instance of this item already exists in the database
+Error in createBookAPI: MissingInformationErrorAPI: You are missing information for the book in createBookAPI
+Error in createBookAPI: MissingInformationErrorAPI: You are missing information for the book in createBookAPI
+Error in createBookAPI: MissingInformationErrorAPI: You are missing information for the book in createBookAPI
+Error in createBookAPI: MissingInformationErrorAPI: You are missing information for the book in createBookAPI
+Error in createBookAPI: MissingInformationErrorAPI: You are missing information for the book in createBookAPI
+Error in createBookAPI: MissingInformationErrorAPI: You are missing information for the book in createBookAPI
+Error in createBookAPI: MissingBookInfoErrorDB: No book_id or book_title provided
+Error in createBookAPI: MissingBookInfoErrorDB: No book_id or book_title provided
+Error in createBookAPI: MissingBookInfoErrorDB: No book_id or book_title provided
+Error in createBookAPI: ReferenceError: title is not defined
+Error in createBookAPI: MissingInformationErrorAPI: You are missing information for the book in createBookAPI
+Error in createBookAPI: MissingBookInfoErrorDB: No book_id or book_title provided
