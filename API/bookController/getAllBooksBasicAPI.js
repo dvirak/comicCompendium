@@ -8,6 +8,7 @@ const logErrorAPI = require("../../Errors/API/logErrorAPI");
 const {
   getAllBooksBasicDB,
 } = require("../../DB/DBFunctions/BookDB/GetBooksDB");
+const { format } = require("date-fns");
 // ! -----------------------------------------------------------
 
 /**
@@ -29,8 +30,16 @@ async function getAllBooksBasicAPI(req, res, next) {
     // Calls the database function to get all books
     const basicBooks = await getAllBooksBasicDB(req, res);
 
+    // Format the publish_date for each book
+    const formattedBooks = basicBooks.map((book) => {
+      return {
+        ...book,
+        publish_date: format(new Date(book.publish_date), "MMMM do, yyyy"),
+      };
+    });
+
     // Send list of books as the response
-    res.status(200).json(basicBooks);
+    res.status(200).json(formattedBooks);
   } catch (error) {
     // Handle errors and send an appropriate response
     logErrorAPI("getAllBooksBasicAPI", error, next);

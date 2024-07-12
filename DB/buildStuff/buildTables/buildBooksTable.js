@@ -9,10 +9,10 @@ async function buildBooksTable() {
         id SERIAL PRIMARY KEY,
         title VARCHAR(255) UNIQUE NOT NULL,
         publish_date DATE NOT NULL,
-        description TEXT NOT NULL,
+        description TEXT UNIQUE NOT NULL,
         print_length INTEGER NOT NULL,
-        series_volume VARCHAR(255) NOT NULL,
-        cover_image VARCHAR(255) NOT NULL,
+        series_volume VARCHAR(255) UNIQUE NOT NULL,
+        cover_image VARCHAR(255) UNIQUE NOT NULL,
         CONSTRAINT unique_id_title UNIQUE (id, title)
       );
     `);

@@ -35,8 +35,7 @@ async function createBookAPI(req, res, next) {
     let bookExists;
     console.log(title);
     try {
-      let book_title = title;
-      bookExists = await getSingleBookDB({ book_title });
+      bookExists = await getSingleBookDB({ title });
     } catch (error) {
       if (error instanceof BookNotFoundErrorDB) {
         bookExists = null;
