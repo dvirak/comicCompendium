@@ -97,3 +97,6 @@ Error in createBookAPI: MissingBookInfoErrorDB: No book_id or book_title provide
 Error in createBookAPI: ReferenceError: title is not defined
 Error in createBookAPI: MissingInformationErrorAPI: You are missing information for the book in createBookAPI
 Error in createBookAPI: MissingBookInfoErrorDB: No book_id or book_title provided
+Error in getSingleBookAPI: error: invalid input syntax for type integer: "title=watchmen"
+Error in getSingleBookAPI: error: invalid input syntax for type integer: "title:watchmen"
+Error in getSingleBookAPI: InputErrorBooksAPI: Either book_id or book_title must be provided.

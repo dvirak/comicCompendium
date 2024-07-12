@@ -104,3 +104,9 @@ Database Error in getSingleBookDB: BookNotFoundErrorDB: No book found
 Database Error in getSingleBookDB: MissingBookInfoErrorDB: No book_id or book_title provided
 Database Error in getBookByNameDB: BookNotFoundErrorDB: No book found
 Database Error in getSingleBookDB: BookNotFoundErrorDB: No book found
+Database Error in getBookByIdDB: error: invalid input syntax for type integer: "title=watchmen"
+Database Error in getSingleBookDB: error: invalid input syntax for type integer: "title=watchmen"
+Database Error in getBookByIdDB: error: invalid input syntax for type integer: "title:watchmen"
+Database Error in getSingleBookDB: error: invalid input syntax for type integer: "title:watchmen"
+Database Error in getBookByNameDB: BookNotFoundErrorDB: No book found
+Database Error in getSingleBookDB: BookNotFoundErrorDB: No book found

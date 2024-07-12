@@ -9,24 +9,24 @@ const {
 
 // -----------------GET SINGLE BOOK FROM DATABASE---------------
 /**
- * Retrieves a single book from the database based on the provided book_id or book_title.
+ * Retrieves a single book from the database based on the provided book_id or title.
  *
  * @param {number} [book_id] - The ID of the book to retrieve.
- * @param {string} [book_title] - The name of the book to retrieve.
+ * @param {string} [title] - The name of the book to retrieve.
  * @returns {Promise<Object>} A promise that resolves to the book data.
- * @throws {Error} If neither book_id nor book_title is provided, or if the book is not found.
+ * @throws {Error} If neither book_id nor title is provided, or if the book is not found.
  *
- * @precondition An object containing either a book_id or a book_title.
+ * @precondition An object containing either a book_id or a title.
  * @postcondition The function returns a Promise that resolves to an object containing the book data from the database.
  *                If an error occurs, the function throws an error.
  */
-async function getSingleBookDB({ book_id, book_title }) {
+async function getSingleBookDB({ book_id, title }) {
   console.log("IN GET SINGLE BOOK DB");
-  console.log(book_title);
+  console.log(title);
 
   try {
-    if (!book_id && !book_title) {
-      // Throw an error if neither book_id nor book_title is provided
+    if (!book_id && !title) {
+      // Throw an error if neither book_id nor title is provided
       throw new MissingBookInfoErrorDB();
     }
 
@@ -35,9 +35,9 @@ async function getSingleBookDB({ book_id, book_title }) {
     if (book_id) {
       // Retrieve book by book_id if provided
       book = await getBookByIdDB(book_id);
-    } else if (book_title) {
-      // Retrieve book by book_title if provided
-      book = await getBookByNameDB(book_title);
+    } else if (title) {
+      // Retrieve book by title if provided
+      book = await getBookByNameDB(title);
     }
 
     if (!book) {

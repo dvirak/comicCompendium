@@ -10,16 +10,16 @@ const client = require("../../../../client");
 /**
  * Retrieves a single book from the database based on the provided book name.
  *
- * @param {string} book_name - The name of the book to retrieve.
+ * @param {string} title - The name of the book to retrieve.
  * @returns {Promise<Object>} A promise that resolves to the book object.
  * @throws {Error} If an error occurs while querying the database or if the book is not found.
  *
- * @precondition book_name is provided and is a valid string.
+ * @precondition title is provided and is a valid string.
  * @postcondition The function returns a Promise that resolves to an object containing the book data from the database.
  *                If an error occurs while querying the database, the function throws an error.
  */
 
-async function getBookByNameDB(book_name) {
+async function getBookByNameDB(title) {
   const query = `
     SELECT *
     FROM books
@@ -27,8 +27,8 @@ async function getBookByNameDB(book_name) {
   `;
 
   try {
-    // Execute the query to select the book from the 'books' table where the title matches the provided book_name.
-    const { rows } = await client.query(query, [book_name]);
+    // Execute the query to select the book from the 'books' table where the title matches the provided title.
+    const { rows } = await client.query(query, [title]);
 
     // If no rows are returned, throw an error indicating the book was not found.
     if (rows.length === 0) {

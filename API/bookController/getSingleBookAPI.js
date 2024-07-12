@@ -18,20 +18,20 @@ const { getSingleBookDB } = require("../../DB/DBFunctions/BookDB/GetBooksDB/");
  */
 async function getSingleBookAPI(req, res, next) {
   const book_id = req.params.book_id;
-  const book_title = req.query.book_title;
+  const title = req.query.title;
 
   console.log("IN GET SINGLE BOOK API");
 
   try {
     // Validate input
-    if (!book_id && !book_title) {
+    if (!book_id && !title) {
       throw new InputErrorBooksAPI();
     }
 
     // Call the database function to get the book data
     const book = book_id
       ? await getSingleBookDB({ book_id })
-      : await getSingleBookDB({ book_title });
+      : await getSingleBookDB({ title });
 
     if (!book) {
       throw new BookNotFoundErrorAPI();
