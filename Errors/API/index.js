@@ -16,6 +16,8 @@ const AuthenticationErrorLoginAPI = require("./AuthenticationErrorLoginAPI");
 const UserFeatureErrorAPI = require("./UserFeatureErrorAPI");
 const ItemAlreadyExistsErrorAPI = require("./ItemAlreadyExistsErrorAPI");
 const MissingInformationErrorAPI = require("./MissingInformationErrorAPI");
+const NotAuthorizedErrorAPI = require("./NotAuthorizedErrorAPI");
+const CantEditErrorAPI = require("./CantEditErrorAPI");
 
 module.exports = {
   UserExistsErrorAPI,
@@ -36,4 +38,6 @@ module.exports = {
   UserFeatureErrorAPI,
   ItemAlreadyExistsErrorAPI,
   MissingInformationErrorAPI,
+  NotAuthorizedErrorAPI,
+  CantEditErrorAPI,
 };

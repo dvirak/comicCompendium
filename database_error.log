@@ -110,3 +110,15 @@ Database Error in getBookByIdDB: error: invalid input syntax for type integer: "
 Database Error in getSingleBookDB: error: invalid input syntax for type integer: "title:watchmen"
 Database Error in getBookByNameDB: BookNotFoundErrorDB: No book found
 Database Error in getSingleBookDB: BookNotFoundErrorDB: No book found
+Database Error in getUserByIdDB: UserNotFoundErrorDB: No user found
+Database Error in getSingleUserDB: UserNotFoundErrorDB: No user found
+Database Error in getUserByIdDB: UserNotFoundErrorDB: No user found
+Database Error in getSingleUserDB: UserNotFoundErrorDB: No user found
+Database Error in getUserByIdDB: UserNotFoundErrorDB: No user found
+Database Error in getSingleUserDB: UserNotFoundErrorDB: No user found
+Database Error in getUserByIdDB: UserNotFoundErrorDB: No user found
+Database Error in getSingleUserDB: UserNotFoundErrorDB: No user found
+Database Error in getUserByIdDB: UserNotFoundErrorDB: No user found
+Database Error in getSingleUserDB: UserNotFoundErrorDB: No user found
+Database Error in getUserByIdDB: UserNotFoundErrorDB: No user found
+Database Error in getSingleUserDB: UserNotFoundErrorDB: No user found

@@ -21,6 +21,7 @@ const client = require("../../../../client");
 
 async function getUserByIdDB(user_id) {
   console.log("IN GET USER BY ID DB");
+  console.log(user_id);
 
   const query = `
     SELECT id, username, first_name, last_name, preferred_name, phone, email, admin

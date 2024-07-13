@@ -100,3 +100,14 @@ Error in createBookAPI: MissingBookInfoErrorDB: No book_id or book_title provide
 Error in getSingleBookAPI: error: invalid input syntax for type integer: "title=watchmen"
 Error in getSingleBookAPI: error: invalid input syntax for type integer: "title:watchmen"
 Error in getSingleBookAPI: InputErrorBooksAPI: Either book_id or book_title must be provided.
+Error in updateUserAPI: CantChangeIDErrorAPI: You cannot edit the id here.
+Error in updateUserAPI: ReferenceError: CantEditErrorAPI is not defined
+Error in updateUserAPI: CantChangeIDErrorAPI: You cannot edit the id here.
+Error in updateUserAPI: CantEditErrorAPI: You cannot edit this here.
+Error in updateUserAPI: CantEditErrorAPI: You cannot edit this here.
+Error in updateUserAPI: MissingInformationErrorAPI: Missing required information
+Error in updateUserAPI: TypeError: NoInfoProvidedErrorDB is not a constructor
+Error in updateUserAPI: TypeError: NoInfoProvidedErrorDB is not a constructor
+Error in updateUserAPI: TypeError: NoInfoProvidedErrorDB is not a constructor
+Error in updateUserAPI: TypeError: NoInfoProvidedErrorDB is not a constructor
+Error in updateUserAPI: MissingInformationErrorAPI: Missing required information

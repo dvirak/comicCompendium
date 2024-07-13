@@ -12,6 +12,7 @@ class NotAdminErrorAPI extends Error {
     super(message); // Call the constructor of Error class with the provided message
     this.name = "NotAdminErrorAPI"; // Set the name of the error
     this.status = 403; // Set the HTTP status code associated with this error (403 Forbidden)
+    this.code = "NOT_ADMIN"; // Custom error code for identification
   }
 }
 
