@@ -24,6 +24,14 @@ booksRouter.get("/", getAllBooksBasicAPI);
 const getSingleBookAPI = require("./getSingleBookAPI");
 booksRouter.get("/book/:book_id?", getSingleBookAPI);
 
+/**
+ * Description: Updates user information.
+ * Method: PATCH
+ * Route: /users/:user_id/update
+ * Middleware: requireUser - Ensures user is authenticated.
+ * Request Body: Contains fields to update user information.
+ * Response: Returns a message indicating update success and the updated user object.
+ */
 const createBookAPI = require("./createBookAPI");
 booksRouter.post("/add", requireUser, createBookAPI);
 
