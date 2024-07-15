@@ -10,6 +10,9 @@ const usersRouter = express.Router();
  * Description: Retrieves a list of all users.
  * Method: GET
  * Route: /users
+ * Authorization: Requires admin privileges.
+ * Response: Returns an array containing information for all users.
+ * Throws: NotAuthorizedErrorAPI if the logged-in user is not an admin.
  */
 const getAllUsersAPI = require("./getAllUsersAPI");
 usersRouter.get("/", requireAdmin, getAllUsersAPI);
