@@ -1,6 +1,7 @@
 // ! ----------------- IMPORTED FILES --------------------------
 const express = require("express");
 const requireUser = require("../Authentication/requireUser");
+const requireAdmin = require("../Authentication/requireAdmin");
 // ! -----------------------------------------------------------
 
 const usersRouter = express.Router();
@@ -61,4 +62,6 @@ usersRouter.post("/register", createUserAPI);
 const updateUserAPI = require("./updateUserAPI");
 usersRouter.patch("/:user_id/update", requireUser, updateUserAPI);
 
+const deleteUserAPI = require("./deleteUserAPI");
+usersRouter.delete("/:user_id/delete", requireUser, deleteUserAPI);
 module.exports = usersRouter;
