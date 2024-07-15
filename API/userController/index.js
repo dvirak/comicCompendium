@@ -12,7 +12,7 @@ const usersRouter = express.Router();
  * Route: /users
  */
 const getAllUsersAPI = require("./getAllUsersAPI");
-usersRouter.get("/", getAllUsersAPI);
+usersRouter.get("/", requireAdmin, getAllUsersAPI);
 
 /**
  * Description: Retrieves information for a single user.

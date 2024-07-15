@@ -5,7 +5,7 @@ const router = express.Router();
 
 // ! ---------- IMPORTED COMPONENTS/VARIABLES -------------------
 const { getAllUsersDB } = require("../../DB/DBFunctions/UserDB/GetUsersDB");
-const { logErrorAPI } = require("../../Errors/API");
+const { logErrorAPI, NotAdminErrorAPI } = require("../../Errors/API");
 // ! -----------------------------------------------------------
 
 /**
