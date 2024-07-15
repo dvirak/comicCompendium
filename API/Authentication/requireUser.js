@@ -10,6 +10,7 @@ const { NotLoggedInErrorAPI } = require("../../Errors/API");
  */
 function requireUser(req, res, next) {
   console.log("IN REQUIRE USER");
+
   if (!req.user) {
     throw new NotLoggedInErrorAPI();
   } else {
