@@ -157,3 +157,4 @@ Error in getSingleUserAPI: UserNotFoundErrorDB: No user found
 Error in deleteUserAPI: UserNotFoundErrorDB: No user found
 Error in deleteUserAPI: IncorrectPasswordErrorDB: Incorrect password
 Error in deleteUserAPI: IncorrectPasswordErrorDB: Incorrect password
+Error in loginUserAPI: IncorrectPasswordErrorDB: Incorrect password
