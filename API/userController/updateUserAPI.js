@@ -13,7 +13,7 @@ const {
   UserNotFoundErrorAPI,
   NotAuthorizedErrorAPI,
 } = require("../../Errors/API");
-const createUpdateFieldsAPI = require("./Helpers/createUpdateFieldsAPI");
+const createUserUpdateFieldsAPI = require("./Helpers/createUserUpdateFieldsAPI");
 // ! -----------------------------------------------------------
 
 /**
@@ -34,22 +34,34 @@ const createUpdateFieldsAPI = require("./Helpers/createUpdateFieldsAPI");
  */
 
 async function updateUserAPI(req, res, next) {
-  const { user_id } = req.params;
+  const user_id = Number(req.params.user_id);
   const updateData = req.body;
+  const currentUser = req.user;
+  console.log("IN updateUserAPI");
+  console.log(user_id);
+  console.log(req.params);
+  console.log(req.params.user_id);
+  console.log(Number(req.params.user_id));
 
   try {
     // Retrieve user information to edit from the database
     const userToEdit = await getUserByIdDB(user_id);
+    console.log("userToEdit: ");
+    console.log(userToEdit);
 
     // Check if user exists
     if (!userToEdit) {
       throw new UserNotFoundErrorAPI();
-    } else if (user_id !== req.user.id && !req.user.admin) {
+    } else if (user_id !== currentUser.id && !currentUser.admin) {
       // Check if current user is authorized to update user information
       throw new NotAuthorizedErrorAPI();
     } else {
       // Create update fields based on current user and update data
-      const updateFields = await createUpdateFieldsAPI(req.user, updateData);
+      const updateFields = await createUserUpdateFieldsAPI(
+        currentUser,
+        userToEdit,
+        updateData
+      );
 
       // Update user information in the database
       const updatedUser = await updateUserDB(user_id, updateFields);

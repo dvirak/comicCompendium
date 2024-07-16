@@ -158,3 +158,17 @@ Error in deleteUserAPI: UserNotFoundErrorDB: No user found
 Error in deleteUserAPI: IncorrectPasswordErrorDB: Incorrect password
 Error in deleteUserAPI: IncorrectPasswordErrorDB: Incorrect password
 Error in loginUserAPI: IncorrectPasswordErrorDB: Incorrect password
+Error in updateUserAPI: TypeError: NoInfoProvidedErrorDB is not a constructor
+Error in updateUserAPI: UserNotFoundErrorDB: No user found
+Error in updateUserAPI: UserNotFoundErrorDB: No user found
+Error in loginUserAPI: IncorrectPasswordErrorDB: Incorrect password
+Error in loginUserAPI: IncorrectPasswordErrorDB: Incorrect password
+Error in loginUserAPI: IncorrectPasswordErrorDB: Incorrect password
+Error in updateUserAPI: UserNotFoundErrorDB: No user found
+Error in updateUserAPI: UserNotFoundErrorDB: No user found
+Error in updateUserAPI: UserNotFoundErrorDB: No user found
+Error in updateUserAPI: UserNotFoundErrorDB: No user found
+Error in updateUserAPI: MissingInformationErrorAPI: Missing required information
+Error in updateUserAPI: MissingInformationErrorAPI: Missing required information
+Error in updateUserAPI: MissingInformationErrorAPI: Missing required information
+Error in updateUserAPI: MissingInformationErrorAPI: Missing required information
