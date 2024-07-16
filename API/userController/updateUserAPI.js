@@ -37,17 +37,10 @@ async function updateUserAPI(req, res, next) {
   const user_id = Number(req.params.user_id);
   const updateData = req.body;
   const currentUser = req.user;
-  console.log("IN updateUserAPI");
-  console.log(user_id);
-  console.log(req.params);
-  console.log(req.params.user_id);
-  console.log(Number(req.params.user_id));
 
   try {
     // Retrieve user information to edit from the database
     const userToEdit = await getUserByIdDB(user_id);
-    console.log("userToEdit: ");
-    console.log(userToEdit);
 
     // Check if user exists
     if (!userToEdit) {

@@ -35,4 +35,7 @@ booksRouter.get("/book/:book_id?", getSingleBookAPI);
 const createBookAPI = require("./createBookAPI");
 booksRouter.post("/add", requireUser, createBookAPI);
 
+const updateBookAPI = require("./updateBookAPI");
+booksRouter.patch("/:book_id/update", requireUser, updateBookAPI);
+
 module.exports = booksRouter;

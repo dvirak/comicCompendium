@@ -8,12 +8,8 @@ const {
   getBookByIdDB,
 } = require("../../DB/DBFunctions/BookDB/GetBooksDB/Helpers");
 const { updateBookDB } = require("../../DB/DBFunctions/BookDB/");
-const {
-  logErrorAPI,
-  BookNotFoundErrorAPI,
-  NotAuthorizedErrorAPI,
-} = require("../../Errors/API");
-const createBookUpdateFieldsAPI = require("./Helpers/createUpdateFieldsAPI");
+const { logErrorAPI, BookNotFoundErrorAPI } = require("../../Errors/API");
+const createBookUpdateFieldsAPI = require("./Helpers/createBookUpdateFieldsAPI");
 // ! -----------------------------------------------------------
 
 /**
@@ -34,7 +30,7 @@ const createBookUpdateFieldsAPI = require("./Helpers/createUpdateFieldsAPI");
  */
 
 async function updateBookAPI(req, res, next) {
-  const { book_id } = Number(req.params.book_id);
+  const book_id = Number(req.params.book_id);
   const updateData = req.body;
 
   try {

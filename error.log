@@ -172,3 +172,8 @@ Error in updateUserAPI: MissingInformationErrorAPI: Missing required information
 Error in updateUserAPI: MissingInformationErrorAPI: Missing required information
 Error in updateUserAPI: MissingInformationErrorAPI: Missing required information
 Error in updateUserAPI: MissingInformationErrorAPI: Missing required information
+Error in deleteUserAPI: IncorrectPasswordErrorDB: Incorrect password
+Error in deleteUserAPI: NotAuthorizedErrorAPI: You do not have permission to access this resource.
+Error in updateUserAPI: NotAuthorizedErrorAPI: You do not have permission to access this resource.
+Error in updateBookAPI: MissingInformationErrorAPI: Missing required information
+Error in updateBookAPI: CantEditErrorAPI: You cannot edit this here.

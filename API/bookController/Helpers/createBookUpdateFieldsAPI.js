@@ -9,7 +9,7 @@ const {
 /**
  * Description: Creates update fields based on book permissions and provided update data.
  *
- * @param {Object} book - User object containing book permissions (e.g., admin status).
+ * @param {Object} bookToEdit - Book object containing book permissions (e.g., admin status).
  * @param {Object} updateData - Data object containing fields to be updated.
  * @returns {Object} Object containing fields and values that are allowed to be updated.
  * @throws {NotAdminErrorAPI} If book does not have admin permissions and tries to update admin status.
@@ -20,8 +20,8 @@ const {
  * @postcondition Returns an object with valid update fields and values.
  */
 
-async function createUserUpdateFieldsAPI(book, updateData) {
-  console.log(book);
+async function createUserUpdateFieldsAPI(bookToEdit, updateData) {
+  console.log(bookToEdit);
   console.log(updateData);
 
   const updateFields = {};
@@ -41,7 +41,7 @@ async function createUserUpdateFieldsAPI(book, updateData) {
       }
 
       // Check if book has the current key and add it to updateFields
-      if (book.hasOwnProperty(key)) {
+      if (bookToEdit.hasOwnProperty(key)) {
         updateFields[key] = updateData[key];
       }
     }
