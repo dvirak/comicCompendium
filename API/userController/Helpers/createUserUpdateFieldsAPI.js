@@ -20,16 +20,13 @@ const {
  * @postcondition Returns an object with valid update fields and values.
  */
 
-async function createUpdateFieldsAPI(user, updateData) {
-  console.log(user);
-  console.log(updateData);
-
+async function createUserUpdateFieldsAPI(currentUser, userToEdit, updateData) {
   const updateFields = {};
 
   // Iterate through each key in updateData
   for (const key in updateData) {
     // Check if user is not an admin and tries to update admin status
-    if (key === "admin" && !user.admin) {
+    if (key === "admin" && !currentUser.admin) {
       throw new NotAdminErrorAPI();
     } else if (key === "id" || key === "password") {
       // Check if user tries to update restricted fields like id or password
@@ -44,7 +41,7 @@ async function createUpdateFieldsAPI(user, updateData) {
       }
 
       // Check if user has the current key and add it to updateFields
-      if (user.hasOwnProperty(key)) {
+      if (userToEdit.hasOwnProperty(key)) {
         updateFields[key] = updateData[key];
       }
     }
@@ -54,4 +51,4 @@ async function createUpdateFieldsAPI(user, updateData) {
   return updateFields;
 }
 
-module.exports = createUpdateFieldsAPI;
+module.exports = createUserUpdateFieldsAPI;
