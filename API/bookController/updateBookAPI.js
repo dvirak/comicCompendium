@@ -9,7 +9,10 @@ const {
 } = require("../../DB/DBFunctions/BookDB/GetBooksDB/Helpers");
 const { updateBookDB } = require("../../DB/DBFunctions/BookDB/");
 const { logErrorAPI, BookNotFoundErrorAPI } = require("../../Errors/API");
-const { createBookUpdateFieldsAPI } = require("./Helpers");
+const {
+  createBookUpdateFieldsAPI,
+  formatBookPublishDatesAPI,
+} = require("./Helpers");
 // ! -----------------------------------------------------------
 
 /**
@@ -46,7 +49,10 @@ async function updateBookAPI(req, res, next) {
       );
 
       // Update book information in the database
-      const updatedBook = await updateBookDB(book_id, updateFields);
+      let updatedBook = await updateBookDB(book_id, updateFields);
+
+      // Ensure publish_date is properly formatted for return
+      updatedBook = formatBookPublishDatesAPI(updatedBook);
 
       // Send success message and updated book data as response
       res.send({ message: "Update successful!", updatedBook });

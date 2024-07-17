@@ -181,3 +181,8 @@ Error in updateBookAPI: CantEditErrorAPI: You cannot edit this here.
 Error in deleteBookAPI: TypeError: deleteBookDB is not a function
 Error in deleteBookAPI: TypeError: deleteBookDB is not a function
 Error in deleteBookAPI: BookNotFoundErrorDB: No book found
+Error in getSingleBookAPI: TypeError: books.map is not a function
+Error in getSingleBookAPI: TypeError: books.map is not a function
+Error in getSingleBookAPI: TypeError: books.map is not a function
+Error in getSingleBookAPI: TypeError: books.map is not a function
+Error in getSingleBookAPI: TypeError: books.map is not a function

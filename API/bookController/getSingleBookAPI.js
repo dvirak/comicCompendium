@@ -8,6 +8,7 @@ const {
   BookNotFoundErrorAPI,
 } = require("../../Errors/API");
 const { getSingleBookDB } = require("../../DB/DBFunctions/BookDB/GetBooksDB/");
+const { formatBookPublishDatesAPI } = require("./Helpers");
 // ! -----------------------------------------------------------
 
 /**
@@ -29,13 +30,16 @@ async function getSingleBookAPI(req, res, next) {
     }
 
     // Call the database function to get the book data
-    const book = book_id
+    let book = book_id
       ? await getSingleBookDB({ book_id })
       : await getSingleBookDB({ title });
 
     if (!book) {
       throw new BookNotFoundErrorAPI();
     }
+
+    // Ensure publish_date is properly formatted for return
+    book = formatBookPublishDatesAPI(book);
 
     // Send the book data as the response
     res.status(200).json(book);

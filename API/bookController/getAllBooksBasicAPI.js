@@ -1,14 +1,9 @@
-// ! ----------------- IMPORTED FILES --------------------------
-const express = require("express");
-const router = express.Router();
-// ! -----------------------------------------------------------
-
 // ! ---------------- IMPORTED MODULES -------------------------
 const logErrorAPI = require("../../Errors/API/logErrorAPI");
 const {
   getAllBooksBasicDB,
 } = require("../../DB/DBFunctions/BookDB/GetBooksDB");
-const { format } = require("date-fns");
+const { formatBookPublishDatesAPI } = require("./Helpers");
 // ! -----------------------------------------------------------
 
 /**
@@ -31,12 +26,7 @@ async function getAllBooksBasicAPI(req, res, next) {
     const basicBooks = await getAllBooksBasicDB(req, res);
 
     // Format the publish_date for each book
-    const formattedBooks = basicBooks.map((book) => {
-      return {
-        ...book,
-        publish_date: format(new Date(book.publish_date), "MMMM do, yyyy"),
-      };
-    });
+    const formattedBooks = formatBookPublishDatesAPI(basicBooks);
 
     // Send list of books as the response
     res.status(200).json(formattedBooks);
