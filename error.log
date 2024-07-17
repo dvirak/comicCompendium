@@ -178,3 +178,6 @@ Error in updateUserAPI: NotAuthorizedErrorAPI: You do not have permission to acc
 Error in updateBookAPI: MissingInformationErrorAPI: Missing required information
 Error in updateBookAPI: CantEditErrorAPI: You cannot edit this here.
 Error in updateBookAPI: CantEditErrorAPI: You cannot edit this here.
+Error in deleteBookAPI: TypeError: deleteBookDB is not a function
+Error in deleteBookAPI: TypeError: deleteBookDB is not a function
+Error in deleteBookAPI: BookNotFoundErrorDB: No book found
