@@ -49,4 +49,15 @@ booksRouter.post("/add", requireUser, createBookAPI);
 const updateBookAPI = require("./updateBookAPI");
 booksRouter.patch("/:book_id/update", requireUser, updateBookAPI);
 
+/**
+ * Description: Deletes a specific book.
+ * Method: DELETE
+ * Route: /books/:book_id/delete
+ * Authorization: Requires user to be logged in and authorized (either the user themselves or an admin).
+ * Response: Returns a message confirming the deletion and the deleted user's username.
+ * Throws: BookNotFoundErrorAPI if the specified user_id does not exist.
+ */
+const deleteBookAPI = require("./deleteBookAPI");
+booksRouter.delete("/:book_id/delete", requireUser, deleteBookAPI);
+
 module.exports = booksRouter;
