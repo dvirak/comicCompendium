@@ -1,6 +1,5 @@
 // ! ---------------- IMPORTED FILES -------------------------
 const {
-  NotAdminErrorAPI,
   CantEditErrorAPI,
   MissingInformationErrorAPI,
 } = require("../../../Errors/API");
@@ -20,7 +19,7 @@ const {
  * @postcondition Returns an object with valid update fields and values.
  */
 
-async function createUserUpdateFieldsAPI(bookToEdit, updateData) {
+async function createBookUpdateFieldsAPI(bookToEdit, updateData) {
   console.log(bookToEdit);
   console.log(updateData);
 
@@ -51,4 +50,4 @@ async function createUserUpdateFieldsAPI(bookToEdit, updateData) {
   return updateFields;
 }
 
-module.exports = createUserUpdateFieldsAPI;
+module.exports = createBookUpdateFieldsAPI;

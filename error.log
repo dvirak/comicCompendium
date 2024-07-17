@@ -177,3 +177,4 @@ Error in deleteUserAPI: NotAuthorizedErrorAPI: You do not have permission to acc
 Error in updateUserAPI: NotAuthorizedErrorAPI: You do not have permission to access this resource.
 Error in updateBookAPI: MissingInformationErrorAPI: Missing required information
 Error in updateBookAPI: CantEditErrorAPI: You cannot edit this here.
+Error in updateBookAPI: CantEditErrorAPI: You cannot edit this here.

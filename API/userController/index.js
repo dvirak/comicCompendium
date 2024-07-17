@@ -65,6 +65,18 @@ usersRouter.post("/register", createUserAPI);
 const updateUserAPI = require("./updateUserAPI");
 usersRouter.patch("/:user_id/update", requireUser, updateUserAPI);
 
+/**
+ * Description: Deletes a specific user.
+ * Method: DELETE
+ * Route: /users/:user_id/delete
+ * Request Body: Requires the current user's password for confirmation.
+ * Authorization: Requires user to be logged in and authorized (either the user themselves or an admin).
+ * Response: Returns a message confirming the deletion and the deleted user's username.
+ * Throws: UserNotFoundErrorAPI if the specified user_id does not exist.
+ *         NotAuthorizedErrorAPI if the logged-in user is not authorized to delete the user.
+ *         InputErrorAPI if the provided password is incorrect.
+ */
 const deleteUserAPI = require("./deleteUserAPI");
 usersRouter.delete("/:user_id/delete", requireUser, deleteUserAPI);
+
 module.exports = usersRouter;

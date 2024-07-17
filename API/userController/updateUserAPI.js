@@ -18,7 +18,7 @@ const createUserUpdateFieldsAPI = require("./Helpers/createUserUpdateFieldsAPI")
 
 /**
  * Description: Update user information based on user_id and request body data.
- * Method: PUT
+ * Method: PATCH
  * Route: /users/:user_id
  *
  * @param {Object} req - Express request object containing user_id in params and update data in body.
@@ -49,7 +49,7 @@ async function updateUserAPI(req, res, next) {
       // Check if current user is authorized to update user information
       throw new NotAuthorizedErrorAPI();
     } else {
-      // Create update fields based on current user and update data
+      // Create update fields based on current user, user to edit and update data
       const updateFields = await createUserUpdateFieldsAPI(
         currentUser,
         userToEdit,

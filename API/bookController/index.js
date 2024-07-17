@@ -35,6 +35,17 @@ booksRouter.get("/book/:book_id?", getSingleBookAPI);
 const createBookAPI = require("./createBookAPI");
 booksRouter.post("/add", requireUser, createBookAPI);
 
+/**
+ * Description: Updates book information based on book_id and request body data.
+ * Method: PATCH
+ * Route: /books/:book_id/update
+ * Middleware: requireUser - Ensures user is authenticated.
+ * Request Body: Contains fields to update book information.
+ * Response: Returns a message indicating update success and the updated book object.
+ * Throws: BookNotFoundErrorAPI if the specified book_id does not exist.
+ *         NotAuthorizedErrorAPI if the logged-in user is not authorized to update the book information.
+ *         Error if an error occurs while updating book information in the database.
+ */
 const updateBookAPI = require("./updateBookAPI");
 booksRouter.patch("/:book_id/update", requireUser, updateBookAPI);
 
