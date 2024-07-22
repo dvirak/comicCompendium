@@ -15,10 +15,12 @@ apiRouter.use(setUser);
 // Import controllers for books and users
 const bookController = require("./bookController");
 const userController = require("./userController");
+const authorController = require("./authorController");
 
 // Define routes
 apiRouter.use("/books", bookController);
 apiRouter.use("/users", userController);
+apiRouter.use("/authors", authorController);
 
 // Error handling middleware
 apiRouter.use(errorHandlerAPI);
