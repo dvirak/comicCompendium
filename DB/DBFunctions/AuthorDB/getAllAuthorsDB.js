@@ -1,8 +1,5 @@
 // ! ----------------- IMPORTED FILES --------------------------
 const client = require("../../client");
-
-// Import the requireUser function from the utils module.
-// const { requireUser } = require('/utils');
 // ! -----------------------------------------------------------
 
 // -----------------GET ALL AUTHORS FROM DATABASE-----------------
