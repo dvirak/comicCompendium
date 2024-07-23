@@ -189,3 +189,17 @@ Database Error in getUserByUsernameDB: UserNotFoundErrorDB: No user found
 Database Error in getSingleUserDB: UserNotFoundErrorDB: No user found
 Database Error in confirmUserDB: IncorrectPasswordErrorDB: Incorrect password
 Database Error in getBookByIdDB: BookNotFoundErrorDB: No book found
+Database Error in getAuthorByNameDB: error: column "title" does not exist
+Database Error in getAuthorDB: error: column "title" does not exist
+Database Error in getAuthorByNameDB: error: column "title" does not exist
+Database Error in getAuthorDB: error: column "title" does not exist
+Database Error in getAuthorByNameDB: error: column "title" does not exist
+Database Error in getAuthorDB: error: column "title" does not exist
+Database Error in getAuthorByNameDB: error: column "title" does not exist
+Database Error in getAuthorDB: error: column "title" does not exist
+Database Error in getAuthorByNameDB: error: column "title" does not exist
+Database Error in getAuthorDB: error: column "title" does not exist
+Database Error in getAuthorByNameDB: AuthorNotFoundErrorDB: No author found
+Database Error in getAuthorDB: AuthorNotFoundErrorDB: No author found
+Database Error in getAuthorByIdDB: AuthorNotFoundErrorDB: No author found
+Database Error in getAuthorDB: AuthorNotFoundErrorDB: No author found

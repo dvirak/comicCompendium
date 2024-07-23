@@ -14,12 +14,10 @@ const getAllBooksBasicAPI = require("./getAllBooksBasicAPI");
 booksRouter.get("/", getAllBooksBasicAPI);
 
 /**
- * Description: Retrieves a single book based on either book_id or book_title.
+ * Description: Retrieves a single book based on either book_id as a param or book_title as a query.
  * Method: GET
  * Route: /books/book
  *
- * Note: You must send either book_id or book_title in the req.body.
- * Example req.body: { book_id: 1 } or { book_title: "Book Title" }
  */
 const getSingleBookAPI = require("./getSingleBookAPI");
 booksRouter.get("/book/:book_id?", getSingleBookAPI);

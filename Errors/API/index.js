@@ -18,6 +18,8 @@ const ItemAlreadyExistsErrorAPI = require("./ItemAlreadyExistsErrorAPI");
 const MissingInformationErrorAPI = require("./MissingInformationErrorAPI");
 const NotAuthorizedErrorAPI = require("./NotAuthorizedErrorAPI");
 const CantEditErrorAPI = require("./CantEditErrorAPI");
+const AuthorNotFoundErrorAPI = require("./AuthorNotFoundErrorAPI");
+const InputErrorAuthorsAPI = require("./InputErrorAuthorsAPI");
 
 module.exports = {
   UserExistsErrorAPI,
@@ -40,4 +42,6 @@ module.exports = {
   MissingInformationErrorAPI,
   NotAuthorizedErrorAPI,
   CantEditErrorAPI,
+  AuthorNotFoundErrorAPI,
+  InputErrorAuthorsAPI,
 };

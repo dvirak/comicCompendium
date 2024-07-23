@@ -186,3 +186,11 @@ Error in getSingleBookAPI: TypeError: books.map is not a function
 Error in getSingleBookAPI: TypeError: books.map is not a function
 Error in getSingleBookAPI: TypeError: books.map is not a function
 Error in getSingleBookAPI: TypeError: books.map is not a function
+Error in getAuthorAPI: InputErrorAuthorsAPI: Either author_id or author_name must be provided.
+Error in getAuthorAPI: error: column "title" does not exist
+Error in getAuthorAPI: error: column "title" does not exist
+Error in getAuthorAPI: error: column "title" does not exist
+Error in getAuthorAPI: error: column "title" does not exist
+Error in getAuthorAPI: error: column "title" does not exist
+Error in getAuthorAPI: AuthorNotFoundErrorDB: No author found
+Error in getAuthorAPI: AuthorNotFoundErrorDB: No author found
