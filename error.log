@@ -194,3 +194,9 @@ Error in getAuthorAPI: error: column "title" does not exist
 Error in getAuthorAPI: error: column "title" does not exist
 Error in getAuthorAPI: AuthorNotFoundErrorDB: No author found
 Error in getAuthorAPI: AuthorNotFoundErrorDB: No author found
+Error in getAuthorAPI: AuthorNotFoundErrorDB: No author found
+Error in createAuthorAPI: MissingBookInfoErrorDB: No book_id or book_title provided
+Error in createAuthorAPI: MissingBookInfoErrorDB: No book_id or book_title provided
+Error in createAuthorAPI: ItemAlreadyExistsErrorAPI: The Author you are trying to add already exists in the database
+Error in createAuthorAPI: ItemAlreadyExistsErrorAPI: The Author you are trying to add already exists in the database
+Error in createAuthorAPI: ItemAlreadyExistsErrorAPI: The Author you are trying to add already exists in the database
