@@ -22,4 +22,14 @@ authorsRouter.get("/", getAllAuthorsAPI);
 const getAuthorAPI = require("./getAuthorAPI");
 authorsRouter.get("/author/:author_id?", getAuthorAPI);
 
+/**
+ * Description: creates a new author.
+ * Method: POST
+ * Route: /author/add
+ * Request Body: Requires author_name (string).
+ * Response: Returns an array containing author info and a message.
+ */
+const createAuthorAPI = require("./createAuthorAPI");
+authorsRouter.post("/add", createAuthorAPI);
+
 module.exports = authorsRouter;

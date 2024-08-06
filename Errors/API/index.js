@@ -20,6 +20,7 @@ const NotAuthorizedErrorAPI = require("./NotAuthorizedErrorAPI");
 const CantEditErrorAPI = require("./CantEditErrorAPI");
 const AuthorNotFoundErrorAPI = require("./AuthorNotFoundErrorAPI");
 const InputErrorAuthorsAPI = require("./InputErrorAuthorsAPI");
+const NotFoundErrorAPI = require("./NotFoundErrorAPI");
 
 module.exports = {
   UserExistsErrorAPI,
@@ -44,4 +45,5 @@ module.exports = {
   CantEditErrorAPI,
   AuthorNotFoundErrorAPI,
   InputErrorAuthorsAPI,
+  NotFoundErrorAPI,
 };

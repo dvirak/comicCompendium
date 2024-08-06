@@ -15,6 +15,7 @@ class ItemAlreadyExistsErrorAPI extends Error {
     super(message); // Call the constructor of Error class with the provided message
     this.name = "ItemAlreadyExistsErrorAPI"; // Set the name of the error
     this.status = 404; // Set the HTTP status code associated with this error (409 Conflict)
+    this.code = "ITEM_EXISTS"; // Custom error code for identification
   }
 }
 
