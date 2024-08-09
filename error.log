@@ -200,3 +200,4 @@ Error in createAuthorAPI: MissingBookInfoErrorDB: No book_id or book_title provi
 Error in createAuthorAPI: ItemAlreadyExistsErrorAPI: The Author you are trying to add already exists in the database
 Error in createAuthorAPI: ItemAlreadyExistsErrorAPI: The Author you are trying to add already exists in the database
 Error in createAuthorAPI: ItemAlreadyExistsErrorAPI: The Author you are trying to add already exists in the database
+Error in deleteAuthorAPI: AuthorNotFoundErrorDB: No author found
