@@ -214,3 +214,6 @@ Database Error in getAuthorDB: AuthorNotFoundErrorDB: No author found
 Database Error in getAuthorByNameDB: AuthorNotFoundErrorDB: No author found
 Database Error in getAuthorDB: AuthorNotFoundErrorDB: No author found
 Database Error in getAuthorByIdDB: AuthorNotFoundErrorDB: No author found
+Database Error in getAuthorByIdDB: AuthorNotFoundErrorDB: No author found
+Database Error in getAuthorByIdDB: error: invalid input syntax for type integer: "alan_moore"
+Database Error in getAuthorDB: error: invalid input syntax for type integer: "alan_moore"
