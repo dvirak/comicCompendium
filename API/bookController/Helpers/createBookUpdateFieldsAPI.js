@@ -29,7 +29,7 @@ async function createBookUpdateFieldsAPI(bookToEdit, updateData) {
   for (const key in updateData) {
     if (key === "id") {
       // Check if book tries to update restricted fields like id or password
-      throw new CantEditErrorAPI();
+      throw new CantEditErrorAPI("You cannot edit a Book's ID");
     }
 
     // Check if updateData has the current key and it's not empty

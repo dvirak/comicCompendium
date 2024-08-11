@@ -225,3 +225,8 @@ Database Error in getAuthorByNameDB: AuthorNotFoundErrorDB: No author found
 Database Error in getAuthorDB: AuthorNotFoundErrorDB: No author found
 Database Error in getAuthorByNameDB: AuthorNotFoundErrorDB: No author found
 Database Error in getAuthorDB: AuthorNotFoundErrorDB: No author found
+Database Error in updateBookDB: error: duplicate key value violates unique constraint "books_title_key"
+Database Error in updateBookDB: error: duplicate key value violates unique constraint "books_title_key"
+Database Error in updateAuthorDB: error: duplicate key value violates unique constraint "authors_author_name_key"
+Database Error in updateAuthorDB: error: duplicate key value violates unique constraint "authors_author_name_key"
+Database Error in updateBookDB: error: duplicate key value violates unique constraint "books_title_key"

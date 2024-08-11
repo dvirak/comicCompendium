@@ -215,3 +215,10 @@ Error in getAuthorAPI: AuthorNotFoundErrorDB: No author found
 Error in createAuthorAPI: ItemAlreadyExistsErrorAPI: The Author you are trying to add already exists in the database
 Error in updateAuthorAPI: CantEditErrorAPI: The author you are trying to edit already exists, but has a different ID
 Error in updateAuthorAPI: CantEditErrorAPI: The author you are trying to edit already exists, but has a different ID
+Error in updateBookAPI: ReferenceError: logErrorDB is not defined
+Error in updateBookAPI: error: duplicate key value violates unique constraint "books_title_key"
+Error in updateBookAPI: error: duplicate key value violates unique constraint "books_title_key"
+Error in updateAuthorAPI: ReferenceError: logErrorDB is not defined
+Error in updateAuthorAPI: error: duplicate key value violates unique constraint "authors_author_name_key"
+Error in updateAuthorAPI: error: duplicate key value violates unique constraint "authors_author_name_key"
+Error in updateBookAPI: error: duplicate key value violates unique constraint "books_title_key"

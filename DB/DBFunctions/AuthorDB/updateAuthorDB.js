@@ -1,5 +1,5 @@
 // ! ----------------- IMPORTED FILES --------------------------
-const { NoInfoProvidedErrorDB } = require("../../../Errors/DB");
+const { NoInfoProvidedErrorDB, logErrorDB } = require("../../../Errors/DB");
 const client = require("../../client");
 // ! -----------------------------------------------------------
 
