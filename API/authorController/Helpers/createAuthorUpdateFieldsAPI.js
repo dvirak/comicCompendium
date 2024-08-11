@@ -1,5 +1,8 @@
 // ! ---------------- IMPORTED FILES -------------------------
 const {
+  getAuthorByNameDB,
+} = require("../../../DB/DBFunctions/AuthorDB/Helpers");
+const {
   CantEditErrorAPI,
   MissingInformationErrorAPI,
 } = require("../../../Errors/API");
@@ -29,6 +32,17 @@ async function createAuthorUpdateFieldsAPI(authorToEdit, updateData) {
     // Check if author tries to update restricted fields like id or password
     if (key === "id") {
       throw new CantEditErrorAPI();
+    } else if (key === "author_name") {
+      let authorNameExistsCheck = await getAuthorByNameDB(
+        updateData["author_name"]
+      );
+      console.log("authorNameExistsCheck is true?");
+      console.log(authorNameExistsCheck);
+      if (authorNameExistsCheck.id !== authorToEdit.id) {
+        throw new CantEditErrorAPI(
+          "The author you are trying to edit already exists, but has a different ID"
+        );
+      }
     }
 
     // Check if updateData has the current key and it's not empty

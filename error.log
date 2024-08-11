@@ -206,3 +206,11 @@ Error in updateAuthorAPI: AuthorNotFoundErrorDB: No author found
 Error in getAuthorAPI: InputErrorAuthorsAPI: Either author_id or author_name must be provided.
 Error in getAuthorAPI: InputErrorAuthorsAPI: Either author_id or author_name must be provided.
 Error in getAuthorAPI: error: invalid input syntax for type integer: "alan_moore"
+Error in getAuthorAPI: error: invalid input syntax for type integer: "alan_moore"
+Error in getAuthorAPI: InputErrorAuthorsAPI: Either author_id or author_name must be provided.
+Error in getAuthorAPI: InputErrorAuthorsAPI: Either author_id or author_name must be provided.
+Error in getAuthorAPI: InputErrorAuthorsAPI: Either author_id or author_name must be provided.
+Error in getAuthorAPI: AuthorNotFoundErrorDB: No author found
+Error in getAuthorAPI: AuthorNotFoundErrorDB: No author found
+Error in createAuthorAPI: ItemAlreadyExistsErrorAPI: The Author you are trying to add already exists in the database
+Error in updateAuthorAPI: CantEditErrorAPI: The author you are trying to edit already exists, but has a different ID
