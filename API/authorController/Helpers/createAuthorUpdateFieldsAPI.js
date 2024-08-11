@@ -36,8 +36,6 @@ async function createAuthorUpdateFieldsAPI(authorToEdit, updateData) {
       let authorNameExistsCheck = await getAuthorByNameDB(
         updateData["author_name"]
       );
-      console.log("authorNameExistsCheck is true?");
-      console.log(authorNameExistsCheck);
       if (authorNameExistsCheck.id !== authorToEdit.id) {
         throw new CantEditErrorAPI(
           "The author you are trying to edit already exists, but has a different ID"

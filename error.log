@@ -214,3 +214,4 @@ Error in getAuthorAPI: AuthorNotFoundErrorDB: No author found
 Error in getAuthorAPI: AuthorNotFoundErrorDB: No author found
 Error in createAuthorAPI: ItemAlreadyExistsErrorAPI: The Author you are trying to add already exists in the database
 Error in updateAuthorAPI: CantEditErrorAPI: The author you are trying to edit already exists, but has a different ID
+Error in updateAuthorAPI: CantEditErrorAPI: The author you are trying to edit already exists, but has a different ID
