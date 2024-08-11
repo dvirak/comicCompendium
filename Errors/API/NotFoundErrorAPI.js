@@ -7,13 +7,13 @@ class NotFoundErrorAPI extends Error {
    * Constructor for BookNotFoundErrorAPI.
    *
    * @param {string} message - Optional error message describing the "book not found" issue.
-   *                           Default is "There was an issue trying to reach the database".
+   *                           Default is "The data you were looking for was not found".
    */
   constructor(message = "The data you were looking for was not found") {
     super(message); // Call the constructor of Error class with the provided message
     this.name = "NotFoundErrorAPI"; // Set the name of the error
     this.status = 404; // Set the HTTP status code associated with this error (404 Not Found)
-    this.code = "NOT_FOUND"; // Custom error code for identification
+    this.code = "NOT_FOUND_API"; // Custom error code for identification
   }
 }
 
