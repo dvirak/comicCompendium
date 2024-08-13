@@ -21,7 +21,7 @@ const { getAuthorByIdDB, getAuthorByNameDB } = require("./Helpers");
  *                If an error occurs while querying the database, the function throws an error.
  */
 
-async function getAuthorDB({ author_id, author_name }) {
+async function getAuthorDB({ table_name, author_id, author_name }) {
   console.log("IN GET AUTHOR DB");
   console.log(author_name);
 
