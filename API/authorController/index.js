@@ -4,6 +4,7 @@ const requireUser = require("../Authentication/requireUser");
 // ! -----------------------------------------------------------
 
 const authorsRouter = express.Router();
+const table_name = "author";
 
 /**
  * Description: Retrieves all authors.
@@ -19,8 +20,10 @@ authorsRouter.get("/", getAllAuthorsAPI);
  * Route: /author/:author_id?
  *
  */
-const getAuthorAPI = require("./getAuthorAPI");
-authorsRouter.get("/author/:author_id?", getAuthorAPI);
+const getItemAPI = require("../MainFunctionsAPI");
+authorsRouter.get("/author/:author_id?", (req, res, next) => {
+  getItemAPI(req, res, next, table_name);
+});
 
 /**
  * Description: creates a new author.
