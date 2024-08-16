@@ -1,7 +1,7 @@
 // ! ----------------- IMPORTED FILES --------------------------
 const express = require("express");
 const requireUser = require("../Authentication/requireUser");
-const { getItemAPI, getAllAPI } = require("../MainFunctionsAPI");
+const { getItemAPI, getAllAPI, createItemAPI } = require("../MainFunctionsAPI");
 // ! -----------------------------------------------------------
 
 const authorsRouter = express.Router();
@@ -35,8 +35,11 @@ authorsRouter.get("/author/:id?", (req, res, next) => {
  * Request Body: Requires author_name (string).
  * Response: Returns an array containing author info and a message.
  */
-const createAuthorAPI = require("./createAuthorAPI");
-authorsRouter.post("/add", createAuthorAPI);
+// const createAuthorAPI = require("./createAuthorAPI");
+// authorsRouter.post("/add", createAuthorAPI);
+authorsRouter.post("/add", (req, res, next) => {
+  createItemAPI(req, res, next, table_name);
+});
 
 /**
  * Description: Updates author information based on author_id and request body data.

@@ -1,9 +1,5 @@
 // ! ---------------- IMPORTED FILES -------------------------
 const {
-  createAuthorDB,
-  getAuthorDB,
-} = require("../../DB/DBFunctions/AuthorDB");
-const {
   getItemDB,
   createItemDB,
 } = require("../../DB/DBFunctions/MainFunctionsDB");
@@ -12,7 +8,7 @@ const {
   ItemAlreadyExistsErrorAPI,
   MissingInformationErrorAPI,
 } = require("../../Errors/API");
-const { AuthorNotFoundErrorDB } = require("../../Errors/DB");
+const { AuthorNotFoundErrorDB, NotFoundErrorDB } = require("../../Errors/DB");
 // ! -----------------------------------------------------------
 
 /**
@@ -32,13 +28,16 @@ const { AuthorNotFoundErrorDB } = require("../../Errors/DB");
  */
 
 async function createItemAPI(req, res, next, table_name) {
-  const { item_name } = req.body;
+  const item_name = req.body.name;
+  console.log(`Creating ${item_name} in the ${table_name} table`);
 
   try {
     // Check if any required fields are missing
-    if (!item_name) {
+    if (!item_name || !table_name) {
       throw new MissingInformationErrorAPI(
-        "You are missing information for the item in createItemAPI"
+        !item_name
+          ? `You are missing the item_name in createItemAPI`
+          : `You are missing the table_name in createItemAPI`
       );
     }
 
@@ -46,7 +45,7 @@ async function createItemAPI(req, res, next, table_name) {
 
     // Check if a book with the same title already exists
     try {
-      itemExists = await getItemDB({ item_name });
+      itemExists = await getItemDB({ table_name, item_name });
     } catch (error) {
       if (error instanceof NotFoundErrorDB) {
         itemExists = null;
@@ -57,11 +56,11 @@ async function createItemAPI(req, res, next, table_name) {
 
     if (itemExists) {
       throw new ItemAlreadyExistsErrorAPI(
-        "The Item you are trying to add already exists in the database"
+        `${item_name} already exists in the ${table_name}s Table`
       );
     } else {
       // Create the new book record in the database
-      const createdItem = await createItemDB({ item_name });
+      const createdItem = await createItemDB({ table_name, item_name });
 
       // Send the created book object as the response
       res.status(201).json(createdItem);

@@ -241,3 +241,18 @@ Database Error in getItemDB: error: relation "undefineds" does not exist
 Database Error in getItemByNameDB: error: column "book_name" does not exist
 Database Error in getItemDB: error: column "book_name" does not exist
 Database Error in getAllDB: MissingInformationErrorDB: Table name was not provided in getAllDB
+Database Error in getItemByNameDB: NotFoundErrorDB: Chad Hardin was not found in the illustrator table.
+Database Error in getItemDB: NotFoundErrorDB: Chad Hardin was not found in the illustrator table.
+Database Error in getItemByNameDB: NotFoundErrorDB: Chad Hardin was not found in the illustrator table.
+Database Error in getItemDB: NotFoundErrorDB: Chad Hardin was not found in the illustrator table.
+Database Error in createItemDB: error: relation "undefineds" does not exist
+Database Error in getItemByNameDB: NotFoundErrorDB: Chad Hardin was not found in the illustrator table.
+Database Error in getItemDB: NotFoundErrorDB: Chad Hardin was not found in the illustrator table.
+Database Error in createItemDB: error: column "item_name" does not exist
+Database Error in getItemByNameDB: NotFoundErrorDB: Chad Hardin was not found in the illustrator table.
+Database Error in getItemDB: NotFoundErrorDB: Chad Hardin was not found in the illustrator table.
+Database Error in createItemDB: error: column "item_name" does not exist
+Database Error in getItemByNameDB: NotFoundErrorDB: Chad Hardin was not found in the illustrator table.
+Database Error in getItemDB: NotFoundErrorDB: Chad Hardin was not found in the illustrator table.
+Database Error in getItemByNameDB: NotFoundErrorDB: Kyrtus J. Wiebe was not found in the author table.
+Database Error in getItemDB: NotFoundErrorDB: Kyrtus J. Wiebe was not found in the author table.
