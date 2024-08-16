@@ -1,7 +1,12 @@
 // ! ----------------- IMPORTED FILES --------------------------
 const express = require("express");
 const requireUser = require("../Authentication/requireUser");
-const { getItemAPI, getAllAPI, createItemAPI } = require("../MainFunctionsAPI");
+const {
+  getItemAPI,
+  getAllAPI,
+  createItemAPI,
+  deleteItemAPI,
+} = require("../MainFunctionsAPI");
 // ! -----------------------------------------------------------
 
 const authorsRouter = express.Router();
@@ -62,7 +67,10 @@ authorsRouter.patch("/:author_id/update", requireUser, updateAuthorAPI);
  * Response: Returns a message confirming the deletion and the deleted user's username.
  * Throws: NotFoundErrorAPI if the specified user_id does not exist.
  */
-const deleteAuthorAPI = require("./deleteAuthorAPI");
-authorsRouter.delete("/:author_id/delete", requireUser, deleteAuthorAPI);
+// const deleteAuthorAPI = require("./deleteAuthorAPI");
+// authorsRouter.delete("/:author_id/delete", requireUser, deleteAuthorAPI);
+authorsRouter.delete("/:id/delete", requireUser, (req, res, next) => {
+  deleteItemAPI(req, res, next, table_name);
+});
 
 module.exports = authorsRouter;

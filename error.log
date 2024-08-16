@@ -244,3 +244,7 @@ Error in createItemAPI: error: column "item_name" does not exist
 Error in createItemAPI: ItemAlreadyExistsErrorAPI: Chad Hardin already exists in the illustrators Table
 Error in createItemAPI: MissingInformationErrorAPI: You are missing the item_name in createItemAPI
 Error in createItemAPI: ItemAlreadyExistsErrorAPI: Kyrtus J. Wiebe already exists in the authors Table
+Error in createItemAPI: ItemAlreadyExistsErrorAPI: Chad Hardin already exists in the illustrators Table
+Error in deleteItemAPI: MissingInformationErrorDB: You are missing the necessary information to retrieve Item Name: undefined from the illustrator table
+Error in deleteItemAPI: MissingInformationErrorDB: You are missing the necessary information to retrieve Item Name: undefined from the illustrator table
+Error in deleteItemAPI: TypeError: deleteItemDB is not a function
