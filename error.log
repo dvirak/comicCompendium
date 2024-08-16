@@ -233,3 +233,14 @@ Error in getItemAPI: MissingInformationErrorAPI: You are missing the necessary i
 Error in getItemAPI: error: column "book_name" does not exist
 Error in getAllAPI: ReferenceError: logErrorDB is not defined
 Error in getAllAPI: MissingInformationErrorDB: Table name was not provided in getAllDB
+Error in createItemAPI: MissingInformationErrorAPI: You are missing information in createItemAPI
+Error in createItemAPI: MissingInformationErrorAPI: You are missing the item_name in createItemAPI
+Error in createItemAPI: MissingInformationErrorAPI: You are missing the item_name in createItemAPI
+Error in createItemAPI: MissingInformationErrorAPI: You are missing the item_name in createItemAPI
+Error in createItemAPI: ReferenceError: logErrorDB is not defined
+Error in createItemAPI: error: relation "undefineds" does not exist
+Error in createItemAPI: error: column "item_name" does not exist
+Error in createItemAPI: error: column "item_name" does not exist
+Error in createItemAPI: ItemAlreadyExistsErrorAPI: Chad Hardin already exists in the illustrators Table
+Error in createItemAPI: MissingInformationErrorAPI: You are missing the item_name in createItemAPI
+Error in createItemAPI: ItemAlreadyExistsErrorAPI: Kyrtus J. Wiebe already exists in the authors Table
