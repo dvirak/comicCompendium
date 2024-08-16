@@ -23,6 +23,10 @@ async function getItemByNameDB(table_name, item_name) {
     WHERE ${table_name}_name ILIKE $1
   `;
 
+  console.log("IN GET ITEM BY NAME DB");
+  console.log("table_name = " + table_name);
+  console.log("item_name = " + item_name);
+
   try {
     // Execute the query to select the item from the desired table where the item_name matches the provided item_name.
     const { rows } = await client.query(query, [item_name]);

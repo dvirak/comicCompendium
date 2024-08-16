@@ -222,3 +222,14 @@ Error in updateAuthorAPI: ReferenceError: logErrorDB is not defined
 Error in updateAuthorAPI: error: duplicate key value violates unique constraint "authors_author_name_key"
 Error in updateAuthorAPI: error: duplicate key value violates unique constraint "authors_author_name_key"
 Error in updateBookAPI: error: duplicate key value violates unique constraint "books_title_key"
+Error in getItemAPI: MissingInformationErrorDB: You are missing the necessary information to retrieve Item Name: undefined from the undefined table
+Error in getItemAPI: MissingInformationErrorDB: You are missing the necessary information to retrieve Item Name: undefined from the undefined table
+Error in getItemAPI: MissingInformationErrorAPI: You are missing the necessary information to retrieve Item Name: undefined from the author table
+Error in getItemAPI: error: relation "undefineds" does not exist
+Error in getItemAPI: MissingInformationErrorAPI: You are missing the necessary information to retrieve Item Name: undefined from the author table
+Error in getItemAPI: error: relation "undefineds" does not exist
+Error in getItemAPI: error: relation "undefineds" does not exist
+Error in getItemAPI: MissingInformationErrorAPI: You are missing the necessary information to retrieve Item Name: undefined from the author table
+Error in getItemAPI: error: column "book_name" does not exist
+Error in getAllAPI: ReferenceError: logErrorDB is not defined
+Error in getAllAPI: MissingInformationErrorDB: Table name was not provided in getAllDB
