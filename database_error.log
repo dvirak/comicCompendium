@@ -230,3 +230,14 @@ Database Error in updateBookDB: error: duplicate key value violates unique const
 Database Error in updateAuthorDB: error: duplicate key value violates unique constraint "authors_author_name_key"
 Database Error in updateAuthorDB: error: duplicate key value violates unique constraint "authors_author_name_key"
 Database Error in updateBookDB: error: duplicate key value violates unique constraint "books_title_key"
+Database Error in getItemDB: MissingInformationErrorDB: You are missing the necessary information to retrieve Item Name: undefined from the undefined table
+Database Error in getItemDB: MissingInformationErrorDB: You are missing the necessary information to retrieve Item Name: undefined from the undefined table
+Database Error in getItemByNameDB: error: relation "undefineds" does not exist
+Database Error in getItemDB: error: relation "undefineds" does not exist
+Database Error in getItemByNameDB: error: relation "undefineds" does not exist
+Database Error in getItemDB: error: relation "undefineds" does not exist
+Database Error in getItemByNameDB: error: relation "undefineds" does not exist
+Database Error in getItemDB: error: relation "undefineds" does not exist
+Database Error in getItemByNameDB: error: column "book_name" does not exist
+Database Error in getItemDB: error: column "book_name" does not exist
+Database Error in getAllDB: MissingInformationErrorDB: Table name was not provided in getAllDB

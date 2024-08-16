@@ -1,6 +1,7 @@
 // ! ----------------- IMPORTED FILES --------------------------
 const express = require("express");
 const requireUser = require("../Authentication/requireUser");
+const { getItemAPI, getAllAPI } = require("../MainFunctionsAPI");
 // ! -----------------------------------------------------------
 
 const authorsRouter = express.Router();
@@ -11,8 +12,11 @@ const table_name = "author";
  * Method: GET
  * Route: /authors
  */
-const getAllAuthorsAPI = require("./getAllAuthorsAPI");
-authorsRouter.get("/", getAllAuthorsAPI);
+// const getAllAuthorsAPI = require("./getAllAuthorsAPI");
+// authorsRouter.get("/", getAllAuthorsAPI);
+authorsRouter.get("/", (req, res, next) => {
+  getAllAPI(req, res, next, table_name);
+});
 
 /**
  * Description: Retrieves an author based on author_id as a param or author_name as a query.
@@ -20,8 +24,7 @@ authorsRouter.get("/", getAllAuthorsAPI);
  * Route: /author/:author_id?
  *
  */
-const getItemAPI = require("../MainFunctionsAPI");
-authorsRouter.get("/author/:author_id?", (req, res, next) => {
+authorsRouter.get("/author/:id?", (req, res, next) => {
   getItemAPI(req, res, next, table_name);
 });
 

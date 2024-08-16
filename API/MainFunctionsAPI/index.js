@@ -1,3 +1,4 @@
+const getAllAPI = require("./getAllAPI");
 const getItemAPI = require("./getItemAPI");
 
-module.exports = { getItemAPI };
+module.exports = { getItemAPI, getAllAPI };

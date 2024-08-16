@@ -38,15 +38,17 @@ async function getItemDB({ table_name, item_id, item_name }) {
       );
     }
 
-    let item;
+    let item = item_id
+      ? await getItemByIdDB(table_name, item_id)
+      : await getItemByNameDB(table_name, item_name);
 
-    if (item_id) {
-      // Retrieve item by item_id if provided
-      item = await getItemByIdDB(table_name, item_id);
-    } else if (item_name) {
-      // Retrieve book by item_name if provided
-      item = await getItemByNameDB(table_name, item_name);
-    }
+    // if (item_id) {
+    //   // Retrieve item by item_id if provided
+    //   item = await getItemByIdDB(table_name, item_id);
+    // } else if (item_name) {
+    //   // Retrieve book by item_name if provided
+    //   item = await getItemByNameDB(table_name, item_name);
+    // }
 
     if (!item) {
       // Throw an error if the book is not found

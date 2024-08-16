@@ -12,20 +12,23 @@ const { getItemDB } = require("../../DB/DBFunctions/MainFunctionsDB");
 // ! ---------------------------------------------------------------
 
 /**
- * Handles GET requests to retrieve a single author based on either author_id or author_name.
+ * Handles GET requests to retrieve a single item based on either item_id or item_name.
  *
- * @param {Object} req - The request object, containing parameters for author_id or query parameters for author_name.
- * @param {Object} res - The response object, used to send back the desired author data or an error message.
+ * @param {Object} req - The request object, containing parameters for item_id or query parameters for item_name.
+ * @param {Object} res - The response object, used to send back the desired item data or an error message.
  * @param {Function} next - The next middleware function in the request-response cycle.
  */
 async function getItemAPI(req, res, next, table_name) {
   console.log("IN GET ITEM API");
-  const author_id = req.params.author_id;
-  const author_name = req.query.author_name;
+  const item_id = req.params.id;
+  const item_name = req.query.name ? req.query.name : req.query.title;
+  console.log("Table Name = " + table_name);
+  console.log("Item Name = " + item_name);
+  console.log("Item ID = " + item_id);
 
   try {
-    // Validate input: Ensure either author_id or author_name is provided
-    if (!author_id && !author_name) {
+    // Validate input: Ensure either item_id or item_name is provided
+    if (!item_id && !item_name) {
       throw new MissingInformationErrorAPI(
         `You are missing the necessary information to retrieve ${
           item_id ? `Item Number: ${item_id}` : `Item Name: ${item_name}`
@@ -33,13 +36,13 @@ async function getItemAPI(req, res, next, table_name) {
       );
     }
 
-    // Call the database function to get the author data based on author_id or author_name
-    const author = author_id
-      ? await getItemDB({ author_id })
-      : await getItemDB({ author_name });
+    // Call the database function to get the item data based on item_id or item_name
+    const item = item_id
+      ? await getItemDB({ table_name, item_id })
+      : await getItemDB({ table_name, item_name });
 
-    // If author is not found, throw a NotFoundErrorAPI
-    if (!author) {
+    // If item is not found, throw a NotFoundErrorAPI
+    if (!item) {
       throw new NotFoundErrorAPI(
         `Could not find ${
           item_id ? `Item Number: ${item_id}` : `Item Name: ${item_name}`
@@ -47,8 +50,8 @@ async function getItemAPI(req, res, next, table_name) {
       );
     }
 
-    // Send the author data as the response
-    res.status(200).json(author);
+    // Send the item data as the response
+    res.status(200).json(item);
   } catch (error) {
     // Handle errors and send an appropriate response
     logErrorAPI("getItemAPI", error, next);
