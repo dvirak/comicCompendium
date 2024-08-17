@@ -262,3 +262,5 @@ Database Error in getItemDB: MissingInformationErrorDB: You are missing the nece
 Database Error in getItemDB: MissingInformationErrorDB: You are missing the necessary information to retrieve Item Name: undefined from the illustrator table
 Database Error in getItemByNameDB: NotFoundErrorDB: Fuck Tarkington was not found in the author table.
 Database Error in getItemDB: NotFoundErrorDB: Fuck Tarkington was not found in the author table.
+Database Error in getItemByNameDB: NotFoundErrorDB: The Masked Floofer was not found in the illustrator table.
+Database Error in getItemDB: NotFoundErrorDB: The Masked Floofer was not found in the illustrator table.

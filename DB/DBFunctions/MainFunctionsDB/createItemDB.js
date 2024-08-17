@@ -46,6 +46,4 @@ async function createItemDB({ table_name, item_name }) {
 //* -----------------CREATE ITEM DB---------------
 
 // Export the function for use by other modules.
-module.exports = {
-  createItemDB,
-};
+module.exports = createItemDB;

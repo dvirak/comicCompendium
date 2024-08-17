@@ -6,6 +6,7 @@ const {
   getAllAPI,
   createItemAPI,
   deleteItemAPI,
+  updateItemAPI,
 } = require("../MainFunctionsAPI");
 // ! -----------------------------------------------------------
 
@@ -13,18 +14,18 @@ const illustratorsRouter = express.Router();
 const table_name = "illustrator";
 
 /**
- * Description: Retrieves all authors.
+ * Description: Retrieves all illustrators.
  * Method: GET
- * Route: /authors
+ * Route: /illustrators
  */
 illustratorsRouter.get("/", (req, res, next) => {
   getAllAPI(req, res, next, table_name);
 });
 
 /**
- * Description: Retrieves an author based on author_id as a param or author_name as a query.
+ * Description: Retrieves an illustrator based on illustrator_id as a param or illustrator_name as a query.
  * Method: GET
- * Route: /author/:author_id?
+ * Route: /illustrator/:illustrator_id?
  *
  */
 illustratorsRouter.get("/illustrator/:id?", (req, res, next) => {
@@ -32,21 +33,35 @@ illustratorsRouter.get("/illustrator/:id?", (req, res, next) => {
 });
 
 /**
- * Description: creates a new author.
+ * Description: creates a new illustrator.
  * Method: POST
- * Route: /author/add
- * Request Body: Requires author_name (string).
- * Response: Returns an array containing author info and a message.
+ * Route: /illustrator/add
+ * Request Body: Requires illustrator_name (string).
+ * Response: Returns an array containing illustrator info and a message.
  */
 illustratorsRouter.post("/add", (req, res, next) => {
   createItemAPI(req, res, next, table_name);
 });
 
 /**
- * Description: Deletes a specific author.
+ * Description: Updates illustrator information based on illustrator_id and request body data.
+ * Method: PATCH
+ * Route: /illustrators/:id/update
+ * Middleware: requireUser - Ensures user is authenticated.
+ * Request Body: Contains fields to update illustrator information.
+ * Response: Returns a message indicating update success and the updated illustrator object.
+ * Throws: IllustratorNotFoundErrorAPI if the specified illustrator_id does not exist.
+ *         Error if an error occurs while updating illustrator information in the database.
+ */
+illustratorsRouter.patch("/:id/update", requireUser, (req, res, next) => {
+  updateItemAPI(req, res, next, table_name);
+});
+
+/**
+ * Description: Deletes a specific illustrator.
  * Method: DELETE
- * Route: /authors/:author_id/delete
- * Authorization: Requires user to be logged in and authorized (either the user themselves or an admin).
+ * Route: /illustrators/:illustrator_id/delete
+ * Illustratorization: Requires user to be logged in and illustratorized (either the user themselves or an admin).
  * Response: Returns a message confirming the deletion and the deleted user's username.
  * Throws: NotFoundErrorAPI if the specified user_id does not exist.
  */

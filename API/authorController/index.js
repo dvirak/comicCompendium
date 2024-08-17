@@ -6,6 +6,7 @@ const {
   getAllAPI,
   createItemAPI,
   deleteItemAPI,
+  updateItemAPI,
 } = require("../MainFunctionsAPI");
 // ! -----------------------------------------------------------
 
@@ -56,8 +57,11 @@ authorsRouter.post("/add", (req, res, next) => {
  * Throws: AuthorNotFoundErrorAPI if the specified author_id does not exist.
  *         Error if an error occurs while updating author information in the database.
  */
-const updateAuthorAPI = require("./updateAuthorAPI");
-authorsRouter.patch("/:author_id/update", requireUser, updateAuthorAPI);
+// const updateAuthorAPI = require("./updateAuthorAPI");
+// authorsRouter.patch("/:author_id/update", requireUser, updateAuthorAPI);
+authorsRouter.patch("/:id/update", requireUser, (req, res, next) => {
+  updateItemAPI(req, res, next, table_name);
+});
 
 /**
  * Description: Deletes a specific author.
