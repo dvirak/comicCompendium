@@ -248,3 +248,13 @@ Error in createItemAPI: ItemAlreadyExistsErrorAPI: Chad Hardin already exists in
 Error in deleteItemAPI: MissingInformationErrorDB: You are missing the necessary information to retrieve Item Name: undefined from the illustrator table
 Error in deleteItemAPI: MissingInformationErrorDB: You are missing the necessary information to retrieve Item Name: undefined from the illustrator table
 Error in deleteItemAPI: TypeError: deleteItemDB is not a function
+Error in updateItemAPI: ReferenceError: MissingInformationErrorAPI is not defined
+Error in updateItemAPI: MissingInformationErrorAPI: You are missing the item_id in createItemAPI
+Error in updateItemAPI: NoInfoProvidedErrorDB: No information was provided for updateItemDB
+Error in updateItemAPI: NoInfoProvidedErrorDB: No information was provided for updateItemDB
+Error in updateItemAPI: NoInfoProvidedErrorDB: No information was provided for updateItemDB
+Error in updateItemAPI: CantEditErrorAPI: You cannot edit an Item's ID
+Error in updateItemAPI: NoInfoProvidedErrorDB: No information was provided for updateItemDB
+Error in updateItemAPI: NoInfoProvidedErrorDB: No information was provided for updateItemDB
+Error in updateItemAPI: MissingInformationErrorAPI: You are missing the item_id in createItemAPI
+Error in updateItemAPI: MissingInformationErrorAPI: You are missing the item_id in createItemAPI
