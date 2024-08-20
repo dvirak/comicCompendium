@@ -17,12 +17,14 @@ const bookController = require("./bookController");
 const userController = require("./userController");
 const authorController = require("./authorController");
 const illustratorController = require("./illustratorController");
+const genresController = require("./genresController");
 
 // Define routes
 apiRouter.use("/books", bookController);
 apiRouter.use("/users", userController);
 apiRouter.use("/authors", authorController);
 apiRouter.use("/illustrators", illustratorController);
+apiRouter.use("/genres", genresController);
 
 // Error handling middleware
 apiRouter.use(errorHandlerAPI);

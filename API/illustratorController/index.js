@@ -53,9 +53,13 @@ illustratorsRouter.post("/add", (req, res, next) => {
  * Throws: IllustratorNotFoundErrorAPI if the specified illustrator_id does not exist.
  *         Error if an error occurs while updating illustrator information in the database.
  */
-illustratorsRouter.patch("/:id/update", requireUser, (req, res, next) => {
-  updateItemAPI(req, res, next, table_name);
-});
+illustratorsRouter.patch(
+  "/illustrator/:id/update",
+  requireUser,
+  (req, res, next) => {
+    updateItemAPI(req, res, next, table_name);
+  }
+);
 
 /**
  * Description: Deletes a specific illustrator.
@@ -65,8 +69,12 @@ illustratorsRouter.patch("/:id/update", requireUser, (req, res, next) => {
  * Response: Returns a message confirming the deletion and the deleted user's username.
  * Throws: NotFoundErrorAPI if the specified user_id does not exist.
  */
-illustratorsRouter.delete("/:id/delete", requireUser, (req, res, next) => {
-  deleteItemAPI(req, res, next, table_name);
-});
+illustratorsRouter.delete(
+  "/illustrator/:id/delete",
+  requireUser,
+  (req, res, next) => {
+    deleteItemAPI(req, res, next, table_name);
+  }
+);
 
 module.exports = illustratorsRouter;
