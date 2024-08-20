@@ -258,3 +258,6 @@ Error in updateItemAPI: NoInfoProvidedErrorDB: No information was provided for u
 Error in updateItemAPI: NoInfoProvidedErrorDB: No information was provided for updateItemDB
 Error in updateItemAPI: MissingInformationErrorAPI: You are missing the item_id in createItemAPI
 Error in updateItemAPI: MissingInformationErrorAPI: You are missing the item_id in createItemAPI
+Error in getItemAPI: MissingInformationErrorAPI: You are missing the necessary information to retrieve Item Name: undefined from the genre table
+Error in createItemAPI: ItemAlreadyExistsErrorAPI: Romace already exists in the genres Table
+Error in updateItemAPI: NoInfoProvidedErrorDB: No information was provided for updateItemDB
