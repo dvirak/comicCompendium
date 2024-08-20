@@ -44,7 +44,7 @@ booksRouter.post("/add", requireUser, createBookAPI);
  *         Error if an error occurs while updating book information in the database.
  */
 const updateBookAPI = require("./updateBookAPI");
-booksRouter.patch("/:book_id/update", requireUser, updateBookAPI);
+booksRouter.patch("/book/:book_id/update", requireUser, updateBookAPI);
 
 /**
  * Description: Deletes a specific book.
@@ -55,6 +55,6 @@ booksRouter.patch("/:book_id/update", requireUser, updateBookAPI);
  * Throws: BookNotFoundErrorAPI if the specified user_id does not exist.
  */
 const deleteBookAPI = require("./deleteBookAPI");
-booksRouter.delete("/:book_id/delete", requireUser, deleteBookAPI);
+booksRouter.delete("/book/:book_id/delete", requireUser, deleteBookAPI);
 
 module.exports = booksRouter;

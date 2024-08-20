@@ -8,7 +8,7 @@ const {
   ItemAlreadyExistsErrorAPI,
   MissingInformationErrorAPI,
 } = require("../../Errors/API");
-const { AuthorNotFoundErrorDB, NotFoundErrorDB } = require("../../Errors/DB");
+const { NotFoundErrorDB } = require("../../Errors/DB");
 // ! -----------------------------------------------------------
 
 /**
