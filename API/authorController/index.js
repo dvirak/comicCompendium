@@ -59,7 +59,7 @@ authorsRouter.post("/add", (req, res, next) => {
  */
 // const updateAuthorAPI = require("./updateAuthorAPI");
 // authorsRouter.patch("/:author_id/update", requireUser, updateAuthorAPI);
-authorsRouter.patch("/:id/update", requireUser, (req, res, next) => {
+authorsRouter.patch("/author/:id/update", requireUser, (req, res, next) => {
   updateItemAPI(req, res, next, table_name);
 });
 
@@ -73,7 +73,7 @@ authorsRouter.patch("/:id/update", requireUser, (req, res, next) => {
  */
 // const deleteAuthorAPI = require("./deleteAuthorAPI");
 // authorsRouter.delete("/:author_id/delete", requireUser, deleteAuthorAPI);
-authorsRouter.delete("/:id/delete", requireUser, (req, res, next) => {
+authorsRouter.delete("/author/:id/delete", requireUser, (req, res, next) => {
   deleteItemAPI(req, res, next, table_name);
 });
 
