@@ -268,3 +268,5 @@ Database Error in getItemByNameDB: NotFoundErrorDB: Romace was not found in the 
 Database Error in getItemDB: NotFoundErrorDB: Romace was not found in the genre table.
 Database Error in getItemByNameDB: NotFoundErrorDB: Smutt was not found in the genre table.
 Database Error in getItemDB: NotFoundErrorDB: Smutt was not found in the genre table.
+Database Error in getItemByNameDB: NotFoundErrorDB: Fuck Tarkington was not found in the author table.
+Database Error in getItemDB: NotFoundErrorDB: Fuck Tarkington was not found in the author table.

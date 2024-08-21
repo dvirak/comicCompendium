@@ -261,3 +261,6 @@ Error in updateItemAPI: MissingInformationErrorAPI: You are missing the item_id 
 Error in getItemAPI: MissingInformationErrorAPI: You are missing the necessary information to retrieve Item Name: undefined from the genre table
 Error in createItemAPI: ItemAlreadyExistsErrorAPI: Romace already exists in the genres Table
 Error in updateItemAPI: NoInfoProvidedErrorDB: No information was provided for updateItemDB
+Error in createItemAPI: ItemAlreadyExistsErrorAPI: Fuck Tarkington already exists in the authors Table
+Error in createItemAPI: MissingInformationErrorAPI: You are missing the item_name in createItemAPI
+Error in createItemAPI: ItemAlreadyExistsErrorAPI: Fuck Tarkington already exists in the authors Table
