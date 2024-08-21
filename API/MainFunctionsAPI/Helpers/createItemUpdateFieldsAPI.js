@@ -8,16 +8,18 @@ const {
 /**
  * Description: Creates update fields based on item permissions and provided update data.
  *
- * @param {Object} itemToEdit - Item object containing item_id.
- * @param {Object} updateData - Data object containing fields to be updated.
- * @returns {Object} Object containing fields and values that are allowed to be updated.
- * @throws {NotAdminErrorAPI} If item does not have admin permissions and tries to update admin status.
- * @throws {MissingInformationErrorAPI} If any update data field is empty.
+ * This function processes the update data to determine which fields can be updated. It checks for restricted fields
+ * and ensures that no empty fields are included.
  *
- * @precondition User must have appropriate permissions to update each field in updateData.
- * @postcondition Returns an object with valid update fields and values.
+ * @param {Object} itemToEdit - The item object containing item details including permissions.
+ * @param {Object} updateData - An object containing fields to be updated and their new values.
+ * @returns {Object} An object containing fields and values that are allowed to be updated.
+ * @throws {CantEditErrorAPI} If the item tries to update restricted fields like `id`.
+ * @throws {MissingInformationErrorAPI} If any field in `updateData` is empty or missing.
+ *
+ * @precondition User must have appropriate permissions to update each field in `updateData`.
+ * @postcondition Returns an object with valid update fields and values that can be updated.
  */
-
 async function createItemUpdateFieldsAPI(itemToEdit, updateData) {
   console.log("IN CREATE ITEM UPDATE FIELDS");
   console.log(itemToEdit);

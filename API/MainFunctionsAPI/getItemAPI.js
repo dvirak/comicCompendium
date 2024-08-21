@@ -1,7 +1,3 @@
-// ! ----------------- IMPORTED LIBRARIES --------------------------
-const express = require("express");
-// ! ---------------------------------------------------------------
-
 // ! ---------------- IMPORTED LOCAL FILES -------------------------
 const {
   NotFoundErrorAPI,
@@ -12,11 +8,27 @@ const { getItemDB } = require("../../DB/DBFunctions/MainFunctionsDB");
 // ! ---------------------------------------------------------------
 
 /**
- * Handles GET requests to retrieve a single item based on either item_id or item_name.
+ * Description: Handles GET requests to retrieve a single item based on either item_id or item_name.
  *
- * @param {Object} req - The request object, containing parameters for item_id or query parameters for item_name.
- * @param {Object} res - The response object, used to send back the desired item data or an error message.
- * @param {Function} next - The next middleware function in the request-response cycle.
+ * This function retrieves an item from a specified table based on the item ID or name provided in the request. It validates input and handles errors through API error handling middleware.
+ *
+ * Middleware: None required.
+ * Request Parameters:
+ * - `item_id` (in URL params) or
+ * - `item_name` (in query params, can also be `title`)
+ * Response: Sends the requested item data or an error message if the item is not found.
+ *
+ * @param {Object} req - The request object, containing `params.id` for item ID or query parameters for item name.
+ * @param {Object} res - The response object used to send back the item data or error message.
+ * @param {Function} next - The next middleware function to pass errors to the error handling middleware.
+ * @param {string} table_name - The name of the database table from which to retrieve the item.
+ *
+ * @throws {MissingInformationErrorAPI} If neither item ID nor item name is provided in the request.
+ * @throws {NotFoundErrorAPI} If the item with the specified ID or name is not found in the database.
+ * @throws {Error} If an unexpected error occurs during the item retrieval process.
+ *
+ * @precondition The request must include either `item_id` or `item_name` (or `title`).
+ * @postcondition A response with the requested item data is sent to the client, or an error message is sent if the item is not found.
  */
 async function getItemAPI(req, res, next, table_name) {
   console.log("IN GET ITEM API");
