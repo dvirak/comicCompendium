@@ -8,6 +8,8 @@ const {
   deleteItemAPI,
   updateItemAPI,
 } = require("../MainFunctionsAPI"); // Generic functions for handling database operations
+const { getRelationItemsAPI } = require("../RelationshipFunctionsAPI");
+
 // ! -----------------------------------------------------------
 
 const illustratorsRouter = express.Router();
@@ -73,6 +75,14 @@ illustratorsRouter.delete(
   requireUser,
   (req, res, next) => {
     deleteItemAPI(req, res, next, table_name);
+  }
+);
+
+illustratorsRouter.get(
+  "/illustrator/:id/relation/?",
+  requireUser,
+  (req, res, next) => {
+    getRelationItemsAPI(req, res, next, table_name);
   }
 );
 

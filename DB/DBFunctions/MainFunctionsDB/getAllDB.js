@@ -45,4 +45,13 @@ async function getAllDB({ table_name }) {
   }
 }
 
+// async function test() {
+//   console.log("TESTING IN GETALLDB");
+//   let table_name = "book_author";
+//   let results = await getAllDB({ table_name });
+//   console.log(results);
+// }
+
+// test();
+
 module.exports = getAllDB;

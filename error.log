@@ -264,3 +264,5 @@ Error in updateItemAPI: NoInfoProvidedErrorDB: No information was provided for u
 Error in createItemAPI: ItemAlreadyExistsErrorAPI: Fuck Tarkington already exists in the authors Table
 Error in createItemAPI: MissingInformationErrorAPI: You are missing the item_name in createItemAPI
 Error in createItemAPI: ItemAlreadyExistsErrorAPI: Fuck Tarkington already exists in the authors Table
+Error in getSingleBookAPI: InputErrorBooksAPI: Either book_id or book_title must be provided.
+Error in getSingleBookAPI: InputErrorBooksAPI: Either book_id or book_title must be provided.

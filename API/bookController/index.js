@@ -4,6 +4,7 @@ const requireUser = require("../Authentication/requireUser");
 // ! -----------------------------------------------------------
 
 const booksRouter = express.Router();
+const table_name = "book";
 
 /**
  * Description: Retrieves basic information for all books.
@@ -56,5 +57,10 @@ booksRouter.patch("/book/:book_id/update", requireUser, updateBookAPI);
  */
 const deleteBookAPI = require("./deleteBookAPI");
 booksRouter.delete("/book/:book_id/delete", requireUser, deleteBookAPI);
+
+const { getRelationItemsAPI } = require("../RelationshipFunctionsAPI");
+booksRouter.get("/book/:id/relation/?", requireUser, (req, res, next) => {
+  getRelationItemsAPI(req, res, next, table_name);
+});
 
 module.exports = booksRouter;
