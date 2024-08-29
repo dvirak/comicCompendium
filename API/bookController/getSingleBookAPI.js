@@ -20,6 +20,7 @@ const { formatBookPublishDatesAPI } = require("./Helpers");
 async function getSingleBookAPI(req, res, next) {
   const book_id = req.params.book_id;
   const title = req.query.title;
+  console.log(req.query);
 
   console.log("IN GET SINGLE BOOK API");
 
