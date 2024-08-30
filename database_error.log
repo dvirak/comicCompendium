@@ -295,3 +295,9 @@ Database Error in getItemByNameDB: NotFoundErrorDB: Graphic_Novel
  was not found in the genre table.
 Database Error in getItemDB: NotFoundErrorDB: Graphic_Novel
  was not found in the genre table.
+Database Error in getRelationItems: error: relation "seriess" does not exist
+Database Error in getRelationItems: error: relation "seriess" does not exist
+Database Error in getRelationItems: error: column book_series.serie_id does not exist
+Database Error in getRelationItems: error: column book_series.serie_id does not exist
+Database Error in getRelationItems: error: column book_series.serie_id does not exist
+Database Error in getRelationItems: error: column book_series.serie_id does not exist

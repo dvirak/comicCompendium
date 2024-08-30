@@ -16,10 +16,20 @@ async function getRelationItemsDB({ main_item, main_item_id, relations }) {
   // Generate individual SELECT queries for each relation type
   const queries = relations.map(
     (relation) => `
-  SELECT '${relation}' as relation_type, ${relation}s.id as relation_id, ${relation}s.${relation}_name as relation_name
-  FROM ${relation}s
-  JOIN ${main_item}_${relation}s ON ${main_item}_${relation}s.${relation}_id = ${relation}s.id
-  WHERE ${main_item}_${relation}s.${main_item}_id = $1
+  SELECT '${relation}' as relation_type, ${
+      relation === "series" ? "serie" : relation
+    }s.id as relation_id, ${
+      relation === "series" ? "serie" : relation
+    }s.${relation}_name as relation_name
+  FROM ${relation === "series" ? "serie" : relation}s
+  JOIN ${main_item}_${
+      relation === "series" ? "serie" : relation
+    }s ON ${main_item}_${
+      relation === "series" ? "serie" : relation
+    }s.${relation}_id = ${relation === "series" ? "serie" : relation}s.id
+  WHERE ${main_item}_${
+      relation === "series" ? "serie" : relation
+    }s.${main_item}_id = $1
   `
   );
 
@@ -38,9 +48,7 @@ async function getRelationItemsDB({ main_item, main_item_id, relations }) {
       );
     }
 
-    console.log(`We made it here`); // Debug log to indicate successful retrieval of data
-
-    console.log(rows[0]); // Debug log to show the first row of the result
+    console.log(rows); // Debug log to show the first row of the result
     return rows; // Return the retrieved rows
   } catch (error) {
     // Log error and rethrow it for further handling
