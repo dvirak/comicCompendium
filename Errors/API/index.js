@@ -21,6 +21,7 @@ const CantEditErrorAPI = require("./CantEditErrorAPI");
 const AuthorNotFoundErrorAPI = require("./AuthorNotFoundErrorAPI");
 const InputErrorAuthorsAPI = require("./InputErrorAuthorsAPI");
 const NotFoundErrorAPI = require("./NotFoundErrorAPI");
+const errorCodeCheck = require("./errorCodeCheck");
 
 module.exports = {
   UserExistsErrorAPI,
@@ -46,4 +47,5 @@ module.exports = {
   AuthorNotFoundErrorAPI,
   InputErrorAuthorsAPI,
   NotFoundErrorAPI,
+  errorCodeCheck,
 };

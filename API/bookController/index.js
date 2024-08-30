@@ -58,9 +58,33 @@ booksRouter.patch("/book/:book_id/update", requireUser, updateBookAPI);
 const deleteBookAPI = require("./deleteBookAPI");
 booksRouter.delete("/book/:book_id/delete", requireUser, deleteBookAPI);
 
+/**
+ * Description: Retrieves related items for a specific book based on query parameters.
+ * Method: GET
+ * Route: /books/book/:id/relation
+ * Request Params: `id` specifies the book to get related items for.
+ * Request Query: At least one relation type is required (e.g., `author`, `genre`, `illustrator`). Additional relation types can be added as query parameters if supported.
+ * Response: Returns a list of related items for the specified book, including details such as relation type, ID, and name.
+ *
+ * Example request: /books/book/5/relation/genre&author
+ */
 const { getRelationItemsAPI } = require("../RelationshipFunctionsAPI");
-booksRouter.get("/book/:id/relation/?", requireUser, (req, res, next) => {
+booksRouter.get("/book/:id/relation/?", (req, res, next) => {
   getRelationItemsAPI(req, res, next, table_name);
+});
+
+/**
+ * Description: Retrieves books based on category filters specified as query parameters.
+ * Method: GET
+ * Route: /books/category
+ * Request Query: One or more category types (e.g., `author`, `genre`, `illustrator`) with their respective values. Each query parameter should match a category filter to apply.
+ * Response: Returns a list of books that match the specified category filters.
+ *
+ * Example Request: /books/category/?illustrator=erica_henderson&author=ryan_north
+ * */
+const getBooksByCategoryAPI = require("./getBooksByCategoryAPI");
+booksRouter.get("/category/?", (req, res, next) => {
+  getBooksByCategoryAPI(req, res, next);
 });
 
 module.exports = booksRouter;
