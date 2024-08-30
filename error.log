@@ -286,3 +286,12 @@ Error in getBooksByCategoryAPI: TypeError: categories.map is not a function
 Error in getBooksByCategoryAPI: NotFoundErrorDB: No books were found for genre: '2' with author: '12'
 Error in getBooksByCategoryAPI: NotFoundErrorDB: No books were found for genre: '2' with author: '12'
 Error in getBooksByCategoryAPI: NotFoundErrorDB: No books were found for genre: '2' with author: '12'
+Error in getSingleBookAPI: ReferenceError: entry is not defined
+Error in getSingleBookAPI: TypeError: Cannot read properties of undefined (reading 'push')
+Error in getSingleBookAPI: TypeError: formattedInfo[value.relation_type] is not iterable
+Error in getSingleBookAPI: error: relation "seriess" does not exist
+Error in getSingleBookAPI: error: relation "seriess" does not exist
+Error in getSingleBookAPI: error: column book_series.serie_id does not exist
+Error in getSingleBookAPI: error: column book_series.serie_id does not exist
+Error in getSingleBookAPI: error: column book_series.serie_id does not exist
+Error in getSingleBookAPI: error: column book_series.serie_id does not exist
