@@ -266,3 +266,23 @@ Error in createItemAPI: MissingInformationErrorAPI: You are missing the item_nam
 Error in createItemAPI: ItemAlreadyExistsErrorAPI: Fuck Tarkington already exists in the authors Table
 Error in getSingleBookAPI: InputErrorBooksAPI: Either book_id or book_title must be provided.
 Error in getSingleBookAPI: InputErrorBooksAPI: Either book_id or book_title must be provided.
+Error in getItemAPI: ReferenceError: res is not defined
+Error in getItemAPI: Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client
+Error in getBooksByCategoryAPI: TypeError: categories.reduce is not a function
+Error in getBooksByCategoryAPI: TypeError: categories.reduce is not a function
+Error in getBooksByCategoryAPI: TypeError: Cannot read properties of undefined (reading 'publish_date')
+Error in getBooksByCategoryAPI: ReferenceError: NotFoundErrorDB is not defined
+Error in getBooksByCategoryAPI: ReferenceError: category is not defined
+Error in getBooksByCategoryAPI: TypeError: categories.join is not a function
+Error in getBooksByCategoryAPI: NotFoundErrorDB: No books were found for [object Object]
+Error in getBooksByCategoryAPI: TypeError: formattedCategories.map is not a function
+Error in getBooksByCategoryAPI: NotFoundErrorDB: No books were found for genre: '2' with author: '12'
+Error in getBooksByCategoryAPI: NotFoundErrorDB: No books were found for genre: '2' with author: '12'
+Error in getBooksByCategoryAPI: NotFoundErrorDB: No books were found for genre: '2' with author: '12'
+Error in getBooksByCategoryAPI: NotFoundErrorDB: No books were found for genre: '2' with author: '12'
+Error in getBooksByCategoryAPI: NotFoundErrorDB: No books were found for genre: '2' with author: '12'
+Error in getBooksByCategoryAPI: NotFoundErrorDB: No books were found for genre: '2' with author: '12'
+Error in getBooksByCategoryAPI: TypeError: categories.map is not a function
+Error in getBooksByCategoryAPI: NotFoundErrorDB: No books were found for genre: '2' with author: '12'
+Error in getBooksByCategoryAPI: NotFoundErrorDB: No books were found for genre: '2' with author: '12'
+Error in getBooksByCategoryAPI: NotFoundErrorDB: No books were found for genre: '2' with author: '12'

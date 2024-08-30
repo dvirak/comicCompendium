@@ -272,3 +272,26 @@ Database Error in getItemByNameDB: NotFoundErrorDB: Fuck Tarkington was not foun
 Database Error in getItemDB: NotFoundErrorDB: Fuck Tarkington was not found in the author table.
 Database Error in getItemByNameDB: NotFoundErrorDB: Romance was not found in the genre table.
 Database Error in getItemDB: NotFoundErrorDB: Romance was not found in the genre table.
+Database Error in getBooksByCategoryDB: ReferenceError: NotFoundErrorDB is not defined
+Database Error in getBooksByCategoryDB: ReferenceError: category is not defined
+Database Error in getBooksByCategoryDB: TypeError: categories.join is not a function
+Database Error in getBooksByCategoryDB: NotFoundErrorDB: No books were found for [object Object]
+Database Error in getBooksByCategoryDB: TypeError: formattedCategories.map is not a function
+Database Error in getBooksByCategoryDB: NotFoundErrorDB: No books were found for genre: '2' with author: '12'
+Database Error in getBooksByCategoryDB: NotFoundErrorDB: No books were found for genre: '2' with author: '12'
+Database Error in getBooksByCategoryDB: NotFoundErrorDB: No books were found for genre: '2' with author: '12'
+Database Error in getBooksByCategoryDB: NotFoundErrorDB: No books were found for genre: '2' with author: '12'
+Database Error in getBooksByCategoryDB: NotFoundErrorDB: No books were found for genre: '2' with author: '12'
+Database Error in getBooksByCategoryDB: NotFoundErrorDB: No books were found for genre: '2' with author: '12'
+Database Error in getBooksByCategoryDB: TypeError: categories.map is not a function
+Database Error in getBooksByCategoryDB: NotFoundErrorDB: No books were found for genre: '2' with author: '12'
+Database Error in getBooksByCategoryDB: NotFoundErrorDB: No books were found for genre: '2' with author: '12'
+Database Error in getBooksByCategoryDB: NotFoundErrorDB: No books were found for genre: '2' with author: '12'
+Database Error in getBooksByCategoryDB: NotFoundErrorDB: No books were found for genre: '2' with author: '12'
+Database Error in getBooksByCategoryDB: NotFoundErrorDB: No books were found for genre: '2' with author: '12'
+Database Error in getBooksByCategoryDB: NotFoundErrorDB: No books were found for genre: '2' with author: '12'
+Database Error in getBooksByCategoryDB: NotFoundErrorDB: No books were found for genre: '2' with author: '12'
+Database Error in getItemByNameDB: NotFoundErrorDB: Graphic_Novel
+ was not found in the genre table.
+Database Error in getItemDB: NotFoundErrorDB: Graphic_Novel
+ was not found in the genre table.
