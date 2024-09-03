@@ -1,3 +1,4 @@
+const additionalInfoCheckAPI = require("./additionalInfoCheckAPI");
 const createBookUpdateFieldsAPI = require("./createBookUpdateFieldsAPI");
 const formatAdditionalInfo = require("./formatAdditionalInfo");
 const formatBookPublishDatesAPI = require("./formatBookPublishDatesAPI");
@@ -8,4 +9,5 @@ module.exports = {
   formatBookPublishDatesAPI,
   formatCategories,
   formatAdditionalInfo,
+  additionalInfoCheckAPI,
 };

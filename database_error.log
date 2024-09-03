@@ -301,3 +301,24 @@ Database Error in getRelationItems: error: column book_series.serie_id does not 
 Database Error in getRelationItems: error: column book_series.serie_id does not exist
 Database Error in getRelationItems: error: column book_series.serie_id does not exist
 Database Error in getRelationItems: error: column book_series.serie_id does not exist
+Database Error in getRelationItems: NotFoundErrorDB: No relations were found for the book where ID = 12
+Database Error in getRelationItems: NotFoundErrorDB: No relations were found for the book where ID = 12
+Database Error in getRelationItems: NotFoundErrorDB: No relations were found for the book where ID = 13
+Database Error in getBookByIdDB: BookNotFoundErrorDB: No book found
+Database Error in getSingleBookDB: BookNotFoundErrorDB: No book found
+Database Error in getBookByIdDB: BookNotFoundErrorDB: No book found
+Database Error in getSingleBookDB: BookNotFoundErrorDB: No book found
+Database Error in getBookByIdDB: BookNotFoundErrorDB: No book found
+Database Error in getSingleBookDB: BookNotFoundErrorDB: No book found
+Database Error in getBookByIdDB: BookNotFoundErrorDB: No book found
+Database Error in getSingleBookDB: BookNotFoundErrorDB: No book found
+Database Error in getRelationItems: NotFoundErrorDB: No relations were found for the book where ID = 12
+Database Error in getRelationItems: NotFoundErrorDB: No relations were found for the book where ID = 12
+Database Error in getRelationItems: NotFoundErrorDB: No relations were found for the book where ID = 12
+Database Error in getRelationItems: NotFoundErrorDB: No relations were found for the book where ID = 12
+Database Error in getRelationItems: NotFoundErrorDB: No relations were found for the book where ID = 12
+Database Error in getRelationItems: NotFoundErrorDB: No relations were found for the book where ID = 12
+Database Error in getRelationItems: NotFoundErrorDB: No relations were found for the book where ID = 12
+Database Error in getRelationItems: NotFoundErrorDB: No relations were found for the book where ID = 12
+Database Error in getRelationItems: NotFoundErrorDB: No relations were found for the book where ID = 12
+Database Error in getRelationItems: NotFoundErrorDB: No relations were found for the book where ID = 12
