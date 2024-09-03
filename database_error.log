@@ -322,3 +322,8 @@ Database Error in getRelationItems: NotFoundErrorDB: No relations were found for
 Database Error in getRelationItems: NotFoundErrorDB: No relations were found for the book where ID = 12
 Database Error in getRelationItems: NotFoundErrorDB: No relations were found for the book where ID = 12
 Database Error in getRelationItems: NotFoundErrorDB: No relations were found for the book where ID = 12
+Database Error in getBooksByCategoryDB: ReferenceError: values is not defined
+Database Error in getBooksByCategoryDB: TypeError: Client was passed a null or undefined query
+Database Error in getBooksByCategoryDB: TypeError: Client was passed a null or undefined query
+Database Error in getBooksByCategoryDB: TypeError: Client was passed a null or undefined query
+Database Error in getBooksByCategoryDB: TypeError: Client was passed a null or undefined query

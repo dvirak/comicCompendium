@@ -1,7 +1,7 @@
 // ! ----------------- IMPORTED FILES --------------------------
 const { NotFoundErrorDB, logErrorDB } = require("../../../Errors/DB"); // Database error handling functions
 const client = require("../../client"); // Database client for executing queries
-const { formatRelationQueries } = require("./helpers");
+const { formatGetRelationQueries } = require("./helpers");
 // ! -----------------------------------------------------------
 
 /**
@@ -15,7 +15,7 @@ const { formatRelationQueries } = require("./helpers");
  */
 async function getRelationItemsDB({ main_item, main_item_id, relations }) {
   // Generate individual SELECT queries for each relation type
-  const query = formatRelationQueries(main_item, relations);
+  const query = formatGetRelationQueries(main_item, relations);
 
   try {
     // Execute the query and retrieve results
