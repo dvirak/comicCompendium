@@ -308,3 +308,8 @@ Error in getSingleBookAPI: NotFoundErrorDB: No relations were found for the book
 Error in getSingleBookAPI: ReferenceError: formattedInfo is not defined
 Error in getSingleBookAPI: ReferenceError: formattedInfo is not defined
 Error in getSingleBookAPI: ReferenceError: main_item is not defined
+Error in getBooksByCategoryAPI: ReferenceError: values is not defined
+Error in getBooksByCategoryAPI: TypeError: Client was passed a null or undefined query
+Error in getBooksByCategoryAPI: TypeError: Client was passed a null or undefined query
+Error in getBooksByCategoryAPI: TypeError: Client was passed a null or undefined query
+Error in getBooksByCategoryAPI: TypeError: Client was passed a null or undefined query

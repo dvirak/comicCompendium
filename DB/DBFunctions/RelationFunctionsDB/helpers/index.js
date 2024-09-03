@@ -1,3 +1,3 @@
-const formatRelationQueries = require("./formatRelationQueriesDB");
+const formatGetRelationQueries = require("./formatGetRelationQueriesDB");
 
-module.exports = { formatRelationQueries };
+module.exports = { formatGetRelationQueries };
