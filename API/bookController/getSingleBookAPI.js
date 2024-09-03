@@ -45,7 +45,7 @@ async function getSingleBookAPI(req, res, next) {
     // Ensure publish_date is properly formatted for return
     book = formatBookPublishDatesAPI(book);
 
-    const formattedInfo = await additionalInfoCheckAPI(book_id);
+    const formattedInfo = await additionalInfoCheckAPI(book.id);
 
     // Send the book data as the response
     res.status(200).json({ ...book, ...formattedInfo });
