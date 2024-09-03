@@ -295,3 +295,16 @@ Error in getSingleBookAPI: error: column book_series.serie_id does not exist
 Error in getSingleBookAPI: error: column book_series.serie_id does not exist
 Error in getSingleBookAPI: error: column book_series.serie_id does not exist
 Error in getSingleBookAPI: error: column book_series.serie_id does not exist
+Error in getSingleBookAPI: NotFoundErrorDB: No relations were found for the book where ID = 12
+Error in getSingleBookAPI: NotFoundErrorDB: No relations were found for the book where ID = 12
+Error in getSingleBookAPI: NotFoundErrorDB: No relations were found for the book where ID = 13
+Error in getSingleBookAPI: BookNotFoundErrorDB: No book found
+Error in getSingleBookAPI: BookNotFoundErrorDB: No book found
+Error in getSingleBookAPI: BookNotFoundErrorDB: No book found
+Error in getSingleBookAPI: BookNotFoundErrorDB: No book found
+Error in getSingleBookAPI: NotFoundErrorDB: No relations were found for the book where ID = 12
+Error in getSingleBookAPI: NotFoundErrorDB: No relations were found for the book where ID = 12
+Error in getSingleBookAPI: NotFoundErrorDB: No relations were found for the book where ID = 12
+Error in getSingleBookAPI: ReferenceError: formattedInfo is not defined
+Error in getSingleBookAPI: ReferenceError: formattedInfo is not defined
+Error in getSingleBookAPI: ReferenceError: main_item is not defined
