@@ -46,11 +46,12 @@ async function getItemDB({ table_name, item_id, item_name }) {
 
     // Check if the item exists; if not, throw a not found error
     if (!item) {
-      throw new NotFoundErrorDB(
-        `Could not find ${
-          item_id ? `Item Number: ${item_id}` : `Item Name: ${item_name}`
-        } in the ${table_name} table`
-      );
+      return null;
+      // throw new NotFoundErrorDB(
+      //   `Could not find ${
+      //     item_id ? `Item Number: ${item_id}` : `Item Name: ${item_name}`
+      //   } in the ${table_name} table`
+      // );
     }
 
     // Return the fetched item object

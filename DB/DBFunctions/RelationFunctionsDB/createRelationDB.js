@@ -1,5 +1,12 @@
-// takes book_id and author_id
-// Create new record
-//
+const client = require("../../client");
 
-async function createRelationDB({ author_id, book_id }) {}
+async function createRelationsDB(book_id, relationType, relation_id) {
+  const relationTable = `book_${relationType}s`;
+  const query = `INSERT INTO ${relationTable} (book_id, ${relationType}_id) 
+  VALUES ($1, $2) 
+  ON CONFLICT DO NOTHING`;
+
+  await client.query(query, [book_id, relation_id]);
+}
+
+module.exports = createRelationsDB;

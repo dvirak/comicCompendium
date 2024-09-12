@@ -313,3 +313,8 @@ Error in getBooksByCategoryAPI: TypeError: Client was passed a null or undefined
 Error in getBooksByCategoryAPI: TypeError: Client was passed a null or undefined query
 Error in getBooksByCategoryAPI: TypeError: Client was passed a null or undefined query
 Error in getBooksByCategoryAPI: TypeError: Client was passed a null or undefined query
+Error in getSingleBookAPI: BookNotFoundErrorAPI: There was an issue trying to reach the database
+Error in getSingleBookAPI: BookNotFoundErrorAPI: The book you are searching for was not found
+Error in getSingleBookAPI: BookNotFoundErrorAPI: The book you are searching for was not found
+Error in getSingleBookAPI: MissingBookInfoErrorDB: No book_id or book_title provided
+Error in getSingleBookAPI: MissingBookInfoErrorDB: No book_id or book_title provided

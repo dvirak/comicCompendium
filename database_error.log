@@ -327,3 +327,7 @@ Database Error in getBooksByCategoryDB: TypeError: Client was passed a null or u
 Database Error in getBooksByCategoryDB: TypeError: Client was passed a null or undefined query
 Database Error in getBooksByCategoryDB: TypeError: Client was passed a null or undefined query
 Database Error in getBooksByCategoryDB: TypeError: Client was passed a null or undefined query
+Database Error in getRelationItems: NotFoundErrorDB: No relations were found for the book where ID = 12
+Database Error in getRelationItems: NotFoundErrorDB: No relations were found for the book where ID = 12
+Database Error in getSingleBookDB: MissingBookInfoErrorDB: No book_id or book_title provided
+Database Error in getSingleBookDB: MissingBookInfoErrorDB: No book_id or book_title provided
