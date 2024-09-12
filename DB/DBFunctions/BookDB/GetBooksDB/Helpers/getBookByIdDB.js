@@ -33,7 +33,7 @@ async function getBookByIdDB(book_id) {
 
     // If no rows are returned, throw an error indicating the book was not found.
     if (rows.length === 0) {
-      throw new BookNotFoundErrorDB();
+      return null;
     }
 
     // Return the first row from the fetched rows (book).

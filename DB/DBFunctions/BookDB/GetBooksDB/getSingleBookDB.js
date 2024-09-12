@@ -42,8 +42,10 @@ async function getSingleBookDB({ book_id, title }) {
 
     if (!book) {
       // Throw an error if the book is not found
-      throw new BookNotFoundErrorDB();
+      return null;
     }
+
+    console.log("BOOK = " + book);
 
     // Return the book data
     return book;

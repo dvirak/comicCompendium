@@ -20,19 +20,23 @@ const client = require("../../../../client");
  */
 
 async function getBookByNameDB(title) {
+  console.log("IN GET BOOK BY NAME");
+  console.log("TITLE : " + title);
   const query = `
     SELECT *
     FROM books
     WHERE title ILIKE $1
   `;
 
+  console.log(query);
+
   try {
     // Execute the query to select the book from the 'books' table where the title matches the provided title.
     const { rows } = await client.query(query, [title]);
-
+    console.log("ROWS = " + rows);
     // If no rows are returned, throw an error indicating the book was not found.
     if (rows.length === 0) {
-      throw new BookNotFoundErrorDB();
+      return null;
     }
 
     // Return the first row from the fetched rows (book).
