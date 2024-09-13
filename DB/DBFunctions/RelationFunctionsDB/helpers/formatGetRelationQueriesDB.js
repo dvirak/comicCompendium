@@ -26,6 +26,7 @@ function formatGetRelationQueries(main_item, relations) {
   );
 
   const query = queries.join(` UNION ALL `); // Combine all SELECT queries into a single query using UNION ALL
+  console.log(query);
   return query; // Return the final combined query
 }
 

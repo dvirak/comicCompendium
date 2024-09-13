@@ -1,8 +1,8 @@
 // ! ----------------- IMPORTED FILES --------------------------
-const { formatCategories } = require("../../../API/bookController/Helpers"); // Helper functions for formatting categories
-const { logErrorDB, NotFoundErrorDB } = require("../../../Errors/DB"); // Database error handling functions
-const client = require("../../client"); // Database client for executing queries
-const { formatGetBooksByCategoryQueryDB } = require("./helpers");
+const { formatCategories } = require("../../../../API/bookController/Helpers"); // Helper functions for formatting categories
+const { logErrorDB, NotFoundErrorDB } = require("../../../../Errors/DB"); // Database error handling functions
+const client = require("../../../client"); // Database client for executing queries
+const { formatGetBooksByCategoryQueryDB } = require("./Helpers");
 // ! -----------------------------------------------------------
 
 /**

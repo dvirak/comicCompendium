@@ -1,4 +1,3 @@
 const checkOrCreateBookDB = require("./checkOrCreateBookDB");
-const formatGetBooksByCategoryQueryDB = require("./formatGetBooksByCategoryQueryDB");
 
-module.exports = { formatGetBooksByCategoryQueryDB, checkOrCreateBookDB };
+module.exports = { checkOrCreateBookDB };

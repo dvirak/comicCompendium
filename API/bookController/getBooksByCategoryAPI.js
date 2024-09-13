@@ -1,5 +1,5 @@
 // ! ----------------- IMPORTED FILES --------------------------
-const { getBooksByCategoryDB } = require("../../DB/DBFunctions/BookDB"); // Function to get books by category from the database
+const getBooksByCategoryDB = require("../../DB/DBFunctions/BookDB/GetBooksDB/getBooksByCategoryDB");
 const getItemDB = require("../../DB/DBFunctions/MainFunctionsDB/getItemDB"); // Function to get item information (e.g., categories) from the database
 const { logErrorAPI, NotFoundErrorAPI } = require("../../Errors/API"); // Error handling and logging functions for API errors
 const { NotFoundErrorDB } = require("../../Errors/DB"); // Error handling for database-specific errors
@@ -22,6 +22,7 @@ async function getBooksByCategoryAPI(req, res, next) {
       let categoryInfo = await getItemDB({ table_name, item_name });
       categories[table_name] = categoryInfo.id;
     }
+    console.log(categories);
 
     // Retrieve books based on the category IDs
     let books = await getBooksByCategoryDB(categories);

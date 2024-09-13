@@ -331,3 +331,15 @@ Database Error in getRelationItems: NotFoundErrorDB: No relations were found for
 Database Error in getRelationItems: NotFoundErrorDB: No relations were found for the book where ID = 12
 Database Error in getSingleBookDB: MissingBookInfoErrorDB: No book_id or book_title provided
 Database Error in getSingleBookDB: MissingBookInfoErrorDB: No book_id or book_title provided
+Database Error in getItemByNameDB: NotFoundErrorDB: 8 was not found in the author table.
+Database Error in getItemDB: NotFoundErrorDB: 8 was not found in the author table.
+Database Error in getItemByNameDB: NotFoundErrorDB: 8 was not found in the author table.
+Database Error in getItemDB: NotFoundErrorDB: 8 was not found in the author table.
+Database Error in getItemByNameDB: NotFoundErrorDB: 8 was not found in the author table.
+Database Error in getItemDB: NotFoundErrorDB: 8 was not found in the author table.
+Database Error in getItemByNameDB: NotFoundErrorDB: 8 was not found in the author table.
+Database Error in getItemDB: NotFoundErrorDB: 8 was not found in the author table.
+Database Error in getItemByNameDB: NotFoundErrorDB: 8 was not found in the author table.
+Database Error in getItemDB: NotFoundErrorDB: 8 was not found in the author table.
+Database Error in getItemByNameDB: NotFoundErrorDB: 8 was not found in the author table.
+Database Error in getItemDB: NotFoundErrorDB: 8 was not found in the author table.
