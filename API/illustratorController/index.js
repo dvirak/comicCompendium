@@ -78,12 +78,8 @@ illustratorsRouter.delete(
   }
 );
 
-illustratorsRouter.get(
-  "/illustrator/:id/relation/?",
-  requireUser,
-  (req, res, next) => {
-    getRelationItemsAPI(req, res, next, table_name);
-  }
-);
+illustratorsRouter.get("/illustrator/:id/relation/?", (req, res, next) => {
+  getRelationItemsAPI(req, res, next, table_name);
+});
 
 module.exports = illustratorsRouter;
