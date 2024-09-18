@@ -25,9 +25,6 @@ const { getItemByIdDB, getItemByNameDB } = require("./Helpers"); // Helper funct
  */
 async function getItemDB({ table_name, item_id, item_name }) {
   console.log("IN GET ITEM DB"); // Log the start of the function execution
-  console.log("TABLE NAME: " + table_name); // Log the provided table name
-  console.log("ITEM NAME: " + item_name); // Log the provided item name (if any)
-  console.log("ITEM ID: " + item_id); // Log the provided item ID (if any)
 
   try {
     // Validate that either item_id or item_name is provided

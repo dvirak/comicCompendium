@@ -21,13 +21,11 @@ async function getItemByNameDB(table_name, item_name) {
   // Define the query to select an item by name from the specified table
   const query = `
     SELECT *
-    FROM ${table_name}s
+    FROM ${table_name == "series" ? "serie" : table_name}s
     WHERE ${table_name}_name ILIKE $1
   `;
 
   console.log("IN GET ITEM BY NAME DB"); // Log the start of the function execution
-  console.log("table_name = " + table_name); // Log the provided table name
-  console.log("item_name = " + item_name); // Log the provided item name
 
   try {
     // Execute the query with the provided item name
@@ -35,10 +33,11 @@ async function getItemByNameDB(table_name, item_name) {
 
     // Check if the query returned any rows
     if (rows.length === 0) {
+      return null;
       // Throw an error if no item was found with the given name
-      throw new NotFoundErrorDB(
-        `${item_name} was not found in the ${table_name} table.`
-      );
+      // throw new NotFoundErrorDB(
+      //   `${item_name} was not found in the ${table_name} table.`
+      // );
     }
 
     // Return the first row from the result set (the item)

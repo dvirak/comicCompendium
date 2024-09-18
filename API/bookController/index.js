@@ -30,8 +30,12 @@ booksRouter.get("/book/:book_id?", getSingleBookAPI);
  * Request Body: Requires title (string), publish_date (string formatted as "YYYY-MM-DD"), description (string), print_length (int), series_volume (string), cover_image (string).
  * Response: Returns an array containing book info and a message.
  */
-const createBookAPI = require("./createBookAPI");
-booksRouter.post("/add", requireUser, createBookAPI);
+// const createBookAPI = require("./createBookAPI");
+// booksRouter.post("/add", requireUser, createBookAPI);
+const createOrUpdateBookAPI = require("./createOrUpdateBookAPI");
+booksRouter.post("/add", requireUser, (req, res, next) => {
+  createOrUpdateBookAPI(req, res, next);
+});
 
 /**
  * Description: Updates book information based on book_id and request body data.

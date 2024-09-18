@@ -31,10 +31,11 @@ async function getItemByIdDB(table_name, item_id) {
 
     // Check if the query returned any rows
     if (rows.length === 0) {
+      return null;
       // Throw an error if no item was found with the given ID
-      throw new NotFoundErrorDB(
-        `${table_name} with ID ${item_id} was not found`
-      );
+      // throw new NotFoundErrorDB(
+      //   `${table_name} with ID ${item_id} was not found`
+      // );
     }
 
     // Return the first row from the result set (the item)

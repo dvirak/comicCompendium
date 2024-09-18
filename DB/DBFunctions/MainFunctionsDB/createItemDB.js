@@ -20,7 +20,9 @@ async function createItemDB({ table_name, item_name }) {
   console.log(`CREATING ITEM: ${item_name} in table: ${table_name}`); // Log the item creation attempt
 
   const query = `
-      INSERT INTO ${table_name}s(${table_name}_name)
+      INSERT INTO ${
+        table_name === "series" ? "serie" : table_name
+      }s(${table_name}_name)
       VALUES ($1)
       ON CONFLICT (${table_name}_name) DO NOTHING
       RETURNING *

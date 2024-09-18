@@ -1,5 +1,6 @@
 function formatAdditionalInfo(additionalInfo) {
   console.log("In format additional info");
+  console.log(additionalInfo);
   let formattedInfo = {};
 
   for (const [key, value] of Object.entries(additionalInfo)) {
