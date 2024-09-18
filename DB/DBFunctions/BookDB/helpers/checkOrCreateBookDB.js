@@ -1,3 +1,6 @@
+const createBookDB = require("../createBookDB");
+const { getSingleBookDB } = require("../GetBooksDB");
+
 async function checkOrCreateBookDB(
   title,
   publish_date,
@@ -6,7 +9,9 @@ async function checkOrCreateBookDB(
   series_volume,
   cover_image
 ) {
-  let book = await getSingleBookDB(title);
+  console.log("IN CHECK OR CREATE BOOKE DB");
+  console.log(title);
+  let book = await getSingleBookDB({ title });
 
   if (!book) {
     book = await createBookDB(
@@ -18,8 +23,8 @@ async function checkOrCreateBookDB(
       cover_image
     );
   }
-
-  return book.id;
+  console.log(book);
+  return book;
 }
 
 module.exports = checkOrCreateBookDB;
