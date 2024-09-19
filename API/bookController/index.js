@@ -1,6 +1,10 @@
 // ! ----------------- IMPORTED FILES --------------------------
 const express = require("express");
 const requireUser = require("../Authentication/requireUser");
+const {
+  getRelationItemsAPI,
+  createRelationsAPI,
+} = require("../RelationshipFunctionsAPI");
 // ! -----------------------------------------------------------
 
 const booksRouter = express.Router();
@@ -72,9 +76,12 @@ booksRouter.delete("/book/:book_id/delete", requireUser, deleteBookAPI);
  *
  * Example request: /books/book/5/relation/genre&author
  */
-const { getRelationItemsAPI } = require("../RelationshipFunctionsAPI");
 booksRouter.get("/book/:id/relation/?", (req, res, next) => {
   getRelationItemsAPI(req, res, next, table_name);
+});
+
+booksRouter.post("/book/:id/relation/add", requireUser, (req, res, next) => {
+  createRelationsAPI(req, res, next);
 });
 
 /**
