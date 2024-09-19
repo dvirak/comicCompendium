@@ -343,3 +343,6 @@ Database Error in getItemByNameDB: NotFoundErrorDB: 8 was not found in the autho
 Database Error in getItemDB: NotFoundErrorDB: 8 was not found in the author table.
 Database Error in getItemByNameDB: NotFoundErrorDB: 8 was not found in the author table.
 Database Error in getItemDB: NotFoundErrorDB: 8 was not found in the author table.
+Database Error in getRelationItems: NotFoundErrorDB: No relations were found for the book where ID = 18
+Database Error in getRelationItems: NotFoundErrorDB: No relations were found for the book where ID = 12
+Database Error in getRelationItems: NotFoundErrorDB: No relations were found for the book where ID = 17
