@@ -346,3 +346,11 @@ Database Error in getItemDB: NotFoundErrorDB: 8 was not found in the author tabl
 Database Error in getRelationItems: NotFoundErrorDB: No relations were found for the book where ID = 18
 Database Error in getRelationItems: NotFoundErrorDB: No relations were found for the book where ID = 12
 Database Error in getRelationItems: NotFoundErrorDB: No relations were found for the book where ID = 17
+Database Error in getBookByIdDB: error: invalid input syntax for type integer: "NaN"
+Database Error in getBookByIdDB: error: invalid input syntax for type integer: "NaN"
+Database Error in getBookByIdDB: error: invalid input syntax for type integer: "NaN"
+Database Error in getBookByIdDB: error: invalid input syntax for type integer: "NaN"
+Database Error in getBookByIdDB: error: invalid input syntax for type integer: "NaN"
+Database Error in getBookByIdDB: error: invalid input syntax for type integer: "NaN"
+Database Error in getBookByIdDB: error: invalid input syntax for type integer: "NaN"
+Database Error in getBookByIdDB: error: invalid input syntax for type integer: "NaN"

@@ -21,6 +21,7 @@ const {
  */
 
 async function getBookByIdDB(book_id) {
+  console.log("IN ET BOOK BY ID DB");
   const query = `
     SELECT *
     FROM books
