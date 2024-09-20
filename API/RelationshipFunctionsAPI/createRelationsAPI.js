@@ -10,7 +10,7 @@ async function createRelationsAPI(req, res, next) {
   try {
     if (!relations || !book_id) {
       throw new MissingInformationErrorAPI(
-        "You are missing information needed for this query. Please double check the information provided"
+        "You are missing information needed for this create query. Please double check the information provided"
       );
     }
 

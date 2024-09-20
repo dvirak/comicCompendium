@@ -4,6 +4,7 @@ const requireUser = require("../Authentication/requireUser");
 const {
   getRelationItemsAPI,
   createRelationsAPI,
+  deleteRelationAPI,
 } = require("../RelationshipFunctionsAPI");
 // ! -----------------------------------------------------------
 
@@ -83,6 +84,14 @@ booksRouter.get("/book/:id/relation/?", (req, res, next) => {
 booksRouter.post("/book/:id/relation/add", requireUser, (req, res, next) => {
   createRelationsAPI(req, res, next);
 });
+
+booksRouter.delete(
+  "/book/:book_id?/:relation/delete/:item_id?",
+  requireUser,
+  (req, res, next) => {
+    deleteRelationAPI(req, res, next);
+  }
+);
 
 /**
  * Description: Retrieves books based on category filters specified as query parameters.

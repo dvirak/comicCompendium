@@ -319,3 +319,11 @@ Error in getSingleBookAPI: BookNotFoundErrorAPI: The book you are searching for 
 Error in getSingleBookAPI: MissingBookInfoErrorDB: No book_id or book_title provided
 Error in getSingleBookAPI: MissingBookInfoErrorDB: No book_id or book_title provided
 Error in getBooksByCategoryAPI: TypeError: formatGetBooksByCategoryQueryDB is not a function
+Error in deleteBookAPI: error: invalid input syntax for type integer: "NaN"
+Error in deleteBookAPI: error: invalid input syntax for type integer: "NaN"
+Error in deleteBookAPI: error: invalid input syntax for type integer: "NaN"
+Error in deleteBookAPI: error: invalid input syntax for type integer: "NaN"
+Error in deleteBookAPI: error: invalid input syntax for type integer: "NaN"
+Error in deleteBookAPI: error: invalid input syntax for type integer: "NaN"
+Error in deleteBookAPI: error: invalid input syntax for type integer: "NaN"
+Error in deleteBookAPI: error: invalid input syntax for type integer: "NaN"
