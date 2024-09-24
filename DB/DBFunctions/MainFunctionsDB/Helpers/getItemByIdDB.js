@@ -18,6 +18,7 @@ const { logErrorDB, NotFoundErrorDB } = require("../../../../Errors/DB/"); // Er
  *                If the item is not found or an error occurs during the query, the function logs the error and throws it.
  */
 async function getItemByIdDB(table_name, item_id) {
+  console.log("IN getItemByIDDB");
   // Define the query to select an item by ID from the specified table
   const query = `
     SELECT *
