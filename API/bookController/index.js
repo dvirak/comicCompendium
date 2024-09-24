@@ -86,7 +86,7 @@ booksRouter.post("/book/:id/relation/add", requireUser, (req, res, next) => {
 });
 
 booksRouter.delete(
-  "/book/:book_id?/:relation/delete/:item_id?",
+  "/book/:book_id?/relation/delete/:relation/:item_id?",
   requireUser,
   (req, res, next) => {
     deleteRelationAPI(req, res, next);
