@@ -1,9 +1,18 @@
-const { logErrorDB, MissingInformationErrorDB } = require("../../../Errors/DB");
+const {
+  logErrorDB,
+  MissingInformationErrorDB,
+  NotFoundErrorDB,
+} = require("../../../Errors/DB");
 const client = require("../../client");
 const getSingleBookDB = require("../BookDB/GetBooksDB/getSingleBookDB");
 const { getItemDB } = require("../MainFunctionsDB");
 
 async function deleteRelationDB(book_id, item_id, relation, title, item_name) {
+  console.log("In deleteRelationDB");
+  console.log("item_id = " + item_id);
+  console.log("book_id = " + book_id);
+  let book;
+  let item;
   const query = `DELETE 
   FROM book_${relation === "series" ? "serie" : relation}s
   WHERE book_id = $1 AND ${relation}_id = $2`;
@@ -28,20 +37,38 @@ async function deleteRelationDB(book_id, item_id, relation, title, item_name) {
     }
 
     if (!book_id) {
-      let book = await getSingleBookDB({ title });
+      book = await getSingleBookDB({ title });
       book_id = book.id;
     }
 
     if (!item_id) {
-      let item = await getItemDB({ table_name: relation, item_name });
+      item = await getItemDB({ table_name: relation, item_name });
       item_id = item.id;
     }
 
-    const {
-      rows: [deleted_item],
-    } = await client.query(query, [book_id, item_id]);
+    book = await getSingleBookDB({ book_id });
+    item = await getItemDB({ table_name: relation, item_id });
+    console.log(item);
+    if (book && item) {
+      const {
+        rows: [deleted_item],
+      } = await client.query(query, [book_id, item_id]);
 
-    return deleted_item;
+      return {
+        status: "Success!",
+        message: `${
+          item_name ? item_name : item[`${relation}_name`]
+        } no longer ${relation} for ${title ? title : book.title}`,
+      };
+    } else if (!book) {
+      throw new NotFoundErrorDB(
+        "The book you were searching for was not found"
+      );
+    } else if (!item) {
+      throw new NotFoundErrorDB(
+        `The ${relation} you were searching for was not found`
+      );
+    }
   } catch (error) {
     logErrorDB("deleteRelationDB", error);
     throw error;

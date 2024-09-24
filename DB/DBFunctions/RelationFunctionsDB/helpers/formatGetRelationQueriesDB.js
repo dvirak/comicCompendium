@@ -5,6 +5,7 @@
  * @returns {string} - A SQL query string that combines all relation queries using UNION ALL.
  */
 function formatGetRelationQueries(main_item, relations) {
+  console.log("IN formatGetRelationQueries");
   // Map each relation type to its corresponding SQL SELECT query
   const queries = relations.map(
     (relation) => `
@@ -26,7 +27,6 @@ function formatGetRelationQueries(main_item, relations) {
   );
 
   const query = queries.join(` UNION ALL `); // Combine all SELECT queries into a single query using UNION ALL
-  console.log(query);
   return query; // Return the final combined query
 }
 

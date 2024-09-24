@@ -22,7 +22,6 @@ const {
  */
 async function getSingleBookDB({ book_id, title }) {
   console.log("IN GET SINGLE BOOK DB");
-  console.log(title);
 
   try {
     if (!book_id && !title) {
@@ -45,7 +44,8 @@ async function getSingleBookDB({ book_id, title }) {
       return null;
     }
 
-    console.log("BOOK = " + book);
+    console.log("BOOK = ");
+    console.log(book);
 
     // Return the book data
     return book;
