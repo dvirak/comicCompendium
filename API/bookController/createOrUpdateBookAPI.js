@@ -13,7 +13,7 @@ async function createOrUpdateBookAPI(req, res, next) {
     let book = await processBookInfoDB(bookInfo);
     res.send(book);
   } catch (error) {
-    logErrorAPI("createOrUpdateBookAPI", error);
+    logErrorAPI("createOrUpdateBookAPI", error, next);
     throw error;
   }
 }

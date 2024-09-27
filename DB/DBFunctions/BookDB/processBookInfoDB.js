@@ -4,7 +4,7 @@ const checkOrCreateItemDB = require("../MainFunctionsDB/checkOrCreateItemDB");
 const { createRelationsDB } = require("../RelationFunctionsDB");
 const { checkOrCreateBookDB, createAdditionalInfoDB } = require("./helpers");
 
-async function processBookInfoDB(bookInfo) {
+async function processBookInfoDB(book_id, bookInfo) {
   console.log("IN PROCESS BOOK INFO DB");
   try {
     const {
@@ -26,7 +26,7 @@ async function processBookInfoDB(bookInfo) {
       cover_image
     );
 
-    let book_id = book.id;
+    book_id = book_id ? book_id : book.id;
 
     let additionalInfo = await createAdditionalInfoDB(book_id, relations);
 

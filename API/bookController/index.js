@@ -31,7 +31,7 @@ booksRouter.get("/book/:book_id?", getSingleBookAPI);
 /**
  * Description: creates a new book.
  * Method: POST
- * Route: /users/register
+ * Route: /books/add
  * Request Body: Requires title (string), publish_date (string formatted as "YYYY-MM-DD"), description (string), print_length (int), series_volume (string), cover_image (string).
  * Response: Returns an array containing book info and a message.
  */
@@ -53,6 +53,7 @@ booksRouter.post("/add", requireUser, (req, res, next) => {
  *         NotAuthorizedErrorAPI if the logged-in user is not authorized to update the book information.
  *         Error if an error occurs while updating book information in the database.
  */
+//! TODO: UPDATE to make/add/edit relations, then we dont need to have a createRelationsRoute
 const updateBookAPI = require("./updateBookAPI");
 booksRouter.patch("/book/:book_id/update", requireUser, updateBookAPI);
 
@@ -70,20 +71,24 @@ booksRouter.delete("/book/:book_id/delete", requireUser, deleteBookAPI);
 /**
  * Description: Retrieves related items for a specific book based on query parameters.
  * Method: GET
- * Route: /books/book/:id/relation
+ * Route: /books/book/:book_id/relation
  * Request Params: `id` specifies the book to get related items for.
  * Request Query: At least one relation type is required (e.g., `author`, `genre`, `illustrator`). Additional relation types can be added as query parameters if supported.
  * Response: Returns a list of related items for the specified book, including details such as relation type, ID, and name.
  *
  * Example request: /books/book/5/relation/genre&author
  */
-booksRouter.get("/book/:id/relation/?", (req, res, next) => {
+booksRouter.get("/book/:book_id/relation/?", (req, res, next) => {
   getRelationItemsAPI(req, res, next, table_name);
 });
 
-booksRouter.post("/book/:id/relation/add", requireUser, (req, res, next) => {
-  createRelationsAPI(req, res, next);
-});
+booksRouter.post(
+  "/book/:book_id/relation/add",
+  requireUser,
+  (req, res, next) => {
+    createRelationsAPI(req, res, next);
+  }
+);
 
 booksRouter.delete(
   "/book/:book_id?/relation/delete/:relation/:item_id?",

@@ -5,7 +5,7 @@ const { formatAdditionalInfo } = require("../bookController/Helpers");
 async function createRelationsAPI(req, res, next) {
   console.log("IN createRelationsAPI");
   let relations = req.body;
-  let book_id = req.params.id;
+  let book_id = req.params.book_id;
 
   try {
     if (!relations || !book_id) {

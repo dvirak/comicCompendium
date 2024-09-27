@@ -329,3 +329,4 @@ Error in deleteBookAPI: error: invalid input syntax for type integer: "NaN"
 Error in deleteBookAPI: error: invalid input syntax for type integer: "NaN"
 Error in deleteBookAPI: error: invalid input syntax for type integer: "NaN"
 Error in deleteBookAPI: error: invalid input syntax for type integer: "NaN"
+Error in updateBookAPI: NoInfoProvidedErrorDB: No information was provided for update
