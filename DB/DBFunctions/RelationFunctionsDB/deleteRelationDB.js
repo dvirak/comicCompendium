@@ -7,26 +7,10 @@ const client = require("../../client");
 const getSingleBookDB = require("../BookDB/GetBooksDB/getSingleBookDB");
 const { getItemDB } = require("../MainFunctionsDB");
 
-/**
- * Description: Deletes a relation between a book and a related item in the database.
- * The function first checks for necessary information, retrieves the corresponding
- * book and item if not directly provided, and then executes the delete operation.
- *
- * @param {string} book_id - The ID of the book from which to delete the relation.
- * @param {string} item_id - The ID of the related item to be deleted.
- * @param {string} relation - The type of relation to delete (e.g., "author", "series").
- * @param {string} [title] - The title of the book (used if book_id is not provided).
- * @param {string} [item_name] - The name of the related item (used if item_id is not provided).
- * @returns {Promise<Object>} An object indicating the success of the operation and a message.
- * @throws {Error} If required information is missing or if the book/item is not found.
- *
- * @precondition At least one of `book_id` or `title` must be provided, and
- * at least one of `item_id` or `item_name` must also be provided.
- * @postcondition A relation entry is deleted from the database if found,
- * otherwise an error is thrown.
- */
 async function deleteRelationDB(book_id, item_id, relation, title, item_name) {
   console.log("In deleteRelationDB");
+  console.log("item_id = " + item_id);
+  console.log("book_id = " + book_id);
   let book;
   let item;
   const query = `DELETE 
@@ -36,7 +20,7 @@ async function deleteRelationDB(book_id, item_id, relation, title, item_name) {
   try {
     if (!book_id && !title) {
       throw new MissingInformationErrorDB(
-        "Please provide the book information to deleteRelationDB"
+        "Please provide the book information to deleteReleationDB"
       );
     }
 
@@ -52,19 +36,28 @@ async function deleteRelationDB(book_id, item_id, relation, title, item_name) {
       );
     }
 
-    if (!book_id) {
-      book = await getSingleBookDB({ title });
-      book_id = book.id;
-    }
+    book = book_id
+      ? await getSingleBookDB({ book_id })
+      : await getSingleBookDB({ title });
 
-    if (!item_id) {
-      item = await getItemDB({ table_name: relation, item_name });
+    item = item_id
+      ? await getItemDB({ item_id })
+      : await getItemDB({ table_name: relation, item_name });
+
+    if (!book) {
+      throw new NotFoundErrorDB(
+        "The book you were searching for was not found"
+      );
+    } else if (!item) {
+      throw new NotFoundErrorDB(
+        `The ${relation} you were searching for was not found`
+      );
+    } else {
+      book_id = book.id;
       item_id = item.id;
     }
 
-    book = await getSingleBookDB({ book_id });
-    item = await getItemDB({ table_name: relation, item_id });
-
+    console.log(item);
     if (book && item) {
       const {
         rows: [deleted_item],
@@ -76,14 +69,6 @@ async function deleteRelationDB(book_id, item_id, relation, title, item_name) {
           item_name ? item_name : item[`${relation}_name`]
         } no longer ${relation} for ${title ? title : book.title}`,
       };
-    } else if (!book) {
-      throw new NotFoundErrorDB(
-        "The book you were searching for was not found"
-      );
-    } else if (!item) {
-      throw new NotFoundErrorDB(
-        `The ${relation} you were searching for was not found`
-      );
     }
   } catch (error) {
     logErrorDB("deleteRelationDB", error);

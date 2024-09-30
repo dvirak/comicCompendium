@@ -9,6 +9,7 @@ const MissingPasswordErrorDB = require("./MissingPasswordErrorDB");
 const MissingUsernameErrorDB = require("./MissingUsernameErrorDB");
 const NoInfoProvidedErrorDB = require("./NoInfoProvidedErrorDB");
 const NoUserProvidedErrorDB = require("./NoUserProvidedErrorDB");
+const NotAuthorizedErrorDB = require("./NotAuthorizedErrorDB");
 const NotFoundErrorDB = require("./NotFoundErrorDB");
 const UserNotFoundErrorDB = require("./UserNotFoundErrorDB");
 const logErrorDB = require("./logErrorDB");
@@ -28,4 +29,5 @@ module.exports = {
   AuthorNotFoundErrorDB,
   MissingInformationErrorDB,
   NotFoundErrorDB,
+  NotAuthorizedErrorDB,
 };

@@ -356,3 +356,16 @@ Database Error in getBookByIdDB: error: invalid input syntax for type integer: "
 Database Error in getBookByIdDB: error: invalid input syntax for type integer: "NaN"
 Database Error in getBookByIdDB: error: invalid input syntax for type integer: "NaN"
 Database Error in getBookByIdDB: error: invalid input syntax for type integer: "NaN"
+Database Error in deleteRelationDB: NotFoundErrorDB: The author you were searching for was not found
+Database Error in deleteRelationDB: NotFoundErrorDB: The author you were searching for was not found
+Database Error in getUserByUsernameDB: UserNotFoundErrorDB: No user found
+Database Error in confirmUserDB: UserNotFoundErrorDB: No user found
+Database Error in confirmUserDB: IncorrectPasswordErrorDB: Incorrect password
+Database Error in confirmUserDB: ReferenceError: NotAuthorizedErrorDB is not defined
+Database Error in confirmUserDB: NotAuthorizedErrorDB: You do not have permission to access this resource.
+Database Error in confirmUserDB: NotAuthorizedErrorDB: You do not have permission to access this resource.
+Database Error in getUserByUsernameDB: UserNotFoundErrorDB: No user found
+Database Error in getSingleUserDB: UserNotFoundErrorDB: No user found
+Database Error in confirmUserDB: NotAuthorizedErrorDB: You do not have permission to access this resource.
+Database Error in deleteBookDB: error: update or delete on table "books" violates foreign key constraint "book_authors_book_id_fkey" on table "book_authors"
+Database Error in deleteItemDB: error: update or delete on table "authors" violates foreign key constraint "book_authors_author_id_fkey" on table "book_authors"

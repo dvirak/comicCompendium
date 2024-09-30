@@ -68,7 +68,6 @@ async function getItemAPI(req, res, next, table_name) {
   } catch (error) {
     // Handle errors and send an appropriate response
     logErrorAPI("getItemAPI", error, next);
-    throw error;
   }
 }
 

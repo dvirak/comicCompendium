@@ -41,7 +41,6 @@ async function createRelationsAPI(req, res, next) {
     res.status(200).json(formattedRelation);
   } catch (error) {
     logErrorAPI("createRelationsAPI", error, next);
-    throw error;
   }
 }
 
