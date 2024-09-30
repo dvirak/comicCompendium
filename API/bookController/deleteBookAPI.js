@@ -7,20 +7,22 @@ const { logErrorAPI, BookNotFoundErrorAPI } = require("../../Errors/API");
 // ! -----------------------------------------------------------
 
 /**
- * Description: Deletes a book.
- * Method: DELETE
- * Route: /books/:book_id/delete
- * Middleware: requireUser - Ensures user is authenticated.
- * Request Body: Requires password for confirmation.
- * Response: Returns a message indicating the book was deleted.
+ * Description: Deletes a book based on the provided book ID.
  *
- * @param {Object} req - Express request object.
- * @param {Object} res - Express response object.
- * @param {Function} next - Express next middleware function.
- * @throws {Error} If an error occurs while deleting the book.
+ * This function checks for the existence of the book before attempting to delete it.
  *
- * @precondition The user must be authenticated.
- * @postcondition The specified book is deleted if the current user is authorized and logged in.
+ * Middleware: None required.
+ * Request Body: None required for this operation.
+ *
+ * @param {Object} req - The request object containing the book ID in params.
+ * @param {Object} res - The response object to send the deletion confirmation.
+ * @param {Function} next - The next middleware function for error handling.
+ * @returns {Promise<void>} This function does not return anything directly, but it sends a response indicating the deletion status.
+ * @throws {BookNotFoundErrorAPI} If the book with the specified ID is not found.
+ * @throws {Error} If an error occurs while deleting the book from the database.
+ *
+ * @precondition The user must be authenticated to delete a book.
+ * @postcondition If successful, the specified book is deleted from the database and a confirmation message is sent in the response.
  */
 async function deleteBookAPI(req, res, next) {
   // Convert book_id from params to a number

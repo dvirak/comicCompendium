@@ -17,8 +17,6 @@ const {
 
 /**
  * Description: Updates book information based on book_id and request body data.
- * Method: PATCH
- * Route: /books/:book_id/update
  *
  * @param {Object} req - Express request object containing book_id in params and update data in body.
  * @param {Object} res - Express response object to send success message and updated book data.

@@ -12,27 +12,40 @@ const { NotFoundErrorDB } = require("../../Errors/DB");
 // ! -----------------------------------------------------------
 
 /**
- * Description: Creates a new item record in the specified table based on the provided request body.
+ * Description: Creates a new book record based on the provided request body.
+ * Validates required fields and checks for existing book title.
+ * Handles errors and logs them using API error handling.
  *
- * This function handles item creation by checking if the item already exists and validating required fields.
- * It requires the user to be authenticated and logs errors using API error handling middleware.
+ * Middleware: None required.
+ * Request Body:
+ * - `title` (string): The title of the book.
+ * - `publish_date` (string): The publication date of the book.
+ * - `description` (string): A brief description of the book.
+ * - `print_length` (number): The number of pages in the book.
+ * - `series_volume` (string): The volume number in a series.
+ * - `cover_image` (string): A URL or path to the book's cover image.
+ * - `publisher` (string): The publisher of the book (optional).
+ * - `series` (string): The series name (optional).
+ * - `author` (string): The author of the book (optional).
+ * - `illustrator` (string): The illustrators of the book (optional).
+ * - `colorist` (string): The colorists involved (optional).
+ * - `letterer` (string): The letterers involved (optional).
+ * - `genre` (string): The genre(s) of the book (optional).
+ * - `penciller` (string): The penciller of the book (optional).
+ * Note: The relation data may or may not be included in the request body.
  *
- * Middleware: requireUser - Ensures user is authenticated.
- * Request Body: Requires a key "name" with the item's name as a string.
- * Response: Returns the created item object upon success.
- *
- * @param {Object} req - Express request object containing the item name in req.body.
- * @param {Object} res - Express response object to send the created item object upon success.
+ * @param {Object} req - Express request object containing book information in req.body.
+ * @param {Object} res - Express response object to send created book object on success.
  * @param {Function} next - Express next function to pass errors to the error handling middleware.
- * @param {string} table_name - The name of the database table where the item will be created.
- *
- * @throws {MissingInformationErrorAPI} If the request body is missing the item name or the table name.
- * @throws {ItemAlreadyExistsErrorAPI} If an item with the same name already exists in the database.
+ * @returns {Promise<void>} This function does not return anything directly, but it sends the created book object as the response.
+ * @throws {MissingInformationErrorAPI} If any required book information is missing in req.body.
+ * @throws {ItemAlreadyExistsErrorAPI} If a book with the same title already exists in the database.
  * @throws {Error} If an unexpected error occurs during database operations.
  *
- * @precondition The request body must include a key "name" with the item's name as a string.
- * @postcondition On success, a new item record is created in the specified table and the created item is returned in the response.
+ * @precondition None
+ * @postcondition If successful, creates a new book record in the database and sends the created book object in the response.
  */
+
 async function createItemAPI(req, res, next, table_name) {
   const item_name = req.body.name;
   console.log(`Creating ${item_name} in the ${table_name} table`);
