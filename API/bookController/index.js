@@ -55,7 +55,7 @@ booksRouter.post("/add", requireUser, (req, res, next) => {
  */
 //! TODO: UPDATE to make/add/edit relations, then we dont need to have a createRelationsRoute
 const updateBookAPI = require("./updateBookAPI");
-booksRouter.patch("/book/:book_id/update", requireUser, updateBookAPI);
+booksRouter.patch("/book/:book_id/update", requireUser, createOrUpdateBookAPI);
 
 /**
  * Description: Deletes a specific book.

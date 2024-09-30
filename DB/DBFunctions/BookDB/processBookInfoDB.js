@@ -1,7 +1,7 @@
 const { formatAdditionalInfo } = require("../../../API/bookController/Helpers");
 const { logErrorDB } = require("../../../Errors/DB");
-const checkOrCreateItemDB = require("../MainFunctionsDB/checkOrCreateItemDB");
-const { createRelationsDB } = require("../RelationFunctionsDB");
+// const checkOrCreateItemDB = require("../MainFunctionsDB/checkOrCreateItemDB");
+// const { createRelationsDB } = require("../RelationFunctionsDB");
 const { checkOrCreateBookDB, createAdditionalInfoDB } = require("./helpers");
 
 async function processBookInfoDB(book_id, bookInfo) {
@@ -17,14 +17,16 @@ async function processBookInfoDB(book_id, bookInfo) {
       ...relations
     } = bookInfo;
 
-    let book = await checkOrCreateBookDB(
+    const basicInfo = {
       title,
       publish_date,
       description,
       print_length,
       series_volume,
-      cover_image
-    );
+      cover_image,
+    };
+
+    let book = await checkOrCreateBookDB(book_id, basicInfo);
 
     book_id = book_id ? book_id : book.id;
 

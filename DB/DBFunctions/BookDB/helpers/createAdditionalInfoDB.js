@@ -2,6 +2,7 @@ const checkOrCreateItemDB = require("../../MainFunctionsDB/checkOrCreateItemDB")
 const { createRelationsDB } = require("../../RelationFunctionsDB");
 
 async function createAdditionalInfoDB(book_id, relations) {
+  console.log("IN CREATE ADDITIONAL INFO DB");
   let additionalInfo = [];
 
   for (const [relationType, relationValue] of Object.entries(relations)) {

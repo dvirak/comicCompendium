@@ -19,8 +19,7 @@ const client = require("../../client");
  */
 
 async function updateBookDB(book_id, fields = {}) {
-  console.log(book_id);
-  console.log(fields);
+  console.log("IN UPDATEBOOKDB");
 
   // Create the SET clause for the SQL update statement by mapping the keys of the fields object.
   const setString = Object.keys(fields)
