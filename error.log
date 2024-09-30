@@ -330,3 +330,30 @@ Error in deleteBookAPI: error: invalid input syntax for type integer: "NaN"
 Error in deleteBookAPI: error: invalid input syntax for type integer: "NaN"
 Error in deleteBookAPI: error: invalid input syntax for type integer: "NaN"
 Error in updateBookAPI: NoInfoProvidedErrorDB: No information was provided for update
+Error in getSingleBookAPI: BookNotFoundErrorAPI: Book not found in the database.
+Error in deleteRelationAPI: NotFoundErrorDB: The author you were searching for was not found
+Error in deleteRelationAPI: NotFoundErrorDB: The author you were searching for was not found
+Error in getSingleUserAPI: NotAuthorizedErrorAPI: You are not authorized to access this data
+Error in getSingleUserAPI: NotAuthorizedErrorAPI: You are not authorized to access this data
+Error in getSingleUserAPI: NotAuthorizedErrorAPI: You are not authorized to access this data
+Error in loginUserAPI: UserNotFoundErrorDB: No user found
+Error in loginUserAPI: IncorrectPasswordErrorDB: Incorrect password
+Error in loginUserAPI: ReferenceError: NotAuthorizedErrorDB is not defined
+Error in loginUserAPI: NotAuthorizedErrorDB: You do not have permission to access this resource.
+Error in loginUserAPI: NotAuthorizedErrorDB: You do not have permission to access this resource.
+Error in createUserAPI: UserExistsErrorAPI: A user with that username already exists
+Error in deleteUserAPI: NotAuthorizedErrorDB: You do not have permission to access this resource.
+Error in deleteBookAPI: error: update or delete on table "books" violates foreign key constraint "book_authors_book_id_fkey" on table "book_authors"
+Error in getItemAPI: NotFoundErrorAPI: Could not find Item Number: 1000 from the author table
+Error in getItemAPI: NotFoundErrorAPI: Could not find Item Number: 10 from the author table
+Error in createItemAPI: ItemAlreadyExistsErrorAPI: Fuck Tarkington already exists in the authors Table
+Error in deleteItemAPI: NotFoundErrorAPI: Item ID#: 26 was not found in the author table.
+Error in deleteItemAPI: error: update or delete on table "authors" violates foreign key constraint "book_authors_author_id_fkey" on table "book_authors"
+Error in getBooksByCategoryAPI: TypeError: Cannot read properties of null (reading 'id')
+Error in getBooksByCategoryAPI: TypeError: Cannot read properties of null (reading 'id')
+Error in getBooksByCategoryAPI: TypeError: Cannot read properties of null (reading 'id')
+Error in getBooksByCategoryAPI: TypeError: Cannot read properties of null (reading 'id')
+Error in getBooksByCategoryAPI: TypeError: Cannot read properties of null (reading 'id')
+Error in getBooksByCategoryAPI: TypeError: Cannot read properties of null (reading 'id')
+Error in getBooksByCategoryAPI: TypeError: Cannot read properties of null (reading 'id')
+Error in getBooksByCategoryAPI: NotFoundErrorAPI: The genre you were searching for was not found

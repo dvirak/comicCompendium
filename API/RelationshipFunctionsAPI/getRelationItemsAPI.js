@@ -64,7 +64,6 @@ async function getRelationItemsAPI(req, res, next, table_name) {
   } catch (error) {
     // Log error and pass it to the next middleware
     logErrorAPI("getRelationItemsAPI", error, next);
-    throw error;
   }
 }
 

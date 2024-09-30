@@ -18,6 +18,9 @@ function logErrorDB(programName, error, next) {
 
   // Send an appropriate error response using next()
   // next(error);
+  if (next) {
+    next(error);
+  }
 }
 
 module.exports = logErrorDB;

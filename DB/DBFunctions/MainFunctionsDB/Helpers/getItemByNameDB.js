@@ -26,6 +26,8 @@ async function getItemByNameDB(table_name, item_name) {
   `;
 
   console.log("IN GET ITEM BY NAME DB"); // Log the start of the function execution
+  console.log(table_name);
+  console.log(item_name);
 
   try {
     // Execute the query with the provided item name

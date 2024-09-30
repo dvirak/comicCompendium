@@ -45,7 +45,6 @@ async function deleteRelationAPI(req, res, next) {
     res.status(200).json(deletedItem);
   } catch (error) {
     logErrorAPI("deleteRelationAPI", error, next);
-    throw error;
   }
 }
 

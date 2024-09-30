@@ -25,6 +25,7 @@ const { formatBookPublishDatesAPI, formatCategories } = require("./Helpers"); //
  * @postcondition A response containing the list of books is sent to the client.
  */
 async function getBooksByCategoryAPI(req, res, next) {
+  console.log("in getBooksByCategoryAPI");
   let categoryNames = req.query; // Retrieve category filters from query parameters
   let categories = {}; // Object to hold category IDs
 
@@ -32,6 +33,13 @@ async function getBooksByCategoryAPI(req, res, next) {
     // Loop through the category filters and retrieve corresponding IDs from the database
     for (const [table_name, item_name] of Object.entries(categoryNames)) {
       let categoryInfo = await getItemDB({ table_name, item_name });
+      console.log("back here");
+      console.log(categoryInfo);
+      if (categoryInfo === null) {
+        throw new NotFoundErrorAPI(
+          "The genre you were searching for was not found"
+        );
+      }
       categories[table_name] = categoryInfo.id;
     }
     console.log(categories);

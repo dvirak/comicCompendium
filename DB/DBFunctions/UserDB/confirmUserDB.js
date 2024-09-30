@@ -3,6 +3,7 @@ const {
   UserNotFoundErrorDB,
   IncorrectPasswordErrorDB,
   logErrorDB,
+  NotAuthorizedErrorDB,
 } = require("../../../Errors/DB");
 const {
   getUserByUsernameDB,
@@ -49,7 +50,7 @@ async function confirmUserDB(username, password) {
 
     // If the passwords do not match, throw password error
     if (!passwordsMatch) {
-      throw new IncorrectPasswordErrorDB();
+      throw new NotAuthorizedErrorDB();
     }
 
     // If the passwords match, delete the password field from the user object

@@ -27,7 +27,7 @@ usersRouter.get("/", requireAdmin, getAllUsersAPI);
  *  - If user_id is provided: Returns an array with all info minus the password and admin info.
  */
 const getSingleUserAPI = require("./getSingleUserAPI");
-usersRouter.get("/user/:user_id?", getSingleUserAPI);
+usersRouter.get("/user/:user_id?", requireUser, getSingleUserAPI);
 
 /**
  * Description: Authenticates a user and returns a token.

@@ -8,6 +8,7 @@ const {
   UserNotFoundErrorAPI,
   InputErrorUsersAPI,
   logErrorAPI,
+  NotAuthorizedErrorAPI,
 } = require("../../Errors/API");
 // ! ---------------------------------------------------------------
 
@@ -20,10 +21,16 @@ const {
  */
 async function getSingleUserAPI(req, res, next) {
   console.log("IN GET SINGLE USER API");
+  console.log(req.user);
   const user_id = req.params.user_id;
   const username = req.query.username;
 
   try {
+    if (req.user.id != user_id && !req.user.admin) {
+      throw new NotAuthorizedErrorAPI(
+        "You are not authorized to access this data"
+      );
+    }
     // Validate input: Ensure either user_id or username is provided
     if (!user_id && !username) {
       throw new InputErrorUsersAPI();
