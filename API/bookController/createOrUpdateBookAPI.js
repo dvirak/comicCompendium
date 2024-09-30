@@ -3,6 +3,8 @@ const { logErrorAPI } = require("../../Errors/API");
 
 async function createOrUpdateBookAPI(req, res, next) {
   let bookInfo = req.body;
+  let book_id = req.params.book_id;
+  console.log(book_id);
 
   if (!bookInfo)
     throw new MissingInformationErrorAPI(
@@ -10,7 +12,7 @@ async function createOrUpdateBookAPI(req, res, next) {
     );
 
   try {
-    let book = await processBookInfoDB(bookInfo);
+    let book = await processBookInfoDB(book_id, bookInfo);
     res.send(book);
   } catch (error) {
     logErrorAPI("createOrUpdateBookAPI", error, next);
