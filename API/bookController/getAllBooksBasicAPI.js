@@ -7,17 +7,22 @@ const { formatBookPublishDatesAPI } = require("./Helpers");
 // ! -----------------------------------------------------------
 
 /**
- * Description: Retrieves basic information for all books.
- * Method: GET
- * Route: /books
+ * Description: Retrieves basic information for all books in the database.
  *
- * @returns {Promise<void>} This route does not return anything directly, but it sends a response containing basic book information.
+ * This function calls the database to get all books and formats their publication dates before sending them in the response.
+ *
+ * Middleware: None required.
+ * Request Body: None required for this operation.
+ *
+ * @param {Object} req - The request object for retrieving book information.
+ * @param {Object} res - The response object to send the list of books.
+ * @param {Function} next - The next middleware function for error handling.
+ * @returns {Promise<void>} This function does not return anything directly, but sends a response containing basic book information.
  * @throws {Error} If an error occurs while retrieving basic book information from the database.
  *
  * @precondition None
  * @postcondition A response containing basic book information is sent to the client.
  */
-
 async function getAllBooksBasicAPI(req, res, next) {
   console.log("IN GET ALL BOOKS BASIC API");
 

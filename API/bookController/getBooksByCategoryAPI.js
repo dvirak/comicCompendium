@@ -8,9 +8,21 @@ const { formatBookPublishDatesAPI, formatCategories } = require("./Helpers"); //
 
 /**
  * Description: Retrieves books based on category filters provided in the query parameters.
+ *
+ * This function fetches category IDs based on the provided category names in the query, retrieves the corresponding books from the database, formats their publish dates, and sends the response.
+ *
+ * Middleware: None required.
+ * Request Body: None required for this operation.
+ *
  * @param {Object} req - Express request object containing query parameters for category filters.
  * @param {Object} res - Express response object to send the list of books or error messages.
  * @param {Function} next - Express next function to pass errors to the error handling middleware.
+ * @returns {Promise<void>} This function does not return anything directly, but sends a response containing the list of books.
+ * @throws {NotFoundErrorAPI} If no books are found for the specified categories.
+ * @throws {Error} If an error occurs while retrieving books from the database.
+ *
+ * @precondition None
+ * @postcondition A response containing the list of books is sent to the client.
  */
 async function getBooksByCategoryAPI(req, res, next) {
   let categoryNames = req.query; // Retrieve category filters from query parameters
@@ -42,13 +54,13 @@ async function getBooksByCategoryAPI(req, res, next) {
   } catch (error) {
     // Handle errors and send appropriate responses
     if (error instanceof NotFoundErrorDB) {
-      const error = new NotFoundErrorAPI(
+      const errorResponse = new NotFoundErrorAPI(
         `No books were found for ${formatCategories(categoryNames)}`
       );
-      return res.status(error.status).json({
-        error: error.name,
-        message: error.message,
-        code: error.code,
+      return res.status(errorResponse.status).json({
+        error: errorResponse.name,
+        message: errorResponse.message,
+        code: errorResponse.code,
       });
     }
     // Log error and pass it to the next middleware
