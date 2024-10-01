@@ -10,10 +10,14 @@ async function buildBookAuthorsTable() {
     await client.query(`
       CREATE TABLE book_authors (
         id SERIAL PRIMARY KEY,
-        book_id INTEGER REFERENCES books(id),
-        author_id INTEGER REFERENCES authors(id),
+        book_id INTEGER 
+          REFERENCES books(id) 
+          ON DELETE CASCADE,
+        author_id INTEGER 
+          REFERENCES authors(id) 
+          ON DELETE CASCADE,
         CONSTRAINT unique_book_author UNIQUE (book_id, author_id)
-      );
+        );
     `);
 
     console.log("FINISHED BUILDING bookAuthors TABLE!");
