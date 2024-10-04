@@ -4,6 +4,7 @@ const {
   getAllBooksBasicDB,
 } = require("../../DB/DBFunctions/BookDB/GetBooksDB");
 const { formatBookPublishDatesAPI } = require("./Helpers");
+const formatAllBooksWithAdditionalInfoAPI = require("./Helpers/formatAllBooksWithAdditionalInfoAPI");
 // ! -----------------------------------------------------------
 
 /**
@@ -33,8 +34,12 @@ async function getAllBooksBasicAPI(req, res, next) {
     // Format the publish_date for each book
     const formattedBooks = formatBookPublishDatesAPI(basicBooks);
 
+    const fullyInformedBooks = await formatAllBooksWithAdditionalInfoAPI(
+      formattedBooks
+    );
+
     // Send list of books as the response
-    res.status(200).json(formattedBooks);
+    res.status(200).json(fullyInformedBooks);
   } catch (error) {
     // Handle errors and send an appropriate response
     logErrorAPI("getAllBooksBasicAPI", error, next);
