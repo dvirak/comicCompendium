@@ -12,8 +12,8 @@ const table_name = "book";
  * Route: /books
  * Response: Returns a list of all books with basic information.
  */
-const getAllBooksBasicAPI = require("./getAllBooksBasicAPI");
-booksRouter.get("/", getAllBooksBasicAPI);
+const getAllBooksAPI = require("./getAllBooksAPI");
+booksRouter.get("/", getAllBooksAPI);
 
 /**
  * Description: Retrieves a single book based on either book_id as a param or book_title as a query.
