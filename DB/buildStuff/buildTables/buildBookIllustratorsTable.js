@@ -10,8 +10,8 @@ async function buildBookIllustratorsTable() {
     await client.query(`
       CREATE TABLE book_illustrators (
         id SERIAL PRIMARY KEY,
-        book_id INTEGER REFERENCES books(id),
-        illustrator_id INTEGER REFERENCES illustrators(id),
+        book_id INTEGER REFERENCES books(id) ON DELETE CASCADE,
+        illustrator_id INTEGER REFERENCES illustrators(id) ON DELETE CASCADE,
         CONSTRAINT unique_book_illustrator UNIQUE (book_id, illustrator_id)
       );
     `);

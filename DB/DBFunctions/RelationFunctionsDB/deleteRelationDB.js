@@ -11,6 +11,7 @@ async function deleteRelationDB(book_id, item_id, relation, title, item_name) {
   console.log("In deleteRelationDB");
   console.log("item_id = " + item_id);
   console.log("book_id = " + book_id);
+  console.log(relation);
   let book;
   let item;
   const query = `DELETE 
@@ -41,7 +42,7 @@ async function deleteRelationDB(book_id, item_id, relation, title, item_name) {
       : await getSingleBookDB({ title });
 
     item = item_id
-      ? await getItemDB({ item_id })
+      ? await getItemDB({ table_name: relation, item_id })
       : await getItemDB({ table_name: relation, item_name });
 
     if (!book) {

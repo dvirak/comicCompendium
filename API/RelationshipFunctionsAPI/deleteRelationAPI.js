@@ -32,6 +32,7 @@ async function deleteRelationAPI(req, res, next) {
   const relation = req.params.relation;
   const { title, item_name } = req.query;
   console.log("IN deleteRelationAPI");
+  console.log(relation);
 
   try {
     const deletedItem = await deleteRelationDB(

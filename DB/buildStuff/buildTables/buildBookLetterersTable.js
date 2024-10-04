@@ -10,8 +10,8 @@ async function buildBookLetterersTable() {
     await client.query(`
       CREATE TABLE book_letterers (
         id SERIAL PRIMARY KEY,
-        book_id INTEGER REFERENCES books(id),
-        letterer_id INTEGER REFERENCES letterers(id),
+        book_id INTEGER REFERENCES books(id) ON DELETE CASCADE,
+        letterer_id INTEGER REFERENCES letterers(id) ON DELETE CASCADE,
         CONSTRAINT unique_book_letterer UNIQUE (book_id, letterer_id)
       );
     `);

@@ -10,8 +10,8 @@ async function buildBookColoristsTable() {
     await client.query(`
       CREATE TABLE book_colorists (
         id SERIAL PRIMARY KEY,
-        book_id INTEGER REFERENCES books(id),
-        colorist_id INTEGER REFERENCES colorists(id),
+        book_id INTEGER REFERENCES books(id) ON DELETE CASCADE, 
+        colorist_id INTEGER REFERENCES colorists(id) ON DELETE CASCADE,
         CONSTRAINT unique_book_colorist UNIQUE (book_id, colorist_id)
       );
     `);
