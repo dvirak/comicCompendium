@@ -10,8 +10,8 @@ async function buildBookGenresTable() {
     await client.query(`
       CREATE TABLE book_genres (
         id SERIAL PRIMARY KEY,
-        book_id INTEGER REFERENCES books(id),
-        genre_id INTEGER REFERENCES genres(id),
+        book_id INTEGER REFERENCES books(id) ON DELETE CASCADE,
+        genre_id INTEGER REFERENCES genres(id) ON DELETE CASCADE,
         CONSTRAINT unique_book_genre UNIQUE (book_id, genre_id)
       );
     `);

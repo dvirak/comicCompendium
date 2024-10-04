@@ -369,3 +369,27 @@ Database Error in getSingleUserDB: UserNotFoundErrorDB: No user found
 Database Error in confirmUserDB: NotAuthorizedErrorDB: You do not have permission to access this resource.
 Database Error in deleteBookDB: error: update or delete on table "books" violates foreign key constraint "book_authors_book_id_fkey" on table "book_authors"
 Database Error in deleteItemDB: error: update or delete on table "authors" violates foreign key constraint "book_authors_author_id_fkey" on table "book_authors"
+Database Error in rebuildDB: TypeError: createUserDB is not a function
+Database Error in rebuildDB: TypeError: createBookDB is not a function
+Database Error in getUserByIdDB: UserNotFoundErrorDB: No user found
+Database Error in getSingleUserDB: UserNotFoundErrorDB: No user found
+Database Error in getUserByIdDB: UserNotFoundErrorDB: No user found
+Database Error in getSingleUserDB: UserNotFoundErrorDB: No user found
+Database Error in getUserByIdDB: UserNotFoundErrorDB: No user found
+Database Error in getSingleUserDB: UserNotFoundErrorDB: No user found
+Database Error in getUserByUsernameDB: UserNotFoundErrorDB: No user found
+Database Error in getSingleUserDB: UserNotFoundErrorDB: No user found
+Database Error in getUserByUsernameDB: UserNotFoundErrorDB: No user found
+Database Error in getSingleUserDB: UserNotFoundErrorDB: No user found
+Database Error in getUserByUsernameDB: UserNotFoundErrorDB: No user found
+Database Error in getSingleUserDB: UserNotFoundErrorDB: No user found
+Database Error in getRelationItems: error: relation "illustrator_books" does not exist
+Database Error in getItemByIdDB: error: relation "undefineds" does not exist
+Database Error in getItemDB: error: relation "undefineds" does not exist
+Database Error in deleteRelationDB: error: relation "undefineds" does not exist
+Database Error in getItemByIdDB: error: relation "undefineds" does not exist
+Database Error in getItemDB: error: relation "undefineds" does not exist
+Database Error in deleteRelationDB: error: relation "undefineds" does not exist
+Database Error in getItemByIdDB: error: relation "undefineds" does not exist
+Database Error in getItemDB: error: relation "undefineds" does not exist
+Database Error in deleteRelationDB: error: relation "undefineds" does not exist

@@ -10,8 +10,8 @@ async function buildBookPencillersTable() {
     await client.query(`
       CREATE TABLE book_pencillers (
         id SERIAL PRIMARY KEY,
-        book_id INTEGER REFERENCES books(id),
-        penciller_id INTEGER REFERENCES pencillers(id),
+        book_id INTEGER REFERENCES books(id) ON DELETE CASCADE,
+        penciller_id INTEGER REFERENCES pencillers(id) ON DELETE CASCADE,
         CONSTRAINT unique_book_penciller UNIQUE (book_id, penciller_id)
       );
     `);

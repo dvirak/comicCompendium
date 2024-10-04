@@ -1,5 +1,5 @@
+const { createBookDB } = require("../../../DBFunctions/BookDB");
 const { books } = require("../Data/bookData");
-const { createBookDB } = require("../../../DBFunctions/BookDB/createBookDB");
 
 async function createInitialBooks() {
   console.log("CREATING INITIAL BOOKS...");

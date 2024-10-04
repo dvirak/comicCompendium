@@ -10,8 +10,8 @@ async function buildBookInkersTable() {
     await client.query(`
       CREATE TABLE book_inkers (
         id SERIAL PRIMARY KEY,
-        book_id INTEGER REFERENCES books(id),
-        inker_id INTEGER REFERENCES inkers(id),
+        book_id INTEGER REFERENCES books(id) ON DELETE CASCADE,
+        inker_id INTEGER REFERENCES inkers(id) ON DELETE CASCADE,
         CONSTRAINT unique_book_inker UNIQUE (book_id, inker_id)
       );
     `);

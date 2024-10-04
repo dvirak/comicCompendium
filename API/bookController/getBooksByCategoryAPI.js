@@ -32,12 +32,17 @@ async function getBooksByCategoryAPI(req, res, next) {
   try {
     // Loop through the category filters and retrieve corresponding IDs from the database
     for (const [table_name, item_name] of Object.entries(categoryNames)) {
-      let categoryInfo = await getItemDB({ table_name, item_name });
+      console.log("typeof item_name" + typeof item_name);
+      console.log("can item be number?" + Number(item_name));
+
+      let categoryInfo = Number(item_name)
+        ? await getItemDB({ table_name, item_id: Number(item_name) })
+        : await getItemDB({ table_name, item_name });
       console.log("back here");
       console.log(categoryInfo);
       if (categoryInfo === null) {
         throw new NotFoundErrorAPI(
-          "The genre you were searching for was not found"
+          `The ${table_name} you were searching for was not found`
         );
       }
       categories[table_name] = categoryInfo.id;

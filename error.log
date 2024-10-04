@@ -357,3 +357,17 @@ Error in getBooksByCategoryAPI: TypeError: Cannot read properties of null (readi
 Error in getBooksByCategoryAPI: TypeError: Cannot read properties of null (reading 'id')
 Error in getBooksByCategoryAPI: TypeError: Cannot read properties of null (reading 'id')
 Error in getBooksByCategoryAPI: NotFoundErrorAPI: The genre you were searching for was not found
+Error in getSingleUserAPI: UserNotFoundErrorDB: No user found
+Error in getSingleUserAPI: UserNotFoundErrorDB: No user found
+Error in getSingleUserAPI: NotAuthorizedErrorAPI: You are not authorized to access this data
+Error in updateUserAPI: NotAdminErrorAPI: You do not have permission to access this resource.
+Error in updateItemAPI: NotFoundErrorAPI: The item you are trying to update was not found
+Error in getRelationItemsAPI: error: relation "illustrator_books" does not exist
+Error in getBooksByCategoryAPI: NotFoundErrorAPI: The genre you were searching for was not found
+Error in getBooksByCategoryAPI: NotFoundErrorAPI: The genre you were searching for was not found
+Error in getBooksByCategoryAPI: NotFoundErrorAPI: The genre you were searching for was not found
+Error in getBooksByCategoryAPI: NotFoundErrorAPI: The genre you were searching for was not found
+Error in getBooksByCategoryAPI: NotFoundErrorAPI: The genre you were searching for was not found
+Error in deleteRelationAPI: error: relation "undefineds" does not exist
+Error in deleteRelationAPI: error: relation "undefineds" does not exist
+Error in deleteRelationAPI: error: relation "undefineds" does not exist

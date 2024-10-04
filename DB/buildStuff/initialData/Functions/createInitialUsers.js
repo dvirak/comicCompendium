@@ -1,5 +1,5 @@
+const createUserDB = require("../../../DBFunctions/UserDB/createUserDB");
 const { users } = require("../Data/userData");
-const { createUserDB } = require("../../../DBFunctions/UserDB/createUserDB");
 
 // Create initial users
 async function createInitialUsers() {
