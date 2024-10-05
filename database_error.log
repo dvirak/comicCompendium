@@ -393,3 +393,9 @@ Database Error in deleteRelationDB: error: relation "undefineds" does not exist
 Database Error in getItemByIdDB: error: relation "undefineds" does not exist
 Database Error in getItemDB: error: relation "undefineds" does not exist
 Database Error in deleteRelationDB: error: relation "undefineds" does not exist
+Database Error in getUserByIdDB: UserNotFoundErrorDB: No user found
+Database Error in getSingleUserDB: UserNotFoundErrorDB: No user found
+Database Error in getUserByIdDB: UserNotFoundErrorDB: No user found
+Database Error in getUserByIdDB: UserNotFoundErrorDB: No user found
+Database Error in getUserByUsernameDB: UserNotFoundErrorDB: No user found
+Database Error in getSingleUserDB: UserNotFoundErrorDB: No user found

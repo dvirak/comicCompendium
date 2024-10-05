@@ -34,9 +34,13 @@ const createUserUpdateFieldsAPI = require("./Helpers/createUserUpdateFieldsAPI")
  */
 
 async function updateUserAPI(req, res, next) {
+  console.log("In updateUser");
+  console.log(req.user);
   const user_id = Number(req.params.user_id);
   const updateData = req.body;
   const currentUser = req.user;
+  console.log(updateData);
+  console.log(updateData.admin);
 
   try {
     // Retrieve user information to edit from the database
@@ -48,6 +52,8 @@ async function updateUserAPI(req, res, next) {
     } else if (user_id !== currentUser.id && !currentUser.admin) {
       // Check if current user is authorized to update user information
       throw new NotAuthorizedErrorAPI();
+    } else if (updateData.admin && !currentUser.admin) {
+      throw new NotAuthorizedErrorAPI("Must be an admin to grant admin status");
     } else {
       // Create update fields based on current user, user to edit and update data
       const updateFields = await createUserUpdateFieldsAPI(
