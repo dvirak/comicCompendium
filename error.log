@@ -371,3 +371,12 @@ Error in getBooksByCategoryAPI: NotFoundErrorAPI: The genre you were searching f
 Error in deleteRelationAPI: error: relation "undefineds" does not exist
 Error in deleteRelationAPI: error: relation "undefineds" does not exist
 Error in deleteRelationAPI: error: relation "undefineds" does not exist
+Error in updateUserAPI: UserNotFoundErrorDB: No user found
+Error in updateUserAPI: UserNotFoundErrorDB: No user found
+Error in createUserAPI: UserExistsErrorAPI: A user with that username already exists
+Error in updateUserAPI: NotAuthorizedErrorAPI: You do not have permission to access this resource.
+Error in updateUserAPI: NotAuthorizedErrorAPI: You do not have permission to access this resource.
+Error in updateUserAPI: NotAuthorizedErrorAPI: You do not have permission to access this resource.
+Error in updateUserAPI: NotAuthorizedErrorAPI: You do not have permission to access this resource.
+Error in updateUserAPI: NotAuthorizedErrorAPI: You do not have permission to access this resource.
+Error in updateUserAPI: NotAuthorizedErrorAPI: Must be an admin to grant admin status
