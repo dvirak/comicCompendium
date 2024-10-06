@@ -34,7 +34,7 @@ async function getItemDB({ table_name, item_id, item_name }) {
       throw new MissingInformationErrorDB(
         `You are missing the necessary information to retrieve ${
           item_id ? `Item Number: ${item_id}` : `Item Name: ${item_name}`
-        } from the ${table_name} table`
+        } from the ${table_name === "series" ? "serie" : table_name} table`
       );
     }
 

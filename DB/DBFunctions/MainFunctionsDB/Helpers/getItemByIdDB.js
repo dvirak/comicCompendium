@@ -22,7 +22,7 @@ async function getItemByIdDB(table_name, item_id) {
   // Define the query to select an item by ID from the specified table
   const query = `
     SELECT *
-    FROM ${table_name}s
+    FROM ${table_name === "series" ? "serie" : table_name}s
     WHERE id = $1
   `;
 

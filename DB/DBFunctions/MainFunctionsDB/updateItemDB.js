@@ -31,7 +31,7 @@ async function updateItemDB(table_name, item_id, fields = {}) {
     .join(",");
 
   const query = `
-        UPDATE ${table_name}s
+        UPDATE ${table_name === "series" ? "serie" : table_name}s
         SET ${setString}
         WHERE id = $${Object.keys(fields).length + 1} 
         RETURNING *;
