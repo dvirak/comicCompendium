@@ -19,7 +19,7 @@ async function deleteItemDB({ table_name, item_id }) {
   console.log(`deleteItemDB deleting ID#: ${item_id} in ${table_name}s Table`); // Log the deletion attempt
 
   const query = `
-      DELETE FROM ${table_name}s
+      DELETE FROM ${table_name === "series" ? "serie" : table_name}s
       WHERE id = $1
       RETURNING ${table_name}_name;
       `;

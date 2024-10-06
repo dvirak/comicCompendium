@@ -380,3 +380,21 @@ Error in updateUserAPI: NotAuthorizedErrorAPI: You do not have permission to acc
 Error in updateUserAPI: NotAuthorizedErrorAPI: You do not have permission to access this resource.
 Error in updateUserAPI: NotAuthorizedErrorAPI: You do not have permission to access this resource.
 Error in updateUserAPI: NotAuthorizedErrorAPI: Must be an admin to grant admin status
+Error in getItemAPI: error: invalid input syntax for type integer: "item_name=john_higgins"
+Error in getItemAPI: error: invalid input syntax for type integer: "name=john_higgins"
+Error in createItemAPI: MissingInformationErrorAPI: You are missing the item_name in createItemAPI
+Error in createItemAPI: MissingInformationErrorAPI: You are missing the item_name in createItemAPI
+Error in updateItemAPI: NoInfoProvidedErrorDB: No information was provided for updateItemDB
+Error in updateItemAPI: NoInfoProvidedErrorDB: No information was provided for updateItemDB
+Error in updateItemAPI: NoInfoProvidedErrorDB: No information was provided for updateItemDB
+Error in getItemAPI: MissingInformationErrorAPI: You are missing the necessary information to retrieve Item Name: undefined from the penciller table
+Error in getItemAPI: MissingInformationErrorAPI: You are missing the necessary information to retrieve Item Name: undefined from the penciller table
+Error in getItemAPI: MissingInformationErrorAPI: You are missing the necessary information to retrieve Item Name: undefined from the penciller table
+Error in updateItemAPI: NoInfoProvidedErrorDB: No information was provided for updateItemDB
+Error in getAllAPI: error: relation "seriess" does not exist
+Error in getItemAPI: error: relation "seriess" does not exist
+Error in getItemAPI: error: relation "seriess" does not exist
+Error in getItemAPI: error: relation "seriess" does not exist
+Error in updateItemAPI: NoInfoProvidedErrorDB: No information was provided for updateItemDB
+Error in updateItemAPI: error: relation "seriess" does not exist
+Error in deleteItemAPI: error: relation "seriess" does not exist

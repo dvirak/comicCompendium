@@ -22,7 +22,7 @@ async function getAllDB({ table_name }) {
 
   const query = `
       SELECT *
-      FROM ${table_name}s;
+      FROM ${table_name === "series" ? "serie" : table_name}s;
     `;
 
   try {

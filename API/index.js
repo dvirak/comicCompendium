@@ -23,7 +23,13 @@ const bookController = require("./bookController");
 const userController = require("./userController");
 const authorController = require("./authorController");
 const illustratorController = require("./illustratorController");
-const genresController = require("./genresController");
+const genresController = require("./genreController");
+const coloristsRouter = require("./coloristController");
+const inkersRouter = require("./inkerController");
+const letterersRouter = require("./lettererController");
+const pencillersRouter = require("./pencillerContoller");
+const publishersRouter = require("./publisherController");
+const seriesRouter = require("./seriesController");
 
 // Define routes for each resource using the imported controllers
 apiRouter.use("/books", bookController);
@@ -31,6 +37,12 @@ apiRouter.use("/users", userController);
 apiRouter.use("/authors", authorController);
 apiRouter.use("/illustrators", illustratorController);
 apiRouter.use("/genres", genresController);
+apiRouter.use("/colorists", coloristsRouter);
+apiRouter.use("/inkers", inkersRouter);
+apiRouter.use("/letterers", letterersRouter);
+apiRouter.use("/pencillers", pencillersRouter);
+apiRouter.use("/publishers", publishersRouter);
+apiRouter.use("/series", seriesRouter);
 
 /**
  * Error Handling Middleware: errorHandlerAPI

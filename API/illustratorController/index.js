@@ -40,7 +40,7 @@ illustratorsRouter.get("/illustrator/:id?", (req, res, next) => {
  * Request Body: Requires `name` (string) for the illustrator's name.
  * Response: Returns an object containing illustrator info and a success message.
  */
-illustratorsRouter.post("/add", (req, res, next) => {
+illustratorsRouter.post("/add", requireUser, (req, res, next) => {
   createItemAPI(req, res, next, table_name);
 });
 

@@ -399,3 +399,16 @@ Database Error in getUserByIdDB: UserNotFoundErrorDB: No user found
 Database Error in getUserByIdDB: UserNotFoundErrorDB: No user found
 Database Error in getUserByUsernameDB: UserNotFoundErrorDB: No user found
 Database Error in getSingleUserDB: UserNotFoundErrorDB: No user found
+Database Error in getItemByIdDB: error: invalid input syntax for type integer: "item_name=john_higgins"
+Database Error in getItemDB: error: invalid input syntax for type integer: "item_name=john_higgins"
+Database Error in getItemByIdDB: error: invalid input syntax for type integer: "name=john_higgins"
+Database Error in getItemDB: error: invalid input syntax for type integer: "name=john_higgins"
+Database Error in getAllDB: error: relation "seriess" does not exist
+Database Error in getItemByIdDB: error: relation "seriess" does not exist
+Database Error in getItemDB: error: relation "seriess" does not exist
+Database Error in getItemByIdDB: error: relation "seriess" does not exist
+Database Error in getItemDB: error: relation "seriess" does not exist
+Database Error in getItemByIdDB: error: relation "seriess" does not exist
+Database Error in getItemDB: error: relation "seriess" does not exist
+Database Error in updateItemDB: error: relation "seriess" does not exist
+Database Error in deleteItemDB: error: relation "seriess" does not exist
