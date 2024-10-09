@@ -7,6 +7,7 @@ const {
   MissingInformationErrorAPI,
   NotFoundErrorAPI,
 } = require("../../Errors/API"); // Error handling and logging functions for API errors
+const formatGetRelationItems = require("./helpers/formatGetRelationItems");
 // ! -----------------------------------------------------------
 
 /**
@@ -58,6 +59,9 @@ async function getRelationItemsAPI(req, res, next, table_name) {
         `No information was found for relations: ${relations.join()} for item number: ${main_item_id} in the table: ${main_item}`
       );
     }
+
+    let formattedInfo = formatGetRelationItems(info);
+    console.log(formattedInfo);
 
     // Send the related items as the response with status 200
     res.status(200).json(info);

@@ -412,3 +412,8 @@ Database Error in getItemByIdDB: error: relation "seriess" does not exist
 Database Error in getItemDB: error: relation "seriess" does not exist
 Database Error in updateItemDB: error: relation "seriess" does not exist
 Database Error in deleteItemDB: error: relation "seriess" does not exist
+Database Error in getRelationItems: error: syntax error at or near "}"
+Database Error in getRelationItems: error: syntax error at or near "}"
+Database Error in getRelationItems: error: syntax error at or near "}"
+Database Error in getRelationItems: error: syntax error at or near "}"
+Database Error in getRelationItems: error: column genres.genre_id does not exist

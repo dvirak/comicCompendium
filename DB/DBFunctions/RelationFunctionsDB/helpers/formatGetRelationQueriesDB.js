@@ -26,7 +26,27 @@ function formatGetRelationQueries(main_item, relations) {
   `
   );
 
+  // const queries = relations.map((relation) => {
+  //   const relationTable = relation === "series" ? "series" : `${relation}s`;
+  //   const relationalJoinTable = `book_${
+  //     relation === "series" ? "serie" : relation
+  //   }s`;
+  //   const relationIdField = `${relation}_id`;
+  //   const relationNameField = `${relationTable.slice(0, -1)}_name`;
+
+  //   return `
+  //     SELECT '${relation}' AS relation_type, STRING_AGG(${relationNameField}, ', ') as relation_names
+  //     FROM ${relationTable}
+  //     JOIN ${relationalJoinTable}
+  //       ON ${relationalJoinTable}.${relationIdField} = ${relationTable}.id
+  //     WHERE ${relationalJoinTable}.${main_item}_id = $1
+  //     GROUP BY relation_type`;
+  // });
+
+  // console.log(queries);
+
   const query = queries.join(` UNION ALL `); // Combine all SELECT queries into a single query using UNION ALL
+  console.log(query);
   return query; // Return the final combined query
 }
 
