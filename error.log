@@ -398,3 +398,9 @@ Error in getItemAPI: error: relation "seriess" does not exist
 Error in updateItemAPI: NoInfoProvidedErrorDB: No information was provided for updateItemDB
 Error in updateItemAPI: error: relation "seriess" does not exist
 Error in deleteItemAPI: error: relation "seriess" does not exist
+Error in getRelationItemsAPI: error: syntax error at or near "}"
+Error in getRelationItemsAPI: error: syntax error at or near "}"
+Error in getRelationItemsAPI: error: syntax error at or near "}"
+Error in getRelationItemsAPI: error: syntax error at or near "}"
+Error in getRelationItemsAPI: error: column genres.genre_id does not exist
+Error in getRelationItemsAPI: TypeError: formattedInfo[each.relation_type].push is not a function
