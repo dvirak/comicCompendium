@@ -404,3 +404,23 @@ Error in getRelationItemsAPI: error: syntax error at or near "}"
 Error in getRelationItemsAPI: error: syntax error at or near "}"
 Error in getRelationItemsAPI: error: column genres.genre_id does not exist
 Error in getRelationItemsAPI: TypeError: formattedInfo[each.relation_type].push is not a function
+Error in deleteRelationAPI: MissingInformationErrorDB: Please provide the relation item information to deleteRelationDB
+Error in deleteRelationAPI: NotFoundErrorDB: The series you were searching for was not found
+Error in deleteRelationAPI: NotFoundErrorDB: The series you were searching for was not found
+Error in deleteRelationAPI: NotFoundErrorDB: The series you were searching for was not found
+Error in deleteRelationAPI: error: relation "lettererss" does not exist
+Error in updateItemAPI: NoInfoProvidedErrorDB: No information was provided for updateItemDB
+Error in createOrUpdateBookAPI: error: relation "authrs" does not exist
+Error in createOrUpdateBookAPI: error: relation "authrs" does not exist
+Error in createOrUpdateBookAPI: error: relation "authrs" does not exist
+Error in createOrUpdateBookAPI: error: relation "authrs" does not exist
+Error in createOrUpdateBookAPI: error: relation "authrs" does not exist
+Error in createOrUpdateBookAPI: error: null value in column "publish_date" of relation "books" violates not-null constraint
+Error in createOrUpdateBookAPI: error: null value in column "publish_date" of relation "books" violates not-null constraint
+Error in createOrUpdateBookAPI: error: null value in column "description" of relation "books" violates not-null constraint
+Error in createOrUpdateBookAPI: error: null value in column "print_length" of relation "books" violates not-null constraint
+Error in createOrUpdateBookAPI: error: null value in column "series_volume" of relation "books" violates not-null constraint
+Error in createOrUpdateBookAPI: error: null value in column "cover_image" of relation "books" violates not-null constraint
+Error in createOrUpdateBookAPI: error: null value in column "cover_image" of relation "books" violates not-null constraint
+Error in createOrUpdateBookAPI: error: relation "authrs" does not exist
+Error in createOrUpdateBookAPI: error: relation "series_voluems" does not exist

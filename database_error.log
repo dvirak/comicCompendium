@@ -417,3 +417,66 @@ Database Error in getRelationItems: error: syntax error at or near "}"
 Database Error in getRelationItems: error: syntax error at or near "}"
 Database Error in getRelationItems: error: syntax error at or near "}"
 Database Error in getRelationItems: error: column genres.genre_id does not exist
+Database Error in deleteRelationDB: MissingInformationErrorDB: Please provide the relation item information to deleteRelationDB
+Database Error in deleteRelationDB: NotFoundErrorDB: The series you were searching for was not found
+Database Error in deleteRelationDB: NotFoundErrorDB: The series you were searching for was not found
+Database Error in deleteRelationDB: NotFoundErrorDB: The series you were searching for was not found
+Database Error in getItemByIdDB: error: relation "lettererss" does not exist
+Database Error in getItemDB: error: relation "lettererss" does not exist
+Database Error in deleteRelationDB: error: relation "lettererss" does not exist
+Database Error in getItemByNameDB: error: relation "authrs" does not exist
+Database Error in getItemDB: error: relation "authrs" does not exist
+Database Error in checkOrCreateItemDB: error: relation "authrs" does not exist
+Database Error in createAdditionalInfoDB: error: relation "authrs" does not exist
+Database Error in processBookInfoDB: error: relation "authrs" does not exist
+Database Error in getItemByNameDB: error: relation "authrs" does not exist
+Database Error in getItemDB: error: relation "authrs" does not exist
+Database Error in checkOrCreateItemDB: error: relation "authrs" does not exist
+Database Error in createAdditionalInfoDB: error: relation "authrs" does not exist
+Database Error in processBookInfoDB: error: relation "authrs" does not exist
+Database Error in getItemByNameDB: error: relation "authrs" does not exist
+Database Error in getItemDB: error: relation "authrs" does not exist
+Database Error in checkOrCreateItemDB: error: relation "authrs" does not exist
+Database Error in createAdditionalInfoDB: error: relation "authrs" does not exist
+Database Error in processBookInfoDB: error: relation "authrs" does not exist
+Database Error in getItemByNameDB: error: relation "authrs" does not exist
+Database Error in getItemDB: error: relation "authrs" does not exist
+Database Error in checkOrCreateItemDB: error: relation "authrs" does not exist
+Database Error in createAdditionalInfoDB: error: relation "authrs" does not exist
+Database Error in processBookInfoDB: error: relation "authrs" does not exist
+Database Error in getItemByNameDB: error: relation "authrs" does not exist
+Database Error in getItemDB: error: relation "authrs" does not exist
+Database Error in checkOrCreateItemDB: error: relation "authrs" does not exist
+Database Error in createAdditionalInfoDB: error: relation "authrs" does not exist
+Database Error in processBookInfoDB: error: relation "authrs" does not exist
+Database Error in createBookDB: error: null value in column "publish_date" of relation "books" violates not-null constraint
+Database Error in checkOrCreateBookDB: error: null value in column "publish_date" of relation "books" violates not-null constraint
+Database Error in processBookInfoDB: error: null value in column "publish_date" of relation "books" violates not-null constraint
+Database Error in createBookDB: error: null value in column "publish_date" of relation "books" violates not-null constraint
+Database Error in checkOrCreateBookDB: error: null value in column "publish_date" of relation "books" violates not-null constraint
+Database Error in processBookInfoDB: error: null value in column "publish_date" of relation "books" violates not-null constraint
+Database Error in createBookDB: error: null value in column "description" of relation "books" violates not-null constraint
+Database Error in checkOrCreateBookDB: error: null value in column "description" of relation "books" violates not-null constraint
+Database Error in processBookInfoDB: error: null value in column "description" of relation "books" violates not-null constraint
+Database Error in createBookDB: error: null value in column "print_length" of relation "books" violates not-null constraint
+Database Error in checkOrCreateBookDB: error: null value in column "print_length" of relation "books" violates not-null constraint
+Database Error in processBookInfoDB: error: null value in column "print_length" of relation "books" violates not-null constraint
+Database Error in createBookDB: error: null value in column "series_volume" of relation "books" violates not-null constraint
+Database Error in checkOrCreateBookDB: error: null value in column "series_volume" of relation "books" violates not-null constraint
+Database Error in processBookInfoDB: error: null value in column "series_volume" of relation "books" violates not-null constraint
+Database Error in createBookDB: error: null value in column "cover_image" of relation "books" violates not-null constraint
+Database Error in checkOrCreateBookDB: error: null value in column "cover_image" of relation "books" violates not-null constraint
+Database Error in processBookInfoDB: error: null value in column "cover_image" of relation "books" violates not-null constraint
+Database Error in createBookDB: error: null value in column "cover_image" of relation "books" violates not-null constraint
+Database Error in checkOrCreateBookDB: error: null value in column "cover_image" of relation "books" violates not-null constraint
+Database Error in processBookInfoDB: error: null value in column "cover_image" of relation "books" violates not-null constraint
+Database Error in getItemByNameDB: error: relation "authrs" does not exist
+Database Error in getItemDB: error: relation "authrs" does not exist
+Database Error in checkOrCreateItemDB: error: relation "authrs" does not exist
+Database Error in createAdditionalInfoDB: error: relation "authrs" does not exist
+Database Error in processBookInfoDB: error: relation "authrs" does not exist
+Database Error in getItemByNameDB: error: relation "series_voluems" does not exist
+Database Error in getItemDB: error: relation "series_voluems" does not exist
+Database Error in checkOrCreateItemDB: error: relation "series_voluems" does not exist
+Database Error in createAdditionalInfoDB: error: relation "series_voluems" does not exist
+Database Error in processBookInfoDB: error: relation "series_voluems" does not exist
