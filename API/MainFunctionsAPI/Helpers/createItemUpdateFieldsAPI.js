@@ -21,7 +21,7 @@ const {
  * @postcondition Returns an object with valid update fields and values that can be updated.
  */
 async function createItemUpdateFieldsAPI(itemToEdit, updateData) {
-  console.log("IN CREATE ITEM UPDATE FIELDS");
+  console.log("IN CREATE ITEM UPDATE FIELDS API");
   console.log(itemToEdit);
   console.log(updateData);
 
@@ -29,6 +29,7 @@ async function createItemUpdateFieldsAPI(itemToEdit, updateData) {
 
   // Iterate through each key in updateData
   for (const key in updateData) {
+    console.log("key: " + key);
     // Check if item tries to update restricted fields like id or password
     if (key === "id") {
       throw new CantEditErrorAPI("You cannot edit an Item's ID");

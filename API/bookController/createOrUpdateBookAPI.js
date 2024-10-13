@@ -36,7 +36,7 @@ async function createOrUpdateBookAPI(req, res, next) {
   } catch (error) {
     // Log and throw any errors that occur during processing
     logErrorAPI("createOrUpdateBookAPI", error, next);
-    throw error;
+    // return next(error);
   }
 }
 

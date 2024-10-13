@@ -25,6 +25,7 @@ async function checkOrCreateItemDB(table_name, item_name) {
     return item;
   } catch (error) {
     logErrorDB("checkOrCreateItemDB", error);
+    throw error;
   }
 }
 
