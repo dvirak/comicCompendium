@@ -64,7 +64,7 @@ async function getRelationItemsAPI(req, res, next, table_name) {
     console.log(formattedInfo);
 
     // Send the related items as the response with status 200
-    res.status(200).json(info);
+    res.status(200).json(formattedInfo);
   } catch (error) {
     // Log error and pass it to the next middleware
     logErrorAPI("getRelationItemsAPI", error, next);
