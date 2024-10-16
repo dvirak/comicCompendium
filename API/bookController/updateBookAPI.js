@@ -18,6 +18,11 @@ const {
 /**
  * Description: Updates book information based on book_id and request body data.
  *
+ * This function retrieves the book by its ID, checks for its existence, creates the fields to be updated, and updates the book in the database before sending the updated information back to the client.
+ *
+ * Middleware: None required.
+ * Request Body: Contains the fields to update in the book data.
+ *
  * @param {Object} req - Express request object containing book_id in params and update data in body.
  * @param {Object} res - Express response object to send success message and updated book data.
  * @param {Function} next - Express next function to pass control to the next middleware.
@@ -61,4 +66,4 @@ async function updateBookAPI(req, res, next) {
   }
 }
 
-module.exports = updateBookAPI;
+module.exports = updateBookAPI; // Export the function for use in other modules

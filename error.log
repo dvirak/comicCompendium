@@ -427,3 +427,5 @@ Error in createOrUpdateBookAPI: error: relation "series_voluems" does not exist
 Error in getItemAPI: MissingInformationErrorAPI: You are missing the necessary information to retrieve Item Name: undefined from the genre table
 Error in getItemAPI: MissingInformationErrorAPI: You are missing the necessary information to retrieve Item Name: undefined from the genre table
 Error in getItemAPI: MissingInformationErrorAPI: You are missing the necessary information to retrieve Item Name: undefined from the genre table
+Error in createItemAPI: MissingInformationErrorAPI: You are missing the item_name in createItemAPI
+Error in createItemAPI: ItemAlreadyExistsErrorAPI: Romance already exists in the genres Table

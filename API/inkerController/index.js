@@ -28,7 +28,7 @@ inkersRouter.get("/", (req, res, next) => {
  * Method: GET
  * Route: /inkers/inker/:id?
  * Request Params: Optional `id` to specify the inker by ID.
- * Request Query: `name` to specify the inker by name.
+ * Request Query: item_name to specify the inker by name.
  * Response: Returns the details of the specified inker.
  */
 inkersRouter.get("/inker/:id?", (req, res, next) => {
@@ -39,7 +39,7 @@ inkersRouter.get("/inker/:id?", (req, res, next) => {
  * Description: Creates a new inker in the database.
  * Method: POST
  * Route: /inkers/inker/add
- * Request Body: Must contain `name` (string) for the inker's name.
+ * Request Body: Must contain item_name (string) for the inker's name.
  * Response: Returns the created inker's information.
  * Middleware: requireUser - Ensures the user is authenticated.
  */

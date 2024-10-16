@@ -3,7 +3,6 @@ const {
   NotFoundErrorAPI,
   MissingInformationErrorAPI,
   logErrorAPI,
-  errorCodeCheck,
 } = require("../../Errors/API");
 const { getItemDB } = require("../../DB/DBFunctions/MainFunctionsDB");
 // ! ---------------------------------------------------------------
@@ -19,7 +18,7 @@ const { getItemDB } = require("../../DB/DBFunctions/MainFunctionsDB");
  * - `item_name` (in query params, can also be `title`)
  * Response: Sends the requested item data or an error message if the item is not found.
  *
- * @param {Object} req - The request object, containing `params.id` for item ID or query parameters for item name.
+ * @param {Object} req - The request object, containing `params.id` for item ID or query.item_name or query.title parameters for item name.
  * @param {Object} res - The response object used to send back the item data or error message.
  * @param {Function} next - The next middleware function to pass errors to the error handling middleware.
  * @param {string} table_name - The name of the database table from which to retrieve the item.
@@ -34,18 +33,13 @@ const { getItemDB } = require("../../DB/DBFunctions/MainFunctionsDB");
 async function getItemAPI(req, res, next, table_name) {
   console.log("IN GET ITEM API");
   const item_id = req.params.id;
-  const item_name = req.query.name ? req.query.name : req.query.title;
-  console.log("Table Name = " + table_name);
-  console.log("Item Name = " + item_name);
-  console.log("Item ID = " + item_id);
+  const item_name = req.query.item_name ? req.query.item_name : req.query.title;
 
   try {
     // Validate input: Ensure either item_id or item_name is provided
     if (!item_id && !item_name) {
       throw new MissingInformationErrorAPI(
-        `You are missing the necessary information to retrieve ${
-          item_id ? `Item Number: ${item_id}` : `Item Name: ${item_name}`
-        } from the ${table_name} table`
+        `Please provide an item_name or item_id`
       );
     }
 

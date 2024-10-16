@@ -26,7 +26,6 @@ const { MissingInformationErrorAPI } = require("../../Errors/API");
  */
 async function getAllAPI(req, res, next, table_name) {
   console.log("IN GET ALL AUTHORS API");
-  console.log("TABLE NAME = " + table_name);
 
   try {
     if (!table_name) {

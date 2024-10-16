@@ -12,6 +12,7 @@ const { formatAdditionalInfo } = require("../bookController/Helpers");
  * - `relation_type` (string): The type of relation being added (e.g., author, illustrator).
  * - `item_name` (string): The name of the related item (e.g., author name).
  * Note: All relations must be included in the format of relation_type: item_name.
+ * - example: Author: Peter North
  *
  * @param {Object} req - Express request object containing the book ID in params and relations in body.
  * @param {Object} res - Express response object to send the created relations.

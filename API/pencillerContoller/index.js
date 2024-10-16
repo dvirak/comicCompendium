@@ -28,7 +28,7 @@ pencillersRouter.get("/", (req, res, next) => {
  * Method: GET
  * Route: /pencillers/penciller/:id?
  * Request Params: Optional `id` to specify the penciller by ID.
- * Request Query: `name` to specify the penciller by name.
+ * Request Query: item_name to specify the penciller by name.
  * Response: Returns the details of the specified penciller.
  */
 pencillersRouter.get("/penciller/:id?", (req, res, next) => {
@@ -39,7 +39,7 @@ pencillersRouter.get("/penciller/:id?", (req, res, next) => {
  * Description: Creates a new penciller in the database.
  * Method: POST
  * Route: /pencillers/penciller/add
- * Request Body: Must contain `name` (string) for the penciller's name.
+ * Request Body: Must contain item_name (string) for the penciller's name.
  * Response: Returns the created penciller's information.
  * Middleware: requireUser - Ensures the user is authenticated.
  */

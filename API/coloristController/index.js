@@ -28,7 +28,7 @@ coloristsRouter.get("/", (req, res, next) => {
  * Method: GET
  * Route: /colorists/colorist/:id?
  * Request Params: Optional `id` to specify the colorist by ID.
- * Request Query: `name` to specify the colorist by name.
+ * Request Query: item_name to specify the colorist by name.
  * Response: Returns the details of the specified colorist.
  */
 coloristsRouter.get("/colorist/:id?", (req, res, next) => {
@@ -39,7 +39,7 @@ coloristsRouter.get("/colorist/:id?", (req, res, next) => {
  * Description: Creates a new colorist in the database.
  * Method: POST
  * Route: /colorists/colorist/add
- * Request Body: Must contain `name` (string) for the colorist's name.
+ * Request Body: Must contain item_name (string) for the colorist's name.
  * Response: Returns the created colorist's information.
  * Middleware: requireUser - Ensures the user is authenticated.
  */

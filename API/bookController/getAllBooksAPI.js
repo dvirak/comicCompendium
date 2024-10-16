@@ -18,7 +18,7 @@ const formatAllBooksWithAdditionalInfoAPI = require("./Helpers/formatAllBooksWit
  * @param {Object} req - The request object for retrieving book information.
  * @param {Object} res - The response object to send the list of books.
  * @param {Function} next - The next middleware function for error handling.
- * @returns {Promise<void>} This function does not return anything directly, but sends a response containing basic book information.
+ * @returns {Promise<void>} This function does not return anything directly, but it sends a response containing basic book information.
  * @throws {Error} If an error occurs while retrieving basic book information from the database.
  *
  * @precondition None

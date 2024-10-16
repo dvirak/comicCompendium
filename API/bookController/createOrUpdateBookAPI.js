@@ -7,7 +7,13 @@ const { logErrorAPI, MissingInformationErrorAPI } = require("../../Errors/API");
  * Description: Creates or updates book information based on provided data.
  * If `book_id` is not supplied, the function can update based on the book's title in the request body.
  *
- * @param {Object} req - Express request object containing book data in the body.
+ * Middleware: None required.
+ * Request Body:
+ * - `bookInfo` (Object): An object containing book data, including title, publish date, description, etc. (required).
+ * Note: Only fields being updated are required for update
+ * Note: The exact structure of `bookInfo` should match the expected database schema for books.
+ *
+ * @param {Object} req - Express request object containing book data in the body and an optional `book_id` in the request parameters.
  * @param {Object} res - Express response object for sending the created or updated book.
  * @param {Function} next - Express next function for error handling.
  * @returns {Promise<void>} This function does not return anything directly, but sends the created or updated book object as a response.
