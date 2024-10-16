@@ -24,11 +24,11 @@ seriesRouter.get("/", (req, res, next) => {
 });
 
 /**
- * Description: Retrieves a specific series based on series_id parameter or series_name query.
+ * Description: Retrieves a specific series based on item_id parameter or item_name query.
  * Method: GET
  * Route: /series/series/:id?
  * Request Params: Optional `id` to specify the series by ID.
- * Request Query: `name` to specify the series by name.
+ * Request Query: item_name to specify the series by name.
  * Response: Returns the details of the specified series.
  */
 seriesRouter.get("/series/:id?", (req, res, next) => {
@@ -39,7 +39,7 @@ seriesRouter.get("/series/:id?", (req, res, next) => {
  * Description: Creates a new series in the database.
  * Method: POST
  * Route: /series/series/add
- * Request Body: Must contain `name` (string) for the series's name.
+ * Request Body: Must contain item_name (string) for the series's name.
  * Response: Returns the created series's information.
  * Middleware: requireUser - Ensures the user is authenticated.
  */

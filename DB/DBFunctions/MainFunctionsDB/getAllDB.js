@@ -18,7 +18,6 @@ const client = require("../../client"); // Database client connection
  */
 async function getAllDB({ table_name }) {
   console.log("IN GET ALL DB"); // Log the start of the function execution
-  console.log("TABLE NAME = " + table_name); // Log the provided table name
 
   const query = `
       SELECT *

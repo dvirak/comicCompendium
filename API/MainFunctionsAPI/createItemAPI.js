@@ -1,4 +1,4 @@
-// ! ---------------- IMPORTED FILES --------------------------
+// ! ----------------- IMPORTED FILES --------------------------
 const {
   getItemDB,
   createItemDB,
@@ -12,29 +12,36 @@ const { NotFoundErrorDB } = require("../../Errors/DB");
 // ! -----------------------------------------------------------
 
 /**
- * Description: Creates a new item in the specified table.
- * This function checks if an item with the same name already exists in the database. If not, it creates the item;
- * otherwise, it throws an error indicating that the item already exists.
+ * Description: Creates a new item in the specified table based on the provided `item_name`.
+ *
+ * This function checks if an item with the same name already exists in the specified table. If the item does not
+ * exist, it creates a new entry in the database. If an item with the same name is found, an error is thrown.
  *
  * Middleware: None required.
- * Request Body:
- * - `name` (string): The name of the item to create.
- * Note: Ensure that the table name is passed as a function argument.
  *
- * @param {Object} req - The request object containing information about the HTTP request.
- * @param {Object} res - The response object used to send back the appropriate HTTP response.
+ * Request Body:
+ * - `item_name` (string): The name of the item to create.
+ *
+ * Response:
+ * - Success: Returns the created item object with a 201 status code upon successful creation.
+ * - Failure: Returns an error indicating whether required information is missing or if the item already exists.
+ *
+ * @param {Object} req - The request object, containing the `item_name` in the request body.
+ * @param {Object} res - The response object used to send back the created item or an error message.
  * @param {Function} next - The next middleware function for error handling.
- * @param {string} table_name - The name of the table where the item will be created.
- * @returns {Promise<void>} Returns the created item as a JSON response with status code 201 upon success.
+ * @param {string} table_name - The name of the database table where the item will be created.
+ *
+ * @returns {Promise<void>} Sends the created item object as a JSON response with a status code of 201 upon success.
+ *
  * @throws {MissingInformationErrorAPI} If either `item_name` or `table_name` is missing.
  * @throws {ItemAlreadyExistsErrorAPI} If an item with the same name already exists in the specified table.
- * @throws {Error} Any other errors encountered during the database interactions.
+ * @throws {Error} For any unexpected errors encountered during the database interaction.
  *
- * @precondition The request must contain an `item_name` in the request body and a valid `table_name`.
- * @postcondition A new item is created in the specified table, or an appropriate error is thrown if it already exists.
+ * @precondition The request must contain a valid `item_name` in the body and a valid `table_name` must be provided.
+ * @postcondition A new item is created in the specified table, or an appropriate error is thrown if the item already exists.
  */
 async function createItemAPI(req, res, next, table_name) {
-  const item_name = req.body.name;
+  const item_name = req.body.item_name;
   console.log(`Creating ${item_name} in the ${table_name} table`);
 
   try {
@@ -63,7 +70,7 @@ async function createItemAPI(req, res, next, table_name) {
     // If the item already exists, throw an error
     if (itemExists) {
       throw new ItemAlreadyExistsErrorAPI(
-        `${item_name} already exists in the ${table_name}s Table`
+        `${item_name} already exists in the ${table_name} table`
       );
     } else {
       // Create a new item record in the database
@@ -73,7 +80,7 @@ async function createItemAPI(req, res, next, table_name) {
       res.status(201).json(createdItem);
     }
   } catch (error) {
-    // Log the error and pass it to the error handling middleware
+    // Log the error and pass it to the error-handling middleware
     logErrorAPI("createItemAPI", error, next);
   }
 }

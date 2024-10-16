@@ -28,7 +28,7 @@ publishersRouter.get("/", (req, res, next) => {
  * Method: GET
  * Route: /publishers/publisher/:id?
  * Request Params: Optional `id` to specify the publisher by ID.
- * Request Query: `name` to specify the publisher by name.
+ * Request Query: item_name to specify the publisher by name.
  * Response: Returns the details of the specified publisher.
  */
 publishersRouter.get("/publisher/:id?", (req, res, next) => {
@@ -39,7 +39,7 @@ publishersRouter.get("/publisher/:id?", (req, res, next) => {
  * Description: Creates a new publisher in the database.
  * Method: POST
  * Route: /publishers/publisher/add
- * Request Body: Must contain `name` (string) for the publisher's name.
+ * Request Body: Must contain item_name (string) for the publisher's name.
  * Response: Returns the created publisher's information.
  * Middleware: requireUser - Ensures the user is authenticated.
  */

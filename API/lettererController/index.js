@@ -28,7 +28,7 @@ letterersRouter.get("/", (req, res, next) => {
  * Method: GET
  * Route: /letterers/letterer/:id?
  * Request Params: Optional `id` to specify the letterer by ID.
- * Request Query: `name` to specify the letterer by name.
+ * Request Query: item_name to specify the letterer by name.
  * Response: Returns the details of the specified letterer.
  */
 letterersRouter.get("/letterer/:id?", (req, res, next) => {
@@ -39,7 +39,7 @@ letterersRouter.get("/letterer/:id?", (req, res, next) => {
  * Description: Creates a new letterer in the database.
  * Method: POST
  * Route: /letterers/letterer/add
- * Request Body: Must contain `name` (string) for the letterer's name.
+ * Request Body: Must contain item_name (string) for the letterer's name.
  * Response: Returns the created letterer's information.
  * Middleware: requireUser - Ensures the user is authenticated.
  */

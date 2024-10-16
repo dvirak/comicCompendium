@@ -28,7 +28,7 @@ authorsRouter.get("/", (req, res, next) => {
  * Method: GET
  * Route: /authors/author/:id?
  * Request Params: Optional `id` to specify the author by ID.
- * Request Query: `name` to specify the author by name.
+ * Request Query: item_name to specify the author by name.
  * Response: Returns the details of the specified author.
  */
 authorsRouter.get("/author/:id?", (req, res, next) => {
@@ -39,7 +39,7 @@ authorsRouter.get("/author/:id?", (req, res, next) => {
  * Description: Creates a new author in the database.
  * Method: POST
  * Route: /authors/author/add
- * Request Body: Must contain `name` (string) for the author's name.
+ * Request Body: Must contain item_name (string) for the author's name.
  * Response: Returns the created author's information.
  * Middleware: requireUser - Ensures the user is authenticated.
  */

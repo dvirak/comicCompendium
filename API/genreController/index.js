@@ -28,7 +28,7 @@ genresRouter.get("/", (req, res, next) => {
  * Method: GET
  * Route: /genres/genre/:id?
  * Request Params: Optional `id` to specify the genre by ID.
- * Request Query: `name` to specify the genre by name.
+ * Request Query: item_name to specify the genre by name.
  * Response: Returns the details of the specified genre.
  */
 genresRouter.get("/genre/:id?", (req, res, next) => {
@@ -39,7 +39,7 @@ genresRouter.get("/genre/:id?", (req, res, next) => {
  * Description: Creates a new genre in the database.
  * Method: POST
  * Route: /genres/genre/add
- * Request Body: Must contain `name` (string) for the genre's name.
+ * Request Body: Must contain item_name (string) for the genre's name.
  * Response: Returns the created genre's information.
  * Middleware: requireUser - Ensures the user is authenticated.
  */

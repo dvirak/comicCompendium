@@ -21,8 +21,6 @@ const client = require("../../client"); // Database client connection
 
 async function updateItemDB(table_name, item_id, fields = {}) {
   console.log("IN UPDATE ITEM DB"); // Log start of function execution
-  console.log(item_id); // Log the provided item ID
-  console.log(fields); // Log the fields to be updated
 
   // Create the SET clause for the SQL update statement using the fields object.
   // Map the keys of the fields object to SQL columns, with each field's index offset for parameterized queries.

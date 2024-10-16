@@ -37,7 +37,7 @@ async function getRelationItemsAPI(req, res, next, table_name) {
   let main_item = table_name; // The table name of the main item
   let main_item_id = req.params.book_id ? req.params.book_id : req.params.id; // The ID of the main item from the request parameters
   let relations = Object.keys(req.query); // Relation types from the query parameters
-  console.log(relations);
+
   try {
     // Check if required information is missing
     if (!main_item || !main_item_id || !relations.length) {
@@ -61,7 +61,6 @@ async function getRelationItemsAPI(req, res, next, table_name) {
     }
 
     let formattedInfo = formatGetRelationItems(info);
-    console.log(formattedInfo);
 
     // Send the related items as the response with status 200
     res.status(200).json(formattedInfo);
