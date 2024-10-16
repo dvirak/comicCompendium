@@ -424,3 +424,6 @@ Error in createOrUpdateBookAPI: error: null value in column "cover_image" of rel
 Error in createOrUpdateBookAPI: error: null value in column "cover_image" of relation "books" violates not-null constraint
 Error in createOrUpdateBookAPI: error: relation "authrs" does not exist
 Error in createOrUpdateBookAPI: error: relation "series_voluems" does not exist
+Error in getItemAPI: MissingInformationErrorAPI: You are missing the necessary information to retrieve Item Name: undefined from the genre table
+Error in getItemAPI: MissingInformationErrorAPI: You are missing the necessary information to retrieve Item Name: undefined from the genre table
+Error in getItemAPI: MissingInformationErrorAPI: You are missing the necessary information to retrieve Item Name: undefined from the genre table
