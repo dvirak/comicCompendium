@@ -1,4 +1,4 @@
-// ! ---------------- IMPORTED FILES -------------------------
+// ! ---------------- IMPORTED FILES --------------------------
 const {
   getItemDB,
   createItemDB,
@@ -12,40 +12,27 @@ const { NotFoundErrorDB } = require("../../Errors/DB");
 // ! -----------------------------------------------------------
 
 /**
- * Description: Creates a new book record based on the provided request body.
- * Validates required fields and checks for existing book title.
- * Handles errors and logs them using API error handling.
+ * Description: Creates a new item in the specified table.
+ * This function checks if an item with the same name already exists in the database. If not, it creates the item;
+ * otherwise, it throws an error indicating that the item already exists.
  *
  * Middleware: None required.
  * Request Body:
- * - `title` (string): The title of the book.
- * - `publish_date` (string): The publication date of the book.
- * - `description` (string): A brief description of the book.
- * - `print_length` (number): The number of pages in the book.
- * - `series_volume` (string): The volume number in a series.
- * - `cover_image` (string): A URL or path to the book's cover image.
- * - `publisher` (string): The publisher of the book (optional).
- * - `series` (string): The series name (optional).
- * - `author` (string): The author of the book (optional).
- * - `illustrator` (string): The illustrators of the book (optional).
- * - `colorist` (string): The colorists involved (optional).
- * - `letterer` (string): The letterers involved (optional).
- * - `genre` (string): The genre(s) of the book (optional).
- * - `penciller` (string): The penciller of the book (optional).
- * Note: The relation data may or may not be included in the request body.
+ * - `name` (string): The name of the item to create.
+ * Note: Ensure that the table name is passed as a function argument.
  *
- * @param {Object} req - Express request object containing book information in req.body.
- * @param {Object} res - Express response object to send created book object on success.
- * @param {Function} next - Express next function to pass errors to the error handling middleware.
- * @returns {Promise<void>} This function does not return anything directly, but it sends the created book object as the response.
- * @throws {MissingInformationErrorAPI} If any required book information is missing in req.body.
- * @throws {ItemAlreadyExistsErrorAPI} If a book with the same title already exists in the database.
- * @throws {Error} If an unexpected error occurs during database operations.
+ * @param {Object} req - The request object containing information about the HTTP request.
+ * @param {Object} res - The response object used to send back the appropriate HTTP response.
+ * @param {Function} next - The next middleware function for error handling.
+ * @param {string} table_name - The name of the table where the item will be created.
+ * @returns {Promise<void>} Returns the created item as a JSON response with status code 201 upon success.
+ * @throws {MissingInformationErrorAPI} If either `item_name` or `table_name` is missing.
+ * @throws {ItemAlreadyExistsErrorAPI} If an item with the same name already exists in the specified table.
+ * @throws {Error} Any other errors encountered during the database interactions.
  *
- * @precondition None
- * @postcondition If successful, creates a new book record in the database and sends the created book object in the response.
+ * @precondition The request must contain an `item_name` in the request body and a valid `table_name`.
+ * @postcondition A new item is created in the specified table, or an appropriate error is thrown if it already exists.
  */
-
 async function createItemAPI(req, res, next, table_name) {
   const item_name = req.body.name;
   console.log(`Creating ${item_name} in the ${table_name} table`);
@@ -73,8 +60,8 @@ async function createItemAPI(req, res, next, table_name) {
       }
     }
 
+    // If the item already exists, throw an error
     if (itemExists) {
-      // Throw error if item already exists
       throw new ItemAlreadyExistsErrorAPI(
         `${item_name} already exists in the ${table_name}s Table`
       );
