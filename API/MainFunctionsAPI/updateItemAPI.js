@@ -44,7 +44,7 @@ const { createItemUpdateFieldsAPI } = require("./Helpers");
  * @postcondition On success, the item information is updated in the database, and a response is sent containing a success message and the updated item data.
  */
 async function updateItemAPI(req, res, next, table_name) {
-  const item_id = Number(req.params.id); // Retrieve the item_id from request parameters
+  const item_id = Number(req.params.item_id); // Retrieve the item_id from request parameters
   const updateData = req.body; // Retrieve the update data from request body
   console.log("IN UPDATE ITEM API");
 

@@ -18,7 +18,7 @@ const { getItemDB } = require("../../DB/DBFunctions/MainFunctionsDB");
  * - `item_name` (in query params, can also be `title`)
  * Response: Sends the requested item data or an error message if the item is not found.
  *
- * @param {Object} req - The request object, containing `params.id` for item ID or query.item_name or query.title parameters for item name.
+ * @param {Object} req - The request object, containing `params.item_id` for item ID or query.item_name or query.title parameters for item name.
  * @param {Object} res - The response object used to send back the item data or error message.
  * @param {Function} next - The next middleware function to pass errors to the error handling middleware.
  * @param {string} table_name - The name of the database table from which to retrieve the item.
@@ -32,7 +32,7 @@ const { getItemDB } = require("../../DB/DBFunctions/MainFunctionsDB");
  */
 async function getItemAPI(req, res, next, table_name) {
   console.log("IN GET ITEM API");
-  const item_id = req.params.id;
+  const item_id = req.params.item_id;
   const item_name = req.query.item_name ? req.query.item_name : req.query.title;
 
   try {

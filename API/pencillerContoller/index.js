@@ -24,14 +24,14 @@ pencillersRouter.get("/", (req, res, next) => {
 });
 
 /**
- * Description: Retrieves a specific penciller based on penciller_id parameter or penciller_name query.
+ * Description: Retrieves a specific penciller based on item_id parameter or item_name query.
  * Method: GET
- * Route: /pencillers/penciller/:id?
- * Request Params: Optional `id` to specify the penciller by ID.
+ * Route: /pencillers/penciller/:item_id?
+ * Request Params: Optional `item_id` to specify the penciller by ID.
  * Request Query: item_name to specify the penciller by name.
  * Response: Returns the details of the specified penciller.
  */
-pencillersRouter.get("/penciller/:id?", (req, res, next) => {
+pencillersRouter.get("/penciller/:item_id?", (req, res, next) => {
   getItemAPI(req, res, next, table_name);
 });
 
@@ -50,8 +50,8 @@ pencillersRouter.post("/add", requireUser, (req, res, next) => {
 /**
  * Description: Updates an existing penciller's information.
  * Method: PATCH
- * Route: /pencillers/penciller/:id/update
- * Request Params: `id` specifies the penciller to update by ID.
+ * Route: /pencillers/penciller/:item_id/update
+ * Request Params: `item_id` specifies the penciller to update by ID.
  * Request Body: Contains fields to update the penciller's information.
  * Response: Returns a message indicating update success and the updated penciller object.
  * Middleware: requireUser - Ensures the user is authenticated.
@@ -59,7 +59,7 @@ pencillersRouter.post("/add", requireUser, (req, res, next) => {
  *         Error if an error occurs while updating penciller information in the database.
  */
 pencillersRouter.patch(
-  "/penciller/:id/update",
+  "/penciller/:item_id/update",
   requireUser,
   (req, res, next) => {
     updateItemAPI(req, res, next, table_name);
@@ -69,14 +69,14 @@ pencillersRouter.patch(
 /**
  * Description: Deletes a specific penciller from the database.
  * Method: DELETE
- * Route: /pencillers/penciller/:id/delete
- * Request Params: `id` specifies the penciller to delete by ID.
+ * Route: /pencillers/penciller/:item_id/delete
+ * Request Params: `item_id` specifies the penciller to delete by ID.
  * Response: Returns a message confirming the deletion and the deleted penciller's name.
  * Middleware: requireUser - Ensures the user is authenticated.
  * Throws: NotFoundErrorAPI if the specified penciller_id does not exist.
  */
 pencillersRouter.delete(
-  "/penciller/:id/delete",
+  "/penciller/:item_id/delete",
   requireUser,
   (req, res, next) => {
     deleteItemAPI(req, res, next, table_name);

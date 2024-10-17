@@ -25,14 +25,14 @@ illustratorsRouter.get("/", (req, res, next) => {
 });
 
 /**
- * Description: Retrieves a specific illustrator based on illustrator_id parameter or illustrator_name query.
+ * Description: Retrieves a specific illustrator based on item_id parameter or item_name query.
  * Method: GET
- * Route: /illustrators/illustrator/:id?
- * Request Params: Optional `id` to specify the illustrator by ID.
+ * Route: /illustrators/illustrator/:item_id?
+ * Request Params: Optional `item_id` to specify the illustrator by ID.
  * Request Query: `item_name` to specify the illustrator by name.
  * Response: Returns the details of the specified illustrator.
  */
-illustratorsRouter.get("/illustrator/:id?", (req, res, next) => {
+illustratorsRouter.get("/illustrator/:item_id?", (req, res, next) => {
   getItemAPI(req, res, next, table_name);
 });
 
@@ -49,10 +49,10 @@ illustratorsRouter.post("/add", requireUser, (req, res, next) => {
 });
 
 /**
- * Description: Updates an existing illustrator's information based on illustrator_id and request body data.
+ * Description: Updates an existing illustrator's information based on illustrator's id and request body data.
  * Method: PATCH
- * Route: /illustrators/illustrator/:id/update
- * Request Params: `id` specifies the illustrator to update by ID.
+ * Route: /illustrators/illustrator/:item_id/update
+ * Request Params: `item_id` specifies the illustrator to update by ID.
  * Request Body: Contains fields to update the illustrator's information.
  * Response: Returns a message indicating update success and the updated illustrator object.
  * Middleware: requireUser - Ensures the user is authenticated.
@@ -60,7 +60,7 @@ illustratorsRouter.post("/add", requireUser, (req, res, next) => {
  *         Error if an error occurs while updating illustrator information in the database.
  */
 illustratorsRouter.patch(
-  "/illustrator/:id/update",
+  "/illustrator/:item_id/update",
   requireUser,
   (req, res, next) => {
     updateItemAPI(req, res, next, table_name);
@@ -70,14 +70,14 @@ illustratorsRouter.patch(
 /**
  * Description: Deletes a specific illustrator from the database.
  * Method: DELETE
- * Route: /illustrators/illustrator/:id/delete
- * Request Params: `id` specifies the illustrator to delete by ID.
+ * Route: /illustrators/illustrator/:item_id/delete
+ * Request Params: `item_id` specifies the illustrator to delete by ID.
  * Response: Returns a message confirming the deletion and the deleted illustrator's name.
  * Middleware: requireUser - Ensures the user is authenticated.
  * Throws: NotFoundErrorAPI if the specified illustrator_id does not exist.
  */
 illustratorsRouter.delete(
-  "/illustrator/:id/delete",
+  "/illustrator/:item_id/delete",
   requireUser,
   (req, res, next) => {
     deleteItemAPI(req, res, next, table_name);
@@ -87,11 +87,11 @@ illustratorsRouter.delete(
 /**
  * Description: Retrieves related items for a specific illustrator.
  * Method: GET
- * Route: /illustrators/illustrator/:id/relation
- * Request Params: `id` specifies the illustrator to retrieve relations for.
+ * Route: /illustrators/illustrator/:item_id/relation
+ * Request Params: `item_id` specifies the illustrator to retrieve relations for.
  * Response: Returns related items for the specified illustrator.
  */
-illustratorsRouter.get("/illustrator/:id/relation/?", (req, res, next) => {
+illustratorsRouter.get("/illustrator/:item_id/relation/?", (req, res, next) => {
   getRelationItemsAPI(req, res, next, table_name);
 });
 

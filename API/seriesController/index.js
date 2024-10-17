@@ -26,12 +26,12 @@ seriesRouter.get("/", (req, res, next) => {
 /**
  * Description: Retrieves a specific series based on item_id parameter or item_name query.
  * Method: GET
- * Route: /series/series/:id?
- * Request Params: Optional `id` to specify the series by ID.
+ * Route: /series/series/:item_id?
+ * Request Params: `item_id` to specify the series by ID.
  * Request Query: item_name to specify the series by name.
  * Response: Returns the details of the specified series.
  */
-seriesRouter.get("/series/:id?", (req, res, next) => {
+seriesRouter.get("/series/:item_id?", (req, res, next) => {
   getItemAPI(req, res, next, table_name);
 });
 
@@ -50,29 +50,33 @@ seriesRouter.post("/add", requireUser, (req, res, next) => {
 /**
  * Description: Updates an existing series's information.
  * Method: PATCH
- * Route: /series/series/:id/update
- * Request Params: `id` specifies the series to update by ID.
+ * Route: /series/series/:item_id/update
+ * Request Params: `item_id` specifies the series to update by ID.
  * Request Body: Contains fields to update the series's information.
  * Response: Returns a message indicating update success and the updated series object.
  * Middleware: requireUser - Ensures the user is authenticated.
  * Throws: NotFoundErrorAPI if the specified series_id does not exist.
  *         Error if an error occurs while updating series information in the database.
  */
-seriesRouter.patch("/series/:id/update", requireUser, (req, res, next) => {
+seriesRouter.patch("/series/:item_id/update", requireUser, (req, res, next) => {
   updateItemAPI(req, res, next, table_name);
 });
 
 /**
  * Description: Deletes a specific series from the database.
  * Method: DELETE
- * Route: /series/series/:id/delete
- * Request Params: `id` specifies the series to delete by ID.
+ * Route: /series/series/:item_id/delete
+ * Request Params: `item_id` specifies the series to delete by ID.
  * Response: Returns a message confirming the deletion and the deleted series's name.
  * Middleware: requireUser - Ensures the user is authenticated.
  * Throws: NotFoundErrorAPI if the specified series_id does not exist.
  */
-seriesRouter.delete("/series/:id/delete", requireUser, (req, res, next) => {
-  deleteItemAPI(req, res, next, table_name);
-});
+seriesRouter.delete(
+  "/series/:item_id/delete",
+  requireUser,
+  (req, res, next) => {
+    deleteItemAPI(req, res, next, table_name);
+  }
+);
 
 module.exports = seriesRouter;

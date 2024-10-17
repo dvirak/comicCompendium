@@ -24,14 +24,14 @@ letterersRouter.get("/", (req, res, next) => {
 });
 
 /**
- * Description: Retrieves a specific letterer based on letterer_id parameter or letterer_name query.
+ * Description: Retrieves a specific letterer based on item_id parameter or item_name query.
  * Method: GET
- * Route: /letterers/letterer/:id?
- * Request Params: Optional `id` to specify the letterer by ID.
+ * Route: /letterers/letterer/:item_id?
+ * Request Params: Optional `item_id` to specify the letterer by ID.
  * Request Query: item_name to specify the letterer by name.
  * Response: Returns the details of the specified letterer.
  */
-letterersRouter.get("/letterer/:id?", (req, res, next) => {
+letterersRouter.get("/letterer/:item_id?", (req, res, next) => {
   getItemAPI(req, res, next, table_name);
 });
 
@@ -50,29 +50,33 @@ letterersRouter.post("/add", requireUser, (req, res, next) => {
 /**
  * Description: Updates an existing letterer's information.
  * Method: PATCH
- * Route: /letterers/letterer/:id/update
- * Request Params: `id` specifies the letterer to update by ID.
+ * Route: /letterers/letterer/:item_id/update
+ * Request Params: `item_id` specifies the letterer to update by ID.
  * Request Body: Contains fields to update the letterer's information.
  * Response: Returns a message indicating update success and the updated letterer object.
  * Middleware: requireUser - Ensures the user is authenticated.
  * Throws: NotFoundErrorAPI if the specified letterer_id does not exist.
  *         Error if an error occurs while updating letterer information in the database.
  */
-letterersRouter.patch("/letterer/:id/update", requireUser, (req, res, next) => {
-  updateItemAPI(req, res, next, table_name);
-});
+letterersRouter.patch(
+  "/letterer/:item_id/update",
+  requireUser,
+  (req, res, next) => {
+    updateItemAPI(req, res, next, table_name);
+  }
+);
 
 /**
  * Description: Deletes a specific letterer from the database.
  * Method: DELETE
- * Route: /letterers/letterer/:id/delete
- * Request Params: `id` specifies the letterer to delete by ID.
+ * Route: /letterers/letterer/:item_id/delete
+ * Request Params: `item_id` specifies the letterer to delete by ID.
  * Response: Returns a message confirming the deletion and the deleted letterer's name.
  * Middleware: requireUser - Ensures the user is authenticated.
  * Throws: NotFoundErrorAPI if the specified letterer_id does not exist.
  */
 letterersRouter.delete(
-  "/letterer/:id/delete",
+  "/letterer/:item_id/delete",
   requireUser,
   (req, res, next) => {
     deleteItemAPI(req, res, next, table_name);

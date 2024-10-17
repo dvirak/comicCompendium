@@ -24,14 +24,14 @@ authorsRouter.get("/", (req, res, next) => {
 });
 
 /**
- * Description: Retrieves a specific author based on the author_id parameter or author_name query.
+ * Description: Retrieves a specific author based on the item_id parameter or item_name query.
  * Method: GET
- * Route: /authors/author/:id?
- * Request Params: Optional `id` to specify the author by ID.
+ * Route: /authors/author/:item_id?
+ * Request Params: Optional `item_id` to specify the author by ID.
  * Request Query: item_name to specify the author by name.
  * Response: Returns the details of the specified author.
  */
-authorsRouter.get("/author/:id?", (req, res, next) => {
+authorsRouter.get("/author/:item_id?", (req, res, next) => {
   getItemAPI(req, res, next, table_name);
 });
 
@@ -50,28 +50,36 @@ authorsRouter.post("/add", requireUser, (req, res, next) => {
 /**
  * Description: Updates an existing author's information.
  * Method: PATCH
- * Route: /authors/author/:id/update
- * Request Params: `id` specifies the author to update by ID.
+ * Route: /authors/author/:item_id/update
+ * Request Params: `item_id` specifies the author to update by ID.
  * Request Body: Contains fields to update the author's information.
  * Response: Returns a message indicating update success and the updated author object.
  * Middleware: requireUser - Ensures the user is authenticated.
  * Throws: AuthorNotFoundErrorAPI if the specified author_id does not exist.
  */
-authorsRouter.patch("/author/:id/update", requireUser, (req, res, next) => {
-  updateItemAPI(req, res, next, table_name);
-});
+authorsRouter.patch(
+  "/author/:item_id/update",
+  requireUser,
+  (req, res, next) => {
+    updateItemAPI(req, res, next, table_name);
+  }
+);
 
 /**
  * Description: Deletes a specific author from the database.
  * Method: DELETE
- * Route: /authors/author/:id/delete
- * Request Params: `id` specifies the author to delete by ID.
+ * Route: /authors/author/:item_id/delete
+ * Request Params: `item_id` specifies the author to delete by ID.
  * Response: Returns a message confirming the deletion and the deleted author's name.
  * Middleware: requireUser - Ensures the user is authenticated.
  * Throws: NotFoundErrorAPI if the specified author_id does not exist.
  */
-authorsRouter.delete("/author/:id/delete", requireUser, (req, res, next) => {
-  deleteItemAPI(req, res, next, table_name);
-});
+authorsRouter.delete(
+  "/author/:item_id/delete",
+  requireUser,
+  (req, res, next) => {
+    deleteItemAPI(req, res, next, table_name);
+  }
+);
 
 module.exports = authorsRouter;

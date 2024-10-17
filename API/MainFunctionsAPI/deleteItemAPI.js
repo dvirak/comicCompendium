@@ -36,7 +36,7 @@ const { logErrorAPI, NotFoundErrorAPI } = require("../../Errors/API");
  */
 async function deleteItemAPI(req, res, next, table_name) {
   // Convert item_id from request parameters to a number
-  const item_id = Number(req.params.id);
+  const item_id = Number(req.params.item_id);
   console.log(
     `IN deleteItemAPI, attempting to delete item with ID#: ${item_id} from the ${table_name} table`
   );

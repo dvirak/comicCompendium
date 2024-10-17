@@ -24,14 +24,14 @@ publishersRouter.get("/", (req, res, next) => {
 });
 
 /**
- * Description: Retrieves a specific publisher based on publisher_id parameter or publisher_name query.
+ * Description: Retrieves a specific publisher based on item_id parameter or item_name query.
  * Method: GET
- * Route: /publishers/publisher/:id?
- * Request Params: Optional `id` to specify the publisher by ID.
+ * Route: /publishers/publisher/:item_id?
+ * Request Params: Optional `item_id` to specify the publisher by ID.
  * Request Query: item_name to specify the publisher by name.
  * Response: Returns the details of the specified publisher.
  */
-publishersRouter.get("/publisher/:id?", (req, res, next) => {
+publishersRouter.get("/publisher/:item_id?", (req, res, next) => {
   getItemAPI(req, res, next, table_name);
 });
 
@@ -50,8 +50,8 @@ publishersRouter.post("/add", requireUser, (req, res, next) => {
 /**
  * Description: Updates an existing publisher's information.
  * Method: PATCH
- * Route: /publishers/publisher/:id/update
- * Request Params: `id` specifies the publisher to update by ID.
+ * Route: /publishers/publisher/:item_id/update
+ * Request Params: `item_id` specifies the publisher to update by ID.
  * Request Body: Contains fields to update the publisher's information.
  * Response: Returns a message indicating update success and the updated publisher object.
  * Middleware: requireUser - Ensures the user is authenticated.
@@ -59,7 +59,7 @@ publishersRouter.post("/add", requireUser, (req, res, next) => {
  *         Error if an error occurs while updating publisher information in the database.
  */
 publishersRouter.patch(
-  "/publisher/:id/update",
+  "/publisher/:item_id/update",
   requireUser,
   (req, res, next) => {
     updateItemAPI(req, res, next, table_name);
@@ -69,14 +69,14 @@ publishersRouter.patch(
 /**
  * Description: Deletes a specific publisher from the database.
  * Method: DELETE
- * Route: /publishers/publisher/:id/delete
- * Request Params: `id` specifies the publisher to delete by ID.
+ * Route: /publishers/publisher/:item_id/delete
+ * Request Params: `item_id` specifies the publisher to delete by ID.
  * Response: Returns a message confirming the deletion and the deleted publisher's name.
  * Middleware: requireUser - Ensures the user is authenticated.
  * Throws: NotFoundErrorAPI if the specified publisher_id does not exist.
  */
 publishersRouter.delete(
-  "/publisher/:id/delete",
+  "/publisher/:item_id/delete",
   requireUser,
   (req, res, next) => {
     deleteItemAPI(req, res, next, table_name);
