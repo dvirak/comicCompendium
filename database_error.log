@@ -480,3 +480,18 @@ Database Error in getItemDB: error: relation "series_voluems" does not exist
 Database Error in checkOrCreateItemDB: error: relation "series_voluems" does not exist
 Database Error in createAdditionalInfoDB: error: relation "series_voluems" does not exist
 Database Error in processBookInfoDB: error: relation "series_voluems" does not exist
+Database Error in getUserByUsernameDB: UserNotFoundErrorDB: No user found
+Database Error in getSingleUserDB: UserNotFoundErrorDB: No user found
+Database Error in getUserByUsernameDB: UserNotFoundErrorDB: No user found
+Database Error in getSingleUserDB: UserNotFoundErrorDB: No user found
+Database Error in getUserByUsernameDB: UserNotFoundErrorDB: No user found
+Database Error in getSingleUserDB: UserNotFoundErrorDB: No user found
+Database Error in getUserByUsernameDB: UserNotFoundErrorDB: No user found
+Database Error in getSingleUserDB: UserNotFoundErrorDB: No user found
+Database Error in getUserByUsernameDB: UserNotFoundErrorDB: No user found
+Database Error in getSingleUserDB: UserNotFoundErrorDB: No user found
+Database Error in getUserByUsernameDB: UserNotFoundErrorDB: No user found
+Database Error in getSingleUserDB: UserNotFoundErrorDB: No user found
+Database Error in getUserByUsernameDB: UserNotFoundErrorDB: No user found
+Database Error in getSingleUserDB: UserNotFoundErrorDB: No user found
+Database Error in getBooksByCategoryDB: error: relation "book_seriess" does not exist

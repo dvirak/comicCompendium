@@ -429,3 +429,14 @@ Error in getItemAPI: MissingInformationErrorAPI: You are missing the necessary i
 Error in getItemAPI: MissingInformationErrorAPI: You are missing the necessary information to retrieve Item Name: undefined from the genre table
 Error in createItemAPI: MissingInformationErrorAPI: You are missing the item_name in createItemAPI
 Error in createItemAPI: ItemAlreadyExistsErrorAPI: Romance already exists in the genres Table
+Error in getSingleUserAPI: NotAuthorizedErrorAPI: You are not authorized to access this data
+Error in createUserAPI: UserExistsErrorAPI: A user with that username already exists
+Error in createUserAPI: UserExistsErrorAPI: A user with that username already exists
+Error in updateUserAPI: NotAuthorizedErrorAPI: You do not have permission to access this resource.
+Error in updateUserAPI: TypeError: NoInfoProvidedErrorDB is not a constructor
+Error in updateUserAPI: TypeError: NoInfoProvidedErrorDB is not a constructor
+Error in updateUserAPI: NotAuthorizedErrorAPI: You do not have permission to access this resource.
+Error in deleteUserAPI: NotAuthorizedErrorAPI: You do not have permission to access this resource.
+Error in createUserAPI: PasswordLengthErrorAPI: Password must be at least 8 characters
+Error in getBooksByCategoryAPI: NotFoundErrorAPI: The illustrator you were searching for was not found
+Error in getBooksByCategoryAPI: error: relation "book_seriess" does not exist

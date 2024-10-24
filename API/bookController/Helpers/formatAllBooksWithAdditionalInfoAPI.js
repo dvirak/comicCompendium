@@ -2,6 +2,7 @@ const { logErrorAPI } = require("../../../Errors/API");
 const additionalInfoCheckAPI = require("./additionalInfoCheckAPI");
 
 async function formatAllBooksWithAdditionalInfoAPI(books) {
+  console.log("in formatAllBooksWithAdditionalInfoAPI");
   let fullyInformedBooks = [];
   try {
     for (const book of books) {

@@ -14,6 +14,7 @@ const { formatGetRelationQueries } = require("./helpers");
  * @throws {NotFoundErrorDB} If no relations are found for the specified main item ID.
  */
 async function getRelationItemsDB({ main_item, main_item_id, relations }) {
+  console.log("In getRelationItemsDB");
   // Generate individual SELECT queries for each relation type
   const query = formatGetRelationQueries(main_item, relations);
 

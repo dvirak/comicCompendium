@@ -58,9 +58,6 @@ async function additionalInfoCheckAPI(book_id) {
       relations,
     });
 
-    console.log("ADDITIONALINFO");
-    console.log(additionalInfo);
-
     formattedInfo = formatAdditionalInfo(additionalInfo);
     return formattedInfo;
   } catch (error) {

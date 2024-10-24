@@ -10,13 +10,14 @@ function formatGetBooksByCategoryQueryDB(categories) {
 
   // Construct JOIN and WHERE clauses based on categories
   for (const [category, id] of Object.entries(categories)) {
+    let pluralCategory = category === "series" ? "serie" : category;
     joinClauses.push(
-      `JOIN book_${category}s ON books.id = book_${category}s.book_id`
+      `JOIN book_${pluralCategory}s ON books.id = book_${pluralCategory}s.book_id`
     );
     joinClauses.push(
-      `JOIN ${category}s ON book_${category}s.${category}_id = ${category}s.id`
+      `JOIN ${pluralCategory}s ON book_${pluralCategory}s.${category}_id = ${pluralCategory}s.id`
     );
-    whereClauses.push(`${category}s.id`); // Add the condition for the category ID
+    whereClauses.push(`${pluralCategory}s.id`); // Add the condition for the category ID
     values.push(id); // Add the category ID to the values array
   }
 

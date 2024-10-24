@@ -31,9 +31,9 @@ async function createUserAPI(req, res, next) {
   // Extract user details from the request body
   console.log("IN CREATE USER API");
 
-  if (req.body.admin !== true) {
-    req.body.admin = false;
-  }
+  // if (req.body.admin !== true) {
+  //   req.body.admin = false;
+  // }
 
   try {
     // Check if the user already exists
