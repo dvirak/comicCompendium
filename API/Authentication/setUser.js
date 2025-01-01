@@ -19,6 +19,7 @@ const JWT_SECRET = process.env.JWT_SECRET;
  */
 async function setUser(req, res, next) {
   console.log("IN SET USER");
+  console.log(req.header);
   // Define the prefix used for the Authorization header
   const prefix = "Bearer ";
 

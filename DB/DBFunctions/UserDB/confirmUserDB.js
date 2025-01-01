@@ -50,7 +50,9 @@ async function confirmUserDB(username, password) {
 
     // If the passwords do not match, throw password error
     if (!passwordsMatch) {
-      throw new NotAuthorizedErrorDB();
+      throw new NotAuthorizedErrorDB(
+        "The password you’ve entered is incorrect."
+      );
     }
 
     // If the passwords match, delete the password field from the user object

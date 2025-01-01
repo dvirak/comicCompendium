@@ -495,3 +495,114 @@ Database Error in getSingleUserDB: UserNotFoundErrorDB: No user found
 Database Error in getUserByUsernameDB: UserNotFoundErrorDB: No user found
 Database Error in getSingleUserDB: UserNotFoundErrorDB: No user found
 Database Error in getBooksByCategoryDB: error: relation "book_seriess" does not exist
+Database Error in getUserByUsernameDB: UserNotFoundErrorDB: No user found
+Database Error in getSingleUserDB: UserNotFoundErrorDB: No user found
+Database Error in getUserByUsernameDB: UserNotFoundErrorDB: No user found
+Database Error in getSingleUserDB: UserNotFoundErrorDB: No user found
+Database Error in confirmUserDB: NotAuthorizedErrorDB: You do not have permission to access this resource.
+Database Error in confirmUserDB: NotAuthorizedErrorDB: You do not have permission to access this resource.
+Database Error in confirmUserDB: NotAuthorizedErrorDB: You do not have permission to access this resource.
+Database Error in getUserByUsernameDB: UserNotFoundErrorDB: No user found
+Database Error in getSingleUserDB: UserNotFoundErrorDB: No user found
+Database Error in getUserByUsernameDB: UserNotFoundErrorDB: No user found
+Database Error in getSingleUserDB: UserNotFoundErrorDB: No user found
+Database Error in getUserByUsernameDB: UserNotFoundErrorDB: No user found
+Database Error in getSingleUserDB: UserNotFoundErrorDB: No user found
+Database Error in getUserByUsernameDB: UserNotFoundErrorDB: No user found
+Database Error in getSingleUserDB: UserNotFoundErrorDB: No user found
+Database Error in getUserByUsernameDB: UserNotFoundErrorDB: No user found
+Database Error in getSingleUserDB: UserNotFoundErrorDB: No user found
+Database Error in getSingleUserDB: NoUserProvidedErrorDB: Either user_id or username must be provided
+Database Error in getSingleUserDB: NoUserProvidedErrorDB: Either user_id or username must be provided
+Database Error in getSingleUserDB: NoUserProvidedErrorDB: Either user_id or username must be provided
+Database Error in getSingleUserDB: NoUserProvidedErrorDB: Either user_id or username must be provided
+Database Error in getSingleUserDB: NoUserProvidedErrorDB: Either user_id or username must be provided
+Database Error in getSingleUserDB: NoUserProvidedErrorDB: Either user_id or username must be provided
+Database Error in getSingleUserDB: NoUserProvidedErrorDB: Either user_id or username must be provided
+Database Error in getSingleUserDB: NoUserProvidedErrorDB: Either user_id or username must be provided
+Database Error in getUserByUsernameDB: UserNotFoundErrorDB: No user found
+Database Error in getSingleUserDB: UserNotFoundErrorDB: No user found
+Database Error in getUserByUsernameDB: UserNotFoundErrorDB: No user found
+Database Error in getSingleUserDB: UserNotFoundErrorDB: No user found
+Database Error in getUserByUsernameDB: UserNotFoundErrorDB: No user found
+Database Error in getSingleUserDB: UserNotFoundErrorDB: No user found
+Database Error in getUserByUsernameDB: UserNotFoundErrorDB: No user found
+Database Error in getSingleUserDB: UserNotFoundErrorDB: No user found
+Database Error in getUserByUsernameDB: UserNotFoundErrorDB: No user found
+Database Error in getSingleUserDB: UserNotFoundErrorDB: No user found
+Database Error in getUserByUsernameDB: UserNotFoundErrorDB: No user found
+Database Error in getSingleUserDB: UserNotFoundErrorDB: No user found
+Database Error in getUserByUsernameDB: UserNotFoundErrorDB: No user found
+Database Error in getSingleUserDB: UserNotFoundErrorDB: No user found
+Database Error in createUserDB: error: invalid input syntax for type bigint: "Cody"
+Database Error in getUserByUsernameDB: UserNotFoundErrorDB: No user found
+Database Error in getSingleUserDB: UserNotFoundErrorDB: No user found
+Database Error in confirmUserDB: NotAuthorizedErrorDB: You do not have permission to access this resource.
+Database Error in confirmUserDB: NotAuthorizedErrorDB: You do not have permission to access this resource.
+Database Error in confirmUserDB: NotAuthorizedErrorDB: You do not have permission to access this resource.
+Database Error in confirmUserDB: NotAuthorizedErrorDB: You do not have permission to access this resource.
+Database Error in confirmUserDB: NotAuthorizedErrorDB: You do not have permission to access this resource.
+Database Error in confirmUserDB: NotAuthorizedErrorDB: You do not have permission to access this resource.
+Database Error in confirmUserDB: NotAuthorizedErrorDB: You do not have permission to access this resource.
+Database Error in confirmUserDB: NotAuthorizedErrorDB: You do not have permission to access this resource.
+Database Error in confirmUserDB: NotAuthorizedErrorDB: You do not have permission to access this resource.
+Database Error in confirmUserDB: NotAuthorizedErrorDB: You do not have permission to access this resource.
+Database Error in confirmUserDB: NotAuthorizedErrorDB: You do not have permission to access this resource.
+Database Error in confirmUserDB: NotAuthorizedErrorDB: You do not have permission to access this resource.
+Database Error in confirmUserDB: NotAuthorizedErrorDB: You do not have permission to access this resource.
+Database Error in confirmUserDB: NotAuthorizedErrorDB: You do not have permission to access this resource.
+Database Error in confirmUserDB: NotAuthorizedErrorDB: You do not have permission to access this resource.
+Database Error in confirmUserDB: NotAuthorizedErrorDB: You do not have permission to access this resource.
+Database Error in confirmUserDB: NotAuthorizedErrorDB: You do not have permission to access this resource.
+Database Error in confirmUserDB: NotAuthorizedErrorDB: You do not have permission to access this resource.
+Database Error in confirmUserDB: NotAuthorizedErrorDB: You do not have permission to access this resource.
+Database Error in confirmUserDB: NotAuthorizedErrorDB: You do not have permission to access this resource.
+Database Error in confirmUserDB: NotAuthorizedErrorDB: You do not have permission to access this resource.
+Database Error in confirmUserDB: NotAuthorizedErrorDB: You do not have permission to access this resource.
+Database Error in confirmUserDB: NotAuthorizedErrorDB: You do not have permission to access this resource.
+Database Error in confirmUserDB: NotAuthorizedErrorDB: You do not have permission to access this resource.
+Database Error in confirmUserDB: NotAuthorizedErrorDB: You do not have permission to access this resource.
+Database Error in confirmUserDB: NotAuthorizedErrorDB: You do not have permission to access this resource.
+Database Error in confirmUserDB: NotAuthorizedErrorDB: You do not have permission to access this resource.
+Database Error in confirmUserDB: NotAuthorizedErrorDB: You do not have permission to access this resource.
+Database Error in confirmUserDB: NotAuthorizedErrorDB: You do not have permission to access this resource.
+Database Error in confirmUserDB: NotAuthorizedErrorDB: You do not have permission to access this resource.
+Database Error in confirmUserDB: NotAuthorizedErrorDB: You do not have permission to access this resource.
+Database Error in confirmUserDB: NotAuthorizedErrorDB: You do not have permission to access this resource.
+Database Error in confirmUserDB: NotAuthorizedErrorDB: You do not have permission to access this resource.
+Database Error in confirmUserDB: NotAuthorizedErrorDB: You do not have permission to access this resource.
+Database Error in confirmUserDB: NotAuthorizedErrorDB: You do not have permission to access this resource.
+Database Error in confirmUserDB: NotAuthorizedErrorDB: You do not have permission to access this resource.
+Database Error in confirmUserDB: NotAuthorizedErrorDB: You do not have permission to access this resource.
+Database Error in confirmUserDB: NotAuthorizedErrorDB: You do not have permission to access this resource.
+Database Error in confirmUserDB: NotAuthorizedErrorDB: You do not have permission to access this resource.
+Database Error in confirmUserDB: NotAuthorizedErrorDB: You do not have permission to access this resource.
+Database Error in confirmUserDB: NotAuthorizedErrorDB: You do not have permission to access this resource.
+Database Error in confirmUserDB: NotAuthorizedErrorDB: You do not have permission to access this resource.
+Database Error in confirmUserDB: NotAuthorizedErrorDB: You do not have permission to access this resource.
+Database Error in confirmUserDB: NotAuthorizedErrorDB: You do not have permission to access this resource.
+Database Error in confirmUserDB: NotAuthorizedErrorDB: You do not have permission to access this resource.
+Database Error in confirmUserDB: NotAuthorizedErrorDB: You do not have permission to access this resource.
+Database Error in confirmUserDB: NotAuthorizedErrorDB: You do not have permission to access this resource.
+Database Error in confirmUserDB: NotAuthorizedErrorDB: You do not have permission to access this resource.
+Database Error in confirmUserDB: NotAuthorizedErrorDB: You do not have permission to access this resource.
+Database Error in getUserByUsernameDB: UserNotFoundErrorDB: No user found
+Database Error in getSingleUserDB: UserNotFoundErrorDB: No user found
+Database Error in confirmUserDB: NotAuthorizedErrorDB: You do not have permission to access this resource.
+Database Error in confirmUserDB: NotAuthorizedErrorDB: You do not have permission to access this resource.
+Database Error in confirmUserDB: NotAuthorizedErrorDB: You do not have permission to access this resource.
+Database Error in confirmUserDB: NotAuthorizedErrorDB: You do not have permission to access this resource.
+Database Error in confirmUserDB: NotAuthorizedErrorDB: You do not have permission to access this resource.
+Database Error in confirmUserDB: NotAuthorizedErrorDB: You do not have permission to access this resource.
+Database Error in confirmUserDB: NotAuthorizedErrorDB: You do not have permission to access this resource.
+Database Error in confirmUserDB: NotAuthorizedErrorDB: You do not have permission to access this resource.
+Database Error in confirmUserDB: NotAuthorizedErrorDB: You do not have permission to access this resource.
+Database Error in confirmUserDB: NotAuthorizedErrorDB: You do not have permission to access this resource.
+Database Error in confirmUserDB: NotAuthorizedErrorDB: You do not have permission to access this resource.
+Database Error in confirmUserDB: NotAuthorizedErrorDB: You do not have permission to access this resource.
+Database Error in confirmUserDB: NotAuthorizedErrorDB: You do not have permission to access this resource.
+Database Error in confirmUserDB: NotAuthorizedErrorDB: You do not have permission to access this resource.
+Database Error in confirmUserDB: NotAuthorizedErrorDB: You do not have permission to access this resource.
+Database Error in confirmUserDB: NotAuthorizedErrorDB: The password you’ve entered is incorrect.
+Database Error in confirmUserDB: NotAuthorizedErrorDB: The password you’ve entered is incorrect.
+Database Error in confirmUserDB: NotAuthorizedErrorDB: The password you’ve entered is incorrect.

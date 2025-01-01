@@ -440,3 +440,160 @@ Error in deleteUserAPI: NotAuthorizedErrorAPI: You do not have permission to acc
 Error in createUserAPI: PasswordLengthErrorAPI: Password must be at least 8 characters
 Error in getBooksByCategoryAPI: NotFoundErrorAPI: The illustrator you were searching for was not found
 Error in getBooksByCategoryAPI: error: relation "book_seriess" does not exist
+Error in createUserAPI: PasswordLengthErrorAPI: Password must be at least 8 characters
+Error in loginUserAPI: NotAuthorizedErrorDB: You do not have permission to access this resource.
+Error in loginUserAPI: NotAuthorizedErrorDB: You do not have permission to access this resource.
+Error in loginUserAPI: NotAuthorizedErrorDB: You do not have permission to access this resource.
+Error in createUserAPI: UserExistsErrorAPI: A user with that username already exists
+Error in getSingleUserAPI: NotAuthorizedErrorAPI: You are not authorized to access this data
+Error in getSingleUserAPI: NotAuthorizedErrorAPI: You are not authorized to access this data
+Error in getSingleUserAPI: NotAuthorizedErrorAPI: You are not authorized to access this data
+Error in getSingleUserAPI: NotAuthorizedErrorAPI: You are not authorized to access this data
+Error in getSingleUserAPI: NotAuthorizedErrorAPI: You are not authorized to access this data
+Error in getSingleUserAPI: NotAuthorizedErrorAPI: You are not authorized to access this data
+Error in createUserAPI: PasswordLengthErrorAPI: Password must be at least 8 characters
+Error in getSingleUserAPI: NotAuthorizedErrorAPI: You are not authorized to access this data
+Error in getSingleUserAPI: NotAuthorizedErrorAPI: You are not authorized to access this data
+Error in createUserAPI: PasswordLengthErrorAPI: Password must be at least 8 characters
+Error in getSingleUserAPI: NotAuthorizedErrorAPI: You are not authorized to access this data
+Error in getSingleUserAPI: NotAuthorizedErrorAPI: You are not authorized to access this data
+Error in createUserAPI: NoUserProvidedErrorDB: Either user_id or username must be provided
+Error in createUserAPI: NoUserProvidedErrorDB: Either user_id or username must be provided
+Error in createUserAPI: NoUserProvidedErrorDB: Either user_id or username must be provided
+Error in createUserAPI: NoUserProvidedErrorDB: Either user_id or username must be provided
+Error in createUserAPI: NoUserProvidedErrorDB: Either user_id or username must be provided
+Error in createUserAPI: NoUserProvidedErrorDB: Either user_id or username must be provided
+Error in createUserAPI: NoUserProvidedErrorDB: Either user_id or username must be provided
+Error in createUserAPI: NoUserProvidedErrorDB: Either user_id or username must be provided
+Error in createUserAPI: PasswordLengthErrorAPI: Password must be at least 8 characters
+Error in getSingleUserAPI: NotAuthorizedErrorAPI: You are not authorized to access this data
+Error in getSingleUserAPI: NotAuthorizedErrorAPI: You are not authorized to access this data
+Error in createUserAPI: PasswordLengthErrorAPI: Password must be at least 8 characters
+Error in getSingleUserAPI: NotAuthorizedErrorAPI: You are not authorized to access this data
+Error in getSingleUserAPI: NotAuthorizedErrorAPI: You are not authorized to access this data
+Error in getSingleUserAPI: NotAuthorizedErrorAPI: You are not authorized to access this data
+Error in createUserAPI: UserExistsErrorAPI: A user with that username already exists
+Error in getSingleUserAPI: NotAuthorizedErrorAPI: You are not authorized to access this data
+Error in getSingleUserAPI: NotAuthorizedErrorAPI: You are not authorized to access this data
+Error in getSingleUserAPI: NotAuthorizedErrorAPI: You are not authorized to access this data
+Error in getSingleUserAPI: NotAuthorizedErrorAPI: You are not authorized to access this data
+Error in getSingleUserAPI: NotAuthorizedErrorAPI: You are not authorized to access this data
+Error in getSingleUserAPI: NotAuthorizedErrorAPI: You are not authorized to access this data
+Error in getSingleUserAPI: NotAuthorizedErrorAPI: You are not authorized to access this data
+Error in getSingleUserAPI: NotAuthorizedErrorAPI: You are not authorized to access this data
+Error in getSingleUserAPI: NotAuthorizedErrorAPI: You are not authorized to access this data
+Error in getSingleUserAPI: NotAuthorizedErrorAPI: You are not authorized to access this data
+Error in getSingleUserAPI: NotAuthorizedErrorAPI: You are not authorized to access this data
+Error in getSingleUserAPI: NotAuthorizedErrorAPI: You are not authorized to access this data
+Error in getSingleUserAPI: NotAuthorizedErrorAPI: You are not authorized to access this data
+Error in getSingleUserAPI: NotAuthorizedErrorAPI: You are not authorized to access this data
+Error in getSingleUserAPI: NotAuthorizedErrorAPI: You are not authorized to access this data
+Error in getSingleUserAPI: NotAuthorizedErrorAPI: You are not authorized to access this data
+Error in getSingleUserAPI: NotAuthorizedErrorAPI: You are not authorized to access this data
+Error in getSingleUserAPI: NotAuthorizedErrorAPI: You are not authorized to access this data
+Error in getSingleUserAPI: NotAuthorizedErrorAPI: You are not authorized to access this data
+Error in getSingleUserAPI: NotAuthorizedErrorAPI: You are not authorized to access this data
+Error in getSingleUserAPI: NotAuthorizedErrorAPI: You are not authorized to access this data
+Error in getSingleUserAPI: NotAuthorizedErrorAPI: You are not authorized to access this data
+Error in getSingleUserAPI: NotAuthorizedErrorAPI: You are not authorized to access this data
+Error in getSingleUserAPI: NotAuthorizedErrorAPI: You are not authorized to access this data
+Error in getSingleUserAPI: NotAuthorizedErrorAPI: You are not authorized to access this data
+Error in getSingleUserAPI: NotAuthorizedErrorAPI: You are not authorized to access this data
+Error in getSingleUserAPI: NotAuthorizedErrorAPI: You are not authorized to access this data
+Error in getSingleUserAPI: NotAuthorizedErrorAPI: You are not authorized to access this data
+Error in getSingleUserAPI: NotAuthorizedErrorAPI: You are not authorized to access this data
+Error in getSingleUserAPI: NotAuthorizedErrorAPI: You are not authorized to access this data
+Error in getSingleUserAPI: NotAuthorizedErrorAPI: You are not authorized to access this data
+Error in getSingleUserAPI: NotAuthorizedErrorAPI: You are not authorized to access this data
+Error in getSingleUserAPI: NotAuthorizedErrorAPI: You are not authorized to access this data
+Error in getSingleUserAPI: NotAuthorizedErrorAPI: You are not authorized to access this data
+Error in getSingleUserAPI: NotAuthorizedErrorAPI: You are not authorized to access this data
+Error in getSingleUserAPI: NotAuthorizedErrorAPI: You are not authorized to access this data
+Error in getSingleUserAPI: NotAuthorizedErrorAPI: You are not authorized to access this data
+Error in getSingleUserAPI: NotAuthorizedErrorAPI: You are not authorized to access this data
+Error in getSingleUserAPI: NotAuthorizedErrorAPI: You are not authorized to access this data
+Error in getSingleUserAPI: NotAuthorizedErrorAPI: You are not authorized to access this data
+Error in createUserAPI: UserExistsErrorAPI: A user with that username already exists
+Error in getSingleUserAPI: NotAuthorizedErrorAPI: You are not authorized to access this data
+Error in getSingleUserAPI: NotAuthorizedErrorAPI: You are not authorized to access this data
+Error in createUserAPI: error: invalid input syntax for type bigint: "Cody"
+Error in getSingleUserAPI: NotAuthorizedErrorAPI: You are not authorized to access this data
+Error in getSingleUserAPI: NotAuthorizedErrorAPI: You are not authorized to access this data
+Error in loginUserAPI: NotAuthorizedErrorDB: You do not have permission to access this resource.
+Error in loginUserAPI: NotAuthorizedErrorDB: You do not have permission to access this resource.
+Error in loginUserAPI: NotAuthorizedErrorDB: You do not have permission to access this resource.
+Error in loginUserAPI: NotAuthorizedErrorDB: You do not have permission to access this resource.
+Error in loginUserAPI: NotAuthorizedErrorDB: You do not have permission to access this resource.
+Error in loginUserAPI: NotAuthorizedErrorDB: You do not have permission to access this resource.
+Error in loginUserAPI: NotAuthorizedErrorDB: You do not have permission to access this resource.
+Error in loginUserAPI: NotAuthorizedErrorDB: You do not have permission to access this resource.
+Error in loginUserAPI: NotAuthorizedErrorDB: You do not have permission to access this resource.
+Error in loginUserAPI: NotAuthorizedErrorDB: You do not have permission to access this resource.
+Error in loginUserAPI: NotAuthorizedErrorDB: You do not have permission to access this resource.
+Error in loginUserAPI: NotAuthorizedErrorDB: You do not have permission to access this resource.
+Error in loginUserAPI: NotAuthorizedErrorDB: You do not have permission to access this resource.
+Error in loginUserAPI: NotAuthorizedErrorDB: You do not have permission to access this resource.
+Error in loginUserAPI: NotAuthorizedErrorDB: You do not have permission to access this resource.
+Error in loginUserAPI: NotAuthorizedErrorDB: You do not have permission to access this resource.
+Error in loginUserAPI: NotAuthorizedErrorDB: You do not have permission to access this resource.
+Error in loginUserAPI: NotAuthorizedErrorDB: You do not have permission to access this resource.
+Error in loginUserAPI: NotAuthorizedErrorDB: You do not have permission to access this resource.
+Error in loginUserAPI: NotAuthorizedErrorDB: You do not have permission to access this resource.
+Error in loginUserAPI: NotAuthorizedErrorDB: You do not have permission to access this resource.
+Error in loginUserAPI: NotAuthorizedErrorDB: You do not have permission to access this resource.
+Error in loginUserAPI: NotAuthorizedErrorDB: You do not have permission to access this resource.
+Error in loginUserAPI: NotAuthorizedErrorDB: You do not have permission to access this resource.
+Error in loginUserAPI: NotAuthorizedErrorDB: You do not have permission to access this resource.
+Error in loginUserAPI: NotAuthorizedErrorDB: You do not have permission to access this resource.
+Error in loginUserAPI: NotAuthorizedErrorDB: You do not have permission to access this resource.
+Error in loginUserAPI: NotAuthorizedErrorDB: You do not have permission to access this resource.
+Error in loginUserAPI: NotAuthorizedErrorDB: You do not have permission to access this resource.
+Error in loginUserAPI: NotAuthorizedErrorDB: You do not have permission to access this resource.
+Error in loginUserAPI: NotAuthorizedErrorDB: You do not have permission to access this resource.
+Error in loginUserAPI: NotAuthorizedErrorDB: You do not have permission to access this resource.
+Error in loginUserAPI: NotAuthorizedErrorDB: You do not have permission to access this resource.
+Error in loginUserAPI: NotAuthorizedErrorDB: You do not have permission to access this resource.
+Error in loginUserAPI: NotAuthorizedErrorDB: You do not have permission to access this resource.
+Error in loginUserAPI: NotAuthorizedErrorDB: You do not have permission to access this resource.
+Error in loginUserAPI: NotAuthorizedErrorDB: You do not have permission to access this resource.
+Error in loginUserAPI: NotAuthorizedErrorDB: You do not have permission to access this resource.
+Error in loginUserAPI: NotAuthorizedErrorDB: You do not have permission to access this resource.
+Error in loginUserAPI: NotAuthorizedErrorDB: You do not have permission to access this resource.
+Error in loginUserAPI: NotAuthorizedErrorDB: You do not have permission to access this resource.
+Error in loginUserAPI: NotAuthorizedErrorDB: You do not have permission to access this resource.
+Error in loginUserAPI: NotAuthorizedErrorDB: You do not have permission to access this resource.
+Error in loginUserAPI: NotAuthorizedErrorDB: You do not have permission to access this resource.
+Error in loginUserAPI: NotAuthorizedErrorDB: You do not have permission to access this resource.
+Error in loginUserAPI: NotAuthorizedErrorDB: You do not have permission to access this resource.
+Error in loginUserAPI: NotAuthorizedErrorDB: You do not have permission to access this resource.
+Error in loginUserAPI: NotAuthorizedErrorDB: You do not have permission to access this resource.
+Error in loginUserAPI: NotAuthorizedErrorDB: You do not have permission to access this resource.
+Error in createUserAPI: UserExistsErrorAPI: A user with that username already exists
+Error in createUserAPI: UserExistsErrorAPI: A user with that username already exists
+Error in getSingleUserAPI: NotAuthorizedErrorAPI: You are not authorized to access this data
+Error in getSingleUserAPI: NotAuthorizedErrorAPI: You are not authorized to access this data
+Error in loginUserAPI: NotAuthorizedErrorDB: You do not have permission to access this resource.
+Error in loginUserAPI: NotAuthorizedErrorDB: You do not have permission to access this resource.
+Error in loginUserAPI: NotAuthorizedErrorDB: You do not have permission to access this resource.
+Error in loginUserAPI: NotAuthorizedErrorDB: You do not have permission to access this resource.
+Error in loginUserAPI: NotAuthorizedErrorDB: You do not have permission to access this resource.
+Error in loginUserAPI: NotAuthorizedErrorDB: You do not have permission to access this resource.
+Error in loginUserAPI: NotAuthorizedErrorDB: You do not have permission to access this resource.
+Error in loginUserAPI: NotAuthorizedErrorDB: You do not have permission to access this resource.
+Error in loginUserAPI: NotAuthorizedErrorDB: You do not have permission to access this resource.
+Error in loginUserAPI: NotAuthorizedErrorDB: You do not have permission to access this resource.
+Error in loginUserAPI: NotAuthorizedErrorDB: You do not have permission to access this resource.
+Error in loginUserAPI: NotAuthorizedErrorDB: You do not have permission to access this resource.
+Error in loginUserAPI: NotAuthorizedErrorDB: You do not have permission to access this resource.
+Error in loginUserAPI: ReferenceError: InputErrorLoginAPI is not defined
+Error in loginUserAPI: InputErrorLoginAPI: Please supply both a username and password
+Error in loginUserAPI: InputErrorLoginAPI: Please supply both a username and password
+Error in loginUserAPI: InputErrorLoginAPI: Please supply both a username and password
+Error in loginUserAPI: InputErrorLoginAPI: Please supply both a username and password
+Error in loginUserAPI: NotAuthorizedErrorDB: You do not have permission to access this resource.
+Error in loginUserAPI: InputErrorLoginAPI: Please supply both a username and password
+Error in loginUserAPI: InputErrorLoginAPI: Please supply both a username and password
+Error in loginUserAPI: NotAuthorizedErrorDB: You do not have permission to access this resource.
+Error in loginUserAPI: NotAuthorizedErrorDB: The password you’ve entered is incorrect.
+Error in loginUserAPI: NotAuthorizedErrorDB: The password you’ve entered is incorrect.
+Error in loginUserAPI: NotAuthorizedErrorDB: The password you’ve entered is incorrect.
