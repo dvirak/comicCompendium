@@ -79,4 +79,7 @@ usersRouter.patch("/:user_id/update", requireUser, updateUserAPI);
 const deleteUserAPI = require("./deleteUserAPI");
 usersRouter.delete("/:user_id/delete", requireUser, deleteUserAPI);
 
+const confirmUserAPI = require("./confirmUserAPI");
+usersRouter.post("/:user_id/confirm", requireUser, confirmUserAPI);
+
 module.exports = usersRouter;
