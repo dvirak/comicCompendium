@@ -9,7 +9,7 @@ class AuthorizationHeaderErrorAPI extends Error {
    * @param {string} message - Optional error message describing the authorization header issue.
    */
   constructor(message) {
-    super(message); // Call the constructor of Error class with the provided message
+    super(message || "You are not authorized to access this"); // Call the constructor of Error class with the provided message
     this.name = `AuthorizationHeaderErrorAPI`; // Set the name of the error
     this.status = 401; // Set the HTTP status code associated with this error (401 Unauthorized)
   }
