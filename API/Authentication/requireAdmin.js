@@ -12,12 +12,8 @@ const { logErrorDB } = require("../../Errors/DB");
  */
 function requireAdmin(req, res, next) {
   console.log("in require admin");
-  console.log(req.user);
-  // console.log(req.user);
-  // console.log(req.user.admin);
   try {
     if (!req.user.admin || !req.user) {
-      console.log("FAILED");
       throw new NotAuthorizedErrorAPI();
     } else {
       next(); // If user is an admin, proceed to the next middleware or route handler

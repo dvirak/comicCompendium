@@ -693,3 +693,4 @@ Database Error in confirmUserDB: NotAuthorizedErrorDB: The password you’ve ent
 Database Error in confirmUserDB: NotAuthorizedErrorDB: The password you’ve entered is incorrect.
 Database Error in confirmUserDB: NotAuthorizedErrorDB: Incorrect username/password combination
 Database Error in confirmUserDB: TypeError: Cannot read properties of undefined (reading 'admin')
+Database Error in confirmUserDB: MissingPasswordErrorDB: No password provided
