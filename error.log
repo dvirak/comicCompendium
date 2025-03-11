@@ -692,3 +692,7 @@ Error in confirmUserAPI: NotAuthorizedErrorDB: The password you’ve entered is 
 Error in confirmUserAPI: NotAuthorizedErrorDB: The password you’ve entered is incorrect.
 Error in confirmUserAPI: AuthenticationErrorLoginAPI: You can only delete your own account.
 Error in confirmUserAPI: NotAuthorizedErrorDB: Incorrect username/password combination
+Error in deleteUserAPI: NotAuthorizedErrorAPI: You do not have permission to access this resource.
+Error in deleteUserAPI: NotAuthorizedErrorAPI: You do not have permission to access this resource.
+Error in deleteUserAPI: NotAuthorizedErrorAPI: You do not have permission to access this resource.
+Error in deleteUserAPI: MissingPasswordErrorDB: No password provided
