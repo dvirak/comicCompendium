@@ -1,4 +1,6 @@
+const { NotAuthorizedErrorAPI } = require("../../Errors/API");
 const NotAdminErrorAPI = require("../../Errors/API/NotAdminErrorAPI");
+const { logErrorDB } = require("../../Errors/DB");
 
 /**
  * Middleware to ensure the user is an admin.
@@ -9,12 +11,26 @@ const NotAdminErrorAPI = require("../../Errors/API/NotAdminErrorAPI");
  * @param {Function} next - The next middleware function
  */
 function requireAdmin(req, res, next) {
-  if (!req.user.admin) {
-    throw new NotAdminErrorAPI();
-  } else {
-    next(); // If user is an admin, proceed to the next middleware or route handler
+  console.log("in require admin");
+  console.log(req.user);
+  // console.log(req.user);
+  // console.log(req.user.admin);
+  try {
+    if (!req.user.admin || !req.user) {
+      console.log("FAILED");
+      throw new NotAuthorizedErrorAPI();
+    } else {
+      next(); // If user is an admin, proceed to the next middleware or route handler
+    }
+  } catch (error) {
+    if (
+      (error.message = "Cannot read properties of undefined (reading 'admin')")
+    ) {
+      throw new NotAuthorizedErrorAPI();
+    }
+    logErrorDB("confirmUserDB", error);
+    throw error;
   }
 }
-
 // Export the middleware functions for use in other modules
 module.exports = requireAdmin;
